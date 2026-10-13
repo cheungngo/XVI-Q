@@ -1,0 +1,39 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q10",
+ "P6_outcome": "Partial",
+ "sigma0_status_kappa3": "evanescent kappa^3 three-point defect sigma0-exact at pole level; X non-unique (ghost-eq compatible)",
+ "goals": {
+  "erratum_Q08_counts": "DONE: Q10-E1 withdraws the Q08 >=97/>=55/>=36 trivial counts and the Q09 139 / 59 counts",
+  "K_sector_blind_directions": "DONE: 42 blind coordinates (K 30, S 12); 62 of the 124 passing F generators live only there",
+  "bound_36_restated": "DONE: exact, but only a bound on N outside the (unverified) family span",
+  "F_trace_failures": "OPEN: 64/65 failures admit no lambda; the defect is in the Q08 construction; the eta-trace hypothesis is neither confirmed nor excluded",
+  "G_P_families": "OPEN: Q08 constructions shown not to be sigma-images (no lambda for 28/33, 132/134); not rebuilt and not proven absent",
+  "classification_remaining": "OPEN",
+  "invariant_evanescent_basis": "OPEN: not constructed",
+  "p22_kappa2_consistency": "OPEN: not reached"
+ },
+ "new_manuscripts": "En05-A/B/C, En06-A/B, En07-A and the OpenAI separation edges read; none imported",
+ "not_implied": [
+  "uniqueness or physicality of X",
+  "any count of BRST-trivial directions",
+  "kappa^3 four-point / higher rows",
+  "p22 consistency",
+  "bulk symmetry restoration",
+  "any change to the O.1 record"
+ ],
+ "disclosed_revisions": {
+  "Q10-R1": "disclosed scope revision of the frozen Q09 layer gate (code/p6q06/q07/q08/q09/release_q09.py): files under code/p6q06/q07/q08/q09/q10/ and tools/*q10* are left to the Q10 gate; and the Q09 gate treats n_files_scanned of Q09_guard_scan3 as a lower bound (new Q10 files are scanned, not exempted); release_q09.py is pinned by q10_expected.json. Q05-Q08 gates untouched."
+ },
+ "errata": [
+  "Q10-E1"
+ ],
+ "O1_closure_unchanged": "CLOSED (scoped)",
+ "bulk_symmetry_restored": false,
+ "flags": {
+  "execution_pass": true,
+  "claim_status": "partial",
+  "scope": "pole level, one loop, kappa^3, three-point rows"
+ },
+ "seconds": 17.0
+}

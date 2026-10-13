@@ -1,0 +1,89 @@
+{
+ "construction": "Y built from Ktilde = K + cbar.F'(h) (canonical shift by Psi = cbar.F, B integrated out); the cbar partner of every K-functional is rho*T(.), rho = -2 (Q08 ghost equation). sigma = (S0, .) applied with the row channel operators (D, A, E), antibracket sign -1 between antifield-type and field-type pieces; G family includes the c*cc piece (h -> s0 h, antisymmetrised in the two c's).",
+ "Q08_F_defect_diagnosis": {
+  "blocks_violated_by_Q08_pieces": {
+   "F": {
+    "ccK: ccb: hhc: bose:": 124,
+    "ccK: ccb: hhc:PQ bose:": 53,
+    "ccK: ccb: hhc:P bose:": 12
+   },
+   "G": {
+    "ccK:Q ccb:P hhc:P bose:": 13,
+    "ccK:Q ccb:P hhc:PQ bose:": 6,
+    "ccK: ccb: hhc:PQ bose:": 8,
+    "ccK: ccb: hhc:P bose:": 6
+   },
+   "P": {
+    "ccK: ccb: hhc:PQ bose:": 122,
+    "ccK: ccb: hhc:P bose:": 12
+   }
+  },
+  "reading": "the Q08 F pieces violate only the h.h.c row; 12 generators fail through the antifield-type piece alone, i.e. Q08 F omitted the cbar partner (Ktilde) and the E channel"
+ },
+ "results_at_derived_signs": {
+  "F": {
+   "n": 204,
+   "leak": 0,
+   "zero_vector": 10,
+   "derived_minus1": {
+    "in_N": 71,
+    "in_N_and_ghost_eq": 71,
+    "fail_blocks": {
+     "hhc": 123
+    }
+   },
+   "plus1": {
+    "in_N": 49,
+    "in_N_and_ghost_eq": 49,
+    "fail_blocks": {
+     "hhc": 145
+    }
+   }
+  },
+  "G": {
+   "n": 33,
+   "leak": 0,
+   "zero_vector": 0,
+   "derived_minus1": {
+    "in_N": 8,
+    "in_N_and_ghost_eq": 8,
+    "fail_blocks": {
+     "ccK ccb hhc": 13,
+     "hhc": 12
+    }
+   },
+   "plus1": {
+    "in_N": 5,
+    "in_N_and_ghost_eq": 5,
+    "fail_blocks": {
+     "ccK ccb hhc": 16,
+     "ccK ccb": 3,
+     "hhc": 9
+    }
+   }
+  }
+ },
+ "lam_mu_scan_diagnostic": {
+  "any": 41,
+  "[('free', '0')]": 92,
+  "[('-1', '1')]": 21,
+  "[('free', '1')]": 18,
+  "[('0', '0'), ('free', '0')]": 1,
+  "none": 24,
+  "[('-2', '0')]": 1,
+  "[('-1', '1'), ('-2', '-1')]": 1,
+  "[('-1', '0'), ('free', '0')]": 2,
+  "[('-2', '0'), ('free', '0')]": 1,
+  "[('-2', 'free'), ('free', '0')]": 2
+ },
+ "trace_correlation": {
+  "no_trace/evanescent: Ktilde=in K-only=out": 6,
+  "no_trace/evanescent: Ktilde=out K-only=in": 58,
+  "no_trace/evanescent: Ktilde=out K-only=out": 11,
+  "trace/evanescent: Ktilde=in K-only=in": 41,
+  "trace/evanescent: Ktilde=in K-only=out": 34,
+  "trace/evanescent: Ktilde=out K-only=in": 40,
+  "trace/evanescent: Ktilde=out K-only=out": 14
+ },
+ "reading": "With the Ktilde construction 71 of 194 nonzero F images and 8 of 33 G images lie in N (all of them also satisfy the ghost equation). The remaining failures are all in the h.h.c row (G also in the ghost rows). No single normalisation works for every generator (lam/mu scan), and failures occur with and without trace monomials, so the eta-trace hypothesis is NOT the (sole) cause. The row operators as inserted on evanescent X do not compose to zero with this sigma: sigma^2 = 0 is not realised on the evanescent sector of the h.h.c row. Diagnosis: OPEN (candidate: the 4D-momentum rule T(p, .) = 0 for hat components, under which s0 h_hat = 0, versus the d-dimensional gauge structure of the kinetic operator)."
+}

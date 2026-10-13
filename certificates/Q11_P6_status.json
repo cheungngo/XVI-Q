@@ -1,0 +1,33 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q11",
+ "P6_outcome": "Partial",
+ "sigma0_status_kappa3": "evanescent kappa^3 three-point defect sigma0-exact at pole level; X non-unique (ghost-eq compatible)",
+ "goals": {
+  "1_sigma_images": "Partial: genuine Ktilde construction built (F, G; P absorbed as the cbar partner of F); 71/194 F and 8/33 G in N; Q08 F defect diagnosed (missing cbar partner / E channel); remaining failures OPEN (not trace-driven)",
+  "2_classification": "Partial (conditional): N_g 104 = sigma span 46 + blind 24 - overlap 9 + 43 unclassified",
+  "3_invariant_basis": "OPEN: not constructed",
+  "3_p22_consistency": "OPEN: not reached"
+ },
+ "not_implied": [
+  "uniqueness or physicality of X",
+  "an unconditional count of BRST-trivial directions",
+  "any physical evanescent direction",
+  "p22 consistency",
+  "bulk symmetry restoration",
+  "any change to the O.1 record"
+ ],
+ "disclosed_revisions": {
+  "Q11-R1": "disclosed scope revision of the frozen Q10 layer gate (code/p6q06/q07/q08/q09/q10/release_q10.py): files under code/p6q06/q07/q08/q09/q10/q11/ and tools/*q11* are left to the Q11 gate; and the Q10 gate treats n_files_scanned of Q09_guard_scan3 as a lower bound (new Q11 files are scanned, not exempted); release_q10.py is pinned by q11_expected.json. Q05-Q09 gates untouched."
+ },
+ "premises_note": "OpenAI catalogue and En05-En07 sheets are not premises (Q10 intake)",
+ "O1_closure_unchanged": "CLOSED (scoped)",
+ "bulk_symmetry_restored": false,
+ "insertion": "frozen",
+ "flags": {
+  "execution_pass": true,
+  "claim_status": "partial",
+  "scope": "pole level, one loop, kappa^3, three-point rows"
+ },
+ "seconds": 400.6
+}

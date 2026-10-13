@@ -1,0 +1,10 @@
+{
+ "N_g": 104,
+ "sigma_span_passing": 46,
+ "blind_in_N_g": 24,
+ "sigma_cap_blind": 9,
+ "sigma_plus_blind": 61,
+ "unclassified": 43,
+ "status": "CONDITIONAL: the 46 directions are sigma-images of local Ktilde-functionals that lie in N_g, hence trivial IF this sigma is the correct linearised Slavnov-Taylor operator on the evanescent sector; that is exactly what the failures above put in doubt. 24 blind directions (9 overlapping the sigma span). 43 directions are unclassified: NOT shown to be physical.",
+ "physical_evanescent_directions": "not established (no direction certified physical)"
+}

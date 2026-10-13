@@ -1,0 +1,30 @@
+{
+ "id": "Q10-E1",
+ "severity": "medium",
+ "withdrawn": {
+  "Q08": [
+   "'>=97 directions of N inside the trivial span at the best fitted lambda'",
+   "'>=55 trivial directions'",
+   "'>=36 unexplained directions' as a count of NON-trivial directions"
+  ],
+  "Q09": [
+   "'F verified on 139/204 generators' (15 of the 139 are zero vectors and the other 124 pass for every lambda)",
+   "'derived trivial span 59 (27 inside the ghost-equation subspace)' as a count of BRST-trivial directions"
+  ]
+ },
+ "reason": "F: of 204 generators 15 vanish after the h-leg symmetrisation; for ALL 124 nonzero generators that pass, each piece is separately in N (lambda arbitrary), so the lambda test is vacuous on them; 62 of them are supported only on blind coordinates. 64 of the 65 failures admit NO lambda at all (1 needs lambda=-2). G: 28/33 admit no lambda, 5 need lambda=i/2. P: 132/134 admit no lambda, 2 need lambda=-2. The Q08 hand-built pieces are therefore not sigma-images of the stated Y for most generators: the defect is in the construction, not in the normalisation, and no single normalisation (derived or fitted) can repair it.",
+ "restated_bound": {
+  "statement": "dim N - dim(N cap span{all Q08 family pieces}) = 152 - 116 = 36",
+  "Q08_value_recorded": 36,
+  "caveat": "lambda-independent and exact as linear algebra, but the spanning pieces are NOT verified sigma-images (anatomy above), so 36 is a lower bound on the directions of N outside that span only; it is neither a lower bound on the non-trivial (physical) directions nor an upper bound on the trivial ones"
+ },
+ "what_remains_established": [
+  "dim N = 152, dim N with ghost equation = 104 (Q08, linear algebra)",
+  "blind coordinates 42 (K 30, S 12); 24 inside the ghost-equation subspace"
+ ],
+ "frozen_layers": "Q08/Q09 certificates unchanged; this erratum supersedes the listed statements",
+ "Q09_superseded_values": {
+  "F_n_in_N": 139,
+  "dim_trivial_span_derived": 59
+ }
+}

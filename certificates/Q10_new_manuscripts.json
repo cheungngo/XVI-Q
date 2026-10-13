@@ -1,0 +1,17 @@
+{
+ "intake_file": "intake/new_manuscripts_q10.json",
+ "sha256": "65ea1f6427bd120f52a6f28f882da2a0057a40cbb87e194af74ab35681634a3d",
+ "head_commit": "bb663a20def2692236482a22b21d168d0d3aea76 (2026-10-11T17:00:06Z)",
+ "ids": [
+  "En05-A",
+  "En05-B",
+  "En05-C",
+  "En06-A",
+  "En06-B",
+  "En07-A"
+ ],
+ "openai": "OpenAI-authored external mathematics catalogue, linked ONLY by separation edges (to I ... IX-A etc.); boundary verbatim: 'This edge is a separation. It is not a",
+ "premises_imported": [],
+ "relevance_to_Q10": "none (no BRST / DRED / evanescent / counterterm content); cited as context only",
+ "XV_B_opened": false
+}

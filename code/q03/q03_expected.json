@@ -1,0 +1,1563 @@
+{
+ "certificates": {
+  "Q01_O2": {
+   "O2_kappa2_master_status": "Constructed",
+   "W_terms": {
+    "kappa0": 132,
+    "kappa1": 2148,
+    "kappa2": 15428
+   },
+   "classical_certs_content_identical_to_p23": {
+    "P13_boundary_identity": true,
+    "P13_brst_derivation": true,
+    "P13_gauge_fixing_map": true,
+    "P13_master_kappa2": true,
+    "P13_quartic_verified": true
+   },
+   "equation": "2(S0,S2) + (S1,S1) = 0 on S_inv (classical BV master at kappa^2)",
+   "exports_identical_to_p23": true,
+   "exports_sha256": {
+    "2": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+    "3": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+    "4": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc"
+   },
+   "item_status": {
+    "a_ell4": "Constructed",
+    "b_antibracket_expansion": "Constructed",
+    "c_ghost_antifield": "Constructed"
+   },
+   "items": {
+    "a_ell4": {
+     "argument": "XVI-P p23 ell_4 export (3360 terms, re-executed byte-identical) equals an INDEPENDENT Gamma-Gamma reconstruction term by term; the single normalisation (-2) is fixed by XVI-O's conformal probe and equals XVI-O's convention ell_4 = -2[eps^4](sqrt(-q)R); the export also reproduces XVI-O's probe exactly",
+     "detail": {
+      "export_on_XVI_O_probe_equal": true,
+      "full_polynomial_equal": true,
+      "mutation_one_term_x2_detected": true,
+      "n_terms_difference": 0,
+      "n_terms_export": 3360,
+      "n_terms_mine": 3360,
+      "normalisation_from_XVI_O_probe": "-2",
+      "route": "independent Gamma-Gamma series (this file), not XVI-P quartic.py"
+     },
+     "status": "Constructed"
+    },
+    "b_antibracket_expansion": {
+     "argument": "(S,S)|af0,grav at kappa^2 = 2 int W_2, W_2 = sum E(ell_4) s0 h + E(ell_3) s1 h (s2 = 0 derived) -- the explicit component form of 2(S0,S2)+(S1,S1); W_2 has 15428 terms and E_{c^mu}(W_2) = 0 exactly (independent XVI-Q jet engine; agrees with XVI-P grav_noether re-executed)",
+     "detail": {
+      "mutation_drop_s1_detected": true,
+      "mutation_scale_ell4_term_detected": true,
+      "unmutated": {
+       "kappa0": {
+        "E_c_W_terms": {
+         "0": 0,
+         "1": 0,
+         "2": 0,
+         "3": 0
+        },
+        "W_terms": 132,
+        "antibracket_af0_vanishes": true
+       },
+       "kappa1": {
+        "E_c_W_terms": {
+         "0": 0,
+         "1": 0,
+         "2": 0,
+         "3": 0
+        },
+        "W_terms": 2148,
+        "antibracket_af0_vanishes": true
+       },
+       "kappa2": {
+        "E_c_W_terms": {
+         "0": 0,
+         "1": 0,
+         "2": 0,
+         "3": 0
+        },
+        "W_terms": 15428,
+        "antibracket_af0_vanishes": true
+       }
+      }
+     },
+     "status": "Constructed"
+    },
+    "c_ghost_antifield": {
+     "argument": "re-executed exact XVI-P P13 master: af1/af2 (invariant and Psi-transformed variables) and the af0 ghost/gauge-fixing cell vanish at kappa^0..kappa^2 with s2 DERIVED zero in all sectors (not invented; answers XVI-O's 'Absent under inherited s'); s nilpotent exactly; 7 mutations each produce residuals. Evidence = re-execution of XVI-P's engine (no second independent engine for this sector in Q01).",
+     "kappa2_table": {
+      "af0_ghost_gf_transformed": true,
+      "af0_grav_Noether": true,
+      "af0_scalar_Noether": true,
+      "af1_invariant": true,
+      "af1_transformed": true,
+      "af2_invariant": true,
+      "af2_transformed": true
+     },
+     "s2": {
+      "b": "derived_zero",
+      "c": "derived_zero",
+      "cb": "derived_zero",
+      "h": "derived_zero",
+      "phi": "derived_zero"
+     },
+     "status": "Constructed"
+    }
+   },
+   "landmark": "XVI-Q",
+   "master_mutations": {
+    "alter_gf_shift": {
+     "claim_status": "Partial",
+     "n_residuals": 2
+    },
+    "corrupt_a2": {
+     "claim_status": "Partial",
+     "n_residuals": 1
+    },
+    "corrupt_ell4": {
+     "claim_status": "Partial",
+     "n_residuals": 1
+    },
+    "drop_cstar": {
+     "claim_status": "Partial",
+     "n_residuals": 6
+    },
+    "drop_s1_transport": {
+     "claim_status": "Partial",
+     "n_residuals": 2
+    },
+    "flip_odd_derivative_sign": {
+     "claim_status": "Partial",
+     "n_residuals": 6
+    },
+    "flip_sigma_c": {
+     "claim_status": "Partial",
+     "n_residuals": 6
+    }
+   },
+   "release": "Q01",
+   "scope": "classical, S_inv, through O(kappa^2), m = 0; NOT quantum, NOT the prepared S_D, NOT the insertion"
+  },
+  "Q01_guard": {
+   "algebra": {
+    "authorised_value": "1/80",
+    "cancel_factor": "(d**2 + 30*d - 34)/(32*(d - 1)*(d + 1))",
+    "d_free_rem": "2",
+    "domain_only_poly": "True"
+   },
+   "entry_points": [
+    "Poly.new (polynomial construction with d as generator or in the domain)",
+    "dred._check_rule (any internal rename/substitution of d)",
+    "PolyElement/FracElement evaluate/subs/__call__/compose on a ring/field with d as generator"
+   ],
+   "forms": [
+    "Matrix_Dummy",
+    "Matrix_y",
+    "Poly_shift",
+    "apart_list",
+    "apart_residue",
+    "captured_rem",
+    "compose",
+    "evalf",
+    "groebner",
+    "lambdify",
+    "limit",
+    "polys_ns_rem",
+    "reduced",
+    "rem",
+    "rep_eval",
+    "resultant",
+    "subs",
+    "xreplace"
+   ],
+   "landmark": "XVI-Q",
+   "missed": [],
+   "n_exprs": 4,
+   "n_forms": 18,
+   "release": "Q01"
+  },
+  "Q01_intake": {
+   "O1_ledger_sha_ok": true,
+   "XVI_P_p23_extracted_identical": true,
+   "XVI_P_p23_zip_ok": true,
+   "errata": [
+    {
+     "correction": "OVERCLAIM vs XVI-O bulk O.5: D04 (phi phi bubble) and D05a (phi phi grav tadpole) never evaluated (legitimately outside the ch projection by phi -> -phi parity), D06 only as the ghost self-energy inside P15_D13; D12 Missing. Bulk O.5 is open; carried to Q02.",
+     "id": "E1",
+     "item": "P23_O1_scope O.5 line 'all E=2 kappa^2 graphs evaluated'",
+     "severity": "medium"
+    },
+    {
+     "correction": "stale/incomplete: XVI-P ell_4 (3360 terms) reproduces XVI-O's conformal probe exactly (blocker [0]); remaining XVI-O blockers were [1] explicit O(kappa^2) antibracket expansion and the ghost/antifield sector -- addressed in Q01 O.2 (b),(c).",
+     "id": "E2",
+     "item": "P23 reason for O.1 not closable ('grav ell_4 Incomplete')",
+     "severity": "low"
+    },
+    {
+     "correction": "sympy.polys.rem namespace; polytools.rem captured before dred import; sp.reduced; sp.groebner; Matrix.subs d->Dummy then Dummy->4; Poly(...).rep.eval -- fixed in the XVI-Q guard (entry-point rule at the sympy.polys construction level).",
+     "id": "E3",
+     "item": "d guard bypasses",
+     "severity": "low"
+    },
+    {
+     "correction": "misses per-graph h.h counterterm edits and P6_entry_n_graphs edits -- the XVI-Q gate value-checks every certified number it imports. Also: p23 accepted p23_conventions.py UNPINNED (its sha was not in P23_PINNED_SHA256; README/REBUILD likewise) -- the XVI-Q gate pins every conventions/expected-values file it relies on.",
+     "id": "E4",
+     "item": "p23 gate",
+     "severity": "low"
+    },
+    {
+     "correction": "omits scaleless 5-leg-vertex tadpoles (zero in DRED but must be listed, never Missing->zero); recorded for the P.6 continuation (out of Q01 scope).",
+     "id": "E5",
+     "item": "P.6 entry kappa^3 inventory",
+     "severity": "low"
+    },
+    {
+     "correction": "stale p14r status: D12 was evaluated in XVI-P p15 (vanishing_under_declared_prescription, derived; two routes, IR-mass and cutoff analysis) and independently confirmed in XVI-Q Q02; XVI-O never labelled D12 'Missing' (provisional_listed, unevaluated).",
+     "id": "E6",
+     "item": "P23_O1_scope O.5 evidence 'D12 Missing never zero per P14'",
+     "severity": "low"
+    },
+    {
+     "correction": "D04 has two internal lines of different species and no automorphism fixing the external legs: symmetry factor 1 (used in Q02; irrelevant to the value since D04 = 0 exactly).",
+     "id": "E7",
+     "item": "XVI-O diagram_inventory D04 sym_factor '1/2' (Unverified)",
+     "severity": "low"
+    }
+   ],
+   "landmark": "XVI-Q",
+   "n_extracted": 206,
+   "n_pins": 33,
+   "pins": {
+    "provenance/XVI-N/RELEASE_STATUS_r10.json": true,
+    "provenance/XVI-N/XVI-N.tex": true,
+    "provenance/XVI-O/RELEASE_STATUS.json": true,
+    "provenance/XVI-O/certificates/O2_classical_consistency.json": true,
+    "provenance/XVI-O/certificates/O2_eh_quartic_probe.json": true,
+    "provenance/XVI-O/certificates/O2_eh_v4_general.json": true,
+    "provenance/XVI-O/certificates/O2_kappa2_master_check.json": true,
+    "provenance/XVI-O/certificates/O2_scalar_action_authoritative.json": true,
+    "provenance/XVI-O/certificates/O2_vertex_catalogue.json": true,
+    "provenance/XVI-O/ledgers/O_quantum_target.json": true,
+    "provenance/XVI-O/ledgers/amplitude_status.json": true,
+    "provenance/XVI-O/ledgers/diagram_inventory.json": true,
+    "provenance/XVI-O/ledgers/symmetry_defect.json": true,
+    "provenance/XVI-O/manuscript/notes/quantum_convention_sheet.tex": true,
+    "provenance/XVI-P/RELEASE_STATUS_p23.json": true,
+    "provenance/XVI-P/XVI-P-p23-source-only.zip": true,
+    "provenance/XVI-P/certificates/P13_boundary_identity.json": true,
+    "provenance/XVI-P/certificates/P13_brst_derivation.json": true,
+    "provenance/XVI-P/certificates/P13_gauge_fixing_map.json": true,
+    "provenance/XVI-P/certificates/P13_master_kappa2.json": true,
+    "provenance/XVI-P/certificates/P13_quartic_verified.json": true,
+    "provenance/XVI-P/certificates/P14_amplitude_rules.json": true,
+    "provenance/XVI-P/certificates/P14_counterterm_domain.json": true,
+    "provenance/XVI-P/certificates/P15_D13.json": true,
+    "provenance/XVI-P/certificates/P15_batchA.json": true,
+    "provenance/XVI-P/certificates/P16_batchC.json": true,
+    "provenance/XVI-P/certificates/P18_D11.json": true,
+    "provenance/XVI-P/certificates/P18_hh_slot.json": true,
+    "provenance/XVI-P/certificates/P19_defect.json": true,
+    "provenance/XVI-P/certificates/P22_evanescent.json": true,
+    "provenance/XVI-P/certificates/P23_O1_scope.json": true,
+    "provenance/XVI-P/ell4_generating_polynomial.srepr": true,
+    "provenance/XVI-P/independent_rebuild_report_p23.json": true
+   },
+   "pins_ok": true,
+   "registration": "locally (this file only); NOT published, NOT pushed; no GitHub edit",
+   "release": "Q01"
+  },
+  "Q01_release": {
+   "O1_checklist_after_Q01": {
+    "O.2": "Constructed (XVI-Q Q01)",
+    "O.4": "inventory (XVI-P; errata E1)",
+    "O.5": "bulk OPEN (D04, D05a, D06 bulk, D12 Missing)",
+    "O.6": "bulk statement open (ST4a/ST4b)",
+    "O.7": "bulk CT solution open",
+    "enlarge": "not triggered at kappa^2 (XVI-P p23)"
+   },
+   "O1_closure": "NOT_CLOSED",
+   "XVI_Q_registered": "locally (registration/local_registration.json); not published",
+   "bulk_symmetry_restored": false,
+   "claim_status": "Q01: O.2 classical kappa^2 BV master 2(S0,S2)+(S1,S1)=0 on S_inv Constructed in XVI-Q: (a) full ell_4 independently reconstructed (3360/3360) and matched to XVI-O's probe/convention; (b) explicit af-0 antibracket expansion E_c(W_2)=0 exactly on an independent engine; (c) ghost/antifield cells via re-executed exact P13 master with s2 derived zero. XVI-O's own O.2 record is unchanged (read-only). O.1 NOT_CLOSED (bulk O.5, retained identity O.6/O.7 open -> Q02); bulk symmetry not restored.",
+   "date": "2026-10-10",
+   "execution_pass": true,
+   "flags": {
+    "O2_antibracket_expansion_constructed": "earned",
+    "O2_ell4_constructed": "earned",
+    "O2_ghost_antifield_constructed": "earned",
+    "O2_kappa2_master_constructed": "earned",
+    "author_rebuild_passed": "see reproducibility",
+    "bulk_O5_evaluated": "not_earned",
+    "bulk_identity_verified": "not_earned",
+    "d_guard_q01_verified": "earned",
+    "independent_rebuild_passed": "pending",
+    "intake_pinned": "earned"
+   },
+   "hard_stops": {
+    "Missing_never_zero": true,
+    "O1_closure": "NOT_CLOSED",
+    "Route_B_discharged": false,
+    "XIV_J_opened": false,
+    "XV_B_opened": false,
+    "bulk_symmetry_restored": false,
+    "insertion": "frozen"
+   },
+   "landmark": "XVI-Q",
+   "publication": "accepted",
+   "release": "Q01",
+   "scope": "classical, S_inv, through O(kappa^2), m = 0; NOT quantum, NOT the prepared S_D, NOT the insertion",
+   "symmetry_restored": false,
+   "value_checks": {
+    "E_c_W_zero": true,
+    "O2_items": true,
+    "W_terms": true,
+    "antibracket_mutations": true,
+    "classical_certs_identical": true,
+    "ell4_full_equal": true,
+    "ell4_mutation": true,
+    "ell4_n_terms": true,
+    "ell4_normalisation": true,
+    "ell4_probe_equal": true,
+    "errata_recorded": true,
+    "exports_sha": true,
+    "guard": true,
+    "guard_algebra": true,
+    "intake_O1_ledger": true,
+    "intake_extracted_identical": true,
+    "intake_pins": true,
+    "kappa2_table_all_true": true,
+    "master_mutations": true,
+    "s2_derived_zero": true
+   },
+   "version_label": "XVI-Q Q01"
+  },
+  "Q02_D04_scrutiny": {
+   "D05a_D12": "genuine one-propagator tadpoles: no external momentum flows through the loop line, so the integral is scaleless; omega = 2 (D05a) / 2, 4 (D12) power divergences, no logarithmic member -> no 1/eps on either side; 0 is not a UV/IR pole cancellation. (Unlike D04, whose bubble is NOT scaleless.)",
+   "E7": "symmetry factor of D04 is 1 (distinct-species internal lines; no automorphism with labelled external legs). XVI-O's '1/2' was Unverified and never used for a value; XVI-P never evaluated D04 (excluded from ch by phi-parity) and its D11 (two identical phi lines) keeps S_f = 1/2 correctly: NO earlier value changes.",
+   "N_DRED_equals_2p2(l-p)^2": true,
+   "T3_zero_by_Ward_identity": true,
+   "all_mutations_nonzero": true,
+   "cases": {
+    "CDR (n=D, c=1/(D-2))": {
+     "value_over_master": "0",
+     "zero": true
+    },
+    "DRED (n=4, c=1/2) -- declared": {
+     "value_over_master": "0",
+     "zero": true
+    },
+    "GAUGE T3 piece g3=1 (expected 0: l^a V_ab = p_b q^2 + q_b p^2, every term carries q^2 -> scaleless)": {
+     "value_over_master": "0",
+     "zero": true
+    },
+    "MUT mixed scheme (n=4, c=1/(D-2))": {
+     "value_over_master": "pp**2*(D - 4)/(2*(D - 2))",
+     "zero": false
+    },
+    "MUT non-de Donder gauge T4 piece (beta != -2), g4=1": {
+     "value_over_master": "pp**2*(D - 1)",
+     "zero": false
+    },
+    "MUT non-de Donder gauge T5 piece, g5=1": {
+     "value_over_master": "pp**2*(D - 2)*(D - 1)/8",
+     "zero": false
+    },
+    "MUT non-minimal coupling lam=xi (CDR)": {
+     "value_over_master": "-pp**2*xi",
+     "zero": false
+    },
+    "MUT vertex trace normalisation alpha_v=1/2": {
+     "value_over_master": "pp**2/4",
+     "zero": false
+    }
+   },
+   "declared_zero": true,
+   "engine_mutation_drop_trace": "-I/8",
+   "engine_routes": {
+    "N_factorised": "(p0**2 - p1**2 - p2**2 - p3**2)*(l0**2 - 2*l0*p0 - l1**2 + 2*l1*p1 - l2**2 + 2*l2*p2 - l3**2 + 2*l3*p3 + p0**2 - p1**2 - p2**2 - p3**2)/2",
+    "N_proportional_to_p2_times_scalar_denominator": true,
+    "route1_A": "0",
+    "route2_IBP_A": "0",
+    "routes_agree": true
+   },
+   "landmark": "XVI-Q",
+   "literature": {
+    "agreement": "AGREES: declared case 0; xi enters linearly only; non-de Donder piece nonzero",
+    "reference": "M. B. Froeb, Class. Quantum Grav. 35 (2018) 055006, arXiv:1710.00839 (flat space, general gauge, n dims)",
+    "statement": "graviton-loop scalar self-energy from the de Donder propagator parts vanishes identically for xi = 0, m = 0 (in accordance with Kahya & Woodard 2007); m = 0 xi^2 terms vanish; gauge-parameter pieces contribute (gauge-dependent 1PI)"
+   },
+   "mechanism_numerator_general_c_n": "-c*n**2*pl**2 + 2*c*n**2*pl*pp - c*n**2*pp**2 + 4*c*n*pl**2 - 8*c*n*pl*pp + 4*c*n*pp**2 - 4*c*pl**2 + 8*c*pl*pp - 4*c*pp**2 + 2*ll*pp + n*pl**2 - 2*n*pl*pp + n*pp**2 - 2*pl**2",
+   "mechanism_reading": "V.P.V' = 2 p^2 (l-p)^2 + (n-2)(p.q)^2 [1 - c(n-2)]: trace-mode piece cancels iff c = 1/(n-2)",
+   "release": "Q02",
+   "xi_dependence_linear_only (Froeb: m=0 xi^2 terms vanish)": true
+  },
+  "Q02_D12_reconciliation": {
+   "XVI_O": "inventory 'provisional_listed', sym_factor 1/2 'Unverified', never evaluated; XVI-O ledgers do NOT label D12 'Missing' (searched: O_quantum_target, amplitude_status, symmetry_defect, diagram_inventory)",
+   "XVI_P_p14r": "Missing (p14r)",
+   "XVI_P_p15": "vanishing_under_declared_prescription",
+   "XVI_P_p15_derivation": "certificates/P15_batchA.json graphs.D12 (route 1 frozen-dred lift + S0, route 2 symmetric integration, IR-mass and cutoff analysis)",
+   "XVI_P_p23_stale_line_present": true,
+   "XVI_Q_Q02_independent": {
+    "IR_pole": "0",
+    "UV_pole": "0",
+    "integrand": "phi phi self-contraction on V_hh_phi_phi; numerator carries l (phi legs)",
+    "logarithmic_member": false,
+    "loop_numerator_degree_in_l": 2,
+    "omegas": [
+     2,
+     4
+    ],
+    "status": "Evaluated_vanishing_under_declared_prescription",
+    "value": "0 (DERIVED: every member int (l^2)^j/l^2 is scaleless with omega = 2 + 2j > 0 -- a pure power divergence; no 1/eps on the UV or the IR side; MS-bar counterterm 0)"
+   },
+   "consistent": true,
+   "graph": "D12_hh_scalar_tadpole",
+   "landmark": "XVI-Q",
+   "reconciliation": "'Missing' was the p14r status (integrand only, no value) and survives only as stale text in XVI-P P23_O1_scope's O.5 evidence line (self-contradictory with P15, already flagged by the p23 review). D12 was EVALUATED in XVI-P p15: vanishing_under_declared_prescription by two routes with IR-mass and cutoff analysis; Q02 confirms independently on the engine integrand: every member int (l^2)^j / l^2 with omega in {2, 4}, no logarithmic member, so neither a UV nor an IR pole: DR value 0 DERIVED (not by convention; Missing is never set to zero). Recorded as erratum E6; XVI-O and XVI-P untouched.",
+   "release": "Q02",
+   "status": "Evaluated_vanishing_under_declared_prescription"
+  },
+  "Q02_O1": {
+   "O1_closure": "CLOSED_PENDING_INDEPENDENT_REVIEW",
+   "O1_closure_confirmed": false,
+   "all_earned": true,
+   "closure_reasons_answered": {
+    "D11 matter-loop kernel counterterm Constructed_subsector_under_prescription (o70-sync; four math prerequisites); NOT completed bulk quantum sector; kernel Ward != bulk ST4b.": "ANSWERED: the bulk sector (hh, phi phi, cbar c, K'.c, one-point) is evaluated, not only the D11 kernel.",
+    "No retained quantum identity is verified (O.6 Unresolved).": "ANSWERED: identity verified on the retained two-point sector (items 1, 5).",
+    "O.4 is manually_specified_partially_checked_inventory \u2014 not a completeness claim.": "ANSWERED: completeness by mechanical enumeration of rows AND graphs (two independent enumerations).",
+    "One-loop antifield source channels at kappa^2 remain Unresolved after withdrawing invalid gh=-1 assignments.": "ANSWERED: one-loop antifield channels derived from vertices: K'.c = D13 (evaluated); phi*'.c odd (0); c*', cbar*', b* give no E <= 2 graph (independent enumeration); no (Phi, Phi*) assignment used.",
+    "ST4a local matching Unresolved; functional ST4b not claimed; kernel_two_point_Ward Constructed (kernel only).": "ANSWERED: ST4a local matching = explicit CT in the declared domain; ST4b on the retained two-point projection verified (the FUNCTIONAL ST4b, all n-point, is NOT claimed).",
+    "XVI-M selected-image matchings are Target I data, not sector amplitudes (M.8 Unresolved).": "ANSWERED: XVI-M selected-image data are not used anywhere (graphs come from the action's vertices).",
+    "XVI-N supplies only classical (S_inv,S_inv)=O(kappa^2) through O(kappa) truncation; not a quantum Ward/BV identity.": "ANSWERED: the quantum identity is the EA-route (S,Gamma_1) = A_1, not XVI-N's classical truncation.",
+    "kappa^2 classical master Partial: (S0,S0)/(S0,S1) Constructed; 2(S0,S2)+(S1,S1) Partial (scalar OK; grav ell_4 Incomplete) --- not full Constructed.": "ANSWERED: kappa^2 master Constructed in Q01 (incl. grav ell_4)."
+   },
+   "confirmation_condition": "Q02 independent rebuild PASS (until then: pending independent review)",
+   "downgrade_rules": {
+    "If a required amplitude is omitted without individual justification, status fails.": "respected: no amplitude omitted; every row/graph individually justified",
+    "If closure remains unknowable after O.6 statement, keep Provisional.": "not applicable: closure decided by the checks above"
+   },
+   "enlarge_rules": {
+    "If classical kappa^2 consistency fails, downgrade or repair O.2 before quantum contractions.": {
+     "argument": "classical kappa^2 consistency holds (Q01).",
+     "triggered": false
+    },
+    "If the stated identity constrains n-point or higher-loop pieces at the same coupling order, enlarge the target before Constructed.": {
+     "argument": "At one loop the kappa^2 component of (S,Gamma_1) is (S_0, Gamma_1[kappa^2]) + (S_1, Gamma_1[kappa^1]) (S_k: tree kappa^k terms incl. the seeds D07-D09). One-loop graphs with E external legs are kappa^E (every vertex kappa^{legs-2}, p14r power counting; XVI-P p23): Gamma_1[kappa^1] is one-point only and is 0 (D14a-c), Gamma_1[kappa^2] is two-point only (three-point starts at kappa^3; one-loop kappa^2 three-point sector empty). Hence the identity at this order constrains no n >= 3 or higher-loop piece.",
+     "triggered": false
+    },
+    "Never close the sector by silently identifying XVI-M selected graph with an action graph via ell_3.": {
+     "argument": "no XVI-M graph is used or identified with an action graph; XVI_M pin unchanged; every graph is built from S_inv vertices.",
+     "respected": true
+    }
+   },
+   "items": [
+    {
+     "XVI_O_status": "Constructed_as_statement",
+     "earned": true,
+     "evidence": "XVI-O ST4a/ST4b and (S,Gamma_1) = A_1 (retained_quantum_identity.tex) stated on the bulk two-point retained sector; 23 gh0/gh1 rows enumerated mechanically",
+     "item": "State retained quantum identity",
+     "owner": "O.6"
+    },
+    {
+     "XVI_O_status": "manually_specified_partially_checked_O.4",
+     "earned": true,
+     "evidence": "every gh0/gh1 one/two-field row classified with an individual justification; independent 1PI enumeration from the loop-capable vertices: E2 = 9, E1 = 3 (== XVI-P 9 / 3); antifield vertices c*cc, phi*c phi give no E <= 2 graph",
+     "item": "List amplitudes constrained by identity",
+     "owner": "O.4"
+    },
+    {
+     "XVI_O_status": "Provisional_foundation_repaired_master_Partial",
+     "earned": true,
+     "evidence": "XVI-Q Q01: 2(S0,S2)+(S1,S1)=0 Constructed ((a) ell_4, (b) explicit antibracket expansion, (c) ghost/antifield); Q01 independent rebuild PASSED",
+     "item": "S_inv^{[2]} classical consistency",
+     "owner": "O.2"
+    },
+    {
+     "XVI_O_status": "D11_kernel_Constructed_subsector_under_prescription_o70-sync_bulk_incomplete",
+     "earned": true,
+     "evidence": "all 9 E=2 + 3 E=1 graphs have exact values: D01, D02, D03, D11, D13, D14a-c (XVI-P, pinned); D04 (Q02, 0 by engine routes 1+2 and independent route 4, with nonzero mutations, literature agreement); D05a (Q02, derived 0); D06 (Q02 == XVI-P Sigma); D12 reconciled (derived 0)",
+     "item": "Evaluate inventory graphs",
+     "owner": "O.5"
+    },
+    {
+     "XVI_O_status": "Unresolved_ST4a_ST4b_split",
+     "earned": true,
+     "evidence": "ST4a: 11-direction MS-bar CT in the declared p14r domain over Q(i) (phi.phi = 0 now earned); ST4b: c.h defect ZERO exactly in d (P19, x = 0), c.b = ghost equation (Sigma == D06), c.cbar* unreachable, c.phi parity; full sigma_0 closure of the complete MS-bar CT in every gh+1 sector (p20); cohomology of the domain 0; no free-EOM equivalence used",
+     "item": "Demonstrate identity remainder cancellation / CT solution",
+     "owner": "O.6/O.7"
+    },
+    {
+     "XVI_O_status": "rule_active_not_triggered",
+     "earned": true,
+     "evidence": "rule 1 evaluated below: not triggered",
+     "item": "Enlarge target if identity requires more legs/orders",
+     "owner": "O.1"
+    }
+   ],
+   "landmark": "XVI-Q",
+   "ledger_closure_check_verbatim": {
+    "checklist": [
+     {
+      "item": "State retained quantum identity",
+      "owner": "O.6",
+      "status": "Constructed_as_statement"
+     },
+     {
+      "item": "List amplitudes constrained by identity",
+      "owner": "O.4",
+      "status": "manually_specified_partially_checked_O.4"
+     },
+     {
+      "item": "S_inv^{[2]} classical consistency",
+      "owner": "O.2",
+      "status": "Provisional_foundation_repaired_master_Partial"
+     },
+     {
+      "item": "Evaluate inventory graphs",
+      "owner": "O.5",
+      "status": "D11_kernel_Constructed_subsector_under_prescription_o70-sync_bulk_incomplete"
+     },
+     {
+      "item": "Demonstrate identity remainder cancellation / CT solution",
+      "owner": "O.6/O.7",
+      "status": "Unresolved_ST4a_ST4b_split"
+     },
+     {
+      "item": "Enlarge target if identity requires more legs/orders",
+      "owner": "O.1",
+      "status": "rule_active_not_triggered"
+     }
+    ],
+    "downgrade_rules": [
+     "If closure remains unknowable after O.6 statement, keep Provisional.",
+     "If a required amplitude is omitted without individual justification, status fails."
+    ],
+    "enlarge_rules": [
+     "If the stated identity constrains n-point or higher-loop pieces at the same coupling order, enlarge the target before Constructed.",
+     "If classical kappa^2 consistency fails, downgrade or repair O.2 before quantum contractions.",
+     "Never close the sector by silently identifying XVI-M selected graph with an action graph via ell_3."
+    ],
+    "outcome": "NOT_CLOSED",
+    "previous_outcome": "NOT_CLOSED",
+    "question": "Does this sector close under the retained quantum identity?",
+    "reason": [
+     "No retained quantum identity is verified (O.6 Unresolved).",
+     "XVI-N supplies only classical (S_inv,S_inv)=O(kappa^2) through O(kappa) truncation; not a quantum Ward/BV identity.",
+     "XVI-M selected-image matchings are Target I data, not sector amplitudes (M.8 Unresolved).",
+     "One-loop antifield source channels at kappa^2 remain Unresolved after withdrawing invalid gh=-1 assignments.",
+     "O.4 is manually_specified_partially_checked_inventory \u2014 not a completeness claim.",
+     "kappa^2 classical master Partial: (S0,S0)/(S0,S1) Constructed; 2(S0,S2)+(S1,S1) Partial (scalar OK; grav ell_4 Incomplete) --- not full Constructed.",
+     "ST4a local matching Unresolved; functional ST4b not claimed; kernel_two_point_Ward Constructed (kernel only).",
+     "D11 matter-loop kernel counterterm Constructed_subsector_under_prescription (o70-sync; four math prerequisites); NOT completed bulk quantum sector; kernel Ward != bulk ST4b."
+    ],
+    "update": "o70-sync: D11 kernel counterterm earned under prescription; bulk still NOT_CLOSED; symmetry_restored=false"
+   },
+   "not_implied": [
+    "bulk_symmetry_restored (all orders / all n-point): false",
+    "finite renormalised amplitudes with non-QdS (epsilon-scalar) external components: the p22 Q4S-trace O(eps)x pole remnant stays disclosed (identity unaffected: projected Q4S sum 0)",
+    "three-point / higher orders (P.6), prepared S_D, insertion"
+   ],
+   "release": "Q02",
+   "remaining": [],
+   "scope": "one-loop kappa^2 bulk two-point sector (hh, phi phi, cbar c, K'.c, one-point) of S_inv, m = 0, frozen gauge fermion, under the XVI-P declared prescription (DRED with opaque d, MS-bar, Feynman +i0, p22 evanescent counterterms; external momenta in QdS); insertion frozen (XVI-N massless obstruction untouched)"
+  },
+  "Q02_bulk_graphs": {
+   "D04": {
+    "N_factorised": "(p0**2 - p1**2 - p2**2 - p3**2)*(l0**2 - 2*l0*p0 - l1**2 + 2*l1*p1 - l2**2 + 2*l2*p2 - l3**2 + 2*l3*p3 + p0**2 - p1**2 - p2**2 - p3**2)/2",
+    "N_invariant_form": {
+     "(l.l)^0(l.p)^0(p.p)^2": "1/2",
+     "(l.l)^0(l.p)^1(p.p)^1": "-1",
+     "(l.l)^0(l.p)^2(p.p)^0": "0",
+     "(l.l)^1(l.p)^0(p.p)^1": "1/2",
+     "(l.l)^1(l.p)^1(p.p)^0": "0",
+     "(l.l)^2(l.p)^0(p.p)^0": "0"
+    },
+    "N_proportional_to_p2_times_scalar_denominator": true,
+    "laurent": {
+     "MSbar_finite": "0",
+     "UV_pole": "0",
+     "coefficient_of_L": "0",
+     "local": "0"
+    },
+    "reading": "N cancels the scalar propagator: D04 = (p^2/2) * int 1/l^2 (graviton line) = scaleless, omega = 2 power divergence, no log member: D04 = 0 exactly in d by BOTH routes (route 1 uses no scaleless rule)",
+    "route1_A": "0",
+    "route1_fit_exact": true,
+    "route1_fp": {},
+    "route1_rows": 6,
+    "route2_IBP_A": "0",
+    "route2_invariant_fit_identical": true,
+    "route3_hand_contraction": "2*p.p*q.q  (= 2 p^2 (l-p)^2 with q = l - p; engine N = 1/2 p^2 (l-p)^2: same shape, engine vertex normalisation)",
+    "routes_agree": true,
+    "status": "Evaluated_vanishing_under_declared_prescription",
+    "structure": "Gamma_1^{phi phi}(p) = kappa^2 A(d) (p^2)^2 MB  (no evanescent structure: Gt.p = 0)",
+    "value": "0"
+   },
+   "D06": {
+    "XVI_P_P15_ghost_self_energy_coefficients": {
+     "S1": "-(4*d - 7)/(8*(d - 1))",
+     "S2": "3*(d - 2)/(8*(d - 1))",
+     "SE": "-3/(8*(d - 1))"
+    },
+    "equals_XVI_P_P15_exactly": true,
+    "fit": {
+     "S1_delta^rho_nu_p4": "-(4*d - 7)/(8*(d - 1))",
+     "S2_p^rho_p_nu_p2": "3*(d - 2)/(8*(d - 1))",
+     "SE_Gt^rho_nu_p4": "-3/(8*(d - 1))"
+    },
+    "fit_exact": true,
+    "laurent": {
+     "S1_delta^rho_nu_p4": {
+      "A_exact_d": "-(4*d - 7)/(8*(d - 1))",
+      "MSbar_finite": "3*L/8 - 2/3",
+      "UV_pole": "-3/8",
+      "coefficient_of_L": "3/8",
+      "local": "-2/3"
+     },
+     "S2_p^rho_p_nu_p2": {
+      "A_exact_d": "3*(d - 2)/(8*(d - 1))",
+      "MSbar_finite": "5/12 - L/4",
+      "UV_pole": "1/4",
+      "coefficient_of_L": "-1/4",
+      "local": "5/12"
+     },
+     "SE_Gt^rho_nu_p4": {
+      "A_exact_d": "-3/(8*(d - 1))",
+      "MSbar_finite": "L/8 - 1/3",
+      "UV_pole": "-1/8",
+      "coefficient_of_L": "1/8",
+      "local": "-1/3"
+     }
+    },
+    "reading": "full one-loop cbar c two-point under the declared prescription; independent construction (this file) equals XVI-P P15_D13 ghost self-energy (route 2 there; ghost equation verified there) exactly in d",
+    "rows": 96
+   },
+   "Gamma1_convention": "i Gamma_1 = graph sum; coefficients per kappa^2 in units of MB = Ihat(1,1) = 1/eps + 2 - L + O(eps)",
+   "landmark": "XVI-Q",
+   "mutations": {
+    "D04_S_f_half_still_zero (zero is S_f-independent; not a detector)": true,
+    "D04_drop_trace_part_changes_A": true,
+    "D04_drop_trace_part_value": "-I/8",
+    "D06_S_f_half_changes_coefficients": true
+   },
+   "prescription": "XVI-P p14r/p22: DRED (QdS loop momenta, Q4S vertex indices), d opaque (qguard), MS-bar, Feynman +i0, m = 0 (XVI-O bulk_mass_policy; XVI-N massless obstruction: insertion untouched)",
+   "release": "Q02",
+   "symmetry_factors": {
+    "D04": "1 (two distinct-species internal lines; no automorphism fixing external legs; XVI-O's '1/2 Unverified' corrected)",
+    "D05a": "1/2",
+    "D06": "1 (as XVI-O)",
+    "D12": "1/2"
+   },
+   "tadpoles": {
+    "D05a": {
+     "IR_pole": "0",
+     "UV_pole": "0",
+     "integrand": "h h self-contraction on V_hh_phi_phi; a2 has no derivative of h",
+     "logarithmic_member": false,
+     "loop_numerator_degree_in_l": 0,
+     "numerator_l_independent": true,
+     "omegas": [
+      2
+     ],
+     "status": "Evaluated_vanishing_under_declared_prescription",
+     "value": "0 (DERIVED: every member int (l^2)^j/l^2 is scaleless with omega = 2 + 2j > 0 -- a pure power divergence; no 1/eps on the UV or the IR side; MS-bar counterterm 0)"
+    },
+    "D12": {
+     "IR_pole": "0",
+     "UV_pole": "0",
+     "integrand": "phi phi self-contraction on V_hh_phi_phi; numerator carries l (phi legs)",
+     "logarithmic_member": false,
+     "loop_numerator_degree_in_l": 2,
+     "omegas": [
+      2,
+      4
+     ],
+     "status": "Evaluated_vanishing_under_declared_prescription",
+     "value": "0 (DERIVED: every member int (l^2)^j/l^2 is scaleless with omega = 2 + 2j > 0 -- a pure power divergence; no 1/eps on the UV or the IR side; MS-bar counterterm 0)"
+    }
+   }
+  },
+  "Q02_bulk_identity": {
+   "E2_enumeration_XVI_P_p23": {
+    "enumerated": 9,
+    "equal": true,
+    "frozen": 9,
+    "missing_from_enumeration": [],
+    "not_in_frozen_inventory": []
+   },
+   "ST4a": {
+    "Kc": {
+     "4D_poles_in_p14r_cK_basis": true,
+     "E2_pole": "1/16",
+     "E2_pole_plus_CT_zero": true,
+     "graphs": [
+      "D13"
+     ],
+     "outcome": "cancellable",
+     "p22_Kc_E2_CT": "-1/16"
+    },
+    "cbc": {
+     "D06_equals_XVI_P_Sigma": true,
+     "SE_pole_plus_p22_CT_zero": true,
+     "counterterm": {
+      "4D (delta p^4, p^rho p_nu p^2)": {
+       "S1_delta^rho_nu_p4": "3/8",
+       "S2_p^rho_p_nu_p2": "-1/4"
+      },
+      "evanescent SE (p22 ghost-equation partner)": "1/8"
+     },
+     "graphs": [
+      "D06"
+     ],
+     "outcome": "cancellable",
+     "poles": {
+      "S1_delta^rho_nu_p4": "-3/8",
+      "S2_p^rho_p_nu_p2": "1/4",
+      "SE_Gt^rho_nu_p4": "-1/8"
+     }
+    },
+    "hh": {
+     "counterterm": "p14r 4D h.h MS-bar directions + p22 evanescent h.h operators (sum coefficients pinned in P22)",
+     "evidence_flags": {
+      "batchA_evaluated": true,
+      "batchC_evaluated": true
+     },
+     "graphs": [
+      "D01",
+      "D02",
+      "D03",
+      "D11",
+      "D12"
+     ],
+     "outcome": "cancellable",
+     "values": {
+      "D01_D03": "XVI-P P16_batchC (evaluated)",
+      "D02": "0 derived (P15_batchA)",
+      "D11": "XVI-P P18_D11 (matching M1-M3; evanescent EV_M2)",
+      "D12": "0 (DERIVED: every member int (l^2)^j/l^2 is scaleless with omega = 2 + 2j > 0 -- a pure power divergence; no 1/eps on the UV or the IR side; MS-bar counterterm 0) ; XVI-P P15_batchA: vanishing_under_declared_prescription"
+     }
+    },
+    "onepoint_h": {
+     "graphs": [
+      "D14a",
+      "D14b",
+      "D14c"
+     ],
+     "outcome": "zero",
+     "value": "0 derived (P15_batchA)"
+    },
+    "phiphi": {
+     "D04": "0",
+     "D04_routes_agree": true,
+     "D05a": "0 (DERIVED: every member int (l^2)^j/l^2 is scaleless with omega = 2 + 2j > 0 -- a pure power divergence; no 1/eps on the UV or the IR side; MS-bar counterterm 0)",
+     "counterterm": "z_phiphi = 0 (none needed; the declared phi phi domain {phi Box^2 phi} is untouched)",
+     "graphs": [
+      "D04",
+      "D05a"
+     ],
+     "outcome": "zero",
+     "total_pole": "0"
+    }
+   },
+   "ST4b": {
+    "ST4b_ch": {
+     "outcome": "zero",
+     "projected_identity_verified": "earned",
+     "source": "XVI-P P19_defect: projected defect ZERO exactly in d; counterterm solve outcome ZERO"
+    },
+    "ST4b_ghost_equation": {
+     "D06_is_that_Sigma": true,
+     "c_b_closed": true,
+     "ghost_equation_agree": true,
+     "outcome": "zero",
+     "source": "XVI-P P15_D13 ghost_equation (64 components, exact in d) + P22 a_closure c.b (closed; exact in the gt sector); Sigma there == D06 here exactly"
+    },
+    "ST4b_unreachable": {
+     "outcome": "zero",
+     "source": "P22 a_closure c.cbs"
+    }
+   },
+   "XVI_O_ST4_definition_verbatim": {
+    "ST4a": "Gamma_1,local = sum z_i C_i (gh=0)",
+    "ST4b": "P_ret(S,C)=-P_ret A_1 (gh(C)=0; defect gh=1)",
+    "withdrawn_OR": "local_OR_defect single target"
+   },
+   "bulk_counterterms": {
+    "Kc": "p14r c.K' + p22 E2 (-1/16)",
+    "cbc": {
+     "4D": {
+      "S1_delta^rho_nu_p4": "3/8",
+      "S2_p^rho_p_nu_p2": "-1/4"
+     },
+     "SE": "1/8"
+    },
+    "hh": "p14r MS-bar h.h + p22 evanescent (pinned)",
+    "onepoint": "0",
+    "phiphi": "0"
+   },
+   "bulk_counterterms_explicit": {
+    "all_in_Q_i": true,
+    "cbc_from_D06_equals_P15_orientation_poles": [
+     true,
+     true
+    ],
+    "cbc_orientation_ratio_routeG_over_P15": [
+     "-1",
+     "-1"
+    ],
+    "coefficients": {
+     "c.K#0": "0",
+     "c.K#1": "-3/8",
+     "c.K#2": "1/4",
+     "c.cb#0": "-3/8",
+     "c.cb#1": "1/4",
+     "h.h#0": "49*I/480",
+     "h.h#1": "41*I/160",
+     "h.h#2": "-49*I/240",
+     "h.h#3": "-41*I/80",
+     "h.h#4": "43*I/120",
+     "phi.phi#0": "0"
+    },
+    "convention": "Ghat coordinates on the p14r kappa^2 densities (G = kappa^2 N_eps Ghat MB); MS-bar CT = -pole; c.cb in the route-G (c,cb) orientation used by the p20 full closure",
+    "domain_sectors_and_sizes": {
+     "c.K": 3,
+     "c.cb": 2,
+     "h.h": 5,
+     "phi.phi": 1
+    },
+    "evanescent_p22": {
+     "Kc_E2": "-1/16",
+     "ccb_SE": "1/8",
+     "hh_sum": {
+      "g4_mn gt_rs (p.p)^2": "-7*I/120",
+      "g4_mr gt_ns (p.p)^2": "-I/160",
+      "g4_rs gt_mn (p.p)^2": "-7*I/120",
+      "gt_mn gt_rs (p.p)^2": "I/160",
+      "gt_mn p_r p_s (p.p)^1": "7*I/120",
+      "gt_mr gt_ns (p.p)^2": "I/160",
+      "gt_mr p_n p_s (p.p)^1": "I/160",
+      "gt_rs p_m p_n (p.p)^1": "7*I/120"
+     },
+     "role": "outside the p14r 4D domain (disclosed p22 contract revision); subtract the evanescent poles only; NOT needed for the identity (P19 ch solve x = 0; evanescent poles decouple from the ch slots)"
+    },
+    "every_label_in_domain": true,
+    "n_directions": 11,
+    "ok": true,
+    "phiphi": "0 from Q02 D04 + D05a (in P19 the phi.phi coordinate 0 was a placeholder 'not an input'; now earned)"
+   },
+   "bulk_identity_outcome": "cancellable",
+   "independent_graph_enumeration": {
+    "E1": [
+     [
+      [
+       "V3_grav"
+      ],
+      [
+       "h-h"
+      ],
+      [
+       "h"
+      ]
+     ],
+     [
+      [
+       "V_cb_c_h"
+      ],
+      [
+       "c-cb"
+      ],
+      [
+       "h"
+      ]
+     ],
+     [
+      [
+       "V_h_phi_phi"
+      ],
+      [
+       "phi-phi"
+      ],
+      [
+       "h"
+      ]
+     ]
+    ],
+    "E2": [
+     [
+      [
+       "V3_grav",
+       "V3_grav"
+      ],
+      [
+       "h-h",
+       "h-h"
+      ],
+      [
+       "h",
+       "h"
+      ]
+     ],
+     [
+      [
+       "V4_grav"
+      ],
+      [
+       "h-h"
+      ],
+      [
+       "h",
+       "h"
+      ]
+     ],
+     [
+      [
+       "V_K_c_h",
+       "V_cb_c_h"
+      ],
+      [
+       "c-cb",
+       "h-h"
+      ],
+      [
+       "K",
+       "c"
+      ]
+     ],
+     [
+      [
+       "V_cb_c_h",
+       "V_cb_c_h"
+      ],
+      [
+       "c-cb",
+       "c-cb"
+      ],
+      [
+       "h",
+       "h"
+      ]
+     ],
+     [
+      [
+       "V_cb_c_h",
+       "V_cb_c_h"
+      ],
+      [
+       "c-cb",
+       "h-h"
+      ],
+      [
+       "c",
+       "cb"
+      ]
+     ],
+     [
+      [
+       "V_h_phi_phi",
+       "V_h_phi_phi"
+      ],
+      [
+       "h-h",
+       "phi-phi"
+      ],
+      [
+       "phi",
+       "phi"
+      ]
+     ],
+     [
+      [
+       "V_h_phi_phi",
+       "V_h_phi_phi"
+      ],
+      [
+       "phi-phi",
+       "phi-phi"
+      ],
+      [
+       "h",
+       "h"
+      ]
+     ],
+     [
+      [
+       "V_hh_phi_phi"
+      ],
+      [
+       "h-h"
+      ],
+      [
+       "phi",
+       "phi"
+      ]
+     ],
+     [
+      [
+       "V_hh_phi_phi"
+      ],
+      [
+       "phi-phi"
+      ],
+      [
+       "h",
+       "h"
+      ]
+     ]
+    ],
+    "n_E1": 3,
+    "n_E2": 9
+   },
+   "landmark": "XVI-Q",
+   "n_rows": 23,
+   "release": "Q02",
+   "residual": null,
+   "rows": {
+    "b": {
+     "class": "zero",
+     "group": "gh0_one",
+     "outcome": "zero",
+     "reason": "auxiliary/nonminimal field on no interaction vertex (checked): no 1PI loop entry"
+    },
+    "b.b": {
+     "class": "zero",
+     "group": "gh0_two",
+     "outcome": "zero",
+     "reason": "auxiliary/nonminimal field on no interaction vertex (checked): no 1PI loop entry"
+    },
+    "b.c": {
+     "class": "ST4b_ghost_equation",
+     "group": "gh1_two",
+     "outcome": "zero",
+     "reason": "c.b row of (S,Gamma) = b Sigma_cbc + (d b) G_Kc: the ghost equation"
+    },
+    "b.cbs": {
+     "class": "zero",
+     "group": "gh0_two",
+     "outcome": "zero",
+     "reason": "auxiliary/nonminimal field on no interaction vertex (checked): no 1PI loop entry"
+    },
+    "b.h": {
+     "class": "zero",
+     "group": "gh0_two",
+     "outcome": "zero",
+     "reason": "auxiliary/nonminimal field on no interaction vertex (checked): no 1PI loop entry"
+    },
+    "b.phi": {
+     "class": "zero",
+     "group": "gh0_two",
+     "outcome": "zero",
+     "reason": "phi-parity: every vertex even in {phi, phi*} (checked) -> odd rows vanish identically"
+    },
+    "bs.c": {
+     "class": "zero",
+     "group": "gh0_two",
+     "outcome": "zero",
+     "reason": "auxiliary/nonminimal field on no interaction vertex (checked): no 1PI loop entry"
+    },
+    "c": {
+     "class": "zero",
+     "group": "gh1_one",
+     "outcome": "zero",
+     "reason": "gh1 one-point defect c^mu(p=0): no 1PI one-loop graph has a single external ghost (the only ghost vertex V_cb_c_h would need a second internal c to close the cbar line) and no Lorentz-covariant constant vector exists"
+    },
+    "c.cb": {
+     "class": "cbc",
+     "group": "gh0_two",
+     "outcome": "cancellable"
+    },
+    "c.cbs": {
+     "class": "ST4b_unreachable",
+     "group": "gh1_two",
+     "outcome": "zero",
+     "reason": "c.cbar*: unreachable (XVI-P P22 a_closure: S0 quadratic part h.h, h.b, b.b, b.cbs)"
+    },
+    "c.h": {
+     "class": "ST4b_ch",
+     "group": "gh1_two",
+     "outcome": "zero"
+    },
+    "c.hs": {
+     "class": "Kc",
+     "group": "gh0_two",
+     "outcome": "cancellable"
+    },
+    "c.phi": {
+     "class": "zero",
+     "group": "gh1_two",
+     "outcome": "zero",
+     "reason": "phi-parity: every vertex even in {phi, phi*} (checked) -> odd rows vanish identically"
+    },
+    "c.phis": {
+     "class": "zero",
+     "group": "gh0_two",
+     "outcome": "zero",
+     "reason": "phi-parity: every vertex even in {phi, phi*} (checked) -> odd rows vanish identically"
+    },
+    "cbs": {
+     "class": "zero",
+     "group": "gh0_one",
+     "outcome": "zero",
+     "reason": "auxiliary/nonminimal field on no interaction vertex (checked): no 1PI loop entry"
+    },
+    "cbs.cbs": {
+     "class": "zero",
+     "group": "gh0_two",
+     "outcome": "zero",
+     "reason": "auxiliary/nonminimal field on no interaction vertex (checked): no 1PI loop entry"
+    },
+    "cbs.h": {
+     "class": "zero",
+     "group": "gh0_two",
+     "outcome": "zero",
+     "reason": "auxiliary/nonminimal field on no interaction vertex (checked): no 1PI loop entry"
+    },
+    "cbs.phi": {
+     "class": "zero",
+     "group": "gh0_two",
+     "outcome": "zero",
+     "reason": "phi-parity: every vertex even in {phi, phi*} (checked) -> odd rows vanish identically"
+    },
+    "h": {
+     "class": "onepoint_h",
+     "group": "gh0_one",
+     "outcome": "zero"
+    },
+    "h.h": {
+     "class": "hh",
+     "group": "gh0_two",
+     "outcome": "cancellable"
+    },
+    "h.phi": {
+     "class": "zero",
+     "group": "gh0_two",
+     "outcome": "zero",
+     "reason": "phi-parity: every vertex even in {phi, phi*} (checked) -> odd rows vanish identically"
+    },
+    "phi": {
+     "class": "zero",
+     "group": "gh0_one",
+     "outcome": "zero",
+     "reason": "phi-parity: every vertex even in {phi, phi*} (checked) -> odd rows vanish identically"
+    },
+    "phi.phi": {
+     "class": "phiphi",
+     "group": "gh0_two",
+     "outcome": "zero"
+    }
+   },
+   "sigma0_closure": {
+    "XVI_P_full_closure_all_gh1_sectors": "P19_defect full_closure_mutation_detector + renormalised_defect_zero",
+    "closed": true,
+    "cohomology_dim_D": 0,
+    "full_closure_with_complete_MSbar_CT": "p20 (corrects p19): with the P15 Sigma coordinates converted from the (cb,c) to the route-G (c,cb) orientation (measured ratio -1), the DERIVED factor +1 gives full sigma_0 closure of the complete MS-bar counterterm (h.h + c.K + c.cb) in every ghost +1 sector; the p19 table above (factors 1, -1, i, -i on UNCONVERTED coordinates) is the bookkeeping error, kept for the erratum",
+    "mutation_detector_cases_detected": {
+     "Sigma_orientation_unconverted (p19 error)": true,
+     "drop_graph_D01": true,
+     "drop_graph_D03": true,
+     "drop_graph_D11": false,
+     "drop_graph_D13 (c.K data = 0, Sigma held fixed)": true,
+     "flip_phase_D03": true,
+     "flip_sign_Kc (c.K data -> -c.K, Sigma held fixed)": true,
+     "symmetry_factor_D03_x2": true
+    },
+    "phi_odd_rows": "identically zero (parity)",
+    "phiphi_CT": "0 (D04 + D05a = 0); sigma_0 rank on the phi.phi direction is 0 (XVI-P P19 D_cap_ker_sigma0), so the direction is sigma_0-closed for any coefficient; NO free-EOM equivalence is used (XVI-O O.6 domain item 4)",
+    "phiphi_sigma0_rank": 0,
+    "relative_factor_derived_equals_P15": true,
+    "renormalised_defect_zero": true,
+    "sigma0_ranks": {
+     "c.K": {
+      "P_ch_sigma0_rank": 1,
+      "dim": 3,
+      "sigma0_rank": 3
+     },
+     "c.cb": {
+      "P_ch_sigma0_rank": 0,
+      "dim": 2,
+      "sigma0_rank": 2
+     },
+     "h.h": {
+      "P_ch_sigma0_rank": 3,
+      "dim": 5,
+      "sigma0_rank": 3
+     },
+     "phi.phi": {
+      "P_ch_sigma0_rank": 0,
+      "dim": 1,
+      "sigma0_rank": 0
+     }
+    }
+   },
+   "unclassified_rows": [],
+   "vertex_checks": {
+    "aux_b_cbs_bs_on_no_interaction_vertex": true,
+    "interaction_vertices": [
+     "V3_grav",
+     "V4_grav",
+     "V_cb_c_h",
+     "V_K_c_h",
+     "V_cs_c_c",
+     "V_phis_c_phi",
+     "V_h_phi_phi",
+     "V_hh_phi_phi"
+    ],
+    "n_vertices": 15,
+    "phi_parity_even_all": true,
+    "phi_parity_per_vertex": {
+     "M0_ghost": true,
+     "M_phi": true,
+     "V2_grav": true,
+     "V3_grav": true,
+     "V4_grav": true,
+     "V_K_c": true,
+     "V_K_c_h": true,
+     "V_b_b": true,
+     "V_b_h": true,
+     "V_cb_c_h": true,
+     "V_cbs_b": true,
+     "V_cs_c_c": true,
+     "V_h_phi_phi": true,
+     "V_hh_phi_phi": true,
+     "V_phis_c_phi": true
+    },
+    "quadratic_vertices_with_aux": [
+     "V_b_h",
+     "V_b_b",
+     "V_cbs_b"
+    ]
+   }
+  },
+  "Q02_release": {
+   "O1_checklist": [
+    {
+     "earned": true,
+     "evidence": "XVI-O ST4a/ST4b and (S,Gamma_1) = A_1 (retained_quantum_identity.tex) stated on the bulk two-point retained sector; 23 gh0/gh1 rows enumerated mechanically",
+     "item": "State retained quantum identity",
+     "owner": "O.6"
+    },
+    {
+     "earned": true,
+     "evidence": "every gh0/gh1 one/two-field row classified with an individual justification; independent 1PI enumeration from the loop-capable vertices: E2 = 9, E1 = 3 (== XVI-P 9 / 3); antifield vertices c*cc, phi*c phi give no E <= 2 graph",
+     "item": "List amplitudes constrained by identity",
+     "owner": "O.4"
+    },
+    {
+     "earned": true,
+     "evidence": "XVI-Q Q01: 2(S0,S2)+(S1,S1)=0 Constructed ((a) ell_4, (b) explicit antibracket expansion, (c) ghost/antifield); Q01 independent rebuild PASSED",
+     "item": "S_inv^{[2]} classical consistency",
+     "owner": "O.2"
+    },
+    {
+     "earned": true,
+     "evidence": "all 9 E=2 + 3 E=1 graphs have exact values: D01, D02, D03, D11, D13, D14a-c (XVI-P, pinned); D04 (Q02, 0 by engine routes 1+2 and independent route 4, with nonzero mutations, literature agreement); D05a (Q02, derived 0); D06 (Q02 == XVI-P Sigma); D12 reconciled (derived 0)",
+     "item": "Evaluate inventory graphs",
+     "owner": "O.5"
+    },
+    {
+     "earned": true,
+     "evidence": "ST4a: 11-direction MS-bar CT in the declared p14r domain over Q(i) (phi.phi = 0 now earned); ST4b: c.h defect ZERO exactly in d (P19, x = 0), c.b = ghost equation (Sigma == D06), c.cbar* unreachable, c.phi parity; full sigma_0 closure of the complete MS-bar CT in every gh+1 sector (p20); cohomology of the domain 0; no free-EOM equivalence used",
+     "item": "Demonstrate identity remainder cancellation / CT solution",
+     "owner": "O.6/O.7"
+    },
+    {
+     "earned": true,
+     "evidence": "rule 1 evaluated below: not triggered",
+     "item": "Enlarge target if identity requires more legs/orders",
+     "owner": "O.1"
+    }
+   ],
+   "O1_closure": "CLOSED_PENDING_INDEPENDENT_REVIEW",
+   "O1_closure_confirmed": false,
+   "O1_closure_note": "pending independent review: becomes confirmed only after the Q02 independent rebuild passes",
+   "O1_closure_scope": "one-loop kappa^2 bulk two-point sector (hh, phi phi, cbar c, K'.c, one-point) of S_inv, m = 0, frozen gauge fermion, under the XVI-P declared prescription (DRED with opaque d, MS-bar, Feynman +i0, p22 evanescent counterterms; external momenta in QdS); insertion frozen (XVI-N massless obstruction untouched)",
+   "O1_not_implied": [
+    "bulk_symmetry_restored (all orders / all n-point): false",
+    "finite renormalised amplitudes with non-QdS (epsilon-scalar) external components: the p22 Q4S-trace O(eps)x pole remnant stays disclosed (identity unaffected: projected Q4S sum 0)",
+    "three-point / higher orders (P.6), prepared S_D, insertion"
+   ],
+   "XVI_Q_registered": "locally; not published",
+   "bulk_identity_outcome": "cancellable",
+   "bulk_symmetry_restored": false,
+   "date": "2026-10-10",
+   "execution_pass": true,
+   "flags": {
+    "D12_reconciled": "earned",
+    "O2_kappa2_master_constructed": "earned (Q01)",
+    "author_rebuild_passed": "see reproducibility",
+    "bulk_O5_graphs_evaluated": "earned",
+    "bulk_counterterms_solved": "earned",
+    "bulk_identity_verified_two_point_kappa2": "earned",
+    "d_guard_q02_verified": "earned",
+    "independent_rebuild_passed": "pending",
+    "independent_rebuild_passed_q01": true,
+    "sigma0_closure_bulk": "earned"
+   },
+   "hard_stops": {
+    "Missing_never_zero": true,
+    "Route_B_discharged": false,
+    "XIV_J_opened": false,
+    "XV_B_opened": false,
+    "bulk_symmetry_restored": false,
+    "insertion": "frozen"
+   },
+   "landmark": "XVI-Q",
+   "publication": "accepted",
+   "release": "Q02",
+   "symmetry_restored": false,
+   "value_checks": {
+    "D04_scrutiny": true,
+    "D04_zero_two_routes": true,
+    "D05a_D12_no_log_member": true,
+    "D06_equals_XVI_P_and_exact": true,
+    "D12_reconciled": true,
+    "O1_enlarge_rule1_not_triggered_and_XVIM_unused": true,
+    "O1_walk_consistent": true,
+    "O2_constructed": true,
+    "O2c_build_input_all_orders": true,
+    "O2c_cells_exact_and_true": true,
+    "Q01_layer_accepted": true,
+    "ST4a_pole_ct_cancel": true,
+    "_value_mismatches": {},
+    "bulk_CT_explicit_in_domain": true,
+    "bulk_outcome_and_closure": true,
+    "bulk_rows_all_classified": true,
+    "conventions_files_pinned": true,
+    "errata_E1_E7_severities": true,
+    "errata_file_equals_certified": true,
+    "every_certified_value_matches_pinned": true,
+    "expected_file_pinned": true,
+    "guard_18_forms_all_raise": true,
+    "independent_enumeration_9_3": true,
+    "mutations_detect": true,
+    "per_file_pins_each_true": true,
+    "registration_corrected": true,
+    "vertex_checks": true,
+    "xvin_label_note": true
+   },
+   "version_label": "XVI-Q Q02"
+  },
+  "Q03_O1_record": {
+   "O1_closure": "CLOSED (scoped)",
+   "O1_closure_confirmed": true,
+   "XVI_O_ledger": "read-only; O.1 there stays NOT_CLOSED (unchanged)",
+   "all_earned": true,
+   "caveats": [
+    "same-box reviews: Q01/Q02 independent rebuilds ran on the author's machine (shared Python/sympy pin and TeX Live); not an independent machine",
+    "D01/D03 pole values were never recomputed from independent Feynman rules in any review; cross-checked only via the exact cancellation of the c.h defect in d",
+    "full sigma_0 closure and the c.h defect were not re-derived in the Q02 review; they rely on the earlier p19-p22 independent checks on byte-identical inputs",
+    "D06 accepted via exact equality with XVI-P P15 Sigma (ghost equation), not via the reviewer's own Feynman rules"
+   ],
+   "closure_reasons": {
+    "D11 matter-loop kernel counterterm Constructed_subsector_under_prescription (o70-sync; four math prerequisites); NOT completed bulk quantum sector; kernel Ward != bulk ST4b.": {
+     "answer": "XVI-O's o70-sync D11 matter-loop kernel counterterm prescription is NOT the one used and is not completed: both XVI-O kernel continuations fail on evanescent external legs (p22 finding). O.1 is closed under XVI-P's declared DRED prescription (QdS loop momenta, Q4S vertex indices, MS-bar, Feynman +i0, p22 evanescent counterterm contract revision). The bulk sector (hh, phi phi, cbar c, K'.c, one-point) is evaluated, not only the D11 kernel; this does not complete XVI-O's kernel prescription.",
+     "status": "NOT_ANSWERED_IN_XVI_O_TERMS (superseded prescription)"
+    },
+    "No retained quantum identity is verified (O.6 Unresolved).": {
+     "answer": "identity verified on the retained two-point sector (items 1, 5).",
+     "status": "ANSWERED"
+    },
+    "O.4 is manually_specified_partially_checked_inventory \u2014 not a completeness claim.": {
+     "answer": "completeness by mechanical enumeration of rows AND graphs (two independent enumerations).",
+     "status": "ANSWERED"
+    },
+    "One-loop antifield source channels at kappa^2 remain Unresolved after withdrawing invalid gh=-1 assignments.": {
+     "answer": "one-loop antifield channels derived from vertices: K'.c = D13 (evaluated); phi*'.c odd (0); c*', cbar*', b* give no E <= 2 graph (independent enumeration); no (Phi, Phi*) assignment used.",
+     "status": "ANSWERED"
+    },
+    "ST4a local matching Unresolved; functional ST4b not claimed; kernel_two_point_Ward Constructed (kernel only).": {
+     "answer": "ST4a local matching = explicit CT in the declared domain; ST4b on the retained two-point projection verified (the FUNCTIONAL ST4b, all n-point, is NOT claimed). Local matching uses the ENLARGED domain (p14r 4D + p22 evanescent).",
+     "status": "ANSWERED"
+    },
+    "XVI-M selected-image matchings are Target I data, not sector amplitudes (M.8 Unresolved).": {
+     "answer": "XVI-M selected-image data are not used anywhere (graphs come from the action's vertices).",
+     "status": "ANSWERED"
+    },
+    "XVI-N supplies only classical (S_inv,S_inv)=O(kappa^2) through O(kappa) truncation; not a quantum Ward/BV identity.": {
+     "answer": "the quantum identity is the EA-route (S,Gamma_1) = A_1, not XVI-N's classical truncation.",
+     "status": "ANSWERED"
+    },
+    "kappa^2 classical master Partial: (S0,S0)/(S0,S1) Constructed; 2(S0,S2)+(S1,S1) Partial (scalar OK; grav ell_4 Incomplete) --- not full Constructed.": {
+     "answer": "kappa^2 master Constructed in Q01 (incl. grav ell_4).",
+     "status": "ANSWERED"
+    }
+   },
+   "confirmation": {
+    "binding_ok": true,
+    "conditions_discharged_by": [
+     "counterterm_domain (enlarged)",
+     "prescription"
+    ],
+    "decision": "CONFIRM CLOSED (scoped)",
+    "report_file": "reproducibility/independent_rebuild_report_q02.json",
+    "report_sha256": "e4b54702bc768899f22a00a289de0c0aeb2bf9317b87a28c4a462f05ae4bf495",
+    "report_sha256_now": "e4b54702bc768899f22a00a289de0c0aeb2bf9317b87a28c4a462f05ae4bf495",
+    "reviewed_tree_sha256": "4b551b9801cd14b8f2b81775942d535ab282a75c1557148a94a91a9dad88a810",
+    "reviewed_zip_sha256": "378651a3a279cde0a8fd67d4e39ac5833d5a94ff00f10f62a001be8ab2b244dc",
+    "reviewer_conditions_for_the_label": [
+     "record that ST4a with QdS externals needs the p14r 11 directions PLUS the p22 evanescent operators (outside p14r; sigma0 closure incl. them verified in my p22 review) -- 'ST4a in the declared p14r domain' alone is true only on 4D externals",
+     "record that the prescription is XVI-P's DRED one; XVI-O's o70-sync D11 kernel prescription is not the one used (both XVI-O kernel continuations fail on evanescent externals, my p22 finding)"
+    ]
+   },
+   "counterterm_domain": {
+    "n_enlarged_domain": 21,
+    "n_p14r_4D": 11,
+    "n_p22_evanescent": 10,
+    "p14r_4D_directions": [
+     "c.K#0",
+     "c.K#1",
+     "c.K#2",
+     "c.cb#0",
+     "c.cb#1",
+     "h.h#0",
+     "h.h#1",
+     "h.h#2",
+     "h.h#3",
+     "h.h#4",
+     "phi.phi#0"
+    ],
+    "p22_evanescent_coefficients": {
+     "Kc_E2": "-1/16",
+     "ccb_SE": "1/8",
+     "hh_sum": {
+      "g4_mn gt_rs (p.p)^2": "-7*I/120",
+      "g4_mr gt_ns (p.p)^2": "-I/160",
+      "g4_rs gt_mn (p.p)^2": "-7*I/120",
+      "gt_mn gt_rs (p.p)^2": "I/160",
+      "gt_mn p_r p_s (p.p)^1": "7*I/120",
+      "gt_mr gt_ns (p.p)^2": "I/160",
+      "gt_mr p_n p_s (p.p)^1": "I/160",
+      "gt_rs p_m p_n (p.p)^1": "7*I/120"
+     }
+    },
+    "p22_evanescent_operators": [
+     "K'.c E2 (evanescent)",
+     "cbar.c SE (evanescent)",
+     "h.h evanescent: g4_mn gt_rs (p.p)^2",
+     "h.h evanescent: g4_mr gt_ns (p.p)^2",
+     "h.h evanescent: g4_rs gt_mn (p.p)^2",
+     "h.h evanescent: gt_mn gt_rs (p.p)^2",
+     "h.h evanescent: gt_mn p_r p_s (p.p)^1",
+     "h.h evanescent: gt_mr gt_ns (p.p)^2",
+     "h.h evanescent: gt_mr p_n p_s (p.p)^1",
+     "h.h evanescent: gt_rs p_m p_n (p.p)^1"
+    ],
+    "statement": "The counterterm domain used for O.1 item 5 is the ENLARGED domain: the 11 p14r 4D directions (over Q(i)) PLUS the p22 evanescent operators (disclosed p22 contract revision, outside p14r). With the declared QdS external momenta the local divergent part contains evanescent poles that are cancelled only by the p22 evanescent operators; 'ST4a in the declared p14r domain' alone holds only for 4D externals. sigma_0 closure including the evanescent operators: verified (p20/p22 independent reviews)."
+   },
+   "downgrade_rules": {
+    "If a required amplitude is omitted without individual justification, status fails.": "respected: no amplitude omitted; every row/graph individually justified",
+    "If closure remains unknowable after O.6 statement, keep Provisional.": "not applicable: closure decided by the checks above"
+   },
+   "enlarge_rules": {
+    "If classical kappa^2 consistency fails, downgrade or repair O.2 before quantum contractions.": {
+     "argument": "classical kappa^2 consistency holds (Q01).",
+     "triggered": false
+    },
+    "If the stated identity constrains n-point or higher-loop pieces at the same coupling order, enlarge the target before Constructed.": {
+     "argument": "At one loop the kappa^2 component of (S,Gamma_1) is (S_0, Gamma_1[kappa^2]) + (S_1, Gamma_1[kappa^1]) (S_k: tree kappa^k terms incl. the seeds D07-D09). One-loop graphs with E external legs are kappa^E (every vertex kappa^{legs-2}, p14r power counting; XVI-P p23): Gamma_1[kappa^1] is one-point only and is 0 (D14a-c), Gamma_1[kappa^2] is two-point only (three-point starts at kappa^3; one-loop kappa^2 three-point sector empty). Hence the identity at this order constrains no n >= 3 or higher-loop piece.",
+     "triggered": false
+    },
+    "Never close the sector by silently identifying XVI-M selected graph with an action graph via ell_3.": {
+     "argument": "no XVI-M graph is used or identified with an action graph; XVI_M pin unchanged; every graph is built from S_inv vertices.",
+     "respected": true
+    }
+   },
+   "items": [
+    {
+     "XVI_O_status": "Constructed_as_statement",
+     "earned": true,
+     "evidence": "XVI-O ST4a/ST4b and (S,Gamma_1) = A_1 (retained_quantum_identity.tex) stated on the bulk two-point retained sector; 23 gh0/gh1 rows enumerated mechanically",
+     "item": "State retained quantum identity",
+     "owner": "O.6"
+    },
+    {
+     "XVI_O_status": "manually_specified_partially_checked_O.4",
+     "earned": true,
+     "evidence": "every gh0/gh1 one/two-field row classified with an individual justification; independent 1PI enumeration from the loop-capable vertices: E2 = 9, E1 = 3 (== XVI-P 9 / 3); antifield vertices c*cc, phi*c phi give no E <= 2 graph",
+     "item": "List amplitudes constrained by identity",
+     "owner": "O.4"
+    },
+    {
+     "XVI_O_status": "Provisional_foundation_repaired_master_Partial",
+     "earned": true,
+     "evidence": "XVI-Q Q01: 2(S0,S2)+(S1,S1)=0 Constructed ((a) ell_4, (b) explicit antibracket expansion, (c) ghost/antifield); Q01 independent rebuild PASSED",
+     "item": "S_inv^{[2]} classical consistency",
+     "owner": "O.2"
+    },
+    {
+     "XVI_O_status": "D11_kernel_Constructed_subsector_under_prescription_o70-sync_bulk_incomplete",
+     "earned": true,
+     "evidence": "all 9 E=2 + 3 E=1 graphs have exact values: D01, D02, D03, D11, D13, D14a-c (XVI-P, pinned); D04 (Q02, 0 by engine routes 1+2 and independent route 4, with nonzero mutations, literature agreement); D05a (Q02, derived 0); D06 (Q02 == XVI-P Sigma); D12 reconciled (derived 0)",
+     "item": "Evaluate inventory graphs",
+     "owner": "O.5"
+    },
+    {
+     "XVI_O_status": "Unresolved_ST4a_ST4b_split",
+     "earned": true,
+     "evidence": "ST4a: MS-bar CT in the ENLARGED domain = 11 p14r 4D directions over Q(i) (phi.phi = 0 earned) PLUS the p22 evanescent operators (K'.c E2, cbar.c SE, 8 h.h evanescent structures), which alone cancel the evanescent poles with d-dimensional (QdS) externals; ST4b: c.h defect ZERO exactly in d (P19, x = 0), c.b = ghost equation (Sigma == D06), c.cbar* unreachable, c.phi parity; full sigma_0 closure of the complete MS-bar CT incl. the evanescent operators in every gh+1 sector (p20/p22); cohomology of the domain 0; no free-EOM equivalence used",
+     "evidence_corrected_in": "Q03 (Q02 review finding ST4a_domain_wording, medium)",
+     "item": "Demonstrate identity remainder cancellation / CT solution",
+     "owner": "O.6/O.7"
+    },
+    {
+     "XVI_O_status": "rule_active_not_triggered",
+     "earned": true,
+     "evidence": "rule 1 evaluated below: not triggered",
+     "item": "Enlarge target if identity requires more legs/orders",
+     "owner": "O.1"
+    }
+   ],
+   "landmark": "XVI-Q",
+   "not_implied": [
+    "the functional / all-n-point ST4b identity (only the retained two-point projection is verified)",
+    "bulk symmetry restoration (bulk_symmetry_restored stays false)",
+    "any change to XVI-O's own O.1 ledger: XVI-O is read-only and its O.1 stays NOT_CLOSED there",
+    "the three-point sector / P.6 (kappa^3) and higher orders or loops",
+    "the insertion (frozen; XVI-N massless obstruction untouched)",
+    "finite renormalised amplitudes with non-QdS (epsilon-scalar) external components (p22 Q4S-trace O(eps)x pole remnant stays disclosed)"
+   ],
+   "prescription": {
+    "not_used": "XVI-O o70-sync D11 kernel counterterm prescription (closure reason 8): superseded on evanescent legs, both kernel continuations fail there (p22); reason 8 is NOT marked answered",
+    "used": "XVI-P declared prescription: DRED (QdS loop momenta, Q4S vertex indices, opaque d via qguard), MS-bar, Feynman +i0, p22 evanescent counterterms; m = 0; frozen gauge fermion"
+   },
+   "release": "Q03",
+   "scope_verbatim_from_independent_review": "one-loop, order kappa^2, bulk two-point retained sector of S_inv (h, phi, c, cbar, b + antifields; gh0 seeds), m=0, frozen gauge fermion, under XVI-P's declared prescription (DRED: QdS loop momenta, Q4S vertex indices, MS-bar) INCLUDING the p22 evanescent counterterm contract revision; NOT the functional ST4b, NOT bulk symmetry restoration, NOT XVI-O's own ledger (read-only, still NOT_CLOSED there)"
+  },
+  "Q03_guard_ring": {
+   "entry_points": [
+    "Poly.new (polynomial construction with d as generator or in the domain)",
+    "dred._check_rule (any internal rename/substitution of d)",
+    "PolyElement/FracElement evaluate/subs/__call__/compose on a ring/field with d as generator"
+   ],
+   "forms": {
+    "field_call": "raises",
+    "field_evaluate": "raises",
+    "field_subs": "raises",
+    "ring_call": "raises",
+    "ring_compose": "raises",
+    "ring_evaluate": "raises",
+    "ring_subs": "raises",
+    "sring_evaluate": "raises"
+   },
+   "legitimate_algebra": {
+    "cancel": "d + 4",
+    "d_free_ring_evaluate": "9",
+    "factor": "d*(d - 1)",
+    "together": "(d + X)/(d*X)"
+   },
+   "missed": [],
+   "n_forms": 8,
+   "residual_disclosed": "raw dense-list evaluation (densetools dup_eval/dmp_eval_in on lists carrying no symbol information) cannot be attributed to d and is not guarded; no package code uses it"
+  }
+ },
+ "file_sha256": {
+  "code/q01/q01_conventions.py": "de4d6596d0f64794827bbbb54ec6778c1bf8fddef672757dc62b47ff051b0b14",
+  "code/q01/qguard.py": "64e222ebc1935a35032a0ed39c5ba0cb70da272091f7cfd9babccc6d325047da",
+  "code/q01/release_q01.py": "e11652181b71b72ba94f26315f75ecb9e33c932a5c83c39da3f99cb8199d83df",
+  "code/q02/bulk_graphs.py": "954d44cad9f3671a0f32be1df840663347faaa094bcb86aecdc46ebd02fa3467",
+  "code/q02/bulk_identity.py": "7ea7f97c23454d7976c11dfc4a45b7ece62a28db49e7e831c2ffeea4efa300bf",
+  "code/q02/d04_route4.py": "29e6c7718b316c4aaf340567f76552b8e8e108ee6003cf031324a471f51bf186",
+  "code/q02/q02_expected.json": "5b50d16935d3ff9a8ab8a9eb51ddcaf7d3bbb46870ac6c9208a80e7e0e1e36ec",
+  "code/q02/release_q02.py": "2ee05a78bf6e107857742e6aaf49b56efd2518635b3575a7685e194e9aa45ccc",
+  "code/q03/q03_certs.py": "07e4ab595cac4e265fd1405fd4593bd29d756b8898d5e7730955d967b2d8c86c",
+  "intake/errata_p23.json": "abfe377466fa350a2771dcb76a33c24d3b2297ae61e87f1e9f35828d74cb0c12",
+  "intake/imports.json": "7cd16a349a8c494a6f68f617992b34b7abc344203b7188f28fec1913f892c1b8",
+  "registration/local_registration.json": "98e813a03d366f96ab332a699400a442f728e2ad0aea2371b1d432b9df384614"
+ }
+}

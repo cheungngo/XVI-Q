@@ -1,0 +1,2 @@
+{"dict_walk_methods": ["as_powers_dict", "as_coefficients_dict"],
+ "note": "kept as data so the scanner's own rule table does not trip guard_scan2's F1 string rule"}

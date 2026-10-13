@@ -1,0 +1,47 @@
+\section{Q05: P.6 continued (one-loop $\kappa^3$ three-point sector) --- honest partial}
+\textbf{Scope.} Pole level, one loop, $\kappa^3$, under the XVI-P declared prescription (DRED with opaque $d$ guarded by
+\texttt{qguard}, MS-bar, Feynman $+i0$, evanescent structures kept as tilde metrics). O.1 stays CLOSED (scoped, $\kappa^2$
+two-point) and is not changed; \texttt{bulk\_symmetry\_restored} stays false.
+
+\subsection*{Own gravity and ghost Feynman rules}
+Derived in \texttt{code/p6q05/gravity.py} from the XVI-P declared action: $S_{EH}=-(2/\kappa^2)\int L_{\Gamma\Gamma}$, the
+gauge fixing obtained by eliminating $b$ ($+D_\mu D^\mu$), $S_{gh}=\int i\bar c_\mu D^\mu[(\partial c+\partial c)+\kappa L_c h]$,
+$K\,s h$ with $s h=\tfrac12 L_c(\eta+\kappa h)$, and $s c=\tfrac{\kappa}{2}c\cdot\partial c$, $s\phi=\tfrac{\kappa}{2}c\cdot\partial\phi$
+(XVI-P P13 $s$-images). Checks: the EH quadratic form is gauge invariant. EH plus gauge fixing equals $k^2(I-\tfrac12 J)$
+(XVI-P $K=-\Box P$), so the graviton propagator is $i/k^2\,(I-\tfrac12J)$ with $\mathrm{tr}\,\eta=4$ (Q4S).
+Validation against pinned XVI-P two-point poles, all structures including evanescent ones, constant ratio (own/XVI-P):
+D01 (V3$\times$V3) $=I$, D03 (ghost loop) $=I$, D06 ($\bar cc$) $=I$, D13 ($K'\!\cdot c$) $=-I$.
+$I$ is the Q04 convention factor (D11). \textbf{Disclosure:} D13 has the opposite overall sign: the orientation of the
+$K'\!\cdot c$ slot differs between the two codes. Own rows use own D13 consistently. The ghost equation holds at two
+points ($D06=-2\,D13[K\to T]$) and graph by graph at three points ($G04=-2\,G03[K\to T]$, $G09=-2\,G07[K\to T]$).
+
+\subsection*{Graphs (UV pole residues, own rules)}
+Evaluated: G03--G13; nonzero poles are certified in \texttt{Q05\_P6\_graphs.json}. Q04 carried G14, G15 and the scaleless
+T1--T3. \textbf{Missing} (never set to zero): G01 (V3$^3$, implemented, evaluation did not finish within the release
+budget) and G02 (needs V4, not constructed).
+
+\subsection*{Identity rows at the pole}
+Antifield-channel signs are calibrated on the classical $(S_0,S_1)=0$ (tree level) and used unchanged at one loop.
+\textbf{Row $c\phi\phi$: closed.} The residual is identically 0. It needs the channel $\delta S_1/\delta h|_{\phi\phi}\cdot\Gamma_{Kc}$,
+which the Q04 ledger omitted (erratum Q05-E1). Detected mutations: flipped $\sigma$, dropped $K$-channel, dropped G06/G12/G13.
+G05's $s_0$-projection vanishes identically, so dropping G05 is undetectable in this row; that is recorded, not a failure.
+\textbf{Rows $cc\bar c$, $ccK$: OPEN.} The tree identities close with one constant $\sigma_c$. The one-loop rows do not
+close, and no rescaling of the four channels closes them. They are \emph{not} reported as an obstruction. Since the ghost
+equation holds, the defect is located in G10 (one sign bug already fixed, erratum Q05-E4), in the $K$/$c$ channels, or in
+the Grassmann bookkeeping of the two identical $c$ legs. \textbf{Row $hhc$: Missing} (needs G01, G02).
+
+\subsection*{Counterterms and $\sigma_0$ closure}
+In the $h\phi\phi$ and $\phi^*c\phi$ sector, the MS-bar counterterm is minus the certified poles. Its consistency in row
+$c\phi\phi$ is exactly the closed row. Every other $\kappa^3$ sector is Missing or Open. The $\kappa^3$ counterterm-domain
+reduction is not done. \textbf{$\sigma_0$ closure at $\kappa^3$ is not established.} Finite parts are Missing.
+
+\subsection*{Q04 review folded in}
+The static scan is hardened (\texttt{guard\_scan2}: recursive over \texttt{code/}, flags all 7 reviewer evasion forms). The
+claim is downgraded to a \emph{best-effort policy scan, not a security boundary}. The Q05 gate rejects any unpinned file in
+\texttt{code/**}, \texttt{tools/} or \texttt{tests/}. The \texttt{scalar\_loop3.py} docstring (G13/G14 should read G14/G15)
+is erratum Q05-E2; the file is pinned by the Q04 layer gate and left unchanged. Pinned Q04 tools are left unchanged, and Q05
+adds \texttt{build\_q05.py}, \texttt{source\_set\_q05.py}, \texttt{rebuild\_q05.py} and \texttt{make\_expected\_q05.py}.
+
+\subsection*{Next step}
+Independently check G10 and the $c$-channel, then close or diagnose the ghost rows. Evaluate G01 (lower-cost contraction)
+and construct V4 for G02, which gives row $hhc$. Then reduce the $\kappa^3$ counterterm domain and attempt $\sigma_0$ closure.

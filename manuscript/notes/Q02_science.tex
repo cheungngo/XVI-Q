@@ -1,0 +1,138 @@
+\section{Q02 scope and outcome}
+Q02 evaluates the bulk O.5 graphs D04, D05a and D06, reconciles D12, states XVI-O's ST4a/ST4b on the full one-loop
+$\kappa^2$ bulk two-point sector of $S_{\rm inv}$ ($m=0$), solves the bulk counterterms, checks full $\sigma_0$ closure,
+and walks the O.1 checklist. XVI-O, XVI-N and XVI-P are read-only and hash-pinned. The prescription is XVI-P's declared
+one: DRED with QdS loop momenta and Q4S vertex indices; $d$ opaque behind the XVI-Q guard; MS-bar; Feynman $+i0$; the p22
+evanescent counterterms.
+Normalisation: $i\Gamma_1=\sum$ graphs. Coefficients are given per $\kappa^2$, in units of
+$M_B=\hat I(1,1)=1/\epsilon+2-L+O(\epsilon)$, with $L=\log(-p^2/\mu^2-i0)$.
+
+\section{Bulk graphs}
+\begin{tabular}{llll}
+graph & content & value & evidence\\\hline
+D04 & $\phi\phi$, two $V_{h\phi\phi}$, $h$+$\phi$ lines & $0$ exactly in $d$ & two routes + hand contraction\\
+D05a & $\phi\phi$, $hh\phi\phi$, $h$ loop & $0$ (derived) & numerator $l$-independent, $\omega=2$, no log member\\
+D06 & $\bar c c$, two $V_{\bar c c h}$, $h$+$c$ lines & $\delta^\rho_\nu p^4$: $-\frac{4d-7}{8(d-1)}$;
+ $p^\rho p_\nu p^2$: $\frac{3(d-2)}{8(d-1)}$; $\tilde G^\rho{}_\nu p^4$: $-\frac{3}{8(d-1)}$ & $=$ XVI-P P15 $\Sigma$ exactly\\
+D12 & $hh$, $hh\phi\phi$, $\phi$ loop & $0$ (derived) & $\omega\in\{2,4\}$, no log member
+\end{tabular}
+
+\textbf{D04: mechanism.} The D04 bubble at $p\neq0$ is \emph{not} scaleless, so its zero needs an explicit reason.
+
+Take the vertex $V_{ab}(p,q)=p_aq_b+p_bq_a-\eta_{ab}\,p\cdot q$ with $q=l-p$, and the graviton numerator
+$P=\tfrac12(\eta\eta+\eta\eta)-c\,\eta\eta$, where the vertex-index trace is $\eta\cdot\eta=n$. Then
+\[V\cdot P\cdot V'=2p^2q^2+(n-2)(p\cdot q)^2\,[1-c(n-2)].\]
+The $(p\cdot q)^2$ term is the coupling to the trace mode. It cancels exactly when $c=1/(n-2)$, which holds for the de
+Donder propagator in DRED ($n=4$, $c=\tfrac12$, the declared prescription) and in CDR ($n=d$, $c=1/(d-2)$). What remains
+is $2p^2(l-p)^2$. This cancels the scalar propagator and leaves $p^2\!\int 1/l^2$, which is scaleless with $\omega=2$ and
+no logarithmic member, so D04 $=0$ exactly in $d$.
+
+D04 $=0$ is therefore a statement about de Donder gauge, minimal coupling and $m=0$, off shell. It is not a general
+property of the bubble, and no free-EOM equivalence is used.
+
+\textbf{D04: routes.}
+\begin{itemize}
+\item Engine route 1: Feynman parameters, with no scaleless rule.
+\item Engine route 2: an invariant fit identical to $\tfrac12p^2(l-p)^2$, followed by IBP.
+\item Route 4: fully independent of the engine. It uses its own covariant algebra and its own Feynman-parameter
+integration with symbolic $D$ for arbitrary propagator powers.
+\end{itemize}
+In route 4, both the DRED and CDR cases give $0$. The mutations, as ratios to the master, are:
+\begin{itemize}
+\item mixed scheme ($n=4$, $c=1/(D-2)$): $\frac{D-4}{2(D-2)}p^4$, i.e.\ $O(\epsilon)\times$pole;
+\item vertex trace normalisation $\tfrac12$: $p^4/4$;
+\item non-de Donder gauge pieces of Fr\"ob's propagator: $T^{(4)}$ gives $(D-1)p^4$ and $T^{(5)}$ gives
+$\frac{(D-2)(D-1)}{8}p^4$;
+\item non-minimal coupling $\xi$: $-\xi p^4$, which is linear in $\xi$;
+\item engine mutation dropping the trace term of the propagator: $-i/8$.
+\end{itemize}
+The gauge piece $T^{(3)}$ gives $0$, and this is expected rather than a failure: $l^aV_{ab}=p_bq^2+q_bp^2$, so every
+$T^{(3)}$ term carries $q^2$ and is scaleless. It is recorded as a Ward-identity zero, not counted as a detector.
+
+\textbf{D04: literature.} M.~B.~Fr\"ob, CQG 35 (2018) 055006 (arXiv:1710.00839), works in flat space, in a general
+gauge, in $n$ dimensions. The de Donder part of the graviton-loop scalar self-energy (his eq.~inv2pf\_termsumint\_grav) has
+an integrand bracket proportional to $m^2$ or $\xi$, and ``vanishes identically'' for $\xi=0$, $m=0$, in accordance with
+Kahya and Woodard (2007). For $m=0$ his $\xi^2$ terms vanish, and the gauge-parameter pieces contribute. \textbf{All three
+statements agree} with our results. The 1PI self-mass is gauge dependent; D04 $=0$ holds in the declared gauge only.
+
+\textbf{E7.} The symmetry factor of D04 is $1$. XVI-O's ``$\tfrac12$'' was marked Unverified and never used for a value.
+XVI-P never evaluated D04, and its D11, which has two identical $\phi$ lines, keeps $\tfrac12$. No earlier value changes.
+
+\textbf{D05a, D12.} These are genuine one-propagator tadpoles: no external momentum flows through the loop line. They
+are pure power divergences ($\omega=2$, and $2,4$ for D12) with no logarithmic member, so there is no pole on either
+side, and the zero is not a cancellation between UV and IR poles. Fr\"ob also notes that graviton tadpoles vanish in
+dimensional regularisation around flat space.
+
+\textbf{D06.} This is the full $\bar c c$ two-point function. MS-bar poles: $-3/8$, $1/4$, $-1/8$. Local finite parts:
+$-2/3$, $5/12$, $-1/3$. Coefficients of $L$: $3/8$, $-1/4$, $1/8$. It is identical in $d$ to the ghost self-energy
+$\Sigma$ of XVI-P P15, for which the ghost equation against D13 is verified.
+
+\textbf{D12 reconciliation.} XVI-O never labels D12 ``Missing''. The word survives only as stale p14r text in XVI-P's
+P23 O.5 line. XVI-P p15 derived D12 $=0$, and Q02 confirms this independently. The value is derived, never set by
+convention; this is erratum E6.
+
+\section{Bulk retained identity, counterterms, closure}
+XVI-O's definitions, quoted verbatim:
+\begin{itemize}
+\item ST4a: $\Gamma_{1,\rm local}=\sum z_iC_i$ (gh $0$);
+\item ST4b: $P_{\rm ret}(S,C)=-P_{\rm ret}A_1$ (gh $1$);
+\item retained identity: $(S,\Gamma_1)=\mathcal A_1$ at one loop and order $\kappa^2$ in the retained sector.
+\end{itemize}
+
+\textbf{Rows.} All 23 one- and two-field monomials of ghost number $0$ and $1$ are classified, each with its own
+justification. Two independent one-loop enumerations agree with XVI-P: $E=2$ gives 9 graphs and $E=1$ gives 3.
+
+\textbf{Counterterms (ST4a).} The MS-bar counterterm, $-$pole, in the 11-direction declared p14r domain over
+$\mathbb Q(i)$:
+\begin{itemize}
+\item $h\!\cdot\!h$: $\tfrac{49i}{480},\tfrac{41i}{160},-\tfrac{49i}{240},-\tfrac{41i}{80},\tfrac{43i}{120}$;
+\item $c\!\cdot\!\bar c$: $-\tfrac38,\tfrac14$, in the route-G orientation; these equal the D06 poles up to the
+orientation sign $-1$;
+\item $c\!\cdot\!K'$: $0,-\tfrac38,\tfrac14$;
+\item $\phi\!\cdot\!\phi$: $0$. P19 carried this coordinate as a placeholder; it is now earned.
+\end{itemize}
+The p22 evanescent counterterms ($K'c$ E2: $-\tfrac1{16}$; $\bar cc$ SE: $\tfrac18$; $hh$ sum) subtract the evanescent
+poles only. They lie outside the p14r 4D domain as a disclosed contract revision. They are not needed for the identity:
+the ch defect is zero with $x=0$.
+
+\textbf{ST4b and closure.}
+\begin{itemize}
+\item $c\cdot h$: the defect is zero exactly in $d$ (P19).
+\item $c\cdot b$: this is the ghost equation, and its $\Sigma$ equals D06.
+\item $c\cdot\bar c^*$: unreachable.
+\item $c\cdot\phi$: zero by parity.
+\end{itemize}
+Full $\sigma_0$ closure of the complete MS-bar counterterm holds in every gh$+1$ sector. The $\sigma_0$ rank on
+$\phi\!\cdot\!\phi$ is $0$, and the cohomology of the domain is $0$. \textbf{Outcome: cancellable, with no residual.}
+
+\section{O.1 walk (verbatim ledger)}
+\begin{enumerate}
+\item \emph{State retained quantum identity}: earned. XVI-O status was Constructed\_as\_statement.
+\item \emph{List amplitudes constrained by identity}: earned. XVI-O status was ``manually\_specified\_partially\_checked''.
+Completeness now rests on two mechanical enumerations.
+\item \emph{$S_{\rm inv}^{[2]}$ classical consistency}: earned in Q01.
+\item \emph{Evaluate inventory graphs}: earned. All 12 graphs have exact values.
+\item \emph{Remainder cancellation / CT solution}: earned, as above.
+\item \emph{Enlarge target}: not triggered. At one loop the $\kappa^2$ part of $(S,\Gamma_1)$ is
+$(S_0,\Gamma_1[\kappa^2])+(S_1,\Gamma_1[\kappa])$. $\Gamma_1[\kappa]$ is one-point only and is $0$, and $\Gamma_1$ with
+three fields starts at $\kappa^3$.
+\end{enumerate}
+All eight closure-check reasons are answered. Enlarge rule 3 is respected: no XVI-M graph is used or identified with an
+action graph. Downgrade rule 2 is respected: no amplitude is omitted without its own justification.
+
+\textbf{O1\_closure = CLOSED\_PENDING\_INDEPENDENT\_REVIEW} (confirmed: false). The scope is the one-loop $\kappa^2$ bulk
+two-point retained sector of $S_{\rm inv}$ at $m=0$, with the frozen gauge fermion, under the declared prescription, with
+external momenta in QdS. The functional ST4b (all $n$-point) and bulk symmetry restoration are \emph{not} claimed.
+
+\section{Guard, gate and records}
+\begin{itemize}
+\item The guard refuses any \texttt{Poly} that has $d$ as a generator. $d$ inside the coefficient domain is admitted, as
+used by the XVI-P integral library. \texttt{apart} and \texttt{apart\_list} are removed from the allow-list. 18 bypass
+forms $\times$ 4 expressions are probed, and all of them raise.
+\item The gate compares every Q01/Q02 certificate value path by path against \texttt{q02\_expected.json}, whose sha256 is
+pinned in the gate. It independently checks the O.2(c) cells (exact set, all true, $\kappa^0$..$\kappa^2$, including the
+build input), each per-file pin, the conventions files and the errata file, and fails closed.
+\item \texttt{tools/build.py} no longer syncs by default; a release opts in with \texttt{--sync}.
+\item The registration record, errata E2 (severity low) and E4 (unpinned \texttt{p23\_conventions}) are corrected, and
+the XVI-N label note (r10 file, r12 content) is added.
+\end{itemize}

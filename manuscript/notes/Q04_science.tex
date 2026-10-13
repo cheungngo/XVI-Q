@@ -1,0 +1,63 @@
+\section{Q04: P.6 entry --- one-loop $\kappa^3$ three-point sector (honest partial)}
+P.6 is the one-loop $\kappa^3$ three-point sector. It lies outside the O.1 scope (one-loop $\kappa^2$ two-point), and
+\textbf{O.1 CLOSED (scoped) is unchanged}. Q04 releases the stages listed below. Anything not evaluated is marked
+\emph{Missing}, never set to zero.
+
+\subsection{Inventory and vertices (Constructed)}
+An independent enumerator (one-loop 1PI graphs as cycles of at most 3 vertices; each vertex of an $E=3$ graph carries at
+least one external leg) is run on the p14r loop-capable vertices plus the $\kappa^3$ vertices. It reproduces XVI-P P23's
+15 loop graphs exactly (hhh 5, h$\phi\phi$ 4, $\bar c c h$ 2, $Kch$ 2, $c c c^*$ 1, $\phi^* c\phi$ 1). It adds three
+$\kappa^3$ tadpoles: V5\_grav $\to$ hhh, and V\_hhh$\phi\phi$ with an hh line $\to$ h$\phi\phi$ or a $\phi\phi$ line
+$\to$ hhh. All three are scaleless (massless self-contraction; $\int d^dl\, l^{2k}/l^2=0$, no log member), so they
+are derived 0.
+
+Power counting: at one loop $I=V$, so $\sum_v(\mathrm{legs}_v-2)=E$ and the $\kappa$ power equals $E$ (checked on every
+enumerated graph). Hence the one-loop $\kappa^3$ one-point and two-point sectors are empty.
+
+$\kappa^3$ vertices: the ghost, antifield and gauge-fixing vertices are exact at their order. $s h=\tfrac12 L_c(\eta+\kappa h)$
+is affine in $h$, $\Psi$ is linear in $h$, and $s c$, $s\phi$ are exact at $\kappa$. The only new vertices are therefore
+V5\_grav and V\_hhh$\phi\phi$. The cubic term of $\sqrt{-g}g^{\mu\nu}$ is derived in closed form and agrees with an
+independent exact determinant/inverse series; a mutation is detected. V5\_grav is not constructed, because it enters only
+the scaleless tadpole.
+
+\subsection{Identity at $\kappa^3$ (ledger Constructed)}
+$(S,\Gamma_1)=A_1$ at $\kappa^3$ is $(S_0,\Gamma_1^{[3]})+(S_1,\Gamma_1^{[2]})+(S_2,\Gamma_1^{[1]})+(S_3,\Gamma_1^{[0]})$.
+The last two terms vanish ($\Gamma_1^{[1]}=0$ by D14; $\Gamma_1^{[0]}$ is field independent). The ghost-number-1 three-field
+rows are enumerated mechanically: 14 rows. Four are odd under $\phi$-parity (zero), six contain auxiliary or nonminimal
+fields, and four need P.6 inputs ($c\,h\,h$, $c\,\phi\phi$, $c\,c\,\bar c$, $c\,c\,K$); each needed input is recorded. The
+$\kappa^3$ counterterm domain is given only as structural monomial counts (4D versus evanescent); its BRST/$\sigma_0$
+reduction is Missing.
+
+\subsection{Evaluation (Partial)}
+\textbf{Own UV-pole engine} (\texttt{code/q04/uvpole.py}). It uses its own Feynman rules, symbolic opaque $d$ through
+qguard, and the DRED hat/tilde split (QdS momenta, Q4S vertex indices); MS-bar residues are taken only through
+\texttt{dred.substitute\_d}. The UV pole is extracted by an exact Taylor (IR-rearranged) expansion.
+\emph{Validation:} the engine's scalar bubble equals $i\times$ XVI-P's P18 D11 pole on all 14 structures, including the
+8 evanescent ones. A vertex mutation breaks the agreement.
+
+\textbf{Evaluated:} P6-G14 (scalar triangle) and P6-G15 (scalar bubble), the scalar-loop contributions to hhh, at the
+UV-pole level (exact residue; Bose symmetric). \textbf{Matter Ward identity at three points}: diffeomorphism invariance
+of the scalar-loop $W[g]$, i.e.\ the matter part of row $c\,h\,h$, with $\Gamma_2$ the validated D11. The pole residue
+satisfies it exactly, including the evanescent structures. A wrong Lie-derivative sign and dropping the
+$\sqrt{-g}g^{-1}$ quadratic-vertex bubbles are both detected. The $d$-dependent coefficient differs from zero by
+$O(d-4)\times U$, which is finite and not evaluated.
+
+\textbf{Missing:} 13 graphs, namely every graph with a graviton or ghost loop, V3/V4\_grav, the ghost/antifield vertices
+or mixed lines (P6-G01..G13). Also Missing: their finite parts, the $\kappa^3$ defect assembly, the counterterm solve
+and $\sigma_0$ closure.
+
+\subsection{Next step}
+Implement V3\_grav (own rules, validated against XVI-P D01) and the ghost vertex (validated against D06/D13). Evaluate
+G01--G13 at the pole level, starting with the rows $c\,\phi\phi$ (G05, G06, G11, G12, G13) and $c\,c\,\bar c$/$c\,c\,K$
+(G03, G04, G07, G09, G10). Assemble the projected $\kappa^3$ defect, reduce the counterterm domain, solve, and check
+$\sigma_0$ closure.
+
+\subsection{Q03 review findings (low), folded in}
+(i) \texttt{tools/source\_set.py}, which decides which files count as source, is now pinned in the gate together with
+\texttt{build.py} and \texttt{rebuild\_from\_source.py}; the gate also re-hashes the Q03 independent report.
+(ii) The d guard cannot see code that leaves sympy symbolics. This covers a pure-Python term walk that identifies $d$ by
+name (comparing with \texttt{== d} is already refused by the p22 guard), a \texttt{str}/\texttt{srepr} rename followed by
+a re-parse, and raw dense-list evaluation. The probes in \texttt{certificates/Q04\_guard\_scan.json} show these
+\emph{do} bypass the runtime guard, and they cannot be closed at runtime. The class is closed by policy: an AST
+static scan of every package file (\texttt{code/q0*/*.py}; the guard probe files are exempt) forbids the escape
+primitives, and the gate requires the scan to be clean.

@@ -1,0 +1,56 @@
+\section{Q06: P.6 continued (honest partial)}
+\subsection*{Scope and standing constraints}
+One-loop $\kappa^3$ three-point sector at UV-pole level, XVI-P declared prescription (DRED, opaque $d$ via qguard,
+MS-bar, Feynman $+i0$), own Feynman rules of Q05.  XVI-O/N/P read-only; O.1 remains CLOSED (scoped, $\kappa^2$
+two-point) and is not affected; bulk symmetry restoration is not claimed; insertion frozen; no Missing is ever set to zero.
+
+\subsection*{1. Ghost rows $c\,c\,\bar c$ and $c\,c\,K$: diagnosis and fix}
+Q05 reported both rows OPEN: the assembled one-loop row did not vanish and no rescaling of the four channels closed it.
+Q06 splits every channel by orientation of the two identical ghosts and fits all six coefficients freely on the 4D
+(non-evanescent) part.  The fit has a unique solution (up to scale), every coefficient $\pm1$:
+the h channel and both c channels enter as assembled in Q05, but the K channel
+$\delta S_1/\delta h|_{X c_j}\cdot\Gamma_{K c_i}$ enters with the \emph{opposite} orientation sign.  Reason: in the K
+channel the external $c_i$ sits inside $\Gamma_{Kc_i}$, to the right of $c_j$, while in the h channel the order is
+reversed; bringing the monomial to the row ordering $c_1c_2$ costs one Grassmann transposition.  The tree row has no K
+channel, so the tree calibration ($\sigma_c=-1$ for $\bar c$, $+1$ for K) is unchanged.  With this fix the 4D part of
+both rows vanishes exactly, and every single-channel mutation (drop $h_{1,2}$, $K_{1,2}$, $c_1$, $c_2$, flip $\sigma_c$,
+restore the Q05 K sign) leaves a nonzero 4D residual.
+
+\emph{Second route for G10.}  The $c^*cc$ triangle was recomputed with a re-routed loop momentum (graviton carries
+$l-p_1$) and the two $c$ slots of $V_{c^*cc}$ entered in the opposite order (Grassmann sign $-1$): bit-identical to the
+Q05 pole.  G10 was therefore not the defect.
+
+\emph{What remains.}  A purely evanescent remainder (22 terms for $ccK$, 24 for $cc\bar c$; every term carries one
+$T$ between external polarisations).  Because the row is linear and its 4D part vanishes, local evanescent counterterms equal to minus the evanescent
+pole parts (p22 prescription) remove it; whether those counterterms are $s_0$-consistent on the full $\kappa^3$
+evanescent domain is OPEN; it is recorded explicitly (sha256 in the certificate) and is
+not called an obstruction.
+
+\subsection*{2. hhh graphs G01 and G02}
+A sparse-ring fast path (same algorithm as the Expr path, partial products truncated in the Taylor parameter at the
+pole order) reproduces G05 and G06 bit-identically and makes G01 (V$_3^3$ triangle) and G02 feasible.
+G02 needs the quartic vertex: $V_4$ was derived from $S_{EH}$ by expanding $\sqrt{-g}\,g^{mn}g^{ac}g^{bd}$ to second
+order.  No non-scaleless XVI-P graph contains $V_4$ (its tadpole is scaleless), so $V_4$ is validated by the exact
+Einstein--Hilbert gauge identity $\delta_0S_4+\delta_1S_3=0$ ($\delta_0h=\partial\xi+\partial\xi$,
+$\delta_1h=L_\xi h$), which vanishes identically; the same identity at $n=2$ ($V_3$ vs $V_2$) is the machinery control.
+G02 (three channels) and G01 are Bose-symmetric under $(a_1,p_1)\leftrightarrow(a_2,p_2)$, and G02's channels map onto
+each other.  All 15 P.6 graphs now have pole values (G14/G15 from Q04).
+
+\subsection*{3. Row $h\,h\,c$, $\kappa^3$ defect, counterterms, $\sigma_0$ closure}
+Not assembled: Missing.  The channel ledger is recorded, including a channel absent from the Q04 ledger: with $b$
+eliminated, $s\bar c\propto F(h)$, so $F(h)\cdot\Gamma_{\bar c c h}$ (G04+G09) enters (erratum Q06-E2).  The
+$\kappa^3$ counterterm-domain reduction, defect, counterterm solve and $\sigma_0$ closure are not established.
+
+\subsection*{Errata}
+Q06-E1 (low): Q05's ghost rows were OPEN because of the K-channel Grassmann sign in the assembly, not because of the
+graphs; corrected here, Q05 record kept.  Q06-E2 (low): Q04 h h c ledger lacks the $F(h)\cdot\Gamma_{\bar cch}$ channel.
+
+\subsection*{Disclosed revision of a frozen layer}
+Q06-R1: the Q05 gate (code/p6q05/release\_q05.py) now treats the pinned Q05 guard-scan file count as a lower bound
+(the recursive scan grows when Q06 adds code) and leaves Q06-owned files to the Q06 gate; Q05\_guard\_scan.json was
+regenerated (26 to 33 files, still clean).  The revised Q05 gate is re-pinned by the Q06 expected-values file.
+
+\subsection*{Status}
+P.6 Partial.  execution\_pass true; claim\_status partial; scope: pole level, one loop, $\kappa^3$.
+Next: evanescent $s_0$-exactness of the ghost-row remainder; h h c row; $\kappa^3$ counterterm domain, defect,
+counterterm solve and $\sigma_0$ closure.

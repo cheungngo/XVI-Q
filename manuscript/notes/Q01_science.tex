@@ -1,0 +1,66 @@
+\section{XVI-Q Q01: scope and registration}
+XVI-Q is a new landmark (registered locally: \texttt{registration/local\_registration.json}; not published). Its aim
+is to import XVI-P's verified $\ell_4$ to discharge O.2, to state the bulk identity, and to attempt O.1 closure.
+XVI-O, XVI-N and XVI-P are read-only. They are imported by sha256 (\texttt{intake/imports.json}; XVI-P frozen at p23,
+source zip \texttt{3f4a88db\ldots}). Q01 covers the intake and O.2. O.1 stays NOT\_CLOSED, bulk symmetry is not
+claimed, and the insertion stays frozen.
+
+\paragraph{O.1 target (XVI-O ledger, verbatim).} ``one-loop\_order\_kappa2\_bulk\_two\_point\_on\_S\_inv'': bulk
+two-point (graviton, scalar, ghost), including the Einstein--scalar $hh$ channels and the vertex-derived gh$=0$
+BV/source tree seeds; baseline $S_{\rm inv}$; frozen gauge fermion; $m=0$. Closure requires a \emph{verified}
+retained quantum identity with O.2, O.4, O.5, O.6 and O.7 earned.
+
+\paragraph{Errata from the p23 review (intake).}
+\begin{itemize}
+\item E1 (medium): the p23 O.5 line ``all $E=2$ graphs evaluated'' overclaims. D04 and D05a were never evaluated,
+D06 only as the ghost self-energy, and D12 is Missing. Bulk O.5 is open.
+\item E2: the stated reason ``grav $\ell_4$ Incomplete'' is stale.
+\item E3: guard bypasses (fixed here).
+\item E4: gate value gaps (fixed here: every number is value-checked).
+\item E5: scaleless 5-leg tadpoles are missing from the $\kappa^3$ inventory.
+\end{itemize}
+
+\section{O.2: the classical $\kappa^2$ master $2(S_0,S_2)+(S_1,S_1)=0$ on $S_{\rm inv}$}
+\paragraph{(a) Full $\ell_4$ --- Constructed.} XVI-P's p23 stages, re-executed from the pinned zip, reproduce the
+$\ell_{2,3,4}$ exports byte-identically. The $\ell_4$ export (3360 terms) equals, term by term, an
+\emph{independent} reconstruction from the $\Gamma\Gamma$ Lagrangian
+$\sqrt{-g}\,g^{mn}(\Gamma^a_{mb}\Gamma^b_{na}-\Gamma^a_{mn}\Gamma^b_{ab})$. That reconstruction uses exact
+$\epsilon$-grading, $g^{-1}$ and $\sqrt{-g}$ to second order in $H$, and a sparse ring over $\mathbb Q$. Its only
+normalisation, $-2$, is fixed by XVI-O's conformal probe and coincides with XVI-O's convention
+$\ell_4=-2[\epsilon^4](\sqrt{-q}R)$, since $L_{\Gamma\Gamma}=\sqrt{-g}R+\partial B$. A one-term mutation is detected.
+
+\paragraph{(b) Explicit $O(\kappa^2)$ antibracket expansion --- Constructed.} With $S_{\rm EH}=\sum_n\kappa^{n-2}\int\ell_n$,
+$s=s_0+\kappa s_1$ ($s_2=0$, derived), and $S_{af}\ni\int h^{*mn}(sh)_{mn}$, the field projection is
+\[(S,S)|_{af0,{\rm grav}}=2\!\int\!\sum_{m\le n}\frac{\delta S_{\rm EH}}{\delta h_{mn}}(sh)_{mn}.\]
+Its $\kappa^2$ coefficient is $2\int W_2$ with
+$W_2=\sum E_{mn}(\ell_4)(s_0h)_{mn}+E_{mn}(\ell_3)(s_1h)_{mn}$. This is the component form of $2(S_0,S_2)+(S_1,S_1)$.
+$W_2$ is linear in $c$, so $\int W_2=0$ for all $c$ iff $E_{c^\mu}(W_2)=0$. On an independent XVI-Q jet engine,
+$W_2$ has 15428 terms and $E_{c^\mu}(W_2)=0$ exactly for $\mu=0..3$; the $\kappa^0$ and $\kappa^1$ regressions
+also vanish. Doubling one $\ell_4$ term, or dropping $s_1$, breaks the result.
+
+\paragraph{(c) Ghost/antifield sector --- Constructed (re-executed evidence).} In XVI-P's exact P13 master
+(re-executed; content-identical to p23), every $\kappa^2$ cell vanishes: af0 ghost/gauge fixing (transformed), and
+af1 and af2 in both invariant and $\Psi$-transformed variables. $s_2$ is \emph{derived} zero in all sectors, from
+the affine $g$, the linear Lie derivative, and the ghost law; it is not invented. This answers XVI-O's ``absent under
+inherited $s$''. $s$ is nilpotent exactly. Seven mutations each produce residuals. Caveat: Q01 has no second,
+independent engine for this sector.
+
+\paragraph{Outcome.} O.2 at $\kappa^2$ is \textbf{Constructed in XVI-Q}; XVI-O's own record is unchanged (read-only).
+The scope is classical, $S_{\rm inv}$, $m=0$: not quantum, not the prepared $S_D$, not the insertion.
+
+\section{d guard (carried)}
+The XVI-P p23 dred is imported unchanged, with one added rule. Polynomial construction (\texttt{Poly.new}, a class
+attribute) and any internal rename of $d$ are admitted only when the \emph{entry} sympy function called from user
+code is an allow-listed rational normaliser; otherwise they are denied. This closes the p23 bypasses:
+\texttt{sympy.polys.rem}, pre-import capture, \texttt{reduced}, \texttt{groebner}, the Dummy rename and
+\texttt{rep.eval}. Probe: 16 forms $\times$ 4 expressions all raise, and ordinary algebra is unchanged.
+
+\section{Status and Q02 plan}
+After Q01: O.2 Constructed; O.4 inventory (with E1); O.5 bulk open; O.6/O.7 bulk open; enlarge rule not triggered at
+$\kappa^2$. Hence O.1 is NOT\_CLOSED. Q02 will:
+\begin{enumerate}
+\item evaluate the bulk O.5 graphs D04, D05a and D06 (full $c\bar c$ two-point), and settle D12 (Missing, never
+zero);
+\item state and verify the bulk retained identity ST4a/ST4b on the full two-point sector;
+\item solve for the bulk counterterms and attempt O.1.
+\end{enumerate}

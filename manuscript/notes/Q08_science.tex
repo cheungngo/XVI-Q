@@ -1,0 +1,27 @@
+\section{Q08: structure of the $\kappa^3$ evanescent counterterm}
+\subsection*{Scope}
+Pole level, one loop, $\kappa^3$, three-point rows (c$\phi\phi$, cc$\bar c$, ccK, hhc) as in Q07. Unknowns: the local
+evanescent counterterm $X$ of Q07 (821 coordinates: $X_{Kch}$ 134, $X_{\bar c ch}$ 81, $X_{c^*cc}$ 18, Bose-symmetric
+$X_{hhh}$ 588).
+\subsection*{1. Ghost equation}
+The loop poles obey $\Gamma_{\bar c ch}=\rho\,\Gamma_{Kch}[K\to T(\bar c)]$, $T(\bar c)=\mathrm{sym}(k,\bar c)-\tfrac12(k\cdot\bar c)\eta$,
+with one constant $\rho=-2$ (graph by graph: G04/G03 and G09/G07). Imposing $X_{\bar c ch}=-2X_{Kch}[K\to T]$ keeps the
+system solvable; a particular solution is certified ($A x=b$ verified). Free directions drop from 152 to 104. The
+$\eta$-trace is taken at the $d\to4$ residue level (hat trace 4, tilde trace 0).
+\subsection*{2--3. Free directions and trivial families}
+Kernel $N$ of the rows: dim 152 (104 with the ghost equation). Single-sector blind directions: 69 in $X_{Kch}$ alone,
+12 in $X_{c^*cc}$ alone, 26 in $X_{hhh}$ alone ($\sigma_0$-closed evanescent cubic structures, candidates for cubic
+parts of invariant evanescent operators), none in $X_{\bar c ch}$ alone. BRST-trivial candidates $\sigma(Y)$, gh $-1$:
+$Y=K\cdot F(h,h)$ (field redefinition of $h$), $Y=c^*\cdot G(c,h)$, $Y=\bar c\cdot\Phi(h,h)$ (gauge fermion). The relative
+normalisation of the two pieces of each family was fitted (best uniform $\lambda$: $-1$, $i/2$, $-2$); with it at
+least 97 directions of $N$ (55 inside the ghost-equation subspace) are trivial, at most 116. At least 36 directions
+are not shown trivial. Whether they are physical ambiguities (invariant evanescent operators) is not settled, and no
+explicit operator basis was constructed.
+\subsection*{4. Consistency with p22}
+Open: the cubic completion of the p22 $\kappa^2$ evanescent operators was not built.
+\subsection*{Outcome}
+P.6 Partial. Q07's pole-level $\sigma_0$ closure on the three-point rows now holds with a ghost-equation compatible
+$X$. Not implied: four-point rows, finite parts, uniqueness/physicality of $X$, p22 consistency.
+\subsection*{Disclosed revision of a frozen layer}
+Q08-R1: the Q07 gate (code/p6q06/q07/release\_q07.py) leaves files under code/p6q06/q07/q08/ and tools/*q08* to the
+Q08 gate; it is pinned by the Q08 expected-values file. The Q05 and Q06 gates are unchanged.

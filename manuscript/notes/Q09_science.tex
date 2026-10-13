@@ -1,0 +1,24 @@
+\section{Q09: review fixes; derived BRST-trivial directions of X}
+\subsection*{Q07 review fixes}
+(i) Status relabelled: \emph{evanescent $\kappa^3$ three-point defect $\sigma_0$-exact at pole level; X non-unique
+(ghost-equation compatible)}. This supersedes the Q07/Q08 wording ``$\sigma_0$ closure CLOSED at pole level''; the
+frozen Q07/Q08 certificates are left unchanged. (ii) The Q04 independent rebuild report is bound by its sha256 in the
+Q09 gate. (iii) A new static scan module (guard\_scan3) flags operator.methodcaller in any form and
+coefficient/exponent walks aimed at $d$ (coeff, as\_coeff\_exponent, as\_independent, collect, as\_poly, degree,
+and dictionary walks of the power/coefficient dictionaries keyed by $d$). All 10 probes are flagged; code/, tools/ and
+tests/ are clean. The Q05 scan is unchanged; the runtime guard stays primary.
+\subsection*{(a) Derived normalisations}
+For $Y=K\cdot F(h,h)$ the components of $\sigma Y=(S_0,Y)$ are produced by the same operators that build the rows
+($X_{hhh}$ by the $\delta S_0/\delta h$ contraction, $X_{Khc}$ by $h\to s_0h(c)$). These operators commute, so
+$\sigma^2=0$ fixes the relative sign $\lambda_F=-1$; likewise $\lambda_P=-1$ for $Y=\bar c\cdot\Phi$, and $\lambda_G=+1$ for
+$Y=c^*\cdot G$. Check: at $\lambda_F=-1$, 139 of 204 generators lie in the kernel. All 65 failures carry a $K$- or
+$h$-trace monomial, which points to the $\eta$-trace convention in the probe contraction (open). The Q08 $G$ and
+$P$ constructions do not close at the derived values (0/33, 0/134); they were assembled by hand and are open. The
+Q08 fitted counts are superseded.
+\subsection*{(b)--(d)}
+(b) Derived trivial span: 59 directions, 27 of them inside the 104-dimensional ghost-equation subspace. The rest are
+not classified. (c) No invariant evanescent operator basis was constructed: open. (d) Consistency with the p22
+$\kappa^2$ evanescent counterterms: open.
+\subsection*{Disclosed revision}
+Q09-R1: the Q08 gate leaves code/p6q06/q07/q08/q09/ and tools/*q09* to the Q09 gate; it is pinned by the Q09
+expected-values file. The Q05--Q07 gates and guard\_scan2 are unchanged.

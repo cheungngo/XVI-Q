@@ -1,0 +1,45 @@
+\section{Q03: correction release (no new science)}
+Q03 corrects the O.1 closure record after the Q02 independent review (report
+\texttt{reproducibility/independent\_rebuild\_report\_q02.json}, sha256 \texttt{e4b54702bc76\ldots}, reviewed
+source zip \texttt{378651a3\ldots}, tree \texttt{4b551b98\ldots}; decision: CONFIRM CLOSED (scoped)).
+The Q02 certificates are a frozen layer; the authoritative record is \texttt{certificates/Q03\_O1\_record.json}.
+
+\subsection{O.1 status}
+$\texttt{O1\_closure} = $ CLOSED (scoped), $\texttt{O1\_closure\_confirmed} = $ true, bound to the report sha256 and the
+reviewed tree (the gate re-hashes the report). Scope (verbatim from the review): one-loop, order $\kappa^2$, bulk
+two-point retained sector of $S_{\rm inv}$ ($h,\phi,c,\bar c,b$ + antifields; gh0 seeds), $m=0$, frozen gauge
+fermion, under XVI-P's declared prescription (DRED: QdS loop momenta, Q4S vertex indices, MS-bar) including the p22
+evanescent counterterm contract revision.
+
+\subsection{Correction 1: counterterm domain of O.1 item 5 (medium)}
+The counterterm domain used is the \emph{enlarged} domain: the 11 p14r 4D directions over $\mathbb{Q}(i)$
+\emph{plus} the 10 p22 evanescent operators ($K'\!\cdot c$ E2, coefficient $-1/16$; $\bar c c$ SE, $1/8$; eight
+$h\!\cdot\!h$ evanescent structures), 21 directions in all. With QdS (d-dimensional) external momenta the local divergent part contains
+evanescent poles that only the p22 operators cancel. ``ST4a in the declared p14r domain'' on its own holds only for 4D
+externals. $\sigma_0$ closure including the evanescent operators was verified in the p20/p22 independent reviews.
+
+\subsection{Correction 2: prescription; XVI-O closure reason 8 (medium)}
+The closure uses XVI-P's prescription, not XVI-O's. XVI-O's o70-sync D11 matter-loop kernel counterterm (closure
+reason 8) is superseded on evanescent legs: both XVI-O kernel continuations fail there (p22). Reason 8 is therefore
+recorded as NOT ANSWERED in XVI-O's terms; reasons 1--7 are answered as in Q02, and reason 7 now names the enlarged domain.
+
+\subsection{What O.1 CLOSED (scoped) does not imply}
+Not the functional/all-$n$-point ST4b; not bulk symmetry restoration (\texttt{bulk\_symmetry\_restored} = false);
+no change to XVI-O's own ledger (read-only, O.1 there stays NOT\_CLOSED); not the three-point sector / P.6
+($\kappa^3$) or higher orders; not the insertion (frozen); not finite amplitudes with $\epsilon$-scalar externals.
+
+\subsection{Caveats}
+(i) Both independent reviews ran on the same box as the author (shared Python/sympy and TeX Live).
+(ii) The D01/D03 pole values were never recomputed from independent Feynman rules; they are cross-checked only
+through the exact cancellation of the $c\!\cdot\!h$ defect in $d$.
+(iii) Full $\sigma_0$ closure and the $c\!\cdot\!h$ defect rely on the earlier p19--p22 independent checks.
+(iv) D06 is accepted through its exact equality with XVI-P P15 $\Sigma$.
+
+\subsection{Correction 3: gate and guard (low)}
+The gate now re-hashes every pinned provenance file (all 33, and it rejects any unpinned provenance file), every
+pinned code/conventions file and the bound independent report at gate time. It also checks that every file it reads
+is in the source set or is a build output. The d guard now refuses value assignment
+(\texttt{evaluate}/\texttt{subs}/\texttt{\_\_call\_\_}/\texttt{compose}) on \texttt{PolyRing}/\texttt{FracField}
+elements whose generators include $d$ when called directly. All 8 reviewer forms raise, and the 18 earlier forms still
+raise. Disclosed residual: raw dense-list evaluation carries no symbol information and is not guarded; no package code
+uses it.

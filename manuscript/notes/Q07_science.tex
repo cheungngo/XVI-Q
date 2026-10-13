@@ -1,0 +1,32 @@
+\section{Q07: $\kappa^3$ three-point rows --- h h c, evanescent counterterms, pole-level $\sigma_0$ closure}
+\subsection*{Scope}
+One loop, $\kappa^3$, UV-pole level, declared XVI-P prescription (DRED, opaque $d$, MS-bar, Feynman $+i0$). Rows of
+$(S,\Gamma_1^{\rm pole})$ with three external legs: $c\phi\phi$ (closed, Q05), $cc\bar c$ and $ccK$ (4D part closed,
+Q06), and $hhc$ (this release). Four-point and higher $\kappa^3$ rows and finite parts are not addressed.
+\subsection*{Row h h c}
+Channels: (A) $\Gamma_{hhh}$ (G01+G02+G08+G14+G15) with one leg replaced by $s_0h(c)$; (B) own $\Gamma_{hh}$ pole
+(graviton, ghost and scalar loops) with one leg $s_1h=\tfrac12 L_c h$; (C) $\delta S_{EH,3}/\delta h\cdot\Gamma_{Kc}$;
+(D) $\delta S_2/\delta h$ (EH + gauge fixing) $\cdot\Gamma_{Khc}$; (E) $s\bar c=\sigma_F F(h)$:
+$F\cdot\Gamma_{\bar c c h}$ (the channel missing from the Q04 ledger, erratum Q06-E2). The tree row
+$(S,S)/2|_{hhc}$ closes exactly with $\sigma_F=i$ and requires channel E. The scalar loops G14, G15 and the scalar
+part of $\Gamma_{hh}$ were recomputed with the Q05 engine; the matter sector alone closes exactly (incl.\ evanescent
+terms). Result: the 4D part of the row vanishes identically with all channels at $+1$ (the unconstrained fit has the
+unique solution all-equal), every single-channel deletion and a flip of $\sigma_F$ re-open it; an explicit
+evanescent remainder (248 terms, every term containing a $\tilde g$ contraction) is left.
+\subsection*{Evanescent counterterms}
+(i) The naive p22-type choice (subtract the $\tilde g$ part of every loop input) is \emph{not} $\sigma_0$-consistent:
+tree vertices regenerate $\tilde g$ structures from 4D loop parts (22 / 26 terms left on $ccK$ / $cc\bar c$).
+(ii) Joint test: $CT=-\Gamma^{\rm pole}+X$ with $X$ a generic local, purely evanescent $\kappa^3$ functional
+(monomials with at least one $\tilde g$) for $\Gamma_{Kch}$, $\Gamma_{\bar c ch}$, $\Gamma_{c^*cc}$ and a Bose-symmetric
+$\Gamma_{hhh}$; the same $X_{Kch}$, $X_{\bar c ch}$ enter the ghost rows and $hhc$. The linear system over
+$\mathbb Q(i)$ (821 unknowns) is solvable; a particular solution ($X_{c^*cc}=0$) is certified and verified by
+substitution; 152 parameters stay free (non-unique). Not tested: ghost-equation compatibility of $X$, four-point rows.
+\subsection*{Outcome}
+$\sigma_0$ closure at $\kappa^3$: CLOSED at pole level on the one-loop three-point rows in the enlarged (evanescent)
+counterterm domain. P.6 remains Partial: CT-domain reduction to an invariant operator basis, four-point rows, finite
+parts, ghost-equation compatibility and uniqueness of $X$ are open. O.1 (scoped, $\kappa^2$ two-point) unchanged;
+bulk symmetry restoration not claimed.
+\subsection*{Disclosed revision of a frozen layer}
+Q07-R1: the Q06 gate (code/p6q06/release\_q06.py) leaves files under code/p6q06/q07/ and tools/*q07* to the Q07 gate
+and treats the pinned Q05 guard-scan file count as a lower bound (as Q06-R1 did for the Q05 gate). The Q05 gate is
+byte-identical to Q06. The revised Q06 gate is pinned by the Q07 expected-values file.

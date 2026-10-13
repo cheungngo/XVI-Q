@@ -1,0 +1,30 @@
+\section{Q10: erratum on the trivial counts; anatomy of the family vectors}
+\subsection*{New manuscripts (intake, context only)}
+The companion source (cheungngo/enter-companion, head bb663a2, 2026-10-11) adds En05-A/B/C, En06-A/B and En07-A
+(partitioned Enter dynamics, operational causality, thermodynamic access) and OpenAI separation edges. The OpenAI
+catalogue is linked only by separations (``not a premise and not a declared path''). None of these has BRST,
+dimensional-regularisation, evanescent or counterterm content; nothing is imported as a premise. XV-B (modified in the
+same commit) stays unopened. Record: intake/new\_manuscripts\_q10.json.
+\subsection*{Erratum Q10-E1 (medium)}
+Withdrawn: the Q08 counts ``$\geq97$ in the trivial span at the best fitted $\lambda$'', ``$\geq55$ trivial'' and
+``$\geq36$ unexplained'' as a count of non-trivial directions; the Q09 counts ``F verified on 139/204'' and ``derived
+trivial span 59 (27 in the ghost-equation subspace)'' as counts of BRST-trivial directions.
+Reason (Q10\_family\_anatomy): of the 204 F generators, 15 vanish after the $h$-leg symmetrisation; all 124 nonzero
+generators that pass have \emph{each piece separately} in $N$, so the $\lambda$ test is vacuous on them, and 62 of them
+are supported only on blind coordinates. 64 of the 65 failures admit no $\lambda$ at all. For G, 28/33 admit no
+$\lambda$ (5 need $i/2$); for P, 132/134 admit no $\lambda$ (2 need $-2$). The Q08 hand-built pieces are not
+$\sigma$-images of the stated $Y$ for most generators. The defect lies in the construction, not the normalisation, so no
+normalisation (derived $-1,-1,+1$ or fitted $-1,i/2,-2$) can repair it.
+\subsection*{Blind directions and the restated bound}
+42 X coordinates (30 in the $K\!\cdot\!c\!\cdot\!h$ sector, 12 in the $c^*\!cc$ sector) enter no three-point row and
+no Bose condition. 24 of these survive the ghost equation. They are free at this order and unconstrained by the
+rows. $\dim N-\dim(N\cap\mathrm{span\ of\ all\ Q08\ pieces})=152-116=36$ is exact linear algebra, but the spanning
+pieces are not verified $\sigma$-images. So 36 bounds only the directions outside that span. It is neither a lower
+bound on physical directions nor an upper bound on trivial ones.
+\subsection*{Open}
+The F trace-type failures (the $\eta$-trace hypothesis is neither confirmed nor excluded); a correct construction of
+$\sigma(Y)$ for $Y=K\!\cdot\!F$, $c^*\!\cdot\!G$, $\bar c\!\cdot\!\Phi$ (or a proof of absence); classification of $N$;
+the invariant evanescent operator basis and X in it; consistency with the p22 $\kappa^2$ evanescent counterterms.
+\subsection*{Disclosed revision}
+Q10-R1: the Q09 layer gate leaves code/p6q06/q07/q08/q09/q10/ and tools/*q10* to the Q10 gate; it treats the guard\_scan3 file count as a lower bound (Q10 files are scanned, not exempted); it is pinned by
+q10\_expected.json. The Q05--Q08 gates are unchanged.

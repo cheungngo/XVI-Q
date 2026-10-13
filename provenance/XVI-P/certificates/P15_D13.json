@@ -1,0 +1,940 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p15",
+  "deliverable": "P.5 calculation Batch B: D13 (K'.c, kappa^2)",
+  "contract_revision": "p14r",
+  "prescription": "frozen p14r P14_DRED_MSbar_FeynmanI0 + S0 (certificates/P15_integral_library.json)",
+  "convention": "G_{(mn) nu}(p) = V_Gamma1[K'_(mn)(-p), c^nu(p)] = kappa^2 * (i S_eps/(16 pi^2)) * Ghat, Ghat = sum A_i(d) T_i * MB, MB = Ihat(1,1) = 1/eps + 2 - L + O(eps), L = log(-p^2/mu^2 - i0); indices lower (K' slot dual to h_(mn), c^nu -> lower nu); p_r lower components; p^2 = eta^{rs} p_r p_s",
+  "export": {
+    "file": "exports/P14_integrands/D13.json",
+    "sha256_recomputed": "42d999fbc4eb3aa01b57050fbe5ff97525976e56dca0e748bae6ca9f03c67026",
+    "sha256_stored": "42d999fbc4eb3aa01b57050fbe5ff97525976e56dca0e748bae6ca9f03c67026",
+    "sha256_p14r_certificate": "42d999fbc4eb3aa01b57050fbe5ff97525976e56dca0e748bae6ca9f03c67026",
+    "pinned": true
+  },
+  "prefactor_export": "I*kappa**2",
+  "status": "regulated",
+  "sector_status": {
+    "4D_structures_T1_T3": "renormalized",
+    "evanescent_structures_E1_E2": "regulated: pole nonzero (E2), recorded and retained (R6); its counterterm is an evanescent K'.c operator NOT in the p14r 4D basis (the p14r contract declares no evanescent counterterm: open contract item, not absorbed)"
+  },
+  "evanescent_counterterm_declared_in_p14r": false,
+  "result": {
+    "T1": {
+      "structure": "eta_mn p_nu p^2",
+      "A_exact_d_times_MB": "0",
+      "UV_pole": "0",
+      "MSbar_finite": "0",
+      "nonlocal_coefficient_of_L": "0",
+      "local_polynomial": "0",
+      "finite_if_d_set_to_4_first": "0",
+      "local_shift_from_d_dependence": "0"
+    },
+    "T2": {
+      "structure": "(eta_m nu p_n + eta_n nu p_m) p^2",
+      "A_exact_d_times_MB": "(4*d - 7)/(16*(d - 1))",
+      "UV_pole": "3/16",
+      "MSbar_finite": "1/3 - 3*L/16",
+      "nonlocal_coefficient_of_L": "-3/16",
+      "local_polynomial": "1/3",
+      "finite_if_d_set_to_4_first": "3/8 - 3*L/16",
+      "local_shift_from_d_dependence": "-1/24"
+    },
+    "T3": {
+      "structure": "p_m p_n p_nu",
+      "A_exact_d_times_MB": "3*(2 - d)/(8*(d - 1))",
+      "UV_pole": "-1/4",
+      "MSbar_finite": "L/4 - 5/12",
+      "nonlocal_coefficient_of_L": "1/4",
+      "local_polynomial": "-5/12",
+      "finite_if_d_set_to_4_first": "L/4 - 1/2",
+      "local_shift_from_d_dependence": "1/12"
+    },
+    "E1": {
+      "structure": "Gt_mn p_nu p^2",
+      "A_exact_d_times_MB": "0",
+      "UV_pole": "0",
+      "MSbar_finite": "0",
+      "nonlocal_coefficient_of_L": "0",
+      "local_polynomial": "0",
+      "finite_if_d_set_to_4_first": "0",
+      "local_shift_from_d_dependence": "0"
+    },
+    "E2": {
+      "structure": "(Gt_m nu p_n + Gt_n nu p_m) p^2",
+      "A_exact_d_times_MB": "3/(16*(d - 1))",
+      "UV_pole": "1/16",
+      "MSbar_finite": "1/6 - L/16",
+      "nonlocal_coefficient_of_L": "-1/16",
+      "local_polynomial": "1/6",
+      "finite_if_d_set_to_4_first": "1/8 - L/16",
+      "local_shift_from_d_dependence": "1/24"
+    }
+  },
+  "UV_pole_in_p14r_cK_basis": {
+    "coordinates": ["0", "3/8", "-1/4"],
+    "basis": [
+      {
+        "density": "(I)*[('c', 0, ()), ('K', (0, 0), (0, 0, 0))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 1, 1))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 2, 2))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 3, 3))] + (-I)*[('c', 0, ()), ('K', (1, 1), (0, 0, 0))] + (I)*[('c', 0, ()), ('K', (1, 1), (0, 1, 1))] + (I)*[('c', 0, ",
+        "T_coordinates": ["1", "0", "0"]
+      },
+      {
+        "density": "(I)*[('c', 0, ()), ('K', (0, 0), (0, 0, 0))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 1, 1))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 2, 2))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 3, 3))] + (I/2)*[('c', 0, ()), ('K', (0, 1), (0, 0, 1))] + (-I/2)*[('c', 0, ()), ('K', (0, 1), (1, 1, 1))] + (-I/2)*[('",
+        "T_coordinates": ["0", "1/2", "0"]
+      },
+      {
+        "density": "(I)*[('c', 0, ()), ('K', (0, 0), (0, 0, 0))] + (I)*[('c', 0, ()), ('K', (0, 1), (0, 0, 1))] + (I)*[('c', 0, ()), ('K', (0, 2), (0, 0, 2))] + (I)*[('c', 0, ()), ('K', (0, 3), (0, 0, 3))] + (I)*[('c', 0, ()), ('K', (1, 1), (0, 1, 1))] + (I)*[('c', 0, ()), ('K', (1, 2), (0, 1, 2))] + (I)*[('c', 0, ()),",
+        "T_coordinates": ["0", "0", "1"]
+      }
+    ]
+  },
+  "local_polynomial_in_p14r_cK_basis": ["0", "2/3", "-5/12"],
+  "nonlocal_in_p14r_cK_basis": ["0", "-3/8", "1/4"],
+  "MSbar_counterterm": "delta S = - kappa^2 (i S_eps/(16 pi^2)) (1/eps) * sum_k z_k O_k  (O_k the p14r c.K' densities, z = UV_pole coordinates); plus, for the evanescent structures, an evanescent counterterm (Gt_mn p_nu p^2, (Gt p + Gt p) p^2) NOT in the p14r basis",
+  "evanescent_pole_nonzero": true,
+  "local_ambiguity": "finite renormalization along the three p14r c.K' directions: G^R -> G^R + kappa^2 (i/(16 pi^2)) sum_k f_k O_k; a change of scale mu -> mu' shifts the local polynomial by + A_i(4) log(mu'^2/mu^2) along the UV-pole direction",
+  "renormalization_conditions": "MS-bar at mu: counterterm = pure pole (P14 normalization condition 0); no lower-degree K'.c contact (mu^2 K' dc) is generated (no scale but mu; pole is cubic in p); u^R_mu (XVI-O) not modified; an alternative momentum subtraction at p^2 = -M^2 differs by the finite renormalization A_i(4) log(M^2/mu^2) - (local MS-bar polynomial) along the same directions",
+  "absorptive_part": "for timelike p^2 > 0: L = log(p^2/mu^2) - i pi, Im Ghat = + pi * sum A_i(4) T_i",
+  "d_dependence": {
+    "evanescent_d_terms_matter": true,
+    "local_shift_from_d_dependence_T": {
+      "T1": "0",
+      "T2": "-1/24",
+      "T3": "1/12"
+    },
+    "evanescent_structure_poles": {
+      "E1": "0",
+      "E2": "1/16"
+    },
+    "statement": "the (d-4) x pole terms change the local finite polynomial (premature d = 4 gives a different MS-bar finite part); the difference is local and lies in the p14r c.K' span (a scheme-type finite renormalization), so it matters for the finite part in the declared scheme"
+  },
+  "authorised_d_substitutions": {
+    "d13.exact_fit: numerical rank test for row selection only (the solve and the verification of every row are exact in d)": 324,
+    "integrals.laurent: d = 4 - 2 eps after all contractions": 1,
+    "d13.expand_coeff: Laurent expansion after all contractions and the fit": 13,
+    "d13.expand_coeff: diagnostic A(4) (d-dependence proof only)": 13,
+    "d13.expand_coeff: diagnostic A'(4)": 13,
+    "d13.mutation display: pole": 3,
+    "mutation display only (enforce=False): premature d = 4": 396
+  },
+  "independent_cross_check_route": "route 2: integrand regenerated from the rule tables (feynman.pw_vertex; no exported data) and evaluated by Feynman parameters with d symbolic (integrals.fp_two_point; no Gram/PV reduction, no S0); agrees with route 1 (frozen export -> dred Pipeline) exactly in d",
+  "scaleless_rule_applications": [
+    {
+      "context": "J_D13[0,1] [I(0,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,1] [I(1,0) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,2] [I(-1,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,2] [I(0,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,2] [I(0,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,2] [I(1,-1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,2] [I(1,0) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,3] [I(-2,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,3] [I(-1,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,3] [I(-1,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,3] [I(0,-1) -> polynomial/(l^2)^-1]",
+      "k": 0,
+      "nu": -1,
+      "omega": 6,
+      "class": "UV power divergence Lambda^6: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,3] [I(0,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,3] [I(0,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,3] [I(1,-2) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,3] [I(1,-1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,3] [I(1,0) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,4] [I(-3,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,4] [I(-2,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,4] [I(-2,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,4] [I(-1,-1) -> polynomial/(l^2)^-1]",
+      "k": 0,
+      "nu": -1,
+      "omega": 6,
+      "class": "UV power divergence Lambda^6: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,4] [I(-1,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,4] [I(-1,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,4] [I(0,-2) -> polynomial/(l^2)^-2]",
+      "k": 0,
+      "nu": -2,
+      "omega": 8,
+      "class": "UV power divergence Lambda^8: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,4] [I(0,-1) -> polynomial/(l^2)^-1]",
+      "k": 0,
+      "nu": -1,
+      "omega": 6,
+      "class": "UV power divergence Lambda^6: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,4] [I(0,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,4] [I(0,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,4] [I(1,-3) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,4] [I(1,-2) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,4] [I(1,-1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[0,4] [I(1,0) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,0] [I(0,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,1] [I(-1,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,1] [I(0,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,1] [I(0,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,2] [I(-2,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,2] [I(-1,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,2] [I(-1,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,2] [I(0,-1) -> polynomial/(l^2)^-1]",
+      "k": 0,
+      "nu": -1,
+      "omega": 6,
+      "class": "UV power divergence Lambda^6: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,2] [I(0,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,2] [I(0,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,3] [I(-3,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,3] [I(-2,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,3] [I(-2,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,3] [I(-1,-1) -> polynomial/(l^2)^-1]",
+      "k": 0,
+      "nu": -1,
+      "omega": 6,
+      "class": "UV power divergence Lambda^6: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,3] [I(-1,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,3] [I(-1,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,3] [I(0,-2) -> polynomial/(l^2)^-2]",
+      "k": 0,
+      "nu": -2,
+      "omega": 8,
+      "class": "UV power divergence Lambda^8: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,3] [I(0,-1) -> polynomial/(l^2)^-1]",
+      "k": 0,
+      "nu": -1,
+      "omega": 6,
+      "class": "UV power divergence Lambda^6: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,3] [I(0,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,3] [I(0,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,4] [I(-4,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,4] [I(-3,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,4] [I(-3,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,4] [I(-2,-1) -> polynomial/(l^2)^-1]",
+      "k": 0,
+      "nu": -1,
+      "omega": 6,
+      "class": "UV power divergence Lambda^6: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,4] [I(-2,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,4] [I(-2,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,4] [I(-1,-2) -> polynomial/(l^2)^-2]",
+      "k": 0,
+      "nu": -2,
+      "omega": 8,
+      "class": "UV power divergence Lambda^8: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,4] [I(-1,-1) -> polynomial/(l^2)^-1]",
+      "k": 0,
+      "nu": -1,
+      "omega": 6,
+      "class": "UV power divergence Lambda^6: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,4] [I(-1,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,4] [I(-1,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,4] [I(0,-3) -> polynomial/(l^2)^-3]",
+      "k": 0,
+      "nu": -3,
+      "omega": 10,
+      "class": "UV power divergence Lambda^10: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,4] [I(0,-2) -> polynomial/(l^2)^-2]",
+      "k": 0,
+      "nu": -2,
+      "omega": 8,
+      "class": "UV power divergence Lambda^8: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,4] [I(0,-1) -> polynomial/(l^2)^-1]",
+      "k": 0,
+      "nu": -1,
+      "omega": 6,
+      "class": "UV power divergence Lambda^6: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,4] [I(0,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[1,4] [I(0,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,0] [I(-1,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,1] [I(-2,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,1] [I(-1,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,1] [I(-1,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,2] [I(-3,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,2] [I(-2,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,2] [I(-2,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,2] [I(-1,-1) -> polynomial/(l^2)^-1]",
+      "k": 0,
+      "nu": -1,
+      "omega": 6,
+      "class": "UV power divergence Lambda^6: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,2] [I(-1,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,2] [I(-1,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,3] [I(-4,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,3] [I(-3,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,3] [I(-3,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,3] [I(-2,-1) -> polynomial/(l^2)^-1]",
+      "k": 0,
+      "nu": -1,
+      "omega": 6,
+      "class": "UV power divergence Lambda^6: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,3] [I(-2,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,3] [I(-2,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,3] [I(-1,-2) -> polynomial/(l^2)^-2]",
+      "k": 0,
+      "nu": -2,
+      "omega": 8,
+      "class": "UV power divergence Lambda^8: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,3] [I(-1,-1) -> polynomial/(l^2)^-1]",
+      "k": 0,
+      "nu": -1,
+      "omega": 6,
+      "class": "UV power divergence Lambda^6: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,3] [I(-1,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,3] [I(-1,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,4] [I(-5,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,4] [I(-4,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,4] [I(-4,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,4] [I(-3,-1) -> polynomial/(l^2)^-1]",
+      "k": 0,
+      "nu": -1,
+      "omega": 6,
+      "class": "UV power divergence Lambda^6: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,4] [I(-3,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,4] [I(-3,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,4] [I(-2,-2) -> polynomial/(l^2)^-2]",
+      "k": 0,
+      "nu": -2,
+      "omega": 8,
+      "class": "UV power divergence Lambda^8: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,4] [I(-2,-1) -> polynomial/(l^2)^-1]",
+      "k": 0,
+      "nu": -1,
+      "omega": 6,
+      "class": "UV power divergence Lambda^6: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,4] [I(-2,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,4] [I(-2,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,4] [I(-1,-3) -> polynomial/(l^2)^-3]",
+      "k": 0,
+      "nu": -3,
+      "omega": 10,
+      "class": "UV power divergence Lambda^10: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,4] [I(-1,-2) -> polynomial/(l^2)^-2]",
+      "k": 0,
+      "nu": -2,
+      "omega": 8,
+      "class": "UV power divergence Lambda^8: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,4] [I(-1,-1) -> polynomial/(l^2)^-1]",
+      "k": 0,
+      "nu": -1,
+      "omega": 6,
+      "class": "UV power divergence Lambda^6: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,4] [I(-1,0) -> polynomial/(l^2)^0]",
+      "k": 0,
+      "nu": 0,
+      "omega": 4,
+      "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+    },
+    {
+      "context": "J_D13[2,4] [I(-1,1) -> polynomial/(l^2)^1]",
+      "k": 0,
+      "nu": 1,
+      "omega": 2,
+      "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+    }
+  ],
+  "dred_ledger_reductions_introducing_d": 248,
+  "controls": {
+    "export_sha_pinned": true,
+    "route1_equals_route2_exact_in_d": true,
+    "covariant_fit_exact": true,
+    "fits_agree": true,
+    "pole_local_in_p14r_cK_span": true,
+    "ghost_equation_2iD_G_equals_ghost_self_energy": true,
+    "ghost_self_energy_pole_in_p14r_c_cb_span": true,
+    "nonlocal_equals_minus_pole": true,
+    "R5_d_retained": true,
+    "R5_structural_safeguard_active": true,
+    "mutations_all_rejected": true
+  },
+  "route_comparison": {
+    "compared": 160,
+    "mismatches": [],
+    "n_mismatches": 0,
+    "agree": true
+  },
+  "fit_equations": 240,
+  "ghost_equation": {
+    "compared": 64,
+    "mismatches": [],
+    "n_mismatches": 0,
+    "agree": true,
+    "statement": "Sigma_{rho nu}(p) [one-loop ghost self-energy, same topology, evaluated by route 2 from the cbar.c.h vertex] == 2 i D^rho_p[G_{.. nu}] with D^rho T = d_s T^{rho s} - 1/2 d^rho tr T (linear de Donder gauge: ghost equation); exact in d on the faithful Gt realization"
+  },
+  "ghost_self_energy_pole": {
+    "fit_exact": true,
+    "structures": {
+      "S1": "delta^rho_nu p^4",
+      "S2": "p^rho p_nu p^2",
+      "SE": "Gt^rho_nu p^4 (evanescent)"
+    },
+    "coefficients_exact_d": {
+      "S1": "-(4*d - 7)/(8*(d - 1))",
+      "S2": "3*(d - 2)/(8*(d - 1))",
+      "SE": "-3/(8*(d - 1))"
+    },
+    "pole": {
+      "S1": "-3/8",
+      "S2": "1/4",
+      "SE": "-1/8"
+    },
+    "local": {
+      "S1": "-2/3",
+      "S2": "5/12",
+      "SE": "-1/3"
+    },
+    "p14r_c_cb_basis": [
+      {
+        "density": "(-1)*[('c', 0, (0, 0, 0, 0)), ('cb', 0, ())] + (2)*[('c', 0, (0, 0, 1, 1)), ('cb', 0, ())] + (2)*[('c', 0, (0, 0, 2, 2)), ('cb', 0, ())] + (2)*[('c', 0, (0, 0, 3, 3)), ('cb', 0, ())] + (-1)*[('c', 0, (1, 1, 1, 1)), ('cb', 0, ())] + (-2)*[('c', 0, (1, 1, 2, 2)), ('cb', 0, ())] + (-2)*[('c', 0, (1, 1,",
+        "S_coordinates": ["1", "0"]
+      },
+      {
+        "density": "(-1)*[('c', 0, (0, 0, 0, 0)), ('cb', 0, ())] + (1)*[('c', 0, (0, 0, 1, 1)), ('cb', 0, ())] + (1)*[('c', 0, (0, 0, 2, 2)), ('cb', 0, ())] + (1)*[('c', 0, (0, 0, 3, 3)), ('cb', 0, ())] + (-1)*[('c', 1, (0, 0, 0, 1)), ('cb', 0, ())] + (1)*[('c', 1, (0, 1, 1, 1)), ('cb', 0, ())] + (1)*[('c', 1, (0, 1, 2",
+        "S_coordinates": ["0", "1"]
+      }
+    ],
+    "pole_in_p14r_c_cb_coordinates": ["-3/8", "1/4"],
+    "evanescent_pole_SE": "-1/8",
+    "pole_local_and_in_p14r_c_cb_span": true
+  },
+  "mutations": {
+    "wrong_ghost_loop_sign": {
+      "changes_result": true,
+      "rejected": true,
+      "reason": "route 1 (frozen export) != regenerated route 2: 160 mismatches; W1 shadow: D13 has no closed ghost loop",
+      "pole_T_if_accepted": ["0", "-3/16", "1/4"],
+      "accepted_as_rejection": true
+    },
+    "premature_d4": {
+      "rejected": true,
+      "changes_result": true,
+      "reason": "PrematureD4Substitution (structural, at the substitution site): d -> 4 outside substitute_d (R5: d is opaque before the Laurent expansion)",
+      "fit_d_free_if_not_caught": false,
+      "local_part_if_not_caught_T": ["-1/24", "5/12", "-1/2"],
+      "local_part_certified_T": ["0", "1/3", "-5/12"],
+      "note": "the Gt realization Gt = (4-d) M reintroduces d after the premature substitution (the false-negative mechanism of finding F1); only the structural safeguard catches it",
+      "pole_T_if_not_caught": ["0", "3/16", "-1/4", "0", "1/16"],
+      "accepted_as_rejection": true
+    },
+    "drop_evanescent_Gt": {
+      "changes_result": true,
+      "rejected": true,
+      "reason": "route 1 with Gt dropped != route 2 (ghat kept): 160 mismatches; R6 retention check fails",
+      "fit_if_accepted": {
+        "T1": "-(d - 4)/(16*(d - 1))",
+        "T2": "(5*d - 11)/(16*(d - 1))",
+        "T3": "-3*(d - 2)/(8*(d - 1))",
+        "E1": "0",
+        "E2": "0"
+      },
+      "accepted_as_rejection": true
+    },
+    "wrong_symmetry_factor": {
+      "changes_result": true,
+      "rejected": true,
+      "reason": "route 1 != route 2 with S_f = 1/2: 160 mismatches",
+      "accepted_as_rejection": true
+    },
+    "wrong_K_c_ordering": {
+      "changes_result": true,
+      "rejected": true,
+      "reason": "route 1 != route 2 with leg order (c, K', h): 160 mismatches",
+      "accepted_as_rejection": true
+    }
+  },
+  "mutations_all_rejected": true,
+  "D13_evaluated": {
+    "execution": true,
+    "claim": "D13 (kappa^2 K'.c) evaluated in closed form under the declared prescription: the UV pole of the 4D structures is local and in the span of the three p14r c.K' directions (the evanescent E2 pole is recorded, not absorbed), MS-bar finite part = nonlocal log(-p^2/mu^2) part + local cubic polynomial, two independent routes agree exactly in d, ghost equation verified, mutations rejected",
+    "scope": "one graph (D13) of the K'.c slot at kappa^2; MS-bar at mu with N_eps = i S_eps/(16 pi^2); external momenta in QdS (R2); evanescent Gt structures retained (their pole is NONZERO: an evanescent K'.c counterterm outside the p14r 4D basis is needed for full DRED renormalization); NOT quantum_inputs_evaluated; the slot's identity role is not evaluated (Batch C, D11 M2)"
+  },
+  "loop_evaluations_performed": true,
+  "seconds": 64.4
+}

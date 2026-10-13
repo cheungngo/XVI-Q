@@ -1,0 +1,239 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p22",
+  "contract_revision": "p22 (p14r contract + disclosed p15/p16/p17/p18 revisions + the DISCLOSED p22 contract revision: evanescent counterterms (EV-CT) and the runtime d guard in code/p5_entry/dred.py)",
+  "deliverable": "p22 priorities 1-2: evanescent matching statement (EV-M2) and evanescent counterterms (EV-CT)",
+  "EV_M2": {
+    "question": "what must the 8 evanescent D11 structures satisfy, given XVI-O has no evanescent counterpart?",
+    "candidates": {
+      "match a d-dim continuation of the XVI-O kernel": "REFUTED for both natural continuations (g4 -> ghat; g4 kept): the exact D11 tensor differs from either continuation of its own 4D part on tilde external legs; XVI-O defines no other continuation -- not a usable statement",
+      "vanish as eps -> 0 in the renormalised result": "TRUE in the stronger form: after subtraction, every evanescent component is identically ZERO on 4D external legs at every d (not merely O(eps))",
+      "be pure local evanescent operators": "TRUE for the UV poles (constants x polynomial gt-structures); FALSE for the finite parts (they carry L = log(-p^2/mu^2)): the finite remainder is nonlocal but evanescent"
+    },
+    "statement": "EV-M2: the evanescent D11 poles are local evanescent operators (removed by the p22 evanescent counterterm), and the renormalised evanescent remainder vanishes identically on 4D external configurations, exactly in d.  No matching to XVI-O is asserted.",
+    "verdict": "PROVEN (exact, opaque d)",
+    "locality": true,
+    "four_D_decoupling": {
+      "D01: g4_mn gt_rs (p.p)^2": "0",
+      "D01: g4_rs gt_mn (p.p)^2": "0",
+      "D01: gt_mn gt_rs (p.p)^2": "0",
+      "D01: g4_mr gt_ns (p.p)^2": "0",
+      "D01: gt_mr gt_ns (p.p)^2": "0",
+      "D01: gt_mn p_r p_s (p.p)^1": "0",
+      "D01: gt_mr p_n p_s (p.p)^1": "0",
+      "D01: gt_rs p_m p_n (p.p)^1": "0",
+      "D03: gt_mn p_r p_s (p.p)^1": "0",
+      "D03: gt_mr p_n p_s (p.p)^1": "0",
+      "D03: gt_rs p_m p_n (p.p)^1": "0",
+      "D03: g4_mn gt_rs (p.p)^2": "0",
+      "D03: g4_mr gt_ns (p.p)^2": "0",
+      "D03: g4_rs gt_mn (p.p)^2": "0",
+      "D11: g4_mn gt_rs (p.p)^2": "0",
+      "D11: g4_rs gt_mn (p.p)^2": "0",
+      "D11: gt_mn gt_rs (p.p)^2": "0",
+      "D11: g4_mr gt_ns (p.p)^2": "0",
+      "D11: gt_mr gt_ns (p.p)^2": "0",
+      "D11: gt_mn p_r p_s (p.p)^1": "0",
+      "D11: gt_mr p_n p_s (p.p)^1": "0",
+      "D11: gt_rs p_m p_n (p.p)^1": "0"
+    },
+    "continuation_tests": {
+      "D11": {
+        "ghat_continuation_mismatches": {
+          "a^b^c~e~": "-I*c~.e~*p.p*(d - 2)*(a^.b^*p.p - a^.p*b^.p)/(32*(d - 1))",
+          "a~b~c^e^": "-I*a~.b~*p.p*(d - 2)*(c^.e^*p.p - c^.p*e^.p)/(32*(d - 1))",
+          "a~b~c~e~": "-I*a~.b~*c~.e~*p.p**2/32"
+        },
+        "g4_kept_continuation_mismatches": {
+          "a^b^c~e~": "-I*d*c~.e~*p.p*(a^.b^*p.p - a^.p*b^.p)/(32*(d - 1)*(d + 1))",
+          "a^b~c^e~": "I*b~.e~*p.p*(a^.c^*p.p - a^.p*c^.p)/(32*(d - 1)*(d + 1))",
+          "a^b~c~e^": "I*b~.c~*p.p*(a^.e^*p.p - a^.p*e^.p)/(32*(d - 1)*(d + 1))",
+          "a~b^c^e~": "I*a~.e~*p.p*(b^.c^*p.p - b^.p*c^.p)/(32*(d - 1)*(d + 1))",
+          "a~b^c~e^": "I*a~.c~*p.p*(b^.e^*p.p - b^.p*e^.p)/(32*(d - 1)*(d + 1))",
+          "a~b~c^e^": "-I*d*a~.b~*p.p*(c^.e^*p.p - c^.p*e^.p)/(32*(d - 1)*(d + 1))",
+          "a~b~c~e~": "-I*p.p**2*(2*d*a~.b~*c~.e~ + a~.b~*c~.e~ - a~.c~*b~.e~ - a~.e~*b~.c~)/(32*(d - 1)*(d + 1))"
+        },
+        "ghat_continuation_holds": false,
+        "g4_kept_continuation_holds": false,
+        "hatted_externals_agree_both": true
+      }
+    }
+  },
+  "D11_matching_verified_scope": "4D components: M2 discharged (P18_D11_M2, unchanged); evanescent components: EV-M2 proven (local poles + exact 4D decoupling of the renormalised remainder); NOT matched to XVI-O (no counterpart; both natural d-dim continuations refuted)",
+  "EV_CT": {
+    "contract_revision": "p22: evanescent counterterms admitted outside the p14r 4D domain -- h.h operators O_k = 1/2 h_mn S_k^{(mn)(rs)}(gt, g4, p) h_rs for the 8 gt-structures of the hh two-point function (D01 + D03 + D11), the K'.c operator K'^{mn} E2_{(mn)v} c^v (D13) and its ghost-equation partner cb_m SE^m_v c^v (Sigma, gt p^4); coefficient = -(UV pole) (MS-bar, N_eps kappa^2 / eps normalisation of P14)",
+    "coefficients_hh_counterterm_per_graph": {
+      "D01": {
+        "g4_mn gt_rs (p.p)^2": "-13*I/120",
+        "g4_rs gt_mn (p.p)^2": "-13*I/120",
+        "gt_mn gt_rs (p.p)^2": "I/240",
+        "g4_mr gt_ns (p.p)^2": "3*I/80",
+        "gt_mr gt_ns (p.p)^2": "I/240",
+        "gt_mn p_r p_s (p.p)^1": "3*I/20",
+        "gt_mr p_n p_s (p.p)^1": "-7*I/120",
+        "gt_rs p_m p_n (p.p)^1": "3*I/20"
+      },
+      "D03": {
+        "gt_mn p_r p_s (p.p)^1": "-I/12",
+        "gt_mr p_n p_s (p.p)^1": "I/16",
+        "gt_rs p_m p_n (p.p)^1": "-I/12",
+        "g4_mn gt_rs (p.p)^2": "I/24",
+        "g4_mr gt_ns (p.p)^2": "-I/24",
+        "g4_rs gt_mn (p.p)^2": "I/24"
+      },
+      "D11": {
+        "g4_mn gt_rs (p.p)^2": "I/120",
+        "g4_rs gt_mn (p.p)^2": "I/120",
+        "gt_mn gt_rs (p.p)^2": "I/480",
+        "g4_mr gt_ns (p.p)^2": "-I/480",
+        "gt_mr gt_ns (p.p)^2": "I/480",
+        "gt_mn p_r p_s (p.p)^1": "-I/120",
+        "gt_mr p_n p_s (p.p)^1": "I/480",
+        "gt_rs p_m p_n (p.p)^1": "-I/120"
+      }
+    },
+    "coefficients_hh_counterterm_sum": {
+      "g4_mn gt_rs (p.p)^2": "-7*I/120",
+      "g4_mr gt_ns (p.p)^2": "-I/160",
+      "g4_rs gt_mn (p.p)^2": "-7*I/120",
+      "gt_mn gt_rs (p.p)^2": "I/160",
+      "gt_mn p_r p_s (p.p)^1": "7*I/120",
+      "gt_mr gt_ns (p.p)^2": "I/160",
+      "gt_mr p_n p_s (p.p)^1": "I/160",
+      "gt_rs p_m p_n (p.p)^1": "7*I/120"
+    },
+    "coefficient_Kc_E2": "-1/16",
+    "coefficient_ccb_SE": "1/8",
+    "a_closure": {
+      "h.c": {
+        "p_dot_T_ev_per_graph": {
+          "D01": {
+            "(('g', 't', 'n', 'r'), ('v', 'p', 's'))": "I*p.p**2/48",
+            "(('g', 't', 'n', 's'), ('v', 'p', 'r'))": "I*p.p**2/48",
+            "(('g', 't', 'r', 's'), ('v', 'p', 'n'))": "-I*p.p**2/24"
+          },
+          "D03": {
+            "(('g', 't', 'n', 'r'), ('v', 'p', 's'))": "-I*p.p**2/48",
+            "(('g', 't', 'n', 's'), ('v', 'p', 'r'))": "-I*p.p**2/48",
+            "(('g', 't', 'r', 's'), ('v', 'p', 'n'))": "I*p.p**2/24"
+          },
+          "D11": {}
+        },
+        "p_dot_T_ev_sum": {},
+        "E_dot_E2": 0,
+        "closed": true
+      },
+      "c.b": {
+        "calibration_rho_from_4D_pair": "1/2",
+        "image_ev_pair": {},
+        "closed": true,
+        "ghost_equation_exact_in_d_gt_sector": true
+      },
+      "c.cbs": "unreachable: S0's quadratic part is h.h, h.b, b.b, b.cbs (+ K.c, cb.c); sigma_0 of h.h, K'.c, cb.c bilinears lands in h.c and c.b only",
+      "full_closure_with_4D_counterterm": "closed: the 4D MS-bar counterterm is closed (P20_defect, unchanged) and sigma_0 is linear"
+    },
+    "b_projected_identity": {
+      "hh_slot_values_sum": {
+        "Q4S (declared, R2)": "0",
+        "QdS (hat)": "0",
+        "c tilde, h hat": "0",
+        "c tilde, h mixed": "0",
+        "c hat, h mixed": "0",
+        "all tilde": "0"
+      },
+      "hh_slot_values_per_graph": {
+        "D01": {
+          "Q4S (declared, R2)": "-p.p**2*(a^.p*b~.c~ - 2*a~.b~*c^.p + a~.c~*b^.p)/48",
+          "QdS (hat)": "0",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "-a~.c~*b^.p*p.p**2/48",
+          "c hat, h mixed": "0",
+          "all tilde": "0"
+        },
+        "D03": {
+          "Q4S (declared, R2)": "p.p**2*(a^.p*b~.c~ - 2*a~.b~*c^.p + a~.c~*b^.p)/48",
+          "QdS (hat)": "0",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "a~.c~*b^.p*p.p**2/48",
+          "c hat, h mixed": "0",
+          "all tilde": "0"
+        },
+        "D11": {
+          "Q4S (declared, R2)": "0",
+          "QdS (hat)": "0",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0"
+        }
+      },
+      "Kc_slot_values": {
+        "Q4S (declared, R2)": "0",
+        "QdS (hat)": "0",
+        "c tilde, h hat": "0",
+        "c tilde, h mixed": "0",
+        "c hat, h mixed": "0",
+        "all tilde": "0"
+      },
+      "unchanged": true
+    },
+    "c_remnants": {
+      "finite_evanescent_remainder": "MS-bar finite parts (local + L) x gt-structures: recorded per structure in P18_D11 / P16_batchC / P15_D13; NONZERO; identically zero on 4D (hatted) external legs, exactly in d (four_d_decoupling below)",
+      "O_eps_times_pole_at_this_order": "none with QdS (hatted) external legs: all four indices are external, so tr gt = 4 - d never arises and the evanescent operators are ZERO on hatted legs at every d; see the Q4S trace entry for the one place it can arise",
+      "trace_of_pole_tensor_g4^{mn}T_mn,rs (hatted r,s)": {
+        "per_graph": {
+          "D01": "-I*p.p*(d - 4)*(13*a^.b^*p.p - 18*a^.p*b^.p)/120",
+          "D03": "I*p.p*(d - 4)*(a^.b^*p.p - 2*a^.p*b^.p)/24",
+          "D11": "I*p.p*(d - 4)*(a^.b^*p.p - a^.p*b^.p)/120"
+        },
+        "sum": "-7*I*p.p*(d - 4)*(a^.b^*p.p - a^.p*b^.p)/120"
+      },
+      "O_eps_times_pole_Q4S_trace_external": {
+        "finite_term_if_external_trace_mode_uses_g4": "7*I*p.p*(a^.b^*p.p - a^.p*b^.p)/60",
+        "rule": "(d - 4) x (1/eps) -> -2 (d = 4 - 2 eps); times the residue above",
+        "status": "NONZERO: a finite local transverse term arises iff the external trace mode is defined with the quasi-4D g4 (it then carries eps-scalar components); with QdS (hatted) external legs it is zero.  This is a scheme / external-state convention (DRED eps-scalar sector), disclosed: the p22 renormalised result is stated for QdS external legs"
+      },
+      "where_O_eps_x_pole_would_enter": "insertions of the evanescent counterterms into loops (two loops) or into composite operators with traces: (4 - d) x (1/eps) = finite local terms -- beyond this order; not evaluated, not claimed"
+    }
+  },
+  "mutations": {
+    "drop_D03_evanescent_ct (h.c)": true,
+    "drop_D01_evanescent_ct (h.c)": true,
+    "D03_evanescent_ct_x2 (h.c)": true,
+    "drop_SE_partner (c.b)": true,
+    "flip_sign_E2_ct (c.b)": true,
+    "trace_operator_in_place_of_s0h (slot)": true
+  },
+  "insensitive_variations": {
+    "D11_evanescent_ct_x2 (h.c)": "p_m T_D11,ev = 0 by itself: the D11 evanescent counterterm is closed alone; its normalisation is pinned by the D11 pins, not by closure",
+    "detected": false
+  },
+  "controls": {
+    "poles_equal_stored_D13_and_Sigma": true,
+    "D11_evanescent_poles_equal_stored": true,
+    "hh_evanescent_pole_sum_equals_P18_hh_slot": true,
+    "ev_poles_local": true,
+    "ev_four_D_decoupling_exact": true,
+    "ev_D11_hatted_externals_agree": true,
+    "hc_p_dot_T_ev_sum_zero": true,
+    "hc_E_dot_E2_zero": true,
+    "hc_D01_D03_ev_sum_transverse": true,
+    "hc_D01_alone_not_transverse": true,
+    "cb_calibration_unique_on_4D_pair": true,
+    "cb_ev_pair_closed": true,
+    "ghost_equation_ev_exact_in_d": true,
+    "identity_unchanged_hh_slot_zero_all_ext": true,
+    "identity_unchanged_kc_slot_zero_all_ext": true,
+    "D01_ev_ct_alone_reaches_slot": true,
+    "mutations_all_detected": true
+  },
+  "evanescent_counterterm_earned": true,
+  "EV_M2_status": "proven",
+  "EV_CT_status": "earned",
+  "P5_calculation_status": "renormalized (one loop, kappa^2, two-point functions hh / K'.c / cb.c; MS-bar in DRED with the p22 evanescent counterterms; external legs in QdS)",
+  "scope": "one loop, kappa^2, the two-point functions entering the ch rows; NOT the one-point row beyond kappa^1, not higher points, not two loops; not bulk symmetry, not O.1",
+  "authorised_d_substitutions": {
+    "evanescent: UV pole A(4) of an evanescent structure (after exact-d algebra)": 59
+  },
+  "seconds": 19.9
+}

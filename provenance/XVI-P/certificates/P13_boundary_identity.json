@@ -1,0 +1,80 @@
+{
+  "revision": "p13",
+  "gate": "C3_boundary_identity",
+  "statement": "sqrt(-g) R - L_GG = - d_mu B^mu,  B^mu = sqrt(-g)(g^{mu nu} G^l_{nu l} - g^{l nu} G^mu_{l nu})",
+  "L_GG": "L_GG = sqrt(-g) g^{mn}(G^a_{mb} G^b_{na} - G^a_{mn} G^b_{ab})",
+  "orientation_correction": "p09/p10 stated sqrt(-q)R - L_GG = + d_mu B^mu; correct is - d_mu B^mu",
+  "old_C3_vacuity": {
+    "support": "g = eta + A(x0) e_00 (p09/p10 C3)",
+    "nonzero_Christoffels": ["G^0_00"],
+    "sqrt_g_R": "0",
+    "L_GG": "0",
+    "B": ["0", "0", "0", "0"],
+    "div_B": "0",
+    "vacuous": true,
+    "why": "locally flat: x0 -> int sqrt(1+A) dx0 removes A; Gamma^0_00 alone gives R = 0, both GammaGamma contractions equal (Gamma^0_00)^2 g^00 and cancel, and B^0 = sqrt(-g)(g^00 G^0_00 - g^00 G^0_00) = 0. The p10 source comment 'keeps dB nontrivial' was false."
+  },
+  "conformal_control_correct_orientation": {
+    "metric": "g = f(x0,x1,x2,x3) eta, generic f (all four coordinates), exact",
+    "orientation": "sqrt(-g)R - L_GG + d_mu B^mu",
+    "residual": "0",
+    "residual_zero": true,
+    "closed_forms_verified": {
+      "sqrt(-g)R = -3 Box f + (3/(2f))(df)^2": true,
+      "L_GG = (3/(2f))(df)^2": true,
+      "B^mu = 3 d^mu f": true
+    },
+    "nontrivial": true
+  },
+  "conformal_control_old_orientation_fails": {
+    "residual": "-6*Derivative(f(x0, x1, x2, x3), (x0, 2)) + 6*Derivative(f(x0, x1, x2, x3), (x1, 2)) + 6*Derivative(f(x0, x1, x2, x3), (x2, 2)) + 6*Derivative(f(x0, x1, x2, x3), (x3, 2))",
+    "fails": true,
+    "equals": "-6 Box f"
+  },
+  "generic_jet_proof": {
+    "variables": {
+      "inverse_metric_free_symmetric": 10,
+      "first_jets": 40,
+      "second_jets": 100
+    },
+    "orientation": "+d_mu B^mu (correct)",
+    "terms": {
+      "R": 2406,
+      "l": 1764,
+      "div_b": 2442
+    },
+    "residual_terms": 0,
+    "identically_zero": true,
+    "holds_for_free_G": true,
+    "seconds": 1.3
+  },
+  "generic_jet_proof_old_orientation": {
+    "variables": {
+      "inverse_metric_free_symmetric": 10,
+      "first_jets": 40,
+      "second_jets": 100
+    },
+    "orientation": "-d_mu B^mu (p09/p10)",
+    "terms": {
+      "R": 2406,
+      "l": 1764,
+      "div_b": 2442
+    },
+    "residual_terms": 2736,
+    "identically_zero": false,
+    "holds_for_free_G": false,
+    "seconds": 0.94
+  },
+  "jacobi_lemma": {
+    "derivative_of_det_equals_tr_adj": true,
+    "adj_g_equals_det_one": true,
+    "consequence": "d_mu sqrt(-g) = (1/2) sqrt(-g) g^{ab} d_mu g_ab ; d_c g^{ab} = - g^{ar} d_c g_rs g^{sb}"
+  },
+  "integrated_action_unaffected": "int d_mu B^mu = 0 under compact support for either sign, so S_EH = -(2/kappa^2) int L_GG and ell_k = -2[eps^k]L_GG are unchanged",
+  "evidence_kind": "deterministic exact symbolic (sympy; polynomial ring over QQ for (iii))",
+  "C3_proved": true,
+  "execution_pass": true,
+  "claim_status": "proved",
+  "scope": "exact non-perturbative identity on the jet space of a generic metric (any signature-compatible g)",
+  "seconds": 3.4
+}

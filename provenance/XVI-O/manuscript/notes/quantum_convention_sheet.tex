@@ -1,0 +1,35 @@
+\section{Quantum convention sheet (o64-hard Gate~0)}
+\label{sec:O-qconv}
+
+\begin{center}
+\begin{tabular}{@{}p{0.28\textwidth}p{0.66\textwidth}@{}}
+\toprule
+Topic & Frozen choice \\
+\midrule
+Metric &
+$q_{\mu\nu}=\eta_{\mu\nu}+\kappa h_{\mu\nu}$ (XI-A uses $\gamma$; map $h\leftrightarrow\gamma$);
+$\eta=\operatorname{diag}(+---)$. \\
+Scalar action &
+$S_\phi=\tfrac12\int\sqrt{-q}\,q^{\mu\nu}\partial_\mu\phi\partial_\nu\phi$ ($m=0$).
+$B^{\mu\nu}=\sqrt{-q}q^{\mu\nu}=\eta+\kappa a_1+\kappa^2 a_2$ with XI-A $a_1,a_2$. \\
+Path integral &
+$e^{iS/\hbar}$; Fourier $\partial_\mu\to ik_\mu$, $\square\to -k^2$. \\
+$G_F$ vs $D_F$ &
+\textbf{Separate.} $G_F=$ Hessian inverse (XIV-A $G^R=-\mathcal PE^R$ coeff.~$-1$;
+XI-B not Hadamard). Wick: $D_F(k)=i/(k^2+i0)$ after stripping $\hbar$;
+$(-\square)D_F=i\delta$. o61 conversion: $\Delta_F=-D_F$ (written once). \\
+Effective action &
+$\Gamma=S+\hbar\Gamma_1+\cdots$,
+$\Gamma_{1,\mathrm{matter}}=-i\log Z$,
+$\Gamma_1^{(2)}=\tfrac12\int h_{\mu\nu}\Pi^{\mu\nu\rho\sigma}(x-y)h_{\rho\sigma}$.
+The $i$ inside $D_F$ is not counted again in $-i\log Z$. \\
+Scope &
+Massless scalar matter-loop on background metric.
+Not complete bulk BV; not $F_t$; En01/Em01 not premises;
+insertion Track~II frozen; O.1 NOT\_CLOSED; bulk \texttt{symmetry\_restored=false};
+subsector Constructed under prescription (o70-sync kernel; same FP/$W_w$ as o68/o69). \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\textbf{Acceptance:} every later factor follows this sheet; no convention is changed midway.

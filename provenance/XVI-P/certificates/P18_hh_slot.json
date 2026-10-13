@@ -1,0 +1,245 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p18",
+  "deliverable": "full hh slot (D01+D02+D03+D11+D12) vs the ch projection",
+  "row": "(S0,Gamma1^[2]) s2 K:K.c",
+  "graphs": "D01 + D02 + D03 + D11 + D12 (D02 = D12 = 0, P15_batchA.json)",
+  "verdict": "DECOUPLED (proof, full row): p_m G = 0 exactly in d for D11 by itself and for D01 + D03 as a sum; no evanescent structure survives in the slot",
+  "decoupling_proven_full_row": true,
+  "surviving_evanescent_structures_in_slot": [],
+  "D11_reopens_evanescent_question": false,
+  "how_D11_decouples": "graph by graph: D11 (scalar loop, conserved matter stress tensor) is transverse by itself, 4D and evanescent parts separately; its evanescent poles are nonzero but transverse. Hence D11 mutations of phase or symmetry factor are NOT detectable by the slot (they are tested by M2 instead); the slot sees D11 only through a non-longitudinal operator (trace operator control: nonzero)",
+  "operator_s_h": {
+    "exact": true,
+    "unique": true,
+    "offdiag_weight": 1,
+    "upper": false,
+    "n_components": 16,
+    "rank": 4,
+    "n_ansatz": 4,
+    "covariant": [
+      [
+        "I/2",
+        [
+          ["g4", "m", "v"],
+          ["p", "n"]
+        ]
+      ]
+    ]
+  },
+  "slot_values": {
+    "D01": {
+      "Q4S (declared, R2)": "p.p**2*(d*a.b*c^.p - 3*a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p - a~.c~*b^.p)/(16*(d - 1))",
+      "QdS (hat)": "p.p**2*(d*a^.b^*c^.p - 3*a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/(16*(d - 1))",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0",
+      "c hat, h tilde": "a~.b~*c^.p*p.p**2/16"
+    },
+    "D03": {
+      "Q4S (declared, R2)": "-p.p**2*(d*a.b*c^.p - 3*a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p - a~.c~*b^.p)/(16*(d - 1))",
+      "QdS (hat)": "-p.p**2*(d*a^.b^*c^.p - 3*a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/(16*(d - 1))",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0",
+      "c hat, h tilde": "-a~.b~*c^.p*p.p**2/16"
+    },
+    "D11": {
+      "Q4S (declared, R2)": "0",
+      "QdS (hat)": "0",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0",
+      "c hat, h tilde": "0"
+    },
+    "D01+D03+D11": {
+      "Q4S (declared, R2)": "0",
+      "QdS (hat)": "0",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0",
+      "c hat, h tilde": "0"
+    },
+    "evanescent_parts_D01+D03+D11": {
+      "Q4S (declared, R2)": "0",
+      "QdS (hat)": "0",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0",
+      "c hat, h tilde": "0"
+    },
+    "evanescent_part_D11": {
+      "Q4S (declared, R2)": "0",
+      "QdS (hat)": "0",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0",
+      "c hat, h tilde": "0"
+    },
+    "D11_under_trace_operator": {
+      "Q4S (declared, R2)": "c^.p*p.p*(d*a.b*p.p - d*a^.p*b^.p - 2*a.b*p.p + 2*a^.p*b^.p + a~.b~*p.p)/(16*(d - 1))",
+      "QdS (hat)": "c^.p*p.p*(d - 2)*(a^.b^*p.p - a^.p*b^.p)/(16*(d - 1))",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0",
+      "c hat, h tilde": "a~.b~*c^.p*p.p**2/16"
+    }
+  },
+  "p_dot_G": {
+    "D11": {},
+    "D01+D03+D11": {},
+    "evanescent_D01+D03+D11": {}
+  },
+  "four_D_poles": {
+    "basis_dimension": 5,
+    "span_is_all_4D_structures": true,
+    "longitudinal_constraint_rank": 3,
+    "transverse_subspace_dimension": 2,
+    "transverse_basis_in_p14r_coordinates": [
+      ["1/2", "-1/2", "-1", "1", "0"],
+      ["1", "0", "-2", "0", "1"]
+    ],
+    "graphs": {
+      "D11": {
+        "coordinates_p14r_basis": ["-I/160", "-I/480", "I/80", "I/240", "-I/120"],
+        "in_span": true,
+        "transverse": true
+      },
+      "D01+D03": {
+        "coordinates_p14r_basis": ["-23*I/240", "-61*I/240", "23*I/120", "61*I/120", "-7*I/20"],
+        "in_span": true,
+        "transverse": true
+      },
+      "D01+D03+D11": {
+        "coordinates_p14r_basis": ["-49*I/480", "-41*I/160", "49*I/240", "41*I/80", "-43*I/120"],
+        "in_span": true,
+        "transverse": true
+      }
+    },
+    "n_4D_orbit_labels": 6,
+    "dim_pair_symmetric_4D_structures": 5,
+    "basis_rank": 5
+  },
+  "evanescent_poles_D01_D03_D11_in_hh_green_function": {
+    "g4_mn gt_rs (p.p)^2": "7*I/120",
+    "g4_mr gt_ns (p.p)^2": "I/160",
+    "g4_rs gt_mn (p.p)^2": "7*I/120",
+    "gt_mn gt_rs (p.p)^2": "-I/160",
+    "gt_mn p_r p_s (p.p)^1": "-7*I/120",
+    "gt_mr gt_ns (p.p)^2": "-I/160",
+    "gt_mr p_n p_s (p.p)^1": "-I/160",
+    "gt_rs p_m p_n (p.p)^1": "-7*I/120"
+  },
+  "consequence": "no evanescent h.h counterterm is required by the ch-projected identity at one loop (D11 included), so NO contract revision is made for it.  The summed evanescent poles of the hh Green function are nonzero but transverse; renormalising the hh Green function itself would need evanescent h.h counterterms -- outside this projection and NOT claimed.",
+  "controls": {
+    "operator_longitudinal": true,
+    "p_dot_G_D11_zero_exact_in_d": true,
+    "p_dot_G_sum_zero_exact_in_d": true,
+    "p_dot_G_evanescent_sum_zero": true,
+    "slot_sum_zero_all_7_assignments": true,
+    "evanescent_slot_sum_zero_all_7_assignments": true,
+    "D01_D03_individually_nonzero_incl_c_hat_h_tilde": true,
+    "D11_reaches_slot_under_trace_operator": true,
+    "4D_pole_sum_D01_D03_D11_transverse": true,
+    "4D_pole_D11_transverse": true,
+    "mutations_all_rejected": true
+  },
+  "mutations": {
+    "M1_wrong_relative_sign_D03": {
+      "rejected": true,
+      "accepted_as_rejection": true
+    },
+    "M3_D03_evanescent_dropped_naive_4D": {
+      "rejected": true,
+      "accepted_as_rejection": true
+    },
+    "M4_trace_operator_in_place_of_s_h": {
+      "rejected": true,
+      "accepted_as_rejection": true
+    }
+  },
+  "inventory": {
+    "D01": {
+      "row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "graph_id": "D01_hh_bubble_cubic",
+      "certificate": "certificates/P16_batchC.json",
+      "present": true,
+      "status": "regulated",
+      "evaluated": true
+    },
+    "D02": {
+      "row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "graph_id": "D02_hh_tadpole_quartic",
+      "certificate": "certificates/P15_batchA.json",
+      "present": true,
+      "status": "vanishing_under_declared_prescription",
+      "evaluated": true
+    },
+    "D03": {
+      "row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "graph_id": "D03_hh_ghost_loop",
+      "certificate": "certificates/P16_batchC.json",
+      "present": true,
+      "status": "regulated",
+      "evaluated": true
+    },
+    "D11": {
+      "row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "graph_id": "D11_hh_scalar_loop",
+      "certificate": "certificates/P18_D11.json",
+      "present": true,
+      "evaluated": true,
+      "status": "renormalized (4D) / regulated (evanescent poles nonzero, retained R6)"
+    },
+    "D12": {
+      "row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "graph_id": "D12_hh_scalar_tadpole",
+      "certificate": "certificates/P15_batchA.json",
+      "present": true,
+      "status": "vanishing_under_declared_prescription",
+      "evaluated": true
+    },
+    "D13": {
+      "row": "(S0,Gamma1^[2]) s1 h:h^2",
+      "graph_id": "D13_Kc_ghost_graviton_loop",
+      "certificate": "certificates/P15_D13.json",
+      "present": true,
+      "status": "evaluated (P15_D13.json)",
+      "evaluated": true
+    },
+    "D14a": {
+      "row": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "graph_id": "D14a_h_onepoint_grav_tadpole",
+      "certificate": "certificates/P15_batchA.json",
+      "present": true,
+      "status": "vanishing_under_declared_prescription",
+      "evaluated": true
+    },
+    "D14b": {
+      "row": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "graph_id": "D14b_h_onepoint_ghost_tadpole",
+      "certificate": "certificates/P15_batchA.json",
+      "present": true,
+      "status": "vanishing_under_declared_prescription",
+      "evaluated": true
+    },
+    "D14c": {
+      "row": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "graph_id": "D14c_h_onepoint_scalar_tadpole",
+      "certificate": "certificates/P15_batchA.json",
+      "present": true,
+      "status": "vanishing_under_declared_prescription",
+      "evaluated": true
+    }
+  },
+  "quantum_inputs_evaluated": "earned",
+  "quantum_inputs_scope": "every graph of the P13 inventory (three ch slots: hh, K.c, one-point) is evaluated under the one frozen prescription; this is NOT projected_identity_verified (the projected identity is not assembled)",
+  "seconds": 288.5
+}

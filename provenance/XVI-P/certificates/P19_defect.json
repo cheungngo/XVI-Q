@@ -1,0 +1,755 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p19",
+  "deliverable": "P.5 identity: projected one-loop kappa^2 ch-identity defect, counterterm solve",
+  "object": "Delta[c,h] = ch projection (P.3, frozen) of the hbar kappa^2 part of (S_Psi, Gamma_Psi) = s_hh X_hh + s_Kc X_Kc + X_1pt (rows of ledgers/P13_ch_dependency_rows.json)",
+  "prescription": "declared (P14_prescription_D11_matching; DRED R1-R6; MS-bar; MB = 1/eps + 2 - L)",
+  "inventory": [
+    {
+      "row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "graph": "D01",
+      "present": true,
+      "evaluated": true,
+      "status": "regulated"
+    },
+    {
+      "row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "graph": "D02",
+      "present": true,
+      "evaluated": true,
+      "status": "vanishing_under_declared_prescription"
+    },
+    {
+      "row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "graph": "D03",
+      "present": true,
+      "evaluated": true,
+      "status": "regulated"
+    },
+    {
+      "row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "graph": "D11",
+      "present": true,
+      "evaluated": true,
+      "status": "renormalized (4D) / regulated (evanescent poles nonzero, retained R6)"
+    },
+    {
+      "row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "graph": "D12",
+      "present": true,
+      "evaluated": true,
+      "status": "vanishing_under_declared_prescription"
+    },
+    {
+      "row": "(S0,Gamma1^[2]) s1 h:h^2",
+      "graph": "D13",
+      "present": true,
+      "evaluated": true,
+      "status": "regulated"
+    },
+    {
+      "row": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "graph": "D14a",
+      "present": true,
+      "evaluated": true,
+      "status": "vanishing_under_declared_prescription"
+    },
+    {
+      "row": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "graph": "D14b",
+      "present": true,
+      "evaluated": true,
+      "status": "vanishing_under_declared_prescription"
+    },
+    {
+      "row": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "graph": "D14c",
+      "present": true,
+      "evaluated": true,
+      "status": "vanishing_under_declared_prescription"
+    }
+  ],
+  "rows": {
+    "(S0,Gamma1^[2]) s2 K:K.c": {
+      "inputs": ["D01", "D02", "D03", "D11", "D12"],
+      "functional": "X_hh = int (s0 h)_(mn) G_hh^{(mn)(rs)} h_(rs)",
+      "value_exact_d_times_MB": {
+        "Q4S (declared, R2)": "0",
+        "QdS (hat)": "0",
+        "c tilde, h hat": "0",
+        "c tilde, h mixed": "0",
+        "c hat, h mixed": "0",
+        "all tilde": "0",
+        "c hat, h tilde": "0"
+      },
+      "evanescent_part": {
+        "Q4S (declared, R2)": "0",
+        "QdS (hat)": "0",
+        "c tilde, h hat": "0",
+        "c tilde, h mixed": "0",
+        "c hat, h mixed": "0",
+        "all tilde": "0",
+        "c hat, h tilde": "0"
+      },
+      "per_graph": {
+        "D01": {
+          "Q4S (declared, R2)": "p.p**2*(d*a.b*c^.p - 3*a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p - a~.c~*b^.p)/(16*(d - 1))",
+          "QdS (hat)": "p.p**2*(d*a^.b^*c^.p - 3*a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/(16*(d - 1))",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "a~.b~*c^.p*p.p**2/16"
+        },
+        "D03": {
+          "Q4S (declared, R2)": "-p.p**2*(d*a.b*c^.p - 3*a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p - a~.c~*b^.p)/(16*(d - 1))",
+          "QdS (hat)": "-p.p**2*(d*a^.b^*c^.p - 3*a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/(16*(d - 1))",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "-a~.b~*c^.p*p.p**2/16"
+        },
+        "D11": {
+          "Q4S (declared, R2)": "0",
+          "QdS (hat)": "0",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "0"
+        }
+      }
+    },
+    "(S0,Gamma1^[2]) s1 h:h^2": {
+      "inputs": ["D13"],
+      "functional": "X_Kc = int G_Kc_{(mn) nu} c^nu E^{(mn)(rs)} h_(rs)",
+      "value_exact_d_times_MB": {
+        "Q4S (declared, R2)": "0",
+        "QdS (hat)": "0",
+        "c tilde, h hat": "0",
+        "c tilde, h mixed": "0",
+        "c hat, h mixed": "0",
+        "all tilde": "0",
+        "c hat, h tilde": "0"
+      },
+      "evanescent_part": {
+        "Q4S (declared, R2)": "0",
+        "QdS (hat)": "0",
+        "c tilde, h hat": "0",
+        "c tilde, h mixed": "0",
+        "c hat, h mixed": "0",
+        "all tilde": "0",
+        "c hat, h tilde": "0"
+      },
+      "D13_coefficients": {
+        "T1": "0",
+        "T2": "(4*d - 7)/(16*(d - 1))",
+        "T3": "-3*(d - 2)/(8*(d - 1))",
+        "E1": "0",
+        "E2": "3/(16*(d - 1))"
+      }
+    },
+    "(S1,Gamma1^[1]) s2 K:K.c.h": {
+      "inputs": ["D14a", "D14b", "D14c"],
+      "value": "0 (each one-point tadpole vanishes under the declared prescription, P15_batchA: evaluated, not Missing)"
+    }
+  },
+  "external_assignments": {
+    "Q4S (declared, R2)": ["c", "a", "b"],
+    "QdS (hat)": ["c^", "a^", "b^"],
+    "c tilde, h hat": ["c~", "a^", "b^"],
+    "c tilde, h mixed": ["c~", "a~", "b^"],
+    "c hat, h mixed": ["c^", "a~", "b^"],
+    "all tilde": ["c~", "a~", "b~"],
+    "c hat, h tilde": ["c^", "a~", "b~"]
+  },
+  "defect": {
+    "Q4S (declared, R2)": {
+      "exact_d_times_MB": "0",
+      "pole": "0",
+      "nonlocal_L": "0",
+      "local": "0"
+    },
+    "QdS (hat)": {
+      "exact_d_times_MB": "0",
+      "pole": "0",
+      "nonlocal_L": "0",
+      "local": "0"
+    },
+    "c tilde, h hat": {
+      "exact_d_times_MB": "0",
+      "pole": "0",
+      "nonlocal_L": "0",
+      "local": "0"
+    },
+    "c tilde, h mixed": {
+      "exact_d_times_MB": "0",
+      "pole": "0",
+      "nonlocal_L": "0",
+      "local": "0"
+    },
+    "c hat, h mixed": {
+      "exact_d_times_MB": "0",
+      "pole": "0",
+      "nonlocal_L": "0",
+      "local": "0"
+    },
+    "all tilde": {
+      "exact_d_times_MB": "0",
+      "pole": "0",
+      "nonlocal_L": "0",
+      "local": "0"
+    },
+    "c hat, h tilde": {
+      "exact_d_times_MB": "0",
+      "pole": "0",
+      "nonlocal_L": "0",
+      "local": "0"
+    }
+  },
+  "defect_zero_exact_in_d": true,
+  "defect_row_sign_independence": {
+    "s_hh=1,s_Kc=1": true,
+    "s_hh=1,s_Kc=-1": true,
+    "s_hh=-1,s_Kc=1": true,
+    "s_hh=-1,s_Kc=-1": true
+  },
+  "evanescent_in_assembly": "verified explicitly: the evanescent (gt) parts of the hh row (D01+D03+D11) and of the K.c row (D13 E1, E2) give ZERO for all seven external assignments, exactly in d; the evanescent poles themselves are nonzero (P18_hh_slot, P15_D13) -- they drop from the ch slots by the decoupling proofs, not by convention",
+  "route_G": {
+    "field": "Q(i)",
+    "labels": ["h.h#0", "h.h#1", "h.h#2", "h.h#3", "h.h#4", "c.cb#0", "c.cb#1", "c.K#0", "c.K#1", "c.K#2", "phi.phi#0"],
+    "n": 11,
+    "S0_check": {
+      "hh_vs_V2_grav_mismatches": 0,
+      "ghost_M0_ok": true,
+      "ok": true
+    },
+    "gh1_sectors": ["h.c", "c.b", "c.cbs"],
+    "dim_D": 11,
+    "image_rank_sigma0_on_Xi": 22,
+    "sigma0_rank_on_D": 5,
+    "dim_D_cap_ker_sigma0": 6,
+    "D_cap_ker_sigma0_basis": [
+      ["1/2", "-1/2", "-1", "1", "0", "0", "0", "0", "0", "0", "0"],
+      ["1", "0", "-2", "0", "1", "0", "0", "0", "0", "0", "0"],
+      ["-2*I", "0", "2*I", "0", "0", "0", "-2", "1", "0", "0", "0"],
+      ["0", "0", "0", "0", "0", "1", "0", "0", "1", "0", "0"],
+      ["0", "0", "0", "0", "0", "0", "1", "0", "0", "1", "0"],
+      ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1"]
+    ],
+    "P_ch_sigma0_rank_on_D": 3,
+    "dim_D_cap_ker_P_ch_sigma0": 8,
+    "ker_P_ch_basis": [
+      ["1/2", "-1/2", "-1", "1", "0", "0", "0", "0", "0", "0", "0"],
+      ["1", "0", "-2", "0", "1", "0", "0", "0", "0", "0", "0"],
+      ["0", "0", "0", "0", "0", "1", "0", "0", "0", "0", "0"],
+      ["0", "0", "0", "0", "0", "0", "1", "0", "0", "0", "0"],
+      ["-2*I", "0", "2*I", "0", "0", "0", "0", "1", "0", "0", "0"],
+      ["0", "0", "0", "0", "0", "0", "0", "0", "1", "0", "0"],
+      ["0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "0"],
+      ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1"]
+    ],
+    "dim_D_cap_Im_sigma0": 6,
+    "D_cap_Im_sigma0_basis": [
+      ["2", "0", "-2", "0", "0", "0", "-2*I", "I", "0", "0", "0"],
+      ["1", "-1", "-2", "2", "0", "I", "0", "0", "I", "0", "0"],
+      ["0", "0", "2", "0", "-2", "0", "-2*I", "I", "0", "0", "0"],
+      ["0", "0", "0", "0", "0", "I/2", "I/2", "0", "I/2", "I/2", "0"],
+      ["0", "0", "0", "0", "0", "0", "I", "0", "0", "I", "0"],
+      ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "-1"]
+    ],
+    "Im_in_ker_sigma0": true,
+    "Im_in_ker_P_ch_sigma0": true,
+    "cohomology_dim": 0,
+    "quotient_complement": ["h.h#0", "h.h#1", "h.h#2", "c.cb#0", "c.cb#1"],
+    "quotient_dim": 5,
+    "sector_ranks": {
+      "h.h": {
+        "dim": 5,
+        "sigma0_rank": 3,
+        "P_ch_sigma0_rank": 3
+      },
+      "c.cb": {
+        "dim": 2,
+        "sigma0_rank": 2,
+        "P_ch_sigma0_rank": 0
+      },
+      "c.K": {
+        "dim": 3,
+        "sigma0_rank": 3,
+        "P_ch_sigma0_rank": 1
+      },
+      "phi.phi": {
+        "dim": 1,
+        "sigma0_rank": 0,
+        "P_ch_sigma0_rank": 0
+      }
+    }
+  },
+  "route_G_Q_split_p14r_convention": {
+    "field": "Q re/im split (p14r convention)",
+    "labels": ["h.h#0", "h.h#1", "h.h#2", "h.h#3", "h.h#4", "c.cb#0", "c.cb#1", "c.K#0", "c.K#1", "c.K#2", "phi.phi#0"],
+    "n": 11,
+    "S0_check": {
+      "hh_vs_V2_grav_mismatches": 0,
+      "ghost_M0_ok": true,
+      "ok": true
+    },
+    "gh1_sectors": ["h.c", "c.b", "c.cbs"],
+    "dim_D": 11,
+    "image_rank_sigma0_on_Xi": 22,
+    "sigma0_rank_on_D": 6,
+    "dim_D_cap_ker_sigma0": 5,
+    "P_ch_sigma0_rank_on_D": 4,
+    "dim_D_cap_ker_P_ch_sigma0": 7,
+    "dim_D_cap_Im_sigma0": 3,
+    "Im_in_ker_sigma0": true,
+    "Im_in_ker_P_ch_sigma0": true,
+    "cohomology_dim": 2,
+    "quotient_complement": ["h.h#0", "h.h#1", "h.h#2", "c.cb#0", "c.cb#1", "c.K#0", "c.K#1", "c.K#2"],
+    "quotient_dim": 8,
+    "sector_ranks": {
+      "h.h": {
+        "dim": 5,
+        "sigma0_rank": 3,
+        "P_ch_sigma0_rank": 3
+      },
+      "c.cb": {
+        "dim": 2,
+        "sigma0_rank": 2,
+        "P_ch_sigma0_rank": 0
+      },
+      "c.K": {
+        "dim": 3,
+        "sigma0_rank": 3,
+        "P_ch_sigma0_rank": 1
+      },
+      "phi.phi": {
+        "dim": 1,
+        "sigma0_rank": 0,
+        "P_ch_sigma0_rank": 0
+      }
+    }
+  },
+  "field_note": "Route G is computed over Q(i) (primary) and, for comparison, over Q with the re/im split used by the p14r domain certificate.  The p14r densities carry explicit factors i for odd derivative counts (c.K: 3 derivatives), so over Q an i-multiple counts as independent: e.g. the ch image of c.K#0 is i times an h.h image.  The counts over Q(i) equal the real dimensions under a compatible real structure (one real coefficient per density, the i fixed by reality of the action); ranks and solvability are quoted over Q(i).",
+  "gamma1_local_data_domain_coordinates": {
+    "labels": ["h.h#0", "h.h#1", "h.h#2", "h.h#3", "h.h#4", "c.cb#0", "c.cb#1", "c.K#0", "c.K#1", "c.K#2", "phi.phi#0"],
+    "convention": "Ghat coordinates (G = kappa^2 N_eps Ghat MB) on the p14r densities; h.h from D01+D03+D11 (4D structures; D02 = D12 = 0), c.K from P15_D13; c.cb (ghost self-energy, P15_D13) recorded separately: not a ch input (P_ch sigma_0 = 0 on c.cb); phi.phi not an input (sigma_0 = 0 on it)",
+    "pole": ["-49*I/480", "-41*I/160", "49*I/240", "41*I/80", "-43*I/120", "0", "0", "0", "3/8", "-1/4", "0"],
+    "nonlocal_L": ["49*I/480", "41*I/160", "-49*I/240", "-41*I/80", "43*I/120", "0", "0", "0", "-3/8", "1/4", "0"],
+    "local": ["-109*I/450", "-623*I/1200", "109*I/225", "623*I/600", "-2741*I/3600", "0", "0", "0", "2/3", "-5/12", "0"],
+    "c_cb_ghost_self_energy (P15 (cb,c) orientation)": {
+      "pole": ["-3/8", "1/4"],
+      "local": ["-2/3", "5/12"]
+    },
+    "c_cb_ghost_self_energy (route-G (c,cb) orientation, p20)": {
+      "pole": ["3/8", "-1/4"],
+      "local": ["2/3", "-5/12"]
+    }
+  },
+  "quotient_coordinates": {
+    "complement_directions": ["h.h#0", "h.h#1", "h.h#2", "c.cb#0", "c.cb#1"],
+    "pole": ["0", "0", "0", "-3/8", "1/4"],
+    "nonlocal_L": ["0", "0", "0", "3/8", "-1/4"],
+    "local": ["0", "0", "0", "-2/3", "5/12"],
+    "reading": "coordinates modulo D cap Im sigma_0 (field redefinitions / s-exact); the h.h pole is transverse, i.e. in D cap Im sigma_0, so its quotient coordinates vanish"
+  },
+  "quotient_coordinates_including_Sigma": {
+    "pole": ["0", "0", "0", "0", "0"],
+    "local": ["0", "0", "0", "0", "0"]
+  },
+  "quotient_coordinates_Sigma_alone_routeG": {
+    "pole": ["0", "0", "0", "3/8", "-1/4"],
+    "local": ["0", "0", "0", "2/3", "-5/12"]
+  },
+  "quotient_reading_p20": "all in route-G (c,cb) labels: 'quotient_coordinates' is the class of the h.h + c.K Gamma1 data WITHOUT the ghost self-energy, = -[Sigma] (c.cb entries (-3/8, 1/4)); Sigma itself has c.cb coordinates (+3/8, -1/4) (P15's (cb,c) numbers carry the opposite sign); the complete data incl. Sigma have quotient 0, consistent with full closure and cohomology 0.  (The p19 reviewer read the p19 entries as Sigma in the wrong orientation; numerically they coincide with P15's (cb,c) Sigma.)",
+  "routeG_defect_by_sector": {
+    "pole": {
+      "h.h": 0,
+      "c.K": 0
+    },
+    "nonlocal_L": {
+      "h.h": 0,
+      "c.K": 0
+    },
+    "local": {
+      "h.h": 0,
+      "c.K": 0
+    }
+  },
+  "counterterm_solve": {
+    "system": "Delta + P_ch sigma_0(x) = 0, x in the declared domain D (11 directions), part by part",
+    "rank_P_ch_sigma0_routeG": 3,
+    "rank_routeC": 3,
+    "routeC_image_relations": [
+      ["1/2", "-1/2", "-1", "1", "0", "0", "0", "0"],
+      ["1", "0", "-2", "0", "1", "0", "0", "0"],
+      ["-2*I", "0", "2*I", "0", "0", "1", "0", "0"],
+      ["0", "0", "0", "0", "0", "0", "1", "0"],
+      ["0", "0", "0", "0", "0", "0", "0", "1"]
+    ],
+    "outcome": "ZERO",
+    "residual": null,
+    "solution": "x = 0 (no counterterm needed beyond the MS-bar poles); the identity-preserving finite renormalisations are ker(P_ch sigma_0) cap D (dim 8), of which 2 modulo D cap Im sigma_0",
+    "MSbar_counterterm_ch_image_zero": true,
+    "MSbar_counterterm_full_sigma0_image_sectors": ["c.b"],
+    "full_closure_relative_factor_table_UNCONVERTED_p19_error": {
+      "1": false,
+      "-1": true,
+      "I": false,
+      "-I": false
+    },
+    "full_closure_reading": "p20 (corrects p19): with the P15 Sigma coordinates converted from the (cb,c) to the route-G (c,cb) orientation (measured ratio -1), the DERIVED factor +1 gives full sigma_0 closure of the complete MS-bar counterterm (h.h + c.K + c.cb) in every ghost +1 sector; the p19 table above (factors 1, -1, i, -i on UNCONVERTED coordinates) is the bookkeeping error, kept for the erratum",
+    "K1_ghost_closure_convention": {
+      "ghost_equation_operator": "2 i D^rho (d13.deDonder_apply), verified by P15: Sigma = 2 i D[G_Kc]",
+      "M_2iD_cK_to_cbc": [
+        ["0", "2"],
+        ["-1", "0"],
+        ["0", "-1"]
+      ],
+      "z_cb_derived_from_cK_pole_cbc_orientation": ["-3/8", "1/4"],
+      "z_cb_P15_sigma_fit_cbc_orientation": ["-3/8", "1/4"],
+      "derived_equals_P15": true,
+      "relative_factor_derived": "1",
+      "orientation_ratio_routeG_over_cbc": ["-1", "-1"],
+      "Sigma_pole_routeG_c_cb_coordinates": ["3/8", "-1/4"],
+      "Sigma_local_routeG_c_cb_coordinates": ["2/3", "-5/12"],
+      "tree_controls": {
+        "ghost_equation_tree_V_cbc_eq_2iD_V_Kc": true,
+        "S0_Kc_terms": 16,
+        "S0_cbc_terms": 40,
+        "sigma0_S0Kc_plus_S0cbc_entries": 0,
+        "sigma0_S0Kc_alone_entries (control, nonzero)": 16,
+        "ok": true
+      },
+      "full_closure_complete_S_ct": {
+        "closed": true,
+        "entries": 0,
+        "sectors": []
+      },
+      "full_closure_S_ct_without_ccb (p19 package S_ct)": {
+        "closed": false,
+        "entries": 88,
+        "sectors": ["c.b"]
+      },
+      "full_closure_unconverted (p19 error)": {
+        "closed": false,
+        "entries": 88,
+        "sectors": ["c.b"],
+        "detected": true
+      },
+      "reading": "ERRATUM to p19: the p19 statement 'closure fails with the derived factor, needs -1, unresolved' was a Grassmann-orientation bookkeeping error (P15 (cb,c) coordinates placed in route-G (c,cb) slots).  Corrected: derived +1, full closure holds (finding K1 of the p19 independent rebuild)."
+    },
+    "note_full_sigma0": "the h.h + c.K MS-bar counterterm ALONE has a nonzero (c, b) image (delta S0/delta h carries b); adding the c.cb ghost self-energy counterterm (correct orientation, derived factor +1) closes it: see K1_ghost_closure_convention.full_closure_complete_S_ct"
+  },
+  "D_cap_ker_sigma0": {
+    "computed": true,
+    "dim": 6,
+    "dim_D_cap_Im_sigma0": 6,
+    "cohomology_dim": 0,
+    "sector_ranks": {
+      "h.h": {
+        "dim": 5,
+        "sigma0_rank": 3,
+        "P_ch_sigma0_rank": 3
+      },
+      "c.cb": {
+        "dim": 2,
+        "sigma0_rank": 2,
+        "P_ch_sigma0_rank": 0
+      },
+      "c.K": {
+        "dim": 3,
+        "sigma0_rank": 3,
+        "P_ch_sigma0_rank": 1
+      },
+      "phi.phi": {
+        "dim": 1,
+        "sigma0_rank": 0,
+        "P_ch_sigma0_rank": 0
+      }
+    }
+  },
+  "mutations": {
+    "drop_graph_D03": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counterterm can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "-p.p**2*(a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p - a~.c~*b^.p)/48",
+          "QdS (hat)": "-p.p**2*(a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/48",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "-a~.b~*c^.p*p.p**2/16"
+        }
+      },
+      "note": "hh row without the ghost loop D03"
+    },
+    "drop_graph_D01": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counterterm can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "p.p**2*(a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p - a~.c~*b^.p)/48",
+          "QdS (hat)": "p.p**2*(a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/48",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "a~.b~*c^.p*p.p**2/16"
+        }
+      },
+      "note": "hh row without the graviton bubble D01"
+    },
+    "flip_phase_D03": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counterterm can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "-p.p**2*(a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p - a~.c~*b^.p)/24",
+          "QdS (hat)": "-p.p**2*(a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/24",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "-a~.b~*c^.p*p.p**2/8"
+        }
+      },
+      "note": "relative sign of D03 flipped"
+    },
+    "symmetry_factor_D03_x2": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counterterm can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "p.p**2*(a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p - a~.c~*b^.p)/48",
+          "QdS (hat)": "p.p**2*(a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/48",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "a~.b~*c^.p*p.p**2/16"
+        }
+      },
+      "note": "D03 doubled"
+    },
+    "wrong_projection_trace_operator_hh": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counterterm can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "-3*c^.p*p.p*(6*a.b*p.p - 6*a^.p*b^.p - a~.b~*p.p)/16",
+          "QdS (hat)": "-9*c^.p*p.p*(a^.b^*p.p - a^.p*b^.p)/8",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "-15*a~.b~*c^.p*p.p**2/16"
+        }
+      },
+      "note": "eta_mn p_v in place of s0 h (not the P.3 projection)"
+    },
+    "wrong_projection_gauge_fixed_operator_Kc": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counterterm can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "p.p*(a.b*c^.p*p.p - 3*a.c*b^.p*p.p - 3*a^.p*b.c*p.p + 4*a^.p*b^.p*c^.p - a^.p*b~.c~*p.p - a~.c~*b^.p*p.p)/16",
+          "QdS (hat)": "p.p*(a^.b^*c^.p*p.p - 3*a^.c^*b^.p*p.p - 3*a^.p*b^.c^*p.p + 4*a^.p*b^.p*c^.p)/16",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "-a~.c~*b^.p*p.p**2/4",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "a~.b~*c^.p*p.p**2/16"
+        }
+      },
+      "note": "de Donder q^2 P in place of the h^2-monomial operator E (not the P.3 projection)"
+    },
+    "naive_4D_D03_evanescent_dropped": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counterterm can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "p.p**2*(a^.p*b~.c~ - 2*a~.b~*c^.p + a~.c~*b^.p)/48",
+          "QdS (hat)": "0",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "a~.c~*b^.p*p.p**2/48",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "-a~.b~*c^.p*p.p**2/24"
+        }
+      },
+      "note": "D03 Gt parts dropped"
+    },
+    "naive_4D_D13_Gt_dropped": {
+      "outcome": "NONZERO, CANCELLABLE by a counterterm in the declared domain",
+      "changes_outcome": true,
+      "residual": {
+        "local": {
+          "Q4S (declared, R2)": "-c^.p*p.p*(a.b*p.p - a^.p*b^.p)/12",
+          "QdS (hat)": "-c^.p*p.p*(a^.b^*p.p - a^.p*b^.p)/12",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "-a~.b~*c^.p*p.p**2/12"
+        }
+      },
+      "note": "D13 evaluated with Gt dropped (P15_D13 mutation fit: T1 = -(d-4)/(16(d-1)))",
+      "finite_counterterm": {
+        "rank": 3,
+        "solvable": true,
+        "solution": ["(6*x3 + 12*x4 - 24*I*x5 - I)/12", "-x3/2", "-(12*x3 + 24*x4 - 24*I*x5 - I)/12", "x3", "x4", "x5", "x6", "x7"]
+      }
+    }
+  },
+  "insensitive_variations": {
+    "drop_graph_D11": {
+      "outcome": "ZERO",
+      "changes_outcome": false,
+      "why_blind": "D11 is transverse by itself (p_m G_D11 = 0 exactly in d): the slot cannot see it; covered by M2 (P18) and by the inventory refusal below"
+    },
+    "drop_graph_D13": {
+      "outcome": "ZERO",
+      "changes_outcome": false,
+      "why_blind": "A_T1 = A_E1 = 0 and T2, T3, E2 are longitudinal: D13 reaches the slot with zero; covered by the D13 certificate (two routes, mutations)"
+    },
+    "flip_row_sign_Kc": {
+      "outcome": "ZERO",
+      "changes_outcome": false,
+      "why_blind": "each row vanishes separately"
+    }
+  },
+  "missing_control": {
+    "D11_removed_from_inventory": {
+      "inventory_ok": false,
+      "projected_defect_computed_if_removed": "not_earned",
+      "changes_outcome": true
+    }
+  },
+  "controls": {
+    "inventory_complete_no_missing": true,
+    "missing_input_refused_not_zero": true,
+    "s0h_longitudinal": true,
+    "E_transverse": true,
+    "hh_row_zero_exact_in_d_all_7": true,
+    "hh_row_evanescent_part_zero_all_7": true,
+    "hh_row_D01_D03_individually_nonzero": true,
+    "Kc_row_zero_exact_in_d_all_7": true,
+    "Kc_row_evanescent_part_zero_all_7": true,
+    "Kc_slot_map_nontrivial_T1_E1": true,
+    "E2_alone_zero_all_7": true,
+    "D13_A_T1_A_E1_zero_exact": true,
+    "onepoint_row_D14abc_vanishing": true,
+    "defect_zero_pole_nonlocal_local_all_7": true,
+    "defect_independent_of_row_signs": true,
+    "routeG_S0_check": true,
+    "routeG_defect_zero_by_sector": true,
+    "routeG_hh_local_data_in_span": true,
+    "routes_agree_on_ch_image_rank": true,
+    "routeG_hh_kernel_equals_p18_transverse_subspace": true,
+    "D_cap_Im_inside_D_cap_ker_sigma0": true,
+    "D_cap_Im_inside_ker_P_ch_sigma0": true,
+    "ghost_equation_relation_reproduces_P15_sigma_pole": true,
+    "MSbar_counterterm_in_ker_P_ch_sigma0": true,
+    "mutations_all_change_outcome": true,
+    "routeG_Q_split_reproduces_p14r_counts": true
+  },
+  "why_zero": "each surviving ch row vanishes separately in the projected slot; no counterterm cancellation and no cancellation between rows is involved: (i) hh row (D01+D02+D03+D11+D12): full-row transverse decoupling -- D01 and D03 are individually nonzero and cancel against each other in the slot (p17/p18 transverse sum), D11 is transverse by itself, D02 = D12 = 0; (ii) K.c row (D13): D13 reaches the ch slot only through T1 and E1 (T2, T3, E2 are longitudinal, E transverse) and A_T1 = A_E1 = 0 exactly in d; (iii) one-point row: the tadpoles D14a-c vanish under the declared prescription.  The defect is therefore zero without any counterterm (solve x = 0).",
+  "rests_on": ["M2 / D11 matching verified on the 4D components only (D11_matching_verified_scope = '4D components'; evanescent components of the D11 matching: not applicable, not verified)", "the evanescent decoupling proofs (P16 E2 decoupling, P17/P18 hh evanescent / full-row decoupling)", "the frozen P.3 projection and the P13 ch dependency ledger (three surviving rows)", "the declared prescription (DRED R1-R6, MS-bar, P14_prescription_D11_matching)"],
+  "flag_definitions": {
+    "projected_defect_computed": "Delta = P_ch[(S_Psi, Gamma_Psi)]_{hbar kappa^2} assembled from every evaluated input of the three surviving rows (none Missing), exact in d, pole + nonlocal + MS-bar local parts, all seven external assignments",
+    "projected_identity_verified": "Delta = 0 for the REGULATED one-loop functional Gamma1: pole, nonlocal and local parts vanish for all seven assignments, exactly in d, with all controls true and every mutation changing the outcome",
+    "projected_restoration_verified": "p20 definition (replaces p19's, which follows from the identity + locality): FULL sigma_0 closure of the COMPLETE one-loop kappa^2 MS-bar counterterm S_ct = -(pole) in the declared domain, h.h + c.K + c.cb (ghost self-energy Sigma held fixed at its P15 value, orientation converted, derived relative factor +1), in every ghost +1 sector (h.c, c.b, c.cbs), together with projected_identity_verified.  Scope: the one-loop kappa^2 counterterm only; NOT bulk symmetry, NOT O.1",
+    "bulk_symmetry_restored": "hard stop: False regardless (not claimed; O.1 NOT_CLOSED)"
+  },
+  "renormalised_defect_zero": true,
+  "route_consistency_control_p19_criterion": {
+    "label": "route-consistency control (the p19 restoration criterion, NOT a flag): P_ch sigma_0(S_ct) = 0 for the h.h + c.K MS-bar counterterm and the solve x = 0; implied by the identity + locality",
+    "holds": true
+  },
+  "p20_controls": {
+    "orientation_ratio_uniform_minus_one": true,
+    "tree_ghost_equation_V_cbc_eq_2iD_V_Kc": true,
+    "tree_sigma0_S0Kc_plus_S0cbc_zero": true,
+    "derived_ghost_relation_reproduces_P15_sigma": true,
+    "full_closure_detects_drop_D13_and_flip_Kc": true,
+    "full_closure_detects_p19_orientation_error": true,
+    "S_ct_without_ccb_not_closed (c.cb counterterm is needed)": true
+  },
+  "full_closure_mutation_detector": {
+    "test": "full sigma_0 closure (all ghost +1 sectors) of the complete MS-bar counterterm, Sigma held fixed",
+    "cases": {
+      "drop_graph_D11": {
+        "closed": true,
+        "entries": 0,
+        "sectors": [],
+        "detected": false
+      },
+      "drop_graph_D13 (c.K data = 0, Sigma held fixed)": {
+        "closed": false,
+        "entries": 88,
+        "sectors": ["c.b"],
+        "detected": true
+      },
+      "flip_sign_Kc (c.K data -> -c.K, Sigma held fixed)": {
+        "closed": false,
+        "entries": 88,
+        "sectors": ["c.b"],
+        "detected": true
+      },
+      "drop_graph_D03": {
+        "closed": false,
+        "entries": 280,
+        "sectors": ["h.c"],
+        "detected": true
+      },
+      "drop_graph_D01": {
+        "closed": false,
+        "entries": 280,
+        "sectors": ["h.c"],
+        "detected": true
+      },
+      "flip_phase_D03": {
+        "closed": false,
+        "entries": 280,
+        "sectors": ["h.c"],
+        "detected": true
+      },
+      "symmetry_factor_D03_x2": {
+        "closed": false,
+        "entries": 280,
+        "sectors": ["h.c"],
+        "detected": true
+      },
+      "Sigma_orientation_unconverted (p19 error)": {
+        "closed": false,
+        "entries": 88,
+        "sectors": ["c.b"],
+        "detected": true
+      }
+    },
+    "reading": "detects drop D13 and flip K.c (the p19 blind spots) through the c.b sector, and the hh-row mutations through h.c; drop D11 stays undetected (D11 transverse => its pole is sigma_0-closed by itself): covered by M2 (P18) and the p20 D11 normalisation pin (P20_D11_pin.json)"
+  },
+  "findings": {
+    "J1_p14r_counterterm_domain_field": "FINDING ABOUT THE p14r CONTRACT (contract NOT modified): the p14r counterterm-domain counts (Im sigma_0 3, quotient 8, D cap ker 5, P_ch sigma_0 rank 4) are artefacts of a re/im split over Q (the densities carry explicit i for odd derivative counts, so i-multiples count as independent).  The counts over Q(i) -- sigma_0 rank 5, D cap ker 6, D cap Im 6, cohomology 0, quotient 5, P_ch sigma_0 rank 3 (= Route C) -- equal the real dimensions under a compatible real structure.  The p14r certificate stays as released; both are reported",
+    "K1_ghost_closure_sign": "p20 CORRECTION (erratum to p19): resolved -- an orientation bookkeeping error. With the P15 Sigma coordinates converted to the route-G (c,cb) orientation (ratio -1), the derived factor +1 gives full sigma_0 closure of the complete MS-bar counterterm in h.c, c.b, c.cbs.  The p19 text 'closure fails / needs -1 / unresolved' is retracted"
+  },
+  "projected_defect_computed": "earned",
+  "projected_identity_verified": "earned",
+  "projected_restoration_verified": "earned",
+  "bulk_symmetry_restored": false,
+  "corrected_in_revision": "p20 (K1 orientation fix; restoration redefined; see the p20 erratum)",
+  "scope": "ch projection only (one c, one h; one loop; kappa^2; off-shell); the evanescent poles of the hh and K.c Green functions remain regulated (not subtracted) and decouple from the ch slots; no statement about higher orders or bulk symmetry.  projected_restoration_verified (p20 definition) additionally tests full sigma_0 closure of the complete one-loop kappa^2 MS-bar counterterm in all ghost +1 sectors (h.c, c.b, c.cbs) -- a statement about that counterterm only, not bulk symmetry, not O.1",
+  "authorised_d_substitutions": {
+    "d13.expand_coeff: Laurent expansion after all contractions and the fit": 61,
+    "d13.expand_coeff: diagnostic A'(4)": 61,
+    "d13.expand_coeff: diagnostic A(4) (d-dependence proof only)": 61,
+    "defect: 4D domain direction image (local, d-free after contraction)": 14,
+    "integrals.laurent: d = 4 - 2 eps after all contractions": 1
+  },
+  "seconds": 234.9
+}

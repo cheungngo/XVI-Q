@@ -1,0 +1,263 @@
+{
+  "revision": "p13",
+  "gate": "quartic_generator_verified",
+  "execution_pass": true,
+  "claim_status": "verified",
+  "scope": "classical EH quartic density ell_4 (Gamma-Gamma form, affine q = eta + kappa h) on declared conventions",
+  "quartic_generator_verified": true,
+  "acceptance_controls_deterministic": {
+    "C1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "C5": true,
+    "C6": true,
+    "C7": true
+  },
+  "all_acceptance_deterministic": true,
+  "D02_vertex_available": true,
+  "D02_quantum_evaluated": false,
+  "ell2_sha256": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+  "ell3_sha256": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+  "ell4_sha256": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+  "terms_reproducibility": {
+    "2": 84,
+    "3": 678,
+    "4": 3360
+  },
+  "NOT_acceptance_by_term_count": true,
+  "build": {
+    "2": {
+      "sha256": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+      "terms_reproducibility": 84
+    },
+    "3": {
+      "sha256": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+      "terms_reproducibility": 678
+    },
+    "4": {
+      "sha256": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+      "terms_reproducibility": 3360
+    },
+    "ell0_zero": true,
+    "ell1_zero": true,
+    "build": "fresh build ell4_full_polynomial.expand_L_gamma_jet(order=4)",
+    "seconds": 92.0
+  },
+  "conventions": {
+    "revision": "p13",
+    "eta": "diag(+,-,-,-)",
+    "q": "eta + eps H, eps = kappa, H = h (lowered, symmetric); affine parametrisation",
+    "S_EH": "-(2/kappa^2) int sqrt(-q) R",
+    "density": "L_GG = sqrt(-g) g^{mn}(G^a_{mb} G^b_{na} - G^a_{mn} G^b_{ab})",
+    "boundary_identity": "sqrt(-g) R - L_GG = - d_mu B^mu,  B^mu = sqrt(-g)(g^{mu nu} G^l_{nu l} - g^{l nu} G^mu_{l nu})",
+    "ell_k": "-2 [eps^k] L_GG ; S_EH = sum_k kappa^{k-2} int ell_k (integrated, compact support)",
+    "IBP": "total derivatives dropped only inside the integrated action (orientation of the dropped divergence irrelevant)",
+    "truncation": "O(eps^4) inclusive",
+    "jets": "H{m}{n} = h_mn (m<=n), dH{m}{n}_{r} = d_r h_mn",
+    "a_ghost": "1/2",
+    "polarization": "V4[h1..h4] = [t1 t2 t3 t4] ell_4(sum t_i h_i) = D^4 ell_4(0)[h1..h4] (unnormalised); normalised symmetric form = V4/4!; Feynman vertex i kappa^2 V4; D02 graph symmetry factor 1/2"
+  },
+  "controls": {
+    "C1_inverse": {
+      "test": "q q^{-1} = 1 + O(eps^5), 10 symbolic components",
+      "pass": true,
+      "failures": []
+    },
+    "C2_det_tracelog_generic": {
+      "test": "log(-det q) = tr log(eta^{-1} q) and sqrt-series^2 = -det q, through eps^4, 10 symbolic components",
+      "logdet_equals_trlog": true,
+      "sqrt_series_squared_equals_minus_det": true,
+      "pass": true
+    },
+    "C3_boundary_identity": "P13_boundary_identity.json (C3_proved=True)",
+    "C4_export_identity": {
+      "test": "export == independent series evaluator over QQ[50 jet symbols] (polynomial identity)",
+      "results": {
+        "ell2": true,
+        "ell3": true,
+        "ell4": true
+      },
+      "pass": true
+    },
+    "C5_C6_regression": {
+      "cubic": {
+        "test": "E_h(ell3 - ell3_XIIC) = 0 for all 10 components (exact)",
+        "difference_terms": 1530,
+        "euler_terms": {
+          "00": 0,
+          "01": 0,
+          "02": 0,
+          "03": 0,
+          "11": 0,
+          "12": 0,
+          "13": 0,
+          "22": 0,
+          "23": 0,
+          "33": 0
+        },
+        "divergence": true,
+        "NOT_XII_C_quartic": true,
+        "NOT_Ward_identity": true
+      },
+      "quadratic": {
+        "test": "E_h(ell2 - FP_XIA) = 0 for all 10 components (exact)",
+        "difference_terms": 48,
+        "euler_terms": {
+          "00": 0,
+          "01": 0,
+          "02": 0,
+          "03": 0,
+          "11": 0,
+          "12": 0,
+          "13": 0,
+          "22": 0,
+          "23": 0,
+          "33": 0
+        },
+        "divergence": true
+      },
+      "sign_discrimination": {
+        "ell3 + ell3_XIIC is a divergence": false
+      },
+      "source": "XVI-N-r10/code/prep/grav_density.py",
+      "source_sha256": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+      "source_pin_ok": true
+    },
+    "C7_noether_exact": {
+      "kappa0": {
+        "density": "s0 ell2",
+        "W_terms": 132,
+        "Q_terms": [0, 0, 0, 0],
+        "Q_identically_zero": true,
+        "s0_piece_alone_Q_terms": [0, 0, 0, 0],
+        "residual_head": []
+      },
+      "kappa1": {
+        "density": "s0 ell3 + s1 ell2",
+        "W_terms": 2148,
+        "Q_terms": [0, 0, 0, 0],
+        "Q_identically_zero": true,
+        "s0_piece_alone_Q_terms": [159, 159, 159, 159],
+        "residual_head": []
+      },
+      "kappa2": {
+        "density": "s0 ell4 + s1 ell3 (+ s2 ell2, s2 = 0)",
+        "W_terms": 15428,
+        "Q_terms": [0, 0, 0, 0],
+        "Q_identically_zero": true,
+        "s0_piece_alone_Q_terms": [2088, 2088, 2088, 2088],
+        "residual_head": []
+      }
+    },
+    "C7_parameters": {
+      "a_ghost": "1/2",
+      "transport_term": 1,
+      "s0": "a(eta_nn d_m c^n + eta_mm d_n c^m)",
+      "s1": "a(c^r d_r h_mn + h_rn d_m c^r + h_mr d_n c^r)",
+      "ell_sha256": {
+        "ell2": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+        "ell3": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+        "ell4": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123"
+      }
+    },
+    "C7_accepted_orders": {
+      "kappa0": true,
+      "kappa1": true,
+      "kappa2": true
+    }
+  },
+  "regression_controls_sampled_NOT_acceptance": {
+    "evaluator_numeric": {
+      "role": "regression control (sampled; NOT acceptance)",
+      "samples_per_k": 3,
+      "agree": true
+    },
+    "planewave_cubic": {
+      "role": "regression control (sampled; NOT acceptance)",
+      "samples": 1,
+      "agree": true
+    }
+  },
+  "identification_of_exported_coefficients": "exports/ell_k (sha above) == -2[eps^k] L_GG(eta + eps h) as polynomials (C4, independent evaluator); L_GG = sqrt(-g)R + d_mu B^mu exactly (C3); hence int ell_k = [kappa^{k-2}] S_EH for compact support.",
+  "mutations": [
+    {
+      "mutation": "M1_corrupt_one_ell4_coefficient_x7/5",
+      "failing_test": "C7 kappa^2 (Q != 0)",
+      "rejected": true
+    },
+    {
+      "mutation": "M2_wrong_overall_norm_ell4_sign",
+      "failing_test": "C7 kappa^2 (Q != 0)",
+      "rejected": true
+    },
+    {
+      "mutation": "M3_swapped_GammaGamma_contraction",
+      "failing_test": "C4, C5, C6, C7",
+      "detail": {
+        "C4": {
+          "ell2": false,
+          "ell3": false,
+          "ell4": false
+        },
+        "C5": false,
+        "C6": false,
+        "C7": {
+          "kappa0": false,
+          "kappa1": false,
+          "kappa2": false
+        }
+      },
+      "rejected": true
+    },
+    {
+      "mutation": "M4_missing_sqrt_eps2_coefficient",
+      "failing_test": "C4 ell4, C7 kappa^2",
+      "detail": {
+        "C4": {
+          "ell2": true,
+          "ell3": true,
+          "ell4": false
+        },
+        "C7": {
+          "kappa0": true,
+          "kappa1": true,
+          "kappa2": false
+        }
+      },
+      "rejected": true
+    },
+    {
+      "mutation": "M5_wrong_inverse_sign",
+      "failing_test": "C1",
+      "rejected": true
+    },
+    {
+      "mutation": "M6_stale_ell4_hash",
+      "failing_test": "sha256 vs certificate",
+      "rejected": true
+    },
+    {
+      "mutation": "M7_wrong_boundary_orientation (+d_mu B^mu)",
+      "failing_test": "C3 generic + conformal",
+      "rejected": true
+    }
+  ],
+  "mutations_all_rejected": true,
+  "polarization": {
+    "convention": "V4[h1..h4] = [t1 t2 t3 t4] ell_4(sum t_i h_i) = D^4 ell_4(0)[h1..h4] (unnormalised); normalised symmetric form = V4/4!; Feynman vertex i kappa^2 V4; D02 graph symmetry factor 1/2",
+    "definition": "V4[h1,h2,h3,h4] := [t1 t2 t3 t4] ell_4(sum_i t_i h_i) = D^4 ell_4(0)[h1,h2,h3,h4]",
+    "normalisation": "UNnormalised fourth variation; the normalised symmetric 4-linear form is V4/4! (not used)",
+    "implemented_by": "planewave_exact.polarize / series_eval.polarized_ell (inclusion-exclusion) compute V4",
+    "where_factors_enter": {
+      "1/4!": "only in S2 = (1/4!) V4[h,h,h,h]; cancelled by the 4! leg assignments",
+      "i": "vertex factor i from e^{iS}",
+      "kappa": "kappa^2 (S = sum kappa^{k-2} int ell_k)",
+      "D02_symmetry_factor": "1/2 at graph level (two legs contracted)",
+      "D02_vertex_rule": "i kappa^2 V4[h1,h2,h3,h4]"
+    },
+    "D02_quantum_evaluated": false
+  },
+  "seconds": 124.5,
+  "pass": true
+}

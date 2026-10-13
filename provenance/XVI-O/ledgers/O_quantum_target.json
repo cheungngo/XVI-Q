@@ -1,0 +1,73 @@
+{
+  "revision": "o70-sync",
+  "gate": "O.1",
+  "proposed_target": {
+    "name": "one-loop_order_kappa2_bulk_two_point_on_S_inv",
+    "loop_order": 1,
+    "coupling_order": "kappa^2",
+    "external": "bulk two-point (graviton, scalar, ghost) including Einstein-scalar hh channels + vertex-derived gh=0 BV/source tree seeds; bulk mass frozen m=0",
+    "baseline_action": "S_inv (NOT S_D)",
+    "gauge": "frozen gauge fermion Psi=-i int cbar_mu (2 D^mu[h]-b^mu); b off shell",
+    "bulk_mass": "m=0 (Track II massless-obstruction alignment)"
+  },
+  "closure_check": {
+    "question": "Does this sector close under the retained quantum identity?",
+    "outcome": "NOT_CLOSED",
+    "reason": [
+      "No retained quantum identity is verified (O.6 Unresolved).",
+      "XVI-N supplies only classical (S_inv,S_inv)=O(kappa^2) through O(kappa) truncation; not a quantum Ward/BV identity.",
+      "XVI-M selected-image matchings are Target I data, not sector amplitudes (M.8 Unresolved).",
+      "One-loop antifield source channels at kappa^2 remain Unresolved after withdrawing invalid gh=-1 assignments.",
+      "O.4 is manually_specified_partially_checked_inventory \u2014 not a completeness claim.",
+      "kappa^2 classical master Partial: (S0,S0)/(S0,S1) Constructed; 2(S0,S2)+(S1,S1) Partial (scalar OK; grav ell_4 Incomplete) --- not full Constructed.",
+      "ST4a local matching Unresolved; functional ST4b not claimed; kernel_two_point_Ward Constructed (kernel only).",
+      "D11 matter-loop kernel counterterm Constructed_subsector_under_prescription (o70-sync; four math prerequisites); NOT completed bulk quantum sector; kernel Ward != bulk ST4b."
+    ],
+    "checklist": [
+      {
+        "item": "State retained quantum identity",
+        "status": "Constructed_as_statement",
+        "owner": "O.6"
+      },
+      {
+        "item": "List amplitudes constrained by identity",
+        "status": "manually_specified_partially_checked_O.4",
+        "owner": "O.4"
+      },
+      {
+        "item": "S_inv^{[2]} classical consistency",
+        "status": "Provisional_foundation_repaired_master_Partial",
+        "owner": "O.2"
+      },
+      {
+        "item": "Evaluate inventory graphs",
+        "status": "D11_kernel_Constructed_subsector_under_prescription_o70-sync_bulk_incomplete",
+        "owner": "O.5"
+      },
+      {
+        "item": "Demonstrate identity remainder cancellation / CT solution",
+        "status": "Unresolved_ST4a_ST4b_split",
+        "owner": "O.6/O.7"
+      },
+      {
+        "item": "Enlarge target if identity requires more legs/orders",
+        "status": "rule_active_not_triggered",
+        "owner": "O.1"
+      }
+    ],
+    "enlarge_rules": [
+      "If the stated identity constrains n-point or higher-loop pieces at the same coupling order, enlarge the target before Constructed.",
+      "If classical kappa^2 consistency fails, downgrade or repair O.2 before quantum contractions.",
+      "Never close the sector by silently identifying XVI-M selected graph with an action graph via ell_3."
+    ],
+    "downgrade_rules": [
+      "If closure remains unknowable after O.6 statement, keep Provisional.",
+      "If a required amplitude is omitted without individual justification, status fails."
+    ],
+    "previous_outcome": "NOT_CLOSED",
+    "update": "o70-sync: D11 kernel counterterm earned under prescription; bulk still NOT_CLOSED; symmetry_restored=false"
+  },
+  "status": "Provisional",
+  "pass_means": "Provisional target + explicit closure checklist recorded; NOT a closed proof of sector closure",
+  "closure_status": "NOT_CLOSED"
+}

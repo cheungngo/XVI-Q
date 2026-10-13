@@ -1,0 +1,157 @@
+{
+  "revision": "o58-fix",
+  "gate": "O.2_general_V4_sparse_index",
+  "pass": true,
+  "pass_means": "Acceptance controls PASSED; nonzero ell_4=-2[eps^4](sqrt(-q)R) on multiple non-conformal sparse supports (probe witnesses only). Full 10-component generating polynomial Unresolved. Prior o57-v4 buggy-inverse hashes WITHDRAWN.",
+  "acceptance_controls": {
+    "qid_identity": [
+      {
+        "support": "h11_const",
+        "pass": true
+      },
+      {
+        "support": "h00",
+        "pass": true
+      },
+      {
+        "support": "h01",
+        "pass": true
+      }
+    ],
+    "negative_control": {
+      "pass": true,
+      "series": "-B**4*eps**4 - B**3*eps**3 - B**2*eps**2 - B*eps - 1",
+      "expected": "-B**4*eps**4 - B**3*eps**3 - B**2*eps**2 - B*eps - 1",
+      "rejected_alternating_bug": true
+    },
+    "pass": true
+  },
+  "withdrawn_prior": {
+    "O2_eh_v4_general.json@o57-v4": "buggy inverse h2=h_up*h_up",
+    "note": "Hashes certified implementation output, not correctness; recomputed after controls."
+  },
+  "conventions": {
+    "eta": "diag(1,-1,-1,-1)",
+    "q": "eta+eps H",
+    "S_EH": "-(2/kappa^2) int sqrt(-q) R",
+    "ell_4": "-2 [eps^4](sqrt(-q) R)",
+    "inverse_series": "eta - eps etaHeta + eps^2 etaHetaHeta - ..."
+  },
+  "method": "sparse_support_series_sqrt_gR_eps4_correct_inverse",
+  "supports": [
+    {
+      "support": "h00_only",
+      "eps4_of_sqrt_gR_nonzero": true,
+      "ell4_nonzero": true,
+      "ell4_definition": "ell_4 = -2 [eps^4](sqrt(-q) R)",
+      "eps3_nonzero": true,
+      "eps2_nonzero": true,
+      "ell4_max_deriv": 2,
+      "ell4_sha256_head": "d97fbbda9365cbc5",
+      "ell4_len": 324,
+      "ell4_head": "5*(A(x0, x1, x2, x3)*Derivative(A(x0, x1, x2, x3), (x1, 2)) + A(x0, x1, x2, x3)*Derivative(A(x0, x1, x2, x3), (x2, 2)) + A(x0, x1, x2, x3)*Derivative(A(x0, x1, x2, x3), (x3, 2)) + 3*Derivative(A(x0, x1, x2, x3), x1)**2 + 3*Derivative(A(x0, "
+    },
+    {
+      "support": "h11_only",
+      "eps4_of_sqrt_gR_nonzero": true,
+      "ell4_nonzero": true,
+      "ell4_definition": "ell_4 = -2 [eps^4](sqrt(-q) R)",
+      "eps3_nonzero": true,
+      "eps2_nonzero": true,
+      "ell4_max_deriv": 2,
+      "ell4_sha256_head": "589c27a0db50d948",
+      "ell4_len": 325,
+      "ell4_head": "5*(-B(x0, x1, x2, x3)*Derivative(B(x0, x1, x2, x3), (x0, 2)) + B(x0, x1, x2, x3)*Derivative(B(x0, x1, x2, x3), (x2, 2)) + B(x0, x1, x2, x3)*Derivative(B(x0, x1, x2, x3), (x3, 2)) - 3*Derivative(B(x0, x1, x2, x3), x0)**2 + 3*Derivative(B(x0,"
+    },
+    {
+      "support": "h01_only",
+      "eps4_of_sqrt_gR_nonzero": true,
+      "ell4_nonzero": true,
+      "ell4_definition": "ell_4 = -2 [eps^4](sqrt(-q) R)",
+      "eps3_nonzero": true,
+      "eps2_nonzero": true,
+      "ell4_max_deriv": 2,
+      "ell4_sha256_head": "6208652008bb0480",
+      "ell4_len": 228,
+      "ell4_head": "(4*C(x0, x1, x2, x3)*Derivative(C(x0, x1, x2, x3), (x2, 2)) + 4*C(x0, x1, x2, x3)*Derivative(C(x0, x1, x2, x3), (x3, 2)) + 11*Derivative(C(x0, x1, x2, x3), x2)**2 + 11*Derivative(C(x0, x1, x2, x3), x3)**2)*C(x0, x1, x2, x3)**2/2"
+    },
+    {
+      "support": "h12_only",
+      "eps4_of_sqrt_gR_nonzero": true,
+      "ell4_nonzero": true,
+      "ell4_definition": "ell_4 = -2 [eps^4](sqrt(-q) R)",
+      "eps3_nonzero": true,
+      "eps2_nonzero": true,
+      "ell4_max_deriv": 2,
+      "ell4_sha256_head": "976d537d7e60aabd",
+      "ell4_len": 229,
+      "ell4_head": "(-4*D(x0, x1, x2, x3)*Derivative(D(x0, x1, x2, x3), (x0, 2)) + 4*D(x0, x1, x2, x3)*Derivative(D(x0, x1, x2, x3), (x3, 2)) - 11*Derivative(D(x0, x1, x2, x3), x0)**2 + 11*Derivative(D(x0, x1, x2, x3), x3)**2)*D(x0, x1, x2, x3)**2/2"
+    },
+    {
+      "support": "h00_h11",
+      "eps4_of_sqrt_gR_nonzero": true,
+      "ell4_nonzero": true,
+      "ell4_definition": "ell_4 = -2 [eps^4](sqrt(-q) R)",
+      "eps3_nonzero": true,
+      "eps2_nonzero": true,
+      "ell4_max_deriv": 2,
+      "ell4_sha256_head": "1f5e636a1e0e2b6a",
+      "ell4_len": 4219,
+      "ell4_head": "5*A(x0, x1, x2, x3)**3*Derivative(A(x0, x1, x2, x3), (x1, 2))/8 + 5*A(x0, x1, x2, x3)**3*Derivative(A(x0, x1, x2, x3), (x2, 2))/8 + 5*A(x0, x1, x2, x3)**3*Derivative(A(x0, x1, x2, x3), (x3, 2))/8 + 5*A(x0, x1, x2, x3)**3*Derivative(B(x0, x1"
+    },
+    {
+      "support": "h01_h23",
+      "eps4_of_sqrt_gR_nonzero": true,
+      "ell4_nonzero": true,
+      "ell4_definition": "ell_4 = -2 [eps^4](sqrt(-q) R)",
+      "eps3_nonzero": true,
+      "eps2_nonzero": true,
+      "ell4_max_deriv": 2,
+      "ell4_sha256_head": "f2d8e3e2f9173325",
+      "ell4_len": 1529,
+      "ell4_head": "2*C(x0, x1, x2, x3)**3*Derivative(C(x0, x1, x2, x3), (x2, 2)) + 2*C(x0, x1, x2, x3)**3*Derivative(C(x0, x1, x2, x3), (x3, 2)) + 2*C(x0, x1, x2, x3)**2*E(x0, x1, x2, x3)*Derivative(E(x0, x1, x2, x3), (x0, 2)) - 2*C(x0, x1, x2, x3)**2*E(x0, x"
+    },
+    {
+      "support": "conformal_ref",
+      "eps4_of_sqrt_gR_nonzero": true,
+      "ell4_nonzero": true,
+      "ell4_definition": "ell_4 = -2 [eps^4](sqrt(-q) R)",
+      "eps3_nonzero": true,
+      "eps2_nonzero": true,
+      "ell4_max_deriv": 1,
+      "ell4_sha256_head": "fa3777f225f75c2b",
+      "ell4_len": 189,
+      "ell4_head": "3*(-Derivative(phi(x0, x1, x2, x3), x0)**2 + Derivative(phi(x0, x1, x2, x3), x1)**2 + Derivative(phi(x0, x1, x2, x3), x2)**2 + Derivative(phi(x0, x1, x2, x3), x3)**2)*phi(x0, x1, x2, x3)**2"
+    }
+  ],
+  "counts": {
+    "supports_tested": 7,
+    "ell4_nonzero": 7,
+    "nonconformal_ell4_nonzero": 6
+  },
+  "general_ell4_generating_polynomial": {
+    "status": "Unresolved"
+  },
+  "certifies_frozen_EH_density": false,
+  "certifies_frozen_EH_density_note": "Sparse-support probes are witnesses of nonzero quartic density after controls; they do not certify the full frozen EH density / 10-component ell_4.",
+  "structural_master": {
+    "pure_EH_antifield_free_self_bracket": {
+      "status": "NOT_a_Noether_certificate",
+      "statement": "Antifield-independence of pure S_EH makes (S_EH,S_EH)=0 automatic from the antibracket definition. That is NOT the registered Noether identity and is NOT cited as a kappa^2 master certificate (XI-A thm:noether; XII-C changed Noether; XIV-A (S_ext,S_ext)=kappa int c^nu K_nu; XVI-N prop:master-square / prop:broken-square)."
+    },
+    "kappa2_master_check_required": {
+      "status": "Unresolved",
+      "statement": "Unresolved kappa^2 master check must expand the bracket against registered Noether densities (XI-A N_nu(E_gamma)=kappa(E_phi partial_nu phi - B_nu) + gauge-fixing; XII-C changed cubic Noether; XIV-A; XVI-N). Do NOT invent an s_2 slot: kappa^2 action terms are read from inherited transformations (XI-A Taylor kappa xi + kappa^2 zeta; XI-B lem:nilpotence; X-E lem:affine)."
+    },
+    "components_cancel_by_construction": [
+      "Ghost kinetic + V3_cbar_c_h from Psi with linear D (inherited through O(kappa))"
+    ],
+    "components_remain_Unresolved": [
+      "Explicit kappa^2 master density expand against Noether densities",
+      "Mixed EH-scalar-ghost cross terms at kappa^2 in (S,S)",
+      "Full 10-component ell_4 generating polynomial"
+    ],
+    "no_invented_s2_slot": true
+  },
+  "seconds": 10.301
+}

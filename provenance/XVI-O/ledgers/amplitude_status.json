@@ -1,0 +1,835 @@
+{
+  "revision": "o61-calc",
+  "gate": "O.5",
+  "status": "schematic_models_and_candidate_CT_lists",
+  "frozen_demotion": false,
+  "honest_demotion_retained": true,
+  "pass": true,
+  "pass_means": "Schematic singularity models + candidate CT lists aligned to o61-calc inventory; full amplitudes Unresolved; ST4a/ST4b split; coverage/spanning/independence NOT claimed",
+  "structural_D01_D02_D03": {
+    "status": "candidate_organization_to_be_tested",
+    "NOT_must_reduce": true,
+    "statements": [
+      {
+        "id": "ST1_gauge_organization",
+        "status": "candidate_organization_to_be_tested",
+        "claim": "D01+D02+D03 (+ D11/D12 scalar channels) as a candidate organization toward a gauge-invariant local functional modulo BV-exact terms --- TO BE TESTED. Not promoted to must-reduce.",
+        "what_is_not": "Explicit coefficient cancellation into local CT"
+      },
+      {
+        "id": "ST2_ghost_sign",
+        "status": "Constructed_inventory_sign",
+        "claim": "D03 carries ghost_sign=-1 relative to a bosonic loop of same topology",
+        "source": "O.3/O.4 inventory + Fermi statistics"
+      },
+      {
+        "id": "ST3_quartic_inventory",
+        "status": "Constructed_as_inventory_requirement",
+        "claim": "Omitting D02 (V4 tadpole) or D11/D12 (scalar hh channels) leaves the Einstein-scalar one-loop inventory incomplete at kappa^2."
+      },
+      {
+        "id": "ST4a_local_action_matching",
+        "status": "Unresolved",
+        "task": "Gamma_1,local = sum_i z_i C_i",
+        "claim": "The LOCAL divergent/contact part of the one-loop effective action (from D01+D02+D03 +/- D11/D12 as applicable) equals a linear combination of admitted ghost-number-zero action counterterms C_i. NOT the full amplitude. gh(C_i)=0.",
+        "ghost_number_CT": 0,
+        "target_object": "Gamma_1_local_divergent_contact",
+        "NOT_full_amplitude": true,
+        "NOT_anomaly_defect": true,
+        "what_is_not": "D01+D02+D03 full amplitude = CT linear combination"
+      },
+      {
+        "id": "ST4b_anomaly_cancellation",
+        "status": "Unresolved",
+        "task": "P_ret(S, C) = -P_ret A_1  with gh(C)=0",
+        "claim": "Restoration test: the Ward/BV (anomaly) defect A_1 has ghost number 1; it cannot itself equal a linear combination of ordinary gh=0 hh counterterms. Symmetry restoration means the defect is the BRST/BV variation of an admitted gh=0 counterterm C: P_ret(S,C) = -P_ret A_1.",
+        "ghost_number_defect": 1,
+        "ghost_number_CT": 0,
+        "target_object": "anomaly_BRST_defect_as_variation_of_admitted_CT",
+        "NOT_full_amplitude": true,
+        "NOT_OR_with_ST4a": true,
+        "note": "ST4a and ST4b are separate tasks --- not a single OR matching target."
+      }
+    ],
+    "ST4_split_note": "Former ST4 OR target withdrawn. Local-action matching (gh=0) and anomaly cancellation (defect gh=1 = s(CT)) are distinct algebraic-renormalization tasks."
+  },
+  "amplitudes": [
+    {
+      "diagram_id": "D01_hh_bubble_cubic",
+      "status": "schematic_model_and_candidate_CT_list",
+      "prescription_id": "O5-EG-XVILM-map-v1-o61-calc",
+      "evaluated_full_amplitude": false,
+      "NOT_Constructed_basis": true,
+      "independence_proven": false,
+      "schematic": {
+        "kind": "bubble",
+        "D_derivative_aware_superficial_schematic": 4,
+        "leading_homogeneous": {
+          "status": "schematic_radial_model_NOT_derived_amplitude_singularity",
+          "assigned_homogeneous_degree_of_r_model": -8,
+          "NOT_kernel_scaling_degree": true,
+          "radial_profile_class": "r**(-8)",
+          "plus_log_tower_flag": true,
+          "delta_derivatives_order_up_to_flag": 4,
+          "sympy_model": "r**(-8)",
+          "warning": "Assigned homogeneous degree of schematic r**(-(4+D)) only --- NOT a kernel scaling degree; NOT a derived tensor Lorentzian singularity."
+        },
+        "CT_candidate_list_size": 7,
+        "CT_candidates": [
+          {
+            "id": "O0_hh",
+            "expr": "eta^{mu nu} eta^{rho sigma} h_{mu rho} h_{nu sigma}",
+            "deriv_order": 0,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O0_trtr",
+            "expr": "(eta^{mu nu} h_{mu nu})^2",
+            "deriv_order": 0,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O2_hBoxh",
+            "expr": "h_{mu nu} Box h^{mu nu}",
+            "deriv_order": 2,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_note": "candidate 2-deriv direction; independence NOT proven",
+            "independence_proven": false
+          },
+          {
+            "id": "O2_trBox",
+            "expr": "(tr h) Box (tr h)",
+            "deriv_order": 2,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O2_dhdh",
+            "expr": "partial_a h_{mu nu} partial^a h^{mu nu}",
+            "deriv_order": 2,
+            "role": "REDUNDANT_mod_total_deriv",
+            "grading": "even, gh=0",
+            "independence_note": "int partial_a h_mn partial^a h^{mn} = -int h_mn Box h^{mn} under compact variation",
+            "independence_proven": false
+          },
+          {
+            "id": "O4_Box2",
+            "expr": "h Box^2 h / (partial^2 h)^2 schematic structures",
+            "deriv_order": 4,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O4_R2like",
+            "expr": "schematic (linearized curvature)^2 contacts",
+            "deriv_order": 4,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_note": "XVI-M: int (Riem^2-4Ric^2+R^2)_lin total derivative",
+            "independence_proven": false
+          }
+        ],
+        "coverage_claim": false,
+        "certs": [
+          "O5_extension_degrees.json",
+          "O5_singular_CT_bases.json"
+        ]
+      }
+    },
+    {
+      "diagram_id": "D02_hh_tadpole_quartic",
+      "status": "schematic_model_and_candidate_CT_list",
+      "prescription_id": "O5-EG-XVILM-map-v1-o61-calc",
+      "evaluated_full_amplitude": false,
+      "NOT_Constructed_basis": true,
+      "independence_proven": false,
+      "schematic": {
+        "kind": "tadpole",
+        "D_derivative_aware_superficial_schematic": 4,
+        "leading_homogeneous": {
+          "status": "not_applicable_for_tadpole_or_tree_contact",
+          "difference_variable_radial_model": "not_applicable",
+          "coincident_prescription": "unresolved",
+          "assigned_homogeneous_degree_of_r_model": null,
+          "warning": "No r**(-(4+D)) difference-variable model for tadpoles/tree contacts."
+        },
+        "CT_candidate_list_size": 7,
+        "CT_candidates": [
+          {
+            "id": "O0_hh",
+            "expr": "eta^{mu nu} eta^{rho sigma} h_{mu rho} h_{nu sigma}",
+            "deriv_order": 0,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O0_trtr",
+            "expr": "(eta^{mu nu} h_{mu nu})^2",
+            "deriv_order": 0,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O2_hBoxh",
+            "expr": "h_{mu nu} Box h^{mu nu}",
+            "deriv_order": 2,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_note": "candidate 2-deriv direction; independence NOT proven",
+            "independence_proven": false
+          },
+          {
+            "id": "O2_trBox",
+            "expr": "(tr h) Box (tr h)",
+            "deriv_order": 2,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O2_dhdh",
+            "expr": "partial_a h_{mu nu} partial^a h^{mu nu}",
+            "deriv_order": 2,
+            "role": "REDUNDANT_mod_total_deriv",
+            "grading": "even, gh=0",
+            "independence_note": "int partial_a h_mn partial^a h^{mn} = -int h_mn Box h^{mn} under compact variation",
+            "independence_proven": false
+          },
+          {
+            "id": "O4_Box2",
+            "expr": "h Box^2 h / (partial^2 h)^2 schematic structures",
+            "deriv_order": 4,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O4_R2like",
+            "expr": "schematic (linearized curvature)^2 contacts",
+            "deriv_order": 4,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_note": "XVI-M: int (Riem^2-4Ric^2+R^2)_lin total derivative",
+            "independence_proven": false
+          }
+        ],
+        "coverage_claim": false,
+        "certs": [
+          "O5_extension_degrees.json",
+          "O5_singular_CT_bases.json"
+        ]
+      }
+    },
+    {
+      "diagram_id": "D03_hh_ghost_loop",
+      "status": "schematic_model_and_candidate_CT_list",
+      "prescription_id": "O5-EG-XVILM-map-v1-o61-calc",
+      "evaluated_full_amplitude": false,
+      "NOT_Constructed_basis": true,
+      "independence_proven": false,
+      "schematic": {
+        "kind": "bubble",
+        "D_derivative_aware_superficial_schematic": 4,
+        "leading_homogeneous": {
+          "status": "schematic_radial_model_NOT_derived_amplitude_singularity",
+          "assigned_homogeneous_degree_of_r_model": -8,
+          "NOT_kernel_scaling_degree": true,
+          "radial_profile_class": "r**(-8)",
+          "plus_log_tower_flag": true,
+          "delta_derivatives_order_up_to_flag": 4,
+          "sympy_model": "r**(-8)",
+          "warning": "Assigned homogeneous degree of schematic r**(-(4+D)) only --- NOT a kernel scaling degree; NOT a derived tensor Lorentzian singularity."
+        },
+        "CT_candidate_list_size": 7,
+        "CT_candidates": [
+          {
+            "id": "O0_hh",
+            "expr": "eta^{mu nu} eta^{rho sigma} h_{mu rho} h_{nu sigma}",
+            "deriv_order": 0,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O0_trtr",
+            "expr": "(eta^{mu nu} h_{mu nu})^2",
+            "deriv_order": 0,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O2_hBoxh",
+            "expr": "h_{mu nu} Box h^{mu nu}",
+            "deriv_order": 2,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_note": "candidate 2-deriv direction; independence NOT proven",
+            "independence_proven": false
+          },
+          {
+            "id": "O2_trBox",
+            "expr": "(tr h) Box (tr h)",
+            "deriv_order": 2,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O2_dhdh",
+            "expr": "partial_a h_{mu nu} partial^a h^{mu nu}",
+            "deriv_order": 2,
+            "role": "REDUNDANT_mod_total_deriv",
+            "grading": "even, gh=0",
+            "independence_note": "int partial_a h_mn partial^a h^{mn} = -int h_mn Box h^{mn} under compact variation",
+            "independence_proven": false
+          },
+          {
+            "id": "O4_Box2",
+            "expr": "h Box^2 h / (partial^2 h)^2 schematic structures",
+            "deriv_order": 4,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O4_R2like",
+            "expr": "schematic (linearized curvature)^2 contacts",
+            "deriv_order": 4,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_note": "XVI-M: int (Riem^2-4Ric^2+R^2)_lin total derivative",
+            "independence_proven": false
+          }
+        ],
+        "coverage_claim": false,
+        "certs": [
+          "O5_extension_degrees.json",
+          "O5_singular_CT_bases.json"
+        ]
+      }
+    },
+    {
+      "diagram_id": "D04_phiphi_bubble",
+      "status": "schematic_model_and_candidate_CT_list",
+      "prescription_id": "O5-EG-XVILM-map-v1-o61-calc",
+      "evaluated_full_amplitude": false,
+      "NOT_Constructed_basis": true,
+      "independence_proven": false,
+      "schematic": {
+        "kind": "bubble",
+        "D_derivative_aware_superficial_schematic": 4,
+        "leading_homogeneous": {
+          "status": "schematic_radial_model_NOT_derived_amplitude_singularity",
+          "assigned_homogeneous_degree_of_r_model": -8,
+          "NOT_kernel_scaling_degree": true,
+          "radial_profile_class": "r**(-8)",
+          "plus_log_tower_flag": true,
+          "delta_derivatives_order_up_to_flag": 4,
+          "sympy_model": "r**(-8)",
+          "warning": "Assigned homogeneous degree of schematic r**(-(4+D)) only --- NOT a kernel scaling degree; NOT a derived tensor Lorentzian singularity."
+        },
+        "CT_candidate_list_size": 4,
+        "CT_candidates": [
+          {
+            "id": "S0_phi2",
+            "expr": "phi^2",
+            "deriv_order": 0,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "S2_phiBox",
+            "expr": "phi Box phi",
+            "deriv_order": 2,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "S2_dphi",
+            "expr": "partial phi partial phi",
+            "deriv_order": 2,
+            "role": "REDUNDANT_mod_total_deriv",
+            "grading": "even, gh=0",
+            "independence_note": "IBP-equivalent to -phi Box phi under compact variation",
+            "independence_proven": false
+          },
+          {
+            "id": "S4_Box2",
+            "expr": "phi Box^2 phi schematic",
+            "deriv_order": 4,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          }
+        ],
+        "coverage_claim": false,
+        "certs": [
+          "O5_extension_degrees.json",
+          "O5_singular_CT_bases.json"
+        ]
+      }
+    },
+    {
+      "diagram_id": "D05a_phiphi_grav_tadpole",
+      "status": "schematic_model_and_candidate_CT_list",
+      "prescription_id": "O5-EG-XVILM-map-v1-o61-calc",
+      "evaluated_full_amplitude": false,
+      "NOT_Constructed_basis": true,
+      "independence_proven": false,
+      "schematic": {
+        "kind": "tadpole",
+        "D_derivative_aware_superficial_schematic": 4,
+        "leading_homogeneous": {
+          "status": "not_applicable_for_tadpole_or_tree_contact",
+          "difference_variable_radial_model": "not_applicable",
+          "coincident_prescription": "unresolved",
+          "assigned_homogeneous_degree_of_r_model": null,
+          "warning": "No r**(-(4+D)) difference-variable model for tadpoles/tree contacts."
+        },
+        "CT_candidate_list_size": 4,
+        "CT_candidates": [
+          {
+            "id": "S0_phi2",
+            "expr": "phi^2",
+            "deriv_order": 0,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "S2_phiBox",
+            "expr": "phi Box phi",
+            "deriv_order": 2,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "S2_dphi",
+            "expr": "partial phi partial phi",
+            "deriv_order": 2,
+            "role": "REDUNDANT_mod_total_deriv",
+            "grading": "even, gh=0",
+            "independence_note": "IBP-equivalent to -phi Box phi under compact variation",
+            "independence_proven": false
+          },
+          {
+            "id": "S4_Box2",
+            "expr": "phi Box^2 phi schematic",
+            "deriv_order": 4,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          }
+        ],
+        "coverage_claim": false,
+        "certs": [
+          "O5_extension_degrees.json",
+          "O5_singular_CT_bases.json"
+        ]
+      }
+    },
+    {
+      "diagram_id": "D05b_phiphi_tree_CT",
+      "status": "schematic_model_and_candidate_CT_list",
+      "prescription_id": "O5-EG-XVILM-map-v1-o61-calc",
+      "evaluated_full_amplitude": false,
+      "NOT_Constructed_basis": true,
+      "independence_proven": false,
+      "schematic": {
+        "kind": "tree_contact",
+        "D_derivative_aware_superficial_schematic": 0,
+        "leading_homogeneous": {
+          "status": "not_applicable_for_tadpole_or_tree_contact",
+          "difference_variable_radial_model": "not_applicable",
+          "coincident_prescription": "n/a",
+          "assigned_homogeneous_degree_of_r_model": null,
+          "warning": "No r**(-(4+D)) difference-variable model for tadpoles/tree contacts."
+        },
+        "CT_candidate_list_size": 1,
+        "CT_candidates": [
+          {
+            "id": "S0_phi2",
+            "expr": "phi^2",
+            "deriv_order": 0,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          }
+        ],
+        "coverage_claim": false,
+        "certs": [
+          "O5_extension_degrees.json",
+          "O5_singular_CT_bases.json"
+        ]
+      }
+    },
+    {
+      "diagram_id": "D06_cc_ghost_two_point",
+      "status": "schematic_model_and_candidate_CT_list",
+      "prescription_id": "O5-EG-XVILM-map-v1-o61-calc",
+      "evaluated_full_amplitude": false,
+      "NOT_Constructed_basis": true,
+      "independence_proven": false,
+      "schematic": {
+        "kind": "bubble",
+        "D_derivative_aware_superficial_schematic": 4,
+        "leading_homogeneous": {
+          "status": "schematic_radial_model_NOT_derived_amplitude_singularity",
+          "assigned_homogeneous_degree_of_r_model": -8,
+          "NOT_kernel_scaling_degree": true,
+          "radial_profile_class": "r**(-8)",
+          "plus_log_tower_flag": true,
+          "delta_derivatives_order_up_to_flag": 4,
+          "sympy_model": "r**(-8)",
+          "warning": "Assigned homogeneous degree of schematic r**(-(4+D)) only --- NOT a kernel scaling degree; NOT a derived tensor Lorentzian singularity."
+        },
+        "CT_candidate_list_size": 3,
+        "CT_candidates": [
+          {
+            "id": "G0",
+            "expr": "cbar_mu c^mu",
+            "deriv_order": 0,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "G2",
+            "expr": "cbar_mu Box c^mu",
+            "deriv_order": 2,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "G4",
+            "expr": "cbar Box^2 c schematic",
+            "deriv_order": 4,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          }
+        ],
+        "coverage_claim": false,
+        "certs": [
+          "O5_extension_degrees.json",
+          "O5_singular_CT_bases.json"
+        ]
+      }
+    },
+    {
+      "diagram_id": "D07_hstar_c_tree",
+      "status": "schematic_model_and_candidate_CT_list",
+      "prescription_id": "O5-EG-XVILM-map-v1-o61-calc",
+      "evaluated_full_amplitude": false,
+      "NOT_Constructed_basis": true,
+      "independence_proven": false,
+      "schematic": {
+        "kind": "tree_contact",
+        "D_derivative_aware_superficial_schematic": 0,
+        "leading_homogeneous": {
+          "status": "not_applicable_for_tadpole_or_tree_contact",
+          "difference_variable_radial_model": "not_applicable",
+          "coincident_prescription": "n/a",
+          "assigned_homogeneous_degree_of_r_model": null,
+          "warning": "No r**(-(4+D)) difference-variable model for tadpoles/tree contacts."
+        },
+        "CT_candidate_list_size": 1,
+        "CT_candidates": [
+          {
+            "id": "AF_h_U_tree",
+            "expr": "h^{* mu nu} U_{mu nu} with gh(U)=1 (e.g. partial c)",
+            "deriv_order": 1,
+            "role": "candidate_graded_tree_seed",
+            "grading": "gh=0 even",
+            "forbidden_bare": "h* h has gh=-1 --- excluded",
+            "independence_proven": false
+          }
+        ],
+        "coverage_claim": false,
+        "certs": [
+          "O5_extension_degrees.json",
+          "O5_singular_CT_bases.json"
+        ]
+      }
+    },
+    {
+      "diagram_id": "D08_phistar_c_phi_tree",
+      "status": "schematic_model_and_candidate_CT_list",
+      "prescription_id": "O5-EG-XVILM-map-v1-o61-calc",
+      "evaluated_full_amplitude": false,
+      "NOT_Constructed_basis": true,
+      "independence_proven": false,
+      "schematic": {
+        "kind": "tree_contact",
+        "D_derivative_aware_superficial_schematic": 0,
+        "leading_homogeneous": {
+          "status": "not_applicable_for_tadpole_or_tree_contact",
+          "difference_variable_radial_model": "not_applicable",
+          "coincident_prescription": "n/a",
+          "assigned_homogeneous_degree_of_r_model": null,
+          "warning": "No r**(-(4+D)) difference-variable model for tadpoles/tree contacts."
+        },
+        "CT_candidate_list_size": 1,
+        "CT_candidates": [
+          {
+            "id": "AF_phi_V_tree",
+            "expr": "kappa a phi^* (c^rho partial_rho phi) with a=1/2 (XVI-N); gh(V)=1",
+            "deriv_order": 1,
+            "role": "candidate_graded_tree_seed",
+            "grading": "gh=0 even",
+            "forbidden_bare": "phi* phi has gh=-1 --- excluded",
+            "independence_proven": false,
+            "order": "kappa^1",
+            "a": "1/2"
+          }
+        ],
+        "coverage_claim": false,
+        "certs": [
+          "O5_extension_degrees.json",
+          "O5_singular_CT_bases.json"
+        ]
+      }
+    },
+    {
+      "diagram_id": "D09_cstar_cc_tree",
+      "status": "schematic_model_and_candidate_CT_list",
+      "prescription_id": "O5-EG-XVILM-map-v1-o61-calc",
+      "evaluated_full_amplitude": false,
+      "NOT_Constructed_basis": true,
+      "independence_proven": false,
+      "schematic": {
+        "kind": "tree_contact",
+        "D_derivative_aware_superficial_schematic": 0,
+        "leading_homogeneous": {
+          "status": "not_applicable_for_tadpole_or_tree_contact",
+          "difference_variable_radial_model": "not_applicable",
+          "coincident_prescription": "n/a",
+          "assigned_homogeneous_degree_of_r_model": null,
+          "warning": "No r**(-(4+D)) difference-variable model for tadpoles/tree contacts."
+        },
+        "CT_candidate_list_size": 1,
+        "CT_candidates": [
+          {
+            "id": "AF_c_W_tree",
+            "expr": "c^*_mu W^mu with gh(W)=2 (e.g. c partial c)",
+            "deriv_order": 1,
+            "role": "candidate_graded_tree_seed",
+            "grading": "gh=0 even",
+            "forbidden_bare": "c* c has gh=-1 --- excluded",
+            "independence_proven": false
+          }
+        ],
+        "coverage_claim": false,
+        "certs": [
+          "O5_extension_degrees.json",
+          "O5_singular_CT_bases.json"
+        ]
+      }
+    },
+    {
+      "diagram_id": "D11_hh_scalar_loop",
+      "status": "schematic_model_and_candidate_CT_list",
+      "prescription_id": "O5-EG-XVILM-map-v1-o61-calc",
+      "evaluated_full_amplitude": false,
+      "NOT_Constructed_basis": true,
+      "independence_proven": false,
+      "schematic": {
+        "kind": "bubble",
+        "D_derivative_aware_superficial_schematic": 4,
+        "leading_homogeneous": {
+          "status": "schematic_radial_model_NOT_derived_amplitude_singularity",
+          "assigned_homogeneous_degree_of_r_model": -8,
+          "NOT_kernel_scaling_degree": true,
+          "radial_profile_class": "r**(-8)",
+          "plus_log_tower_flag": true,
+          "delta_derivatives_order_up_to_flag": 4,
+          "sympy_model": "r**(-8)",
+          "warning": "Assigned homogeneous degree of schematic r**(-(4+D)) only --- NOT a kernel scaling degree; NOT a derived tensor Lorentzian singularity."
+        },
+        "CT_candidate_list_size": 7,
+        "CT_candidates": [
+          {
+            "id": "O0_hh",
+            "expr": "eta^{mu nu} eta^{rho sigma} h_{mu rho} h_{nu sigma}",
+            "deriv_order": 0,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O0_trtr",
+            "expr": "(eta^{mu nu} h_{mu nu})^2",
+            "deriv_order": 0,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O2_hBoxh",
+            "expr": "h_{mu nu} Box h^{mu nu}",
+            "deriv_order": 2,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_note": "candidate 2-deriv direction; independence NOT proven",
+            "independence_proven": false
+          },
+          {
+            "id": "O2_trBox",
+            "expr": "(tr h) Box (tr h)",
+            "deriv_order": 2,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O2_dhdh",
+            "expr": "partial_a h_{mu nu} partial^a h^{mu nu}",
+            "deriv_order": 2,
+            "role": "REDUNDANT_mod_total_deriv",
+            "grading": "even, gh=0",
+            "independence_note": "int partial_a h_mn partial^a h^{mn} = -int h_mn Box h^{mn} under compact variation",
+            "independence_proven": false
+          },
+          {
+            "id": "O4_Box2",
+            "expr": "h Box^2 h / (partial^2 h)^2 schematic structures",
+            "deriv_order": 4,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O4_R2like",
+            "expr": "schematic (linearized curvature)^2 contacts",
+            "deriv_order": 4,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_note": "XVI-M: int (Riem^2-4Ric^2+R^2)_lin total derivative",
+            "independence_proven": false
+          }
+        ],
+        "coverage_claim": false,
+        "certs": [
+          "O5_extension_degrees.json",
+          "O5_singular_CT_bases.json"
+        ]
+      }
+    },
+    {
+      "diagram_id": "D12_hh_scalar_tadpole",
+      "status": "schematic_model_and_candidate_CT_list",
+      "prescription_id": "O5-EG-XVILM-map-v1-o61-calc",
+      "evaluated_full_amplitude": false,
+      "NOT_Constructed_basis": true,
+      "independence_proven": false,
+      "schematic": {
+        "kind": "tadpole",
+        "D_derivative_aware_superficial_schematic": 4,
+        "leading_homogeneous": {
+          "status": "not_applicable_for_tadpole_or_tree_contact",
+          "difference_variable_radial_model": "not_applicable",
+          "coincident_prescription": "unresolved",
+          "assigned_homogeneous_degree_of_r_model": null,
+          "warning": "No r**(-(4+D)) difference-variable model for tadpoles/tree contacts."
+        },
+        "CT_candidate_list_size": 7,
+        "CT_candidates": [
+          {
+            "id": "O0_hh",
+            "expr": "eta^{mu nu} eta^{rho sigma} h_{mu rho} h_{nu sigma}",
+            "deriv_order": 0,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O0_trtr",
+            "expr": "(eta^{mu nu} h_{mu nu})^2",
+            "deriv_order": 0,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O2_hBoxh",
+            "expr": "h_{mu nu} Box h^{mu nu}",
+            "deriv_order": 2,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_note": "candidate 2-deriv direction; independence NOT proven",
+            "independence_proven": false
+          },
+          {
+            "id": "O2_trBox",
+            "expr": "(tr h) Box (tr h)",
+            "deriv_order": 2,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O2_dhdh",
+            "expr": "partial_a h_{mu nu} partial^a h^{mu nu}",
+            "deriv_order": 2,
+            "role": "REDUNDANT_mod_total_deriv",
+            "grading": "even, gh=0",
+            "independence_note": "int partial_a h_mn partial^a h^{mn} = -int h_mn Box h^{mn} under compact variation",
+            "independence_proven": false
+          },
+          {
+            "id": "O4_Box2",
+            "expr": "h Box^2 h / (partial^2 h)^2 schematic structures",
+            "deriv_order": 4,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_proven": false
+          },
+          {
+            "id": "O4_R2like",
+            "expr": "schematic (linearized curvature)^2 contacts",
+            "deriv_order": 4,
+            "role": "candidate",
+            "grading": "even, gh=0",
+            "independence_note": "XVI-M: int (Riem^2-4Ric^2+R^2)_lin total derivative",
+            "independence_proven": false
+          }
+        ],
+        "coverage_claim": false,
+        "certs": [
+          "O5_extension_degrees.json",
+          "O5_singular_CT_bases.json"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "schematic_candidate_lists": 12,
+    "Constructed_singularity_CT_basis": 0,
+    "full_amplitude": 0,
+    "Non_claim": 1,
+    "matched_to_CT": 0
+  },
+  "demotion": {
+    "withdrawn": "Constructed bases / ambiguity LB coverage / full-amplitude ST4 / ST4 OR target",
+    "replacement": "schematic models and candidate counterterm lists; ST4a+ST4b separate"
+  },
+  "ST4_split": {
+    "ST4a": "Gamma_1,local = sum z_i C_i (gh=0)",
+    "ST4b": "P_ret(S,C) = -P_ret A_1 (gh(C)=0; defect gh=1)",
+    "withdrawn_OR_target": "local_divergent_contact_OR_computed_symmetry_defect"
+  }
+}

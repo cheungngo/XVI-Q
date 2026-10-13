@@ -1,0 +1,118 @@
+{
+  "revision": "p13",
+  "gate": "gauge_fixing_map_constructed",
+  "Psi": "Psi = -i int cbar_mu (2 D^mu[h] - b^mu),  D^mu[h] = d_nu h^{mu nu} - (1/2) d^mu tr h",
+  "Psi_parity_odd": true,
+  "Psi_ghost_number": [-1],
+  "left_equals_right_for_odd_Psi": true,
+  "dPsi": {
+    "dPsi/dh_mn": "2i (d^(m cbar^n) - 1/2 eta^{mn} d.cbar) * w_mn-pairing (independent comps m<=n)",
+    "dPsi/dcbar_mu": "-i (2 D^mu[h] - b^mu)",
+    "dPsi/db_mu": "+i cbar^mu",
+    "dPsi/dc": "0",
+    "dPsi/dphi": "0"
+  },
+  "dPsi_nonzero_components": ["b0", "b1", "b2", "b3", "cb0", "cb1", "cb2", "cb3", "h(0, 0)", "h(0, 1)", "h(0, 2)", "h(0, 3)", "h(1, 1)", "h(1, 2)", "h(1, 3)", "h(2, 2)", "h(2, 3)", "h(3, 3)"],
+  "S_af_at_dPsi_vs_sPsi": {
+    "S_af(dPsi) ~ -sPsi": true,
+    "S_af(dPsi) ~ +sPsi": false
+  },
+  "orientation_scan": {
+    "1": {
+      "hessian": {
+        "momentum": "generic symbolic k = (k0,k1,k2,k3); identities in Q(k) (no sample)",
+        "det_Mbb": "-16",
+        "Mbb_det_nonzero": true,
+        "schur_equals_k2P": false,
+        "det_k2P": "64*(k0**2 - k1**2 - k2**2 - k3**2)**10",
+        "propagator_hh_equals_inv_k2P": false,
+        "propagator_argument": "block-inverse formula: (M^{-1})_hh = (A - B D^{-1} C)^{-1} = (k^2 P)^{-1}"
+      },
+      "ghost_kinetic_i_box": false
+    },
+    "-1": {
+      "hessian": {
+        "momentum": "generic symbolic k = (k0,k1,k2,k3); identities in Q(k) (no sample)",
+        "det_Mbb": "-16",
+        "Mbb_det_nonzero": true,
+        "schur_equals_k2P": true,
+        "det_k2P": "64*(k0**2 - k1**2 - k2**2 - k3**2)**10",
+        "propagator_hh_equals_inv_k2P": true,
+        "propagator_argument": "block-inverse formula: (M^{-1})_hh = (A - B D^{-1} C)^{-1} = (k^2 P)^{-1}"
+      },
+      "ghost_kinetic_i_box": true
+    }
+  },
+  "derived_eps": -1,
+  "map": {
+    "fields": "Phi'^A = Phi^A (all fields unchanged)",
+    "antifields": "Phi*_A = Phi*'_A + (-1) dPsi/dPhi^A   i.e.  Phi*'_A = Phi*_A - (-1) dPsi/dPhi^A",
+    "inverse": "Phi^A = Phi'^A ; Phi*'_A = Phi*_A - (-1) dPsi/dPhi^A",
+    "explicit": {
+      "K'^{mn}": "K^{mn} - (-1) dPsi/dh_mn",
+      "cbar*'^mu": "cbar*^mu - (-1)(-i)(2D^mu[h]-b^mu)",
+      "b*'^mu": "b*^mu - (-1)(i cbar^mu)",
+      "c*'": "c*",
+      "phi*'": "phi*"
+    }
+  },
+  "S_Psi_equals_S_plus_sPsi_mod_d": true,
+  "gauge_fixed_pieces": {
+    "kappa0_ghost_kinetic_i_box": true,
+    "kappa1_ghost_graviton_2ia_D[L_c h]": true,
+    "kappa2_field_only_terms": 0,
+    "kappa2_ghost_vertex_absent_derived": true,
+    "b_sector": "b(2D-b): eliminating b gives +D_mu D^mu"
+  },
+  "propagators": {
+    "graviton": {
+      "stated": "K = -Box P (includes S_gf)",
+      "momentum": "generic symbolic k = (k0,k1,k2,k3); identities in Q(k) (no sample)",
+      "det_Mbb": "-16",
+      "Mbb_det_nonzero": true,
+      "schur_equals_k2P": true,
+      "det_k2P": "64*(k0**2 - k1**2 - k2**2 - k3**2)**10",
+      "propagator_hh_equals_inv_k2P": true,
+      "propagator_argument": "block-inverse formula: (M^{-1})_hh = (A - B D^{-1} C)^{-1} = (k^2 P)^{-1}"
+    },
+    "ghost": {
+      "stated": "i cbar Box c",
+      "match": true
+    },
+    "scalar": {
+      "stated": "-Box (m=0)",
+      "match": true
+    },
+    "momentum": "generic symbolic (k0,k1,k2,k3)"
+  },
+  "propagators_match_transformed_Hessians": true,
+  "canonicity": {
+    "antifield_antifield_fails": [],
+    "antifield_field_fails": [],
+    "pass": true,
+    "pairs_tested": 299
+  },
+  "external_antifields_retained": ["K", "cbs", "cs0", "cs1", "cs2", "cs3", "phis"],
+  "invariant_vs_transformed_kept_separate": {
+    "invariant_extended": "S_ext = S_field + S_af(Phi*)  [nonminimal pair included; Psi not applied]",
+    "transformed": "S_Psi(Phi,Phi*') = S_ext(Phi, Phi*' + (-1) dPsi/dPhi)  [external antifields retained]",
+    "NOT_S_D": true
+  },
+  "source_identity_relation": {
+    "relation": "Gamma_Psi(Phi,Phi*') := Gamma(Phi, Phi*' + (-1) dPsi/dPhi)",
+    "classical_instance_verified": true,
+    "status": "DEFINED classical pullback/interface along the canonical antifield shift; NOT an independently established quantum gauge-change theorem (no quantum Gamma is constructed here)",
+    "ch_relevant_feed": "cbar*-dependence of the invariant functional maps to h-dependence: cbar* = cbar*' + (-1)(-i)(2D[h]-b); h*, b* shifts carry cbar (vanish on ch pattern)",
+    "related_not_identical": true
+  },
+  "source_identity_relation_defined": true,
+  "gauge_fixing_map_constructed": true,
+  "pass": true,
+  "execution_pass": true,
+  "mutations_from_env": [],
+  "claim_status": "Constructed",
+  "scope": "classical BV gauge fixing of S_inv extended action by declared Psi; linear de Donder; through O(kappa^2)",
+  "NOT_import_shift_sign": true,
+  "obstruction_respected": "No insertion completion; XVI-N thm:massless-obstruction untouched; XV-B not opened; Route B not discharged",
+  "seconds": 10.1
+}

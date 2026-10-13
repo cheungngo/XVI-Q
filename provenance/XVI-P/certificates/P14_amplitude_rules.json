@@ -1,0 +1,760 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p14r",
+  "deliverable": "P.5 entry D4: executable amplitude rules",
+  "amplitude_rules_verified": true,
+  "verified_definition": "W1 AND W2 AND W3 AND W4 AND W5 AND W6 pass AND the W6 Hessian route equals the EXPORTED D01/D02/D03/D12 integrands AND every listed mutation rejected (no env mutation)",
+  "mutations_from_env": [],
+  "integrands_only": true,
+  "loop_evaluations_performed": false,
+  "conventions": {
+    "weight": "e^{iS}",
+    "fourier": "f(x) = int d^4k/(2pi)^4 e^{ikx} f~(k); d -> i k; incoming momenta",
+    "extraction": "ordered: V[L1..Ln] = d^L_{Ln}...d^L_{L1} S (leg 1 leftmost)",
+    "vertex_factor": "i kappa^n V (V unnormalised n-th variation; frozen V4 convention)",
+    "Gamma1": "i Gamma_1^{(ext)} = sum of 1PI one-loop graphs; Gamma_1 = -i * graph sum",
+    "graviton_components": "independent h_(mn) (m<=n); multiplicity w = 1 (diag), 2 (off-diag) enters ONLY the tensor form",
+    "ghost": "vertices c-bar LEFT (cbar.c.h); <c cbar> = i M0^{-1}; closed ghost loop factor -1",
+    "source": "K' LEFT of c in K'.c.h and in the Gamma_1 coefficient G_{a' nu} (K'_(a') G c^nu)",
+    "loop_measure": "int d^d l/(2pi)^d (prescription: see P14_prescription_D11_matching)"
+  },
+  "rules": {
+    "graphs": {
+      "D01": {
+        "S_f": "1/2",
+        "loop_sign": 1,
+        "ext_sign": 1,
+        "ext_order": ["h", "h"]
+      },
+      "D02": {
+        "S_f": "1/2",
+        "loop_sign": 1,
+        "ext_sign": 1,
+        "ext_order": ["h", "h"]
+      },
+      "D03": {
+        "S_f": "1",
+        "loop_sign": -1,
+        "ext_sign": 1,
+        "ext_order": ["h", "h"]
+      },
+      "D11": {
+        "S_f": "1/2",
+        "loop_sign": 1,
+        "ext_sign": 1,
+        "ext_order": ["h", "h"]
+      },
+      "D12": {
+        "S_f": "1/2",
+        "loop_sign": 1,
+        "ext_sign": 1,
+        "ext_order": ["h", "h"]
+      },
+      "D13": {
+        "S_f": "1",
+        "loop_sign": 1,
+        "ext_sign": 1,
+        "ext_order": ["K", "c"]
+      },
+      "D14a": {
+        "S_f": "1/2",
+        "loop_sign": 1,
+        "ext_sign": 1,
+        "ext_order": ["h"]
+      },
+      "D14b": {
+        "S_f": "1",
+        "loop_sign": -1,
+        "ext_sign": 1,
+        "ext_order": ["h"]
+      },
+      "D14c": {
+        "S_f": "1/2",
+        "loop_sign": 1,
+        "ext_sign": 1,
+        "ext_order": ["h"]
+      }
+    },
+    "leg_order": {
+      "K_c_h": ["K", "c", "h"],
+      "cb_c_h": ["cb", "c", "h"],
+      "ghost_kinetic": ["cb", "c"]
+    },
+    "graviton_contraction": "independent_components",
+    "ghost_propagator": "<c^mu(q) cbar_rho(-q)> = i (M0^{-1})_{mu rho},  M0_{rho mu} = V[cbar_rho(-q), c^mu(q)]"
+  },
+  "vertex_inventory": [
+    {
+      "name": "V2_grav",
+      "legs": ["h", "h"],
+      "kappa_power": 0,
+      "phase_i_power": 0,
+      "components": 90,
+      "nonzeros": 156,
+      "sha256": "44e354ba23d84f09afa496fc205cc7d862cab2c175f2abb229f35857398313e5",
+      "origin": "exports/ell2_generating_polynomial.srepr (sha 8af76ef7b97d1901)"
+    },
+    {
+      "name": "V3_grav",
+      "legs": ["h", "h", "h"],
+      "kappa_power": 1,
+      "phase_i_power": 0,
+      "components": 894,
+      "nonzeros": 3924,
+      "sha256": "e3eafa0b0c4cb3047a0c6f56da288b3c3984935953d7a2f2554599c04ddef422",
+      "origin": "exports/ell3_generating_polynomial.srepr (sha 60c73cd39c9e1531)"
+    },
+    {
+      "name": "V4_grav",
+      "legs": ["h", "h", "h", "h"],
+      "kappa_power": 2,
+      "phase_i_power": 0,
+      "components": 8796,
+      "nonzeros": 68688,
+      "sha256": "6f1ead09b1e1ecd4453bbfa7cb1a9b7ab95bd22a39c8362322410fa850ab3f99",
+      "origin": "exports/ell4_generating_polynomial.srepr (sha 33ac9e49c4d1644e)"
+    },
+    {
+      "name": "M0_ghost",
+      "legs": ["cb", "c"],
+      "kappa_power": 0,
+      "phase_i_power": 1,
+      "components": 16,
+      "nonzeros": 40,
+      "sha256": "a705e13333b4a2a6c6c1d200545a07290959795f3c3fa4b6cd19d9b8f9e44a5c",
+      "origin": "X^(0): cbar.c (c-bar left)"
+    },
+    {
+      "name": "V_cb_c_h",
+      "legs": ["cb", "c", "h"],
+      "kappa_power": 1,
+      "phase_i_power": 1,
+      "components": 136,
+      "nonzeros": 272,
+      "sha256": "0b1a615ccce1aec8b96f35e733a87196e91ae604217d48ebc80632ed3b0887d0",
+      "origin": "X^(1): cbar.c.h"
+    },
+    {
+      "name": "V_K_c",
+      "legs": ["K", "c"],
+      "kappa_power": 0,
+      "phase_i_power": 1,
+      "components": 16,
+      "nonzeros": 16,
+      "sha256": "8f5e321559f13cbc1d385c9f7175724c858df09484da94ad569704c700580de9",
+      "origin": "X^(0): K'.c (source-linear, tree)"
+    },
+    {
+      "name": "V_K_c_h",
+      "legs": ["K", "c", "h"],
+      "kappa_power": 1,
+      "phase_i_power": 1,
+      "components": 88,
+      "nonzeros": 104,
+      "sha256": "b9feeb4a2218b176e1c41d969dde0fcc787b47437d94667fcb803c50b13075df",
+      "origin": "X^(1): K'.c.h"
+    },
+    {
+      "name": "V_cs_c_c",
+      "legs": ["cs", "c", "c"],
+      "kappa_power": 1,
+      "phase_i_power": 1,
+      "components": 28,
+      "nonzeros": 32,
+      "sha256": "e5cf0ac5b0ac8b15232a95d0142e021bee0d08e9e1797ee02ceadd62e37223f8",
+      "origin": "X^(1): c*.c.c"
+    },
+    {
+      "name": "V_phis_c_phi",
+      "legs": ["phis", "c", "phi"],
+      "kappa_power": 1,
+      "phase_i_power": 1,
+      "components": 4,
+      "nonzeros": 4,
+      "sha256": "13ad47dc9753e69558a315f2192412e643682c23c3e4ce743b9c494cb5e96e6a",
+      "origin": "X^(1): phi*.c.phi"
+    },
+    {
+      "name": "V_b_h",
+      "legs": ["b", "h"],
+      "kappa_power": 0,
+      "phase_i_power": 1,
+      "components": 28,
+      "nonzeros": 28,
+      "sha256": "007bdb36f1ff2bd8edf72701dbe17261665af2e5a797ce38dccf0fd9e4a16002",
+      "origin": "X^(0): b.h (gauge fixing)"
+    },
+    {
+      "name": "V_b_b",
+      "legs": ["b", "b"],
+      "kappa_power": 0,
+      "phase_i_power": 0,
+      "components": 4,
+      "nonzeros": 4,
+      "sha256": "8f31a01eafd2a4f290a460b325380533a3d0d2d3f3db60a43d10b6b9fcb132c4",
+      "origin": "X^(0): b.b"
+    },
+    {
+      "name": "V_cbs_b",
+      "legs": ["cbs", "b"],
+      "kappa_power": 0,
+      "phase_i_power": 1,
+      "components": 4,
+      "nonzeros": 4,
+      "sha256": "7628280e5d25da0c2cd56c2f873603698a0b81e20056b13d957ef0a37b5306f2",
+      "origin": "X^(0): cbar*'.b (nonminimal, tree)"
+    },
+    {
+      "name": "M_phi",
+      "legs": ["phi", "phi"],
+      "kappa_power": 0,
+      "phase_i_power": 0,
+      "components": 1,
+      "nonzeros": 4,
+      "sha256": "13dcf1e38f25de0fa9d362a4696e87e3871e049fdb0d175e78f87b23c36cc346",
+      "origin": "S_phi^(0)"
+    },
+    {
+      "name": "V_h_phi_phi",
+      "legs": ["h", "phi", "phi"],
+      "kappa_power": 1,
+      "phase_i_power": 0,
+      "components": 10,
+      "nonzeros": 28,
+      "sha256": "ac0b6145d174f59e3bcfb91d46cce14950ba28a0a72e6e3db7a6b54b6bece537",
+      "origin": "S_phi^(1): a1"
+    },
+    {
+      "name": "V_hh_phi_phi",
+      "legs": ["h", "h", "phi", "phi"],
+      "kappa_power": 2,
+      "phase_i_power": 0,
+      "components": 94,
+      "nonzeros": 232,
+      "sha256": "00498bb5467c33d467b6037ad94f933a73dad4d2b9ed0d54003be1cf2b90178a",
+      "origin": "S_phi^(2): a2"
+    }
+  ],
+  "propagators": {
+    "graviton": {
+      "numerator": "i (P^{-1})_{ab}",
+      "denominator": "q^2 + i0",
+      "Pinv": [
+        ["1/2", "0", "0", "0", "1/2", "0", "0", "1/2", "0", "1/2"],
+        ["0", "-1/2", "0", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "-1/2", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "0", "-1/2", "0", "0", "0", "0", "0", "0"],
+        ["1/2", "0", "0", "0", "1/2", "0", "0", "-1/2", "0", "-1/2"],
+        ["0", "0", "0", "0", "0", "1/2", "0", "0", "0", "0"],
+        ["0", "0", "0", "0", "0", "0", "1/2", "0", "0", "0"],
+        ["1/2", "0", "0", "0", "-1/2", "0", "0", "1/2", "0", "-1/2"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "1/2", "0"],
+        ["1/2", "0", "0", "0", "-1/2", "0", "0", "-1/2", "0", "1/2"]
+      ],
+      "Pinv_equals_deDonder_tensor_at_representatives": true,
+      "schur_equals_q2P": true,
+      "full_h_b_inverse_verified": true,
+      "b_block": "Matrix([[-2, 0, 0, 0], [0, 2, 0, 0], [0, 0, 2, 0], [0, 0, 0, 2]])",
+      "hb_entry_example": "-I*q0/(q0**2 - q1**2 - q2**2 - q3**2) (entry [00,0])"
+    },
+    "ghost": {
+      "rule": "<c^mu(q) cbar_rho(-q)> = i (M0^{-1})_{mu rho} = numerator_{mu rho}/(q^2+i0)",
+      "M0": "-i q^2 delta_{rho mu}",
+      "numerator": "-delta_{mu rho}",
+      "M0_is_q2_times_constant": true
+    },
+    "scalar": {
+      "rule": "i/(q^2+i0)",
+      "V2": "q0**2 - q1**2 - q2**2 - q3**2"
+    },
+    "i0": "Feynman: every denominator q^2 + i0 (eta = +,-,-,-); D_F(k) = i/(k^2+i0) (Gate 0)"
+  },
+  "graphs": {
+    "D01": {
+      "status": "integrand_available",
+      "integrand_available": true,
+      "integrated": false,
+      "value": "not evaluated",
+      "prefactor": "kappa**2/2",
+      "denominators": ["l^2+i0", "(l-p)^2+i0"],
+      "external": ["h_a(p)", "h_b(-p)"],
+      "routing": {
+        "A": ["h_a: p", "h_c: -l", "h_e: l-p"],
+        "B": ["h_b: -p", "h_d: l", "h_f: p-l"],
+        "propagators": ["<h_c h_d>(l)", "<h_e h_f>(l-p)"]
+      },
+      "numerator_components": 100,
+      "numerator_monomials": 3888,
+      "numerator_degree": 4,
+      "file": "exports/P14_integrands/D01.json",
+      "sha256": "869a5db72f275c25a68b9b0295e3381fdf57b9c71de3c632172d70dce2fabce8",
+      "rule": {
+        "S_f": "1/2",
+        "loop_sign": 1,
+        "ext_sign": 1,
+        "ext_order": ["h", "h"]
+      }
+    },
+    "D02": {
+      "status": "integrand_available",
+      "integrand_available": true,
+      "integrated": false,
+      "value": "not evaluated",
+      "prefactor": "-kappa**2/2",
+      "denominators": ["l^2+i0"],
+      "external": ["h_a(p)", "h_b(-p)"],
+      "routing": {
+        "V4": ["h_a: p", "h_b: -p", "h_c: l", "h_d: -l"],
+        "propagators": ["<h_c h_d>(l)"]
+      },
+      "numerator_components": 94,
+      "numerator_monomials": 220,
+      "numerator_degree": 2,
+      "file": "exports/P14_integrands/D02.json",
+      "sha256": "e37cb4152690018ec8ce2ac1a0539a29864528e65e06a9efe09441b14fb6a063",
+      "rule": {
+        "S_f": "1/2",
+        "loop_sign": 1,
+        "ext_sign": 1,
+        "ext_order": ["h", "h"]
+      }
+    },
+    "D03": {
+      "status": "integrand_available",
+      "integrand_available": true,
+      "integrated": false,
+      "value": "not evaluated",
+      "prefactor": "-kappa**2",
+      "denominators": ["(l-p)^2+i0", "l^2+i0"],
+      "external": ["h_a(p)", "h_b(-p)"],
+      "routing": {
+        "A": ["cbar_rho: -l", "c^mu: l-p", "h_a: p"],
+        "B": ["cbar_sigma: p-l", "c^nu: l", "h_b: -p"],
+        "propagators": ["<c^mu cbar_sigma>(l-p)", "<c^nu cbar_rho>(l)"],
+        "trace": "closed ghost loop"
+      },
+      "numerator_components": 100,
+      "numerator_monomials": 2728,
+      "numerator_degree": 4,
+      "file": "exports/P14_integrands/D03.json",
+      "sha256": "728cd2564ff9024d77e950c07642f4a287d59c0d9c6ff56f4de03d1ed7a978bc",
+      "rule": {
+        "S_f": "1",
+        "loop_sign": -1,
+        "ext_sign": 1,
+        "ext_order": ["h", "h"]
+      }
+    },
+    "D11": {
+      "status": "reference: inherited XVI-O kernel (O5/o70); P-convention integrand for matching M1 only",
+      "integrand_available": true,
+      "integrated": false,
+      "value": "not evaluated",
+      "prefactor": "kappa**2/2",
+      "denominators": ["l^2+i0", "(l-p)^2+i0"],
+      "external": ["h_a(p)", "h_b(-p)"],
+      "routing": {
+        "A": ["h_a: p", "phi: -l", "phi: l-p"],
+        "B": ["h_b: -p", "phi: l", "phi: p-l"],
+        "propagators": ["<phi phi>(l)", "<phi phi>(l-p)"]
+      },
+      "numerator_components": 100,
+      "numerator_monomials": 1722,
+      "numerator_degree": 4,
+      "file": "exports/P14_integrands/D11.json",
+      "sha256": "6afa9cc07776ed4a77077986ffa3aa2ab50936cff13068f98fba9c3017958609",
+      "rule": {
+        "S_f": "1/2",
+        "loop_sign": 1,
+        "ext_sign": 1,
+        "ext_order": ["h", "h"]
+      }
+    },
+    "D12": {
+      "status": "Missing (integrand available; no value)",
+      "integrand_available": true,
+      "integrated": false,
+      "value": "not evaluated",
+      "prefactor": "-kappa**2/2",
+      "denominators": ["l^2+i0"],
+      "external": ["h_a(p)", "h_b(-p)"],
+      "routing": {
+        "V": ["h_a: p", "h_b: -p", "phi: l", "phi: -l"],
+        "propagators": ["<phi phi>(l)"]
+      },
+      "numerator_components": 94,
+      "numerator_monomials": 160,
+      "numerator_degree": 2,
+      "file": "exports/P14_integrands/D12.json",
+      "sha256": "044080e17dc3acdfcbd2640995d831b69ab2d637712f27148fa60a6a2a99b6fa",
+      "rule": {
+        "S_f": "1/2",
+        "loop_sign": 1,
+        "ext_sign": 1,
+        "ext_order": ["h", "h"]
+      },
+      "D12_status": "Missing"
+    },
+    "D13": {
+      "status": "integrand_available",
+      "integrand_available": true,
+      "integrated": false,
+      "value": "not evaluated",
+      "prefactor": "I*kappa**2",
+      "denominators": ["l^2+i0", "(p-l)^2+i0"],
+      "external": ["K'_(a')(-p)  [left]", "c^nu(p)  [right]"],
+      "routing": {
+        "K_vertex": ["K'_(a'): -p", "c^mu: l", "h_c: p-l"],
+        "ghost_vertex": ["cbar_rho: -l", "c^nu (external): p", "h_d: l-p"],
+        "propagators": ["<c^mu cbar_rho>(l)", "<h_c h_d>(p-l)"],
+        "Gamma1_term": "Gamma_1 contains int K'_(a') G_{a' nu} c^nu, G = ordered extraction (K', c)"
+      },
+      "numerator_components": 40,
+      "numerator_monomials": 396,
+      "numerator_degree": 3,
+      "file": "exports/P14_integrands/D13.json",
+      "sha256": "42d999fbc4eb3aa01b57050fbe5ff97525976e56dca0e748bae6ca9f03c67026",
+      "rule": {
+        "S_f": "1",
+        "loop_sign": 1,
+        "ext_sign": 1,
+        "ext_order": ["K", "c"]
+      }
+    },
+    "D14a": {
+      "status": "integrand_available",
+      "integrand_available": true,
+      "integrated": false,
+      "value": "not evaluated",
+      "prefactor": "-kappa/2",
+      "denominators": ["l^2+i0"],
+      "external": ["h_a(0)"],
+      "routing": {
+        "V3": ["h_a: 0", "h_c: l", "h_d: -l"],
+        "propagators": ["<h_c h_d>(l)"]
+      },
+      "numerator_components": 10,
+      "numerator_monomials": 22,
+      "numerator_degree": 2,
+      "file": "exports/P14_integrands/D14a.json",
+      "sha256": "e141db64f2ed3ef1cb09709b03b8bbaf6c55d29604cb6873e09d05387473e606",
+      "rule": {
+        "S_f": "1/2",
+        "loop_sign": 1,
+        "ext_sign": 1,
+        "ext_order": ["h"]
+      }
+    },
+    "D14b": {
+      "status": "integrand_available",
+      "integrand_available": true,
+      "integrated": false,
+      "value": "not evaluated",
+      "prefactor": "kappa",
+      "denominators": ["l^2+i0"],
+      "external": ["h_a(0)"],
+      "routing": {
+        "V": ["cbar_rho: -l", "c^mu: l", "h_a: 0"],
+        "propagators": ["<c^mu cbar_rho>(l)"]
+      },
+      "numerator_components": 4,
+      "numerator_monomials": 16,
+      "numerator_degree": 2,
+      "file": "exports/P14_integrands/D14b.json",
+      "sha256": "630ff664eec930d2c3eab60f5782dc9a3d4151c85304549f315cd94ad68d94de",
+      "rule": {
+        "S_f": "1",
+        "loop_sign": -1,
+        "ext_sign": 1,
+        "ext_order": ["h"]
+      }
+    },
+    "D14c": {
+      "status": "integrand_available",
+      "integrand_available": true,
+      "integrated": false,
+      "value": "not evaluated",
+      "prefactor": "-kappa/2",
+      "denominators": ["l^2+i0"],
+      "external": ["h_a(0)"],
+      "routing": {
+        "V": ["h_a: 0", "phi: l", "phi: -l"],
+        "propagators": ["<phi phi>(l)"]
+      },
+      "numerator_components": 10,
+      "numerator_monomials": 22,
+      "numerator_degree": 2,
+      "file": "exports/P14_integrands/D14c.json",
+      "sha256": "26d8a239783f101b997843a91ba11acaea453cab04a9fa1266974ad0e2a7f120",
+      "rule": {
+        "S_f": "1/2",
+        "loop_sign": 1,
+        "ext_sign": 1,
+        "ext_order": ["h"]
+      }
+    }
+  },
+  "controls": {
+    "W1_wick_berezin_shadow": {
+      "checks": {
+        "D01": true,
+        "D11": true,
+        "D02": true,
+        "D12": true,
+        "D14a": true,
+        "D14c": true,
+        "ghost_propagator": true,
+        "D03": true,
+        "D14b": true,
+        "D13": true
+      },
+      "pass": true
+    },
+    "W2_multiplicity": {
+      "checks": {
+        "D02": true,
+        "D14a": true,
+        "D13": true,
+        "Pinv_equals_deDonder_numerator": true,
+        "schur_equals_q2P": true,
+        "full_h_b_inverse_verified": true
+      },
+      "pass": true,
+      "rule": "independent components h_(mn): vertex = d/dh_(mn) (no 1/w), propagator i (P^{-1})_{ab}/(q^2+i0), contraction sum over 10x10; tensor form needs V^T = V/w (w=2 off-diagonal) with the 16x16 de Donder numerator"
+    },
+    "W3_closed_form_vertices": {
+      "checks": {
+        "cbar_c_h_equals_2ia_D_Lch": true,
+        "cbar_c_h_mismatched_components": 0,
+        "K_c_h_equals_a_Lch": true,
+        "K_c_equals_a_dc_plus_dc": true,
+        "h_phi_phi_equals_a1_closed_form": true,
+        "ghost_kinetic_equals_minus_i_q2_delta": true
+      },
+      "pass": true,
+      "closed_forms": {
+        "cbar.c.h": "kappa * cbar_rho 2 i a D^rho[L_c h], L_c h = c^r d_r h + h_rn d_m c^r + h_mr d_n c^r",
+        "K'.c.h": "kappa K'_(mn) a (L_c h)_mn",
+        "K'.c": "K'_(mn) a (d_m c_n + d_n c_m)",
+        "h.phi.phi": "kappa (1/2) a1^{mn}(h) d_m phi d_n phi, a1 = tau eta/2 - h^{mn}",
+        "ghost kinetic": "cbar_mu i Box c^mu"
+      }
+    },
+    "W5_regeneration": {
+      "checks": {
+        "D14c": true,
+        "D14b": true,
+        "D14a": true,
+        "D11": true,
+        "D13": true,
+        "D01_bose_N_ab_equals_N_ba": true
+      },
+      "pass": true,
+      "covers": ["D14a", "D14b", "D14c", "D11", "D13"]
+    },
+    "W6_hessian_route": {
+      "checks": {
+        "D01_hessian_route_equals_integrand": true,
+        "D02_hessian_route_equals_integrand": true,
+        "D03_hessian_route_equals_integrand": true,
+        "D12_hessian_route_equals_integrand": true,
+        "graviton_Hbb_constant": true,
+        "graviton_schur_is_q2_times_constant": true,
+        "graviton_full_14x14_inverse_verified": true,
+        "ghost_M0_is_q2_times_constant": true,
+        "structural: X1_has_no_field_only_monomial (no b.h.h, h^3 in X)": true,
+        "structural: X2_is_zero (no cbar.c.h.h, no ghost tadpole at kappa^2)": true
+      },
+      "pass": true,
+      "route": "Tr log of the field-dependent Hessian of S_Psi (independent of the Feynman-rule assembler)",
+      "X0_hh_part_zero": true,
+      "seconds": 12.5
+    },
+    "W4_ward_bose": {
+      "checks": {
+        "kappa1_ward_offshell_symbolic": true,
+        "kappa1_V3_part_nonzero": true,
+        "kappa0_ward_symbolic": true,
+        "kappa2_ward_offshell_symbolic": true,
+        "kappa2_chunks": 1000,
+        "kappa2_chunks_failing": 0,
+        "kappa2_V4_part_nonzero_chunks": 996,
+        "seconds": 15.7,
+        "ward_contraction_two_free_onshell_graviton_legs_offshell_gauge_leg": true,
+        "ward_contraction_instances": 144,
+        "bose_V3": true,
+        "bose_V4": true,
+        "fast_extractor_equals_polarisation_V3_symbolic": true
+      },
+      "pass": true,
+      "acceptance_keys": ["kappa1_ward_offshell_symbolic", "kappa1_V3_part_nonzero", "kappa0_ward_symbolic", "kappa2_ward_offshell_symbolic", "ward_contraction_two_free_onshell_graviton_legs_offshell_gauge_leg", "bose_V3", "bose_V4", "fast_extractor_equals_polarisation_V3_symbolic"]
+    }
+  },
+  "W1_detail": {
+    "D01": {
+      "value": "-I*g_a*g_b/(2*m**2)",
+      "rule": "-I*g_a*g_b/(2*m**2)",
+      "agree": true
+    },
+    "D11": {
+      "value": "-I*g_a*g_b/(2*m**2)",
+      "rule": "-I*g_a*g_b/(2*m**2)",
+      "agree": true
+    },
+    "D02": {
+      "value": "I*g/(2*m)",
+      "rule": "I*g/(2*m)",
+      "agree": true
+    },
+    "D12": {
+      "value": "I*g/(2*m)",
+      "rule": "I*g/(2*m)",
+      "agree": true
+    },
+    "D14a": {
+      "value": "I*g_a/(2*m)",
+      "rule": "I*g_a/(2*m)",
+      "agree": true
+    },
+    "D14c": {
+      "value": "I*g_a/(2*m)",
+      "rule": "I*g_a/(2*m)",
+      "agree": true
+    },
+    "ghost_propagator": {
+      "berezin": "Matrix([[-40*I/247, -42*I/247], [-84*I/247, 60*I/247]])",
+      "rule": "Matrix([[-40*I/247, -42*I/247], [-84*I/247, 60*I/247]])",
+      "agree": true
+    },
+    "D03": {
+      "value": "335057*I/305045",
+      "rule": "335057*I/305045",
+      "agree": true
+    },
+    "D14b": {
+      "value": "-714*I/247",
+      "rule": "-714*I/247",
+      "agree": true
+    },
+    "D13": {
+      "values_vs_rule": {
+        "00": ["-6111*I/(4940*m)", "-6111*I/(4940*m)"],
+        "01": ["1809*I/(1235*m)", "1809*I/(1235*m)"],
+        "10": ["4229*I/(1235*m)", "4229*I/(1235*m)"],
+        "11": ["-3308*I/(1235*m)", "-3308*I/(1235*m)"]
+      },
+      "agree": true
+    }
+  },
+  "W6_detail": {
+    "D01": {
+      "components": 100,
+      "nonzero_components": 100,
+      "mismatches": [],
+      "n_mismatches": 0,
+      "agree": true
+    },
+    "D02": {
+      "components": 94,
+      "nonzero_components": 94,
+      "mismatches": [],
+      "n_mismatches": 0,
+      "agree": true
+    },
+    "D03": {
+      "components": 100,
+      "nonzero_components": 100,
+      "mismatches": [],
+      "n_mismatches": 0,
+      "agree": true
+    },
+    "D12": {
+      "components": 94,
+      "nonzero_components": 94,
+      "mismatches": [],
+      "n_mismatches": 0,
+      "agree": true
+    }
+  },
+  "W6_exports": {
+    "D01": {
+      "components": 100,
+      "nonzero_components": 100,
+      "mismatches": [],
+      "n_mismatches": 0,
+      "agree": true,
+      "export_sha256": "869a5db72f275c25a68b9b0295e3381fdf57b9c71de3c632172d70dce2fabce8"
+    },
+    "D02": {
+      "components": 94,
+      "nonzero_components": 94,
+      "mismatches": [],
+      "n_mismatches": 0,
+      "agree": true,
+      "export_sha256": "e37cb4152690018ec8ce2ac1a0539a29864528e65e06a9efe09441b14fb6a063"
+    },
+    "D03": {
+      "components": 100,
+      "nonzero_components": 100,
+      "mismatches": [],
+      "n_mismatches": 0,
+      "agree": true,
+      "export_sha256": "728cd2564ff9024d77e950c07642f4a287d59c0d9c6ff56f4de03d1ed7a978bc"
+    },
+    "D12": {
+      "components": 94,
+      "nonzero_components": 94,
+      "mismatches": [],
+      "n_mismatches": 0,
+      "agree": true,
+      "export_sha256": "044080e17dc3acdfcbd2640995d831b69ab2d637712f27148fa60a6a2a99b6fa"
+    },
+    "all_agree": true
+  },
+  "regeneration_coverage": {
+    "W5_independent_sympy_route": ["D14a", "D14b", "D14c", "D11", "D13"],
+    "W6_hessian_trlog_route": ["D01", "D02", "D03", "D12"],
+    "D01_bose_symmetry": "W5 (symmetry check only)"
+  },
+  "mutations": {
+    "wrong_tadpole_factor": {
+      "amplitude_rules_verified": false,
+      "rejected": true,
+      "failed_checks": ["W1_wick_berezin_shadow.D02", "W6_hessian_route.D02_hessian_route_equals_integrand"],
+      "seconds": 10.1
+    },
+    "wrong_ghost_loop_sign": {
+      "amplitude_rules_verified": false,
+      "rejected": true,
+      "failed_checks": ["W1_wick_berezin_shadow.D03", "W1_wick_berezin_shadow.D14b", "W6_hessian_route.D03_hessian_route_equals_integrand"],
+      "seconds": 10.1
+    },
+    "offdiag_multiplicity": {
+      "amplitude_rules_verified": false,
+      "rejected": true,
+      "failed_checks": ["W2_multiplicity.D02", "W2_multiplicity.D13", "W2_multiplicity.D14a", "W5_regeneration.D13", "W5_regeneration.D14a", "W6_hessian_route.D01_hessian_route_equals_integrand", "W6_hessian_route.D02_hessian_route_equals_integrand"],
+      "seconds": 10.2
+    },
+    "reversed_source_ghost_order": {
+      "amplitude_rules_verified": false,
+      "rejected": true,
+      "failed_checks": ["W1_wick_berezin_shadow.D13"],
+      "seconds": 17.7
+    },
+    "omit_ghost_transport_term": {
+      "amplitude_rules_verified": false,
+      "rejected": true,
+      "failed_checks": ["W3_closed_form_vertices.cbar_c_h_equals_2ia_D_Lch", "W6_hessian_route.D03_hessian_route_equals_integrand"],
+      "seconds": 17.2
+    }
+  },
+  "mutations_all_rejected": true,
+  "D12_status": "Missing",
+  "D11_role": "inherited kernel reference; matching defined (see D11 matching note)",
+  "exports": {
+    "vertex_tensors": "exports/P14_vertex_tensors.json",
+    "integrands": "exports/P14_integrands/*.json"
+  },
+  "execution_pass": true,
+  "seconds": 145.1
+}

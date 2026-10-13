@@ -1,0 +1,515 @@
+{
+  "revision": "p13",
+  "gate": "required_classical_BV_components_verified",
+  "equation": "(S,S) at kappa^2: 2(S0,S2)+(S1,S1) = 0  [plus regressions (S0,S0)=0, 2(S0,S1)=0]",
+  "bracket": "(F,G) = sum_A int [ (d^R F/d Phi^A)(d^L G/d Phi*_A) - (d^R F/d Phi*_A)(d^L G/d Phi^A) ]",
+  "baseline": "S_inv (unprepared, sigma_eps == 1, no insertion I_t); prepared S_D keeps (S_D,S_D) != 0 (XVI-N prop:broken-square)",
+  "identification_with_exports": {
+    "ell2_ell3_ell4": {
+      "2": {
+        "sha256": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+        "terms": 84
+      },
+      "3": {
+        "sha256": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+        "terms": 678
+      },
+      "4": {
+        "sha256": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+        "terms": 3360
+      }
+    },
+    "ell2_ell3_ell4_sha_match_P13_quartic_verified": true,
+    "quartic_generator_verified": true,
+    "scalar_a1_a2": "re-derived and identified in P13_source_action (B = sqrt(-g) g^{-1})",
+    "s_images": "P13_brst_derivation (s2 derived zero)"
+  },
+  "table_by_kappa_and_antifield_number": {
+    "kappa0": {
+      "af0_grav_Noether": true,
+      "af0_scalar_Noether": true,
+      "af0_ghost_gf_transformed": true,
+      "af1_invariant": true,
+      "af1_transformed": true,
+      "af2_invariant": true,
+      "af2_transformed": true
+    },
+    "kappa1": {
+      "af0_grav_Noether": true,
+      "af0_scalar_Noether": true,
+      "af0_ghost_gf_transformed": true,
+      "af1_invariant": true,
+      "af1_transformed": true,
+      "af2_invariant": true,
+      "af2_transformed": true
+    },
+    "kappa2": {
+      "af0_grav_Noether": true,
+      "af0_scalar_Noether": true,
+      "af0_ghost_gf_transformed": true,
+      "af1_invariant": true,
+      "af1_transformed": true,
+      "af2_invariant": true,
+      "af2_transformed": true
+    }
+  },
+  "details": {
+    "invariant_variables": {
+      "0": {
+        "total": {
+          "is_divergence": true,
+          "n_terms": 0,
+          "nonzero_euler_components": []
+        },
+        "by_antifield_number": {
+          "0": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 0,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {},
+            "mixed_cancellation": false
+          },
+          "1": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 0,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {},
+            "mixed_cancellation": false
+          },
+          "2": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 0,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {},
+            "mixed_cancellation": false
+          }
+        }
+      },
+      "1": {
+        "total": {
+          "is_divergence": true,
+          "n_terms": 180,
+          "nonzero_euler_components": []
+        },
+        "by_antifield_number": {
+          "0": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 0,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {},
+            "mixed_cancellation": false
+          },
+          "1": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 180,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {
+              "h": {
+                "is_divergence": false,
+                "n_terms": 148,
+                "nonzero_euler_components": ["K(0, 0)", "K(0, 1)", "K(0, 2)", "K(0, 3)", "K(1, 1)", "K(1, 2)", "K(1, 3)", "K(2, 2)", "K(2, 3)", "K(3, 3)", "c0", "c1"]
+              },
+              "c": {
+                "is_divergence": false,
+                "n_terms": 64,
+                "nonzero_euler_components": ["K(0, 0)", "K(0, 1)", "K(0, 2)", "K(0, 3)", "K(1, 1)", "K(1, 2)", "K(1, 3)", "K(2, 2)", "K(2, 3)", "K(3, 3)", "c0", "c1"]
+              }
+            },
+            "mixed_cancellation": true
+          },
+          "2": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 0,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {},
+            "mixed_cancellation": false
+          }
+        }
+      },
+      "2": {
+        "total": {
+          "is_divergence": true,
+          "n_terms": 1356,
+          "nonzero_euler_components": []
+        },
+        "by_antifield_number": {
+          "0": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 0,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {},
+            "mixed_cancellation": false
+          },
+          "1": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 1356,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {
+              "h": {
+                "is_divergence": false,
+                "n_terms": 992,
+                "nonzero_euler_components": ["K(0, 0)", "K(0, 1)", "K(0, 2)", "K(0, 3)", "K(1, 1)", "K(1, 2)", "K(1, 3)", "K(2, 2)", "K(2, 3)", "K(3, 3)", "c0", "c1"]
+              },
+              "c": {
+                "is_divergence": false,
+                "n_terms": 564,
+                "nonzero_euler_components": ["K(0, 0)", "K(0, 1)", "K(0, 2)", "K(0, 3)", "K(1, 1)", "K(1, 2)", "K(1, 3)", "K(2, 2)", "K(2, 3)", "K(3, 3)", "c0", "c1"]
+              },
+              "phi": {
+                "is_divergence": false,
+                "n_terms": 28,
+                "nonzero_euler_components": ["c0", "c1", "c2", "c3", "phi()", "phis()"]
+              }
+            },
+            "mixed_cancellation": true
+          },
+          "2": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 0,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {},
+            "mixed_cancellation": false
+          }
+        }
+      }
+    },
+    "transformed_variables": {
+      "0": {
+        "total": {
+          "is_divergence": true,
+          "n_terms": 32,
+          "nonzero_euler_components": []
+        },
+        "by_antifield_number": {
+          "0": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 32,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {
+              "h": {
+                "is_divergence": false,
+                "n_terms": 16,
+                "nonzero_euler_components": ["b0", "b1", "b2", "b3", "c0", "c1", "c2", "c3"]
+              },
+              "cb": {
+                "is_divergence": false,
+                "n_terms": 16,
+                "nonzero_euler_components": ["b0", "b1", "b2", "b3", "c0", "c1", "c2", "c3"]
+              }
+            },
+            "mixed_cancellation": true
+          },
+          "1": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 0,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {},
+            "mixed_cancellation": false
+          },
+          "2": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 0,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {},
+            "mixed_cancellation": false
+          }
+        }
+      },
+      "1": {
+        "total": {
+          "is_divergence": true,
+          "n_terms": 552,
+          "nonzero_euler_components": []
+        },
+        "by_antifield_number": {
+          "0": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 372,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {
+              "h": {
+                "is_divergence": false,
+                "n_terms": 324,
+                "nonzero_euler_components": ["b0", "b1", "b2", "b3", "c0", "c1", "c2", "c3", "cb0", "cb1", "cb2", "cb3"]
+              },
+              "c": {
+                "is_divergence": false,
+                "n_terms": 64,
+                "nonzero_euler_components": ["c0", "c1", "c2", "c3", "cb0", "cb1", "cb2", "cb3"]
+              },
+              "cb": {
+                "is_divergence": false,
+                "n_terms": 36,
+                "nonzero_euler_components": ["b0", "b1", "b2", "b3", "c0", "c1", "c2", "c3", "h(0, 0)", "h(0, 1)", "h(0, 2)", "h(0, 3)"]
+              }
+            },
+            "mixed_cancellation": true
+          },
+          "1": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 180,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {
+              "h": {
+                "is_divergence": false,
+                "n_terms": 148,
+                "nonzero_euler_components": ["K(0, 0)", "K(0, 1)", "K(0, 2)", "K(0, 3)", "K(1, 1)", "K(1, 2)", "K(1, 3)", "K(2, 2)", "K(2, 3)", "K(3, 3)", "c0", "c1"]
+              },
+              "c": {
+                "is_divergence": false,
+                "n_terms": 64,
+                "nonzero_euler_components": ["K(0, 0)", "K(0, 1)", "K(0, 2)", "K(0, 3)", "K(1, 1)", "K(1, 2)", "K(1, 3)", "K(2, 2)", "K(2, 3)", "K(3, 3)", "c0", "c1"]
+              }
+            },
+            "mixed_cancellation": true
+          },
+          "2": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 0,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {},
+            "mixed_cancellation": false
+          }
+        }
+      },
+      "2": {
+        "total": {
+          "is_divergence": true,
+          "n_terms": 3748,
+          "nonzero_euler_components": []
+        },
+        "by_antifield_number": {
+          "0": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 2392,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {
+              "h": {
+                "is_divergence": false,
+                "n_terms": 2192,
+                "nonzero_euler_components": ["c0", "c1", "c2", "c3", "cb0", "cb1", "cb2", "cb3", "h(0, 0)", "h(0, 1)", "h(0, 2)", "h(0, 3)"]
+              },
+              "c": {
+                "is_divergence": false,
+                "n_terms": 512,
+                "nonzero_euler_components": ["c0", "c1", "c2", "c3", "cb0", "cb1", "cb2", "cb3", "h(0, 0)", "h(0, 1)", "h(0, 2)", "h(0, 3)"]
+              }
+            },
+            "mixed_cancellation": true
+          },
+          "1": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 1356,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {
+              "h": {
+                "is_divergence": false,
+                "n_terms": 992,
+                "nonzero_euler_components": ["K(0, 0)", "K(0, 1)", "K(0, 2)", "K(0, 3)", "K(1, 1)", "K(1, 2)", "K(1, 3)", "K(2, 2)", "K(2, 3)", "K(3, 3)", "c0", "c1"]
+              },
+              "c": {
+                "is_divergence": false,
+                "n_terms": 564,
+                "nonzero_euler_components": ["K(0, 0)", "K(0, 1)", "K(0, 2)", "K(0, 3)", "K(1, 1)", "K(1, 2)", "K(1, 3)", "K(2, 2)", "K(2, 3)", "K(3, 3)", "c0", "c1"]
+              },
+              "phi": {
+                "is_divergence": false,
+                "n_terms": 28,
+                "nonzero_euler_components": ["c0", "c1", "c2", "c3", "phi()", "phis()"]
+              }
+            },
+            "mixed_cancellation": true
+          },
+          "2": {
+            "total": {
+              "is_divergence": true,
+              "n_terms": 0,
+              "nonzero_euler_components": []
+            },
+            "per_bracket_pair": {},
+            "mixed_cancellation": false
+          }
+        }
+      }
+    },
+    "scalar_af0": {
+      "0": {
+        "total": {
+          "is_divergence": true,
+          "n_terms": 0,
+          "nonzero_euler_components": []
+        },
+        "pieces_individually_divergence": {
+          "2(L0,X0)": true
+        }
+      },
+      "1": {
+        "total": {
+          "is_divergence": true,
+          "n_terms": 20,
+          "nonzero_euler_components": []
+        },
+        "pieces_individually_divergence": {
+          "2(L0,X1)": false,
+          "2(L1,X0)": false
+        }
+      },
+      "2": {
+        "total": {
+          "is_divergence": true,
+          "n_terms": 20,
+          "nonzero_euler_components": []
+        },
+        "pieces_individually_divergence": {
+          "2(L1,X1)": false,
+          "2(L2,X0)": false
+        }
+      }
+    },
+    "grav_af0_deterministic": {
+      "kappa0": {
+        "density": "s0 ell2",
+        "W_terms": 132,
+        "Q_terms": [0, 0, 0, 0],
+        "Q_identically_zero": true,
+        "s0_piece_alone_Q_terms": [0, 0, 0, 0],
+        "residual_head": []
+      },
+      "kappa1": {
+        "density": "s0 ell3 + s1 ell2",
+        "W_terms": 2148,
+        "Q_terms": [0, 0, 0, 0],
+        "Q_identically_zero": true,
+        "s0_piece_alone_Q_terms": [159, 159, 159, 159],
+        "residual_head": []
+      },
+      "kappa2": {
+        "density": "s0 ell4 + s1 ell3 (+ s2 ell2, s2 = 0)",
+        "W_terms": 15428,
+        "Q_terms": [0, 0, 0, 0],
+        "Q_identically_zero": true,
+        "s0_piece_alone_Q_terms": [2088, 2088, 2088, 2088],
+        "residual_head": []
+      }
+    },
+    "grav_af0_parameters": {
+      "a_ghost": "1/2",
+      "transport_term": 1,
+      "s0": "a(eta_nn d_m c^n + eta_mm d_n c^m)",
+      "s1": "a(c^r d_r h_mn + h_rn d_m c^r + h_mr d_n c^r)",
+      "ell_sha256": {
+        "ell2": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+        "ell3": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+        "ell4": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123"
+      }
+    },
+    "grav_af0_accepted_orders": {
+      "kappa0": true,
+      "kappa1": true,
+      "kappa2": true
+    },
+    "grav_af0_planewave_regression_control_NOT_acceptance": {
+      "0": {
+        "samples": 3,
+        "all_sums_exactly_zero": true,
+        "s0_piece_nonzero_in_samples": 0,
+        "s1_piece_nonzero_in_samples": 0,
+        "max_abs_sum": "0",
+        "example_pieces": ["0", "0"],
+        "density": "s0 ell2"
+      },
+      "1": {
+        "samples": 3,
+        "all_sums_exactly_zero": true,
+        "s0_piece_nonzero_in_samples": 3,
+        "s1_piece_nonzero_in_samples": 3,
+        "max_abs_sum": "0",
+        "example_pieces": ["82091533477/1800000", "-82091533477/1800000"],
+        "density": "s0 ell3 + s1 ell2"
+      },
+      "2": {
+        "samples": 3,
+        "all_sums_exactly_zero": true,
+        "s0_piece_nonzero_in_samples": 3,
+        "s1_piece_nonzero_in_samples": 3,
+        "max_abs_sum": "0",
+        "example_pieces": ["13042093527791/1620000000", "-13042093527791/1620000000"],
+        "density": "s0 ell4 + s1 ell3 (+ s2 ell2, s2=0 derived)"
+      }
+    },
+    "grav_inputs": {
+      "2": {
+        "sha256": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+        "terms": 84
+      },
+      "3": {
+        "sha256": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+        "terms": 678
+      },
+      "4": {
+        "sha256": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+        "terms": 3360
+      }
+    },
+    "residuals_all_orders": [],
+    "residuals_kappa2": [],
+    "seconds": 56.65,
+    "mutations": []
+  },
+  "required_master_residuals": [],
+  "required_classical_BV_components_verified": true,
+  "evidence_kind": {
+    "engine_parts": "exact symbolic (graded jets; Euler-operator divergence test)",
+    "grav_af0": "DETERMINISTIC exact polynomial identity: E_{c^mu}(s0 ell_{n+2} + s1 ell_{n+1}) = 0 for n = 0,1,2 on the exported polynomials (grav_noether.py); structural reason: sqrt(-g)R is a scalar density, s(sqrt(-g)R) = d(xi sqrt(-g)R), and L_GG = sqrt(-g)R + d_mu B^mu (P13_boundary_identity: sqrt(-g)R - L_GG = -d_mu B^mu), with s d_mu B^mu = d_mu s B^mu",
+    "grav_af0_planewave": "REGRESSION CONTROL only: exact rational plane-wave evaluation at 3 points per order; not cited as proof"
+  },
+  "transformed_variables_note": "(S_Psi,S_Psi) = 2(S_field,X_Psi) + (X_Psi,X_Psi); X is antifield-linear, so dX_Psi/dPhi*' = dX/dPhi* and 2(S_field,X_Psi) = 2(S_field,X) (af 0, shared Noether table); the s Psi field-only part has no antifields and brackets only through (X_Psi,X_Psi).",
+  "mixed_cancellations": {
+    "kappa1_af1_invariant": ["c", "h"],
+    "kappa2_af1_invariant": ["c", "h", "phi"],
+    "kappa0_af0_transformed": ["cb", "h"],
+    "kappa1_af0_transformed": ["c", "cb", "h"],
+    "kappa1_af1_transformed": ["c", "h"],
+    "kappa2_af0_transformed": ["c", "h"],
+    "kappa2_af1_transformed": ["c", "h", "phi"]
+  },
+  "execution_pass": true,
+  "claim_status": "verified",
+  "mutations_from_env": [],
+  "scope": "classical BV master equation of the S_inv extended action (grav ell_2..ell_4 + massless scalar + minimal ghosts + nonminimal (cbar,b)) through O(kappa^2), in invariant and Psi-transformed variables with external antifields; NOT the prepared S_D (broken square kept), NOT the insertion, NOT quantum.",
+  "note_on_pass": "p11: no unconditional 'pass' field; execution_pass (ran), claim_status and scope are separate."
+}

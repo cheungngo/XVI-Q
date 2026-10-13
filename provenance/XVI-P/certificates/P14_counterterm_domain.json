@@ -1,0 +1,203 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p14r",
+  "deliverable": "P.5 entry D3: counterterm domain",
+  "kind": "order-bounded EFT constraint list (one loop, kappa^1 and kappa^2); NOT an admission",
+  "XIV_J_opened": false,
+  "XV_B_opened": false,
+  "dimensions": {
+    "h": 1,
+    "c": 1,
+    "cb": 1,
+    "b": 2,
+    "phi": 1,
+    "K": 2,
+    "cs": 2,
+    "cbs": 2,
+    "bs": 1,
+    "phis": 2,
+    "kappa": -1
+  },
+  "ghost_numbers": {
+    "h": 0,
+    "c": 1,
+    "cb": -1,
+    "b": 0,
+    "phi": 0,
+    "K": -1,
+    "cs": -2,
+    "cbs": 0,
+    "bs": -1,
+    "phis": -1
+  },
+  "phi_parity": {
+    "h": 0,
+    "c": 0,
+    "cb": 0,
+    "b": 0,
+    "phi": 1,
+    "K": 0,
+    "cs": 0,
+    "cbs": 0,
+    "bs": 0,
+    "phis": 1
+  },
+  "power_counting": "every interaction vertex is kappa^{legs-2} (amplitude_rules vertex inventory) => one-loop kappa^n terms have n external legs and local operator dimension 4+n; massless, no other scale",
+  "permitted_species": ["h", "c", "cb", "phi", "K", "cs", "phis"],
+  "excluded_species": ["b", "cbs", "bs"],
+  "exclusion_reason": "not a leg of any loop-capable vertex (b only in kappa^0 bilinears; cbar*' only in cbar*'.b; b*' absent since s b = 0)",
+  "loop_capable_vertices": {
+    "V3_grav": ["h", "h", "h"],
+    "V4_grav": ["h", "h", "h", "h"],
+    "V_cb_c_h": ["cb", "c", "h"],
+    "V_K_c_h": ["K", "c", "h"],
+    "V_cs_c_c": ["cs", "c", "c"],
+    "V_phis_c_phi": ["phis", "c", "phi"],
+    "V_h_phi_phi": ["h", "phi", "phi"],
+    "V_hh_phi_phi": ["h", "h", "phi", "phi"]
+  },
+  "permitted_source_dependence": "K' only in the K'.c sector at kappa^2; c*' and phi*' enter first in three-leg terms (c*'.c.c, phi*'.c.phi) at kappa^3 (outside the order bound); cbar*', b*' never",
+  "symmetries": ["Lorentz covariance (structures generated from eta and p; parity-odd eps structures vanish for two-leg terms with one momentum)", "phi -> -phi (with phi*' -> -phi*')", "ghost number 0", "Bose/Fermi symmetry of identical legs (ordered two-point representation)"],
+  "kappa1": {
+    "candidates": [
+      {
+        "species": "h",
+        "derivatives": 4,
+        "dimension_ok": true,
+        "surviving_mod_total_derivatives": false,
+        "reason": "a one-leg local functional with k>0 derivatives is a total derivative; k = 0 needs a dimension-5 field (none)"
+      }
+    ],
+    "basis": [],
+    "basis_size": 0
+  },
+  "kappa2": {
+    "sectors": {
+      "h.h": {
+        "derivatives": 4,
+        "dimension": 5,
+        "structures": ["(h00*h00_d0000 - 2*h00*h00_d0011 - 2*h00*h00_d0022 - 2*h00*h00_d0033 + h00*h00_d1111 + 2*h00*h00_d1122 + 2*h00*h00_d1133 + h00*h00_d2222 + 2*h00*h00_d2233 + h00", "(h00*h00_d0000 - 2*h00*h00_d0011 - 2*h00*h00_d0022 - 2*h00*h00_d0033 + h00*h00_d1111 + 2*h00*h00_d1122 + 2*h00*h00_d1133 + h00*h00_d2222 + 2*h00*h00_d2233 + h00", "(h00*h00_d0000 - h00*h00_d0011 - h00*h00_d0022 - h00*h00_d0033 - h00*h11_d0000 + h00*h11_d0011 + h00*h11_d0022 + h00*h11_d0033 - h00*h22_d0000 + h00*h22_d0011 +", "(h00*h00_d0000 - h00*h00_d0011 - h00*h00_d0022 - h00*h00_d0033 - h00*h01_d0001 + h00*h01_d0111 + h00*h01_d0122 + h00*h01_d0133 - h00*h02_d0002 + h00*h02_d0112 +", "(h00*h00_d0000 - 2*h00*h01_d0001 - 2*h00*h02_d0002 - 2*h00*h03_d0003 + h00*h11_d0011 + 2*h00*h12_d0012 + 2*h00*h13_d0013 + h00*h22_d0022 + 2*h00*h23_d0023 + h00"]
+      },
+      "c.cb": {
+        "derivatives": 4,
+        "dimension": 2,
+        "structures": ["(1)*[('c', 0, ()), ('cb', 0, (0, 0, 0, 0))] + (-2)*[('c', 0, ()), ('cb', 0, (0, 0, 1, 1))] + (-2)*[('c', 0, ()), ('cb', 0, (0, 0, 2, 2))] + (-2)*[('c', 0, ()), ", "(1)*[('c', 0, ()), ('cb', 0, (0, 0, 0, 0))] + (-1)*[('c', 0, ()), ('cb', 0, (0, 0, 1, 1))] + (-1)*[('c', 0, ()), ('cb', 0, (0, 0, 2, 2))] + (-1)*[('c', 0, ()), "]
+      },
+      "c.K": {
+        "derivatives": 3,
+        "dimension": 3,
+        "structures": ["(I)*[('c', 0, ()), ('K', (0, 0), (0, 0, 0))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 1, 1))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 2, 2))] + (-I)*[('c', 0, ()", "(I)*[('c', 0, ()), ('K', (0, 0), (0, 0, 0))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 1, 1))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 2, 2))] + (-I)*[('c', 0, ()", "(I)*[('c', 0, ()), ('K', (0, 0), (0, 0, 0))] + (I)*[('c', 0, ()), ('K', (0, 1), (0, 0, 1))] + (I)*[('c', 0, ()), ('K', (0, 2), (0, 0, 2))] + (I)*[('c', 0, ()), "]
+      },
+      "phi.phi": {
+        "derivatives": 4,
+        "dimension": 1,
+        "structures": ["(phi*phi_d0000 - 2*phi*phi_d0011 - 2*phi*phi_d0022 - 2*phi*phi_d0033 + phi*phi_d1111 + 2*phi*phi_d1122 + 2*phi*phi_d1133 + phi*phi_d2222 + 2*phi*phi_d2233 + phi"]
+      }
+    },
+    "basis_size": 11,
+    "basis_size_by_sector": {
+      "h.h": 5,
+      "c.cb": 2,
+      "c.K": 3,
+      "phi.phi": 1
+    }
+  },
+  "equivalences": {
+    "total_derivatives": "built in: two-point momentum representation with momentum conservation",
+    "sigma0": "sigma_0 = (S_Psi^(0), .) with the frozen XVI-N antibracket (graded_jets.bracket)",
+    "S0_density_check": {
+      "hh_vs_V2_grav_mismatches": 0,
+      "ghost_M0_ok": true,
+      "ok": true
+    },
+    "Xi_classes": {
+      "h.cb": {
+        "derivatives": 3,
+        "candidates": 4,
+        "image_rank": 3,
+        "kind": "field-only (s-exact gauge-fixing direction)"
+      },
+      "h.K": {
+        "derivatives": 2,
+        "candidates": 9,
+        "image_rank": 5,
+        "kind": "antifield-linear (field redefinition / canonical transformation)"
+      },
+      "h.bs": {
+        "derivatives": 3,
+        "candidates": 4,
+        "image_rank": 3,
+        "kind": "antifield-linear (field redefinition / canonical transformation)"
+      },
+      "c.cs": {
+        "derivatives": 2,
+        "candidates": 2,
+        "image_rank": 2,
+        "kind": "antifield-linear (field redefinition / canonical transformation)"
+      },
+      "cb.b": {
+        "derivatives": 2,
+        "candidates": 2,
+        "image_rank": 2,
+        "kind": "field-only (s-exact gauge-fixing direction)"
+      },
+      "cb.cbs": {
+        "derivatives": 2,
+        "candidates": 2,
+        "image_rank": 2,
+        "kind": "antifield-linear (field redefinition / canonical transformation)"
+      },
+      "b.K": {
+        "derivatives": 1,
+        "candidates": 3,
+        "image_rank": 2,
+        "kind": "antifield-linear (field redefinition / canonical transformation)"
+      },
+      "b.bs": {
+        "derivatives": 2,
+        "candidates": 2,
+        "image_rank": 2,
+        "kind": "antifield-linear (field redefinition / canonical transformation)"
+      },
+      "phi.phis": {
+        "derivatives": 2,
+        "candidates": 1,
+        "image_rank": 1,
+        "kind": "antifield-linear (field redefinition / canonical transformation)"
+      },
+      "K.cbs": {
+        "derivatives": 1,
+        "candidates": 3,
+        "image_rank": 2,
+        "kind": "antifield-linear (field redefinition / canonical transformation)"
+      },
+      "cbs.bs": {
+        "derivatives": 2,
+        "candidates": 2,
+        "image_rank": 2,
+        "kind": "antifield-linear (field redefinition / canonical transformation)"
+      }
+    },
+    "image_rank": 22,
+    "domain_cap_image": 3,
+    "sector_cap_image": {
+      "h.h": 2,
+      "c.cb": 0,
+      "c.K": 0,
+      "phi.phi": 1
+    },
+    "candidate_directions_by_sector": {
+      "h.h": 3,
+      "c.cb": 2,
+      "c.K": 3,
+      "phi.phi": 0
+    },
+    "quotient_dimension": 8,
+    "reading": "domain elements in Im sigma_0 are removable by field redefinitions/canonical transformations (antifield-linear Xi) or are s-exact (field-only Xi). Eight candidate directions modulo the computed exact equivalences, before imposing the relevant identity constraints.",
+    "cohomology_caveat": "NOT a cohomological classification: that needs D cap ker sigma_0 (the identity constraints, i.e. sigma_0-closedness of the counterterm) and the quotient (D cap ker sigma_0)/(D cap Im sigma_0); D cap ker sigma_0 has NOT been computed. The count above is D/(D cap Im sigma_0) only, an upper bound for the cohomological count",
+    "D_cap_ker_sigma0_computed": false
+  },
+  "normalization_conditions": ["MS-bar in the declared prescription (P14_prescription_D11_matching): counterterms are pure poles at scale mu", "no dimension-4 (two-derivative) counterterm at kappa^2: kappa and the h normalisation are not renormalised at this order -- an IMPOSED normalization condition (N4 of P14_prescription_D11_matching M3: no mu^2 p^2 or mu^4 contacts), not a consequence of masslessness, since mu is a scale; no kappa^1 counterterm (empty domain)", "finite adjustments only inside this domain; the D11 matching difference L_match is booked in the hh sector", "u^R_mu (XVI-O) is never modified: no c delta"],
+  "counterterm_domain_defined": true,
+  "seconds": 148.0
+}

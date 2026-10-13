@@ -1,0 +1,411 @@
+{
+  "revision": "o61-calc",
+  "gate": "O.2_vertex_catalogue",
+  "pass": true,
+  "pass_means": "Authoritative Lag_q; V_af_h split; V_af_phi kappa^1 a=1/2; Hessian -Box at m=0; kappa_power metadata; not full kappa^2 grav master",
+  "inherited_coefficients": {
+    "a": "1/2",
+    "a_rational": 0.5,
+    "xi": "a c",
+    "s_phi": "kappa a c^rho partial_rho phi",
+    "S_af_phi": "kappa a int phi* (c^rho partial_rho phi)",
+    "S_af_phi_order": "kappa^1",
+    "source": "XVI-N frozen convention / Saf expanded",
+    "bulk_mass_policy": {
+      "freeze": "m=0",
+      "reason": "Bulk quantum target aligned to Track II massless obstruction. Inherited free Hessian -(Box+m^2) specializes to -Box at m=0 (NOT bare 'Box'). Massful cubic/quartic matter vertices omitted.",
+      "Hessian_at_m0": "-Box",
+      "NOT_arbitrary_m_gt_0": true
+    },
+    "scalar_action_authoritative": "O2_scalar_action_authoritative.json",
+    "a1": "a1^{mu nu}=(1/2) tau eta^{mu nu} - gamma^{mu nu}",
+    "a2": "a2^{mu nu}=gamma^mu_rho gamma^{rho nu}-(1/2)tau gamma^{mu nu}+b2 eta^{mu nu}"
+  },
+  "inherited_coefficient_check": {
+    "pass": true,
+    "failures": [],
+    "inherited": {
+      "a": "1/2",
+      "a_rational": 0.5,
+      "xi": "a c",
+      "s_phi": "kappa a c^rho partial_rho phi",
+      "S_af_phi": "kappa a int phi* (c^rho partial_rho phi)",
+      "S_af_phi_order": "kappa^1",
+      "source": "XVI-N frozen convention / Saf expanded",
+      "bulk_mass_policy": {
+        "freeze": "m=0",
+        "reason": "Bulk quantum target aligned to Track II massless obstruction. Inherited free Hessian -(Box+m^2) specializes to -Box at m=0 (NOT bare 'Box'). Massful cubic/quartic matter vertices omitted.",
+        "Hessian_at_m0": "-Box",
+        "NOT_arbitrary_m_gt_0": true
+      },
+      "scalar_action_authoritative": "O2_scalar_action_authoritative.json",
+      "a1": "a1^{mu nu}=(1/2) tau eta^{mu nu} - gamma^{mu nu}",
+      "a2": "a2^{mu nu}=gamma^mu_rho gamma^{rho nu}-(1/2)tau gamma^{mu nu}+b2 eta^{mu nu}"
+    },
+    "checked": [
+      "V_af_phi.kappa^1.a=1/2",
+      "V_af_h_0/V_af_h_1 split",
+      "V3/V4 from Lag_q",
+      "Hessian=-Box",
+      "m=0 mass_factor"
+    ]
+  },
+  "Psi": {
+    "Psi": "-i int cbar_mu (2 D^mu[h] - b^mu)",
+    "b_off_shell": true,
+    "elimination_separate": {
+      "S_gf": "int D_nu D^nu",
+      "ghost_kinetic": "i int cbar Box c",
+      "status": "Constructed_as_policy_inherited"
+    },
+    "sPsi_through_O_kappa": "Constructed_inheritance (XVI-N)",
+    "sPsi_through_O_kappa2": "Partial (see O2_kappa2_master_check)",
+    "no_invented_s2_slot": true
+  },
+  "vertices": [
+    {
+      "id": "V2_grav",
+      "order": "kappa^0",
+      "kappa_power": 0,
+      "fields": "h h",
+      "density": "K=-Box P",
+      "status": "Constructed_inheritance",
+      "source": "XVI-N N-Norm",
+      "legs": {
+        "h": 2
+      },
+      "leg_species": [
+        "h",
+        "h"
+      ],
+      "n_derivatives_total": 2,
+      "mass_factor": 0
+    },
+    {
+      "id": "V2_ghost",
+      "order": "kappa^0",
+      "kappa_power": 0,
+      "fields": "cbar c",
+      "density": "i Box",
+      "status": "Constructed_inheritance",
+      "source": "XVI-N sPsi / N-Norm",
+      "legs": {
+        "cbar": 1,
+        "c": 1
+      },
+      "leg_species": [
+        "cbar",
+        "c"
+      ],
+      "n_derivatives_total": 2,
+      "mass_factor": 0
+    },
+    {
+      "id": "V2_scalar_kin",
+      "order": "kappa^0",
+      "kappa_power": 0,
+      "fields": "phi phi",
+      "density": "(1/2) eta^{mu nu} partial_mu phi partial_nu phi  [m=0]",
+      "status": "Constructed_from_authoritative_action",
+      "source": "XI-A Lag_q |_{kappa^0} / O2_scalar_action_authoritative",
+      "Hessian": "-Box",
+      "legs": {
+        "phi": 2
+      },
+      "leg_species": [
+        "phi",
+        "phi"
+      ],
+      "n_derivatives_total": 2,
+      "mass_factor": 0,
+      "replaces": "V_scalar_kin (old wrong-sign -sqrt(-q) q^{mu nu} form)"
+    },
+    {
+      "id": "V3_grav",
+      "order": "kappa^1",
+      "kappa_power": 1,
+      "fields": "h h h",
+      "density": "kappa ell_3 (action density; not M-selected graph)",
+      "status": "Constructed_inheritance",
+      "source": "XII-C/XVI-N",
+      "legs": {
+        "h": 3
+      },
+      "leg_species": [
+        "h",
+        "h",
+        "h"
+      ],
+      "n_derivatives_total": 2,
+      "mass_factor": 0
+    },
+    {
+      "id": "V3_cbar_c_h",
+      "order": "kappa^1",
+      "kappa_power": 1,
+      "fields": "cbar c h",
+      "density": "kappa * 2 i a int cbar D(L_c h)",
+      "status": "Constructed_inheritance",
+      "source": "XVI-N eq Psi",
+      "legs": {
+        "cbar": 1,
+        "c": 1,
+        "h": 1
+      },
+      "leg_species": [
+        "cbar",
+        "c",
+        "h"
+      ],
+      "n_derivatives_total": 2,
+      "mass_factor": 0
+    },
+    {
+      "id": "V3_hphiphi",
+      "order": "kappa^1",
+      "kappa_power": 1,
+      "fields": "h phi phi",
+      "density": "(kappa/2) a1^{mu nu}[h] partial_mu phi partial_nu phi  [m=0]",
+      "status": "Constructed_from_authoritative_action",
+      "source": "XI-A Lag_q |_{kappa^1} = V_{1,g=1}",
+      "a1": "a1^{mu nu}=(1/2) tau eta^{mu nu} - gamma^{mu nu}",
+      "note": "Derived from authoritative Lag_q; sign matches +1/2 expansion",
+      "legs": {
+        "h": 1,
+        "phi": 2
+      },
+      "leg_species": [
+        "h",
+        "phi",
+        "phi"
+      ],
+      "n_derivatives_total": 2,
+      "mass_factor": 0,
+      "derivative_placement_default": "on_phi"
+    },
+    {
+      "id": "V_af_h_0",
+      "order": "kappa^0",
+      "kappa_power": 0,
+      "fields": "h* c",
+      "density": "h* R0(c)",
+      "status": "Constructed_inheritance",
+      "source": "XVI-N",
+      "gh0_tree_externals": "h*,c",
+      "legs": {
+        "h*": 1,
+        "c": 1
+      },
+      "leg_species": [
+        "h*",
+        "c"
+      ],
+      "n_derivatives_total": 1,
+      "mass_factor": 0,
+      "split_from": "V_af_h",
+      "note": "kappa^0 piece; two legs"
+    },
+    {
+      "id": "V_af_h_1",
+      "order": "kappa^1",
+      "kappa_power": 1,
+      "fields": "h* h c",
+      "density": "kappa a h* (L_c h)",
+      "status": "Constructed_inheritance",
+      "source": "XVI-N",
+      "a": "1/2",
+      "gh0_tree_externals": "h*,h,c",
+      "legs": {
+        "h*": 1,
+        "h": 1,
+        "c": 1
+      },
+      "leg_species": [
+        "h*",
+        "h",
+        "c"
+      ],
+      "n_derivatives_total": 1,
+      "mass_factor": 0,
+      "split_from": "V_af_h",
+      "note": "kappa^1 piece; three legs --- distinct from V_af_h_0"
+    },
+    {
+      "id": "V_af_phi",
+      "order": "kappa^1",
+      "kappa_power": 1,
+      "fields": "phi* c phi",
+      "density": "kappa a int phi* (c^rho partial_rho phi)",
+      "a": "1/2",
+      "factor": "kappa * a",
+      "status": "Constructed_inheritance",
+      "source": "XVI-N frozen: s phi = kappa a c^rho partial_rho phi",
+      "gh0_tree_externals": "phi*,c,phi",
+      "legs": {
+        "phi*": 1,
+        "c": 1,
+        "phi": 1
+      },
+      "leg_species": [
+        "phi*",
+        "c",
+        "phi"
+      ],
+      "n_derivatives_total": 1,
+      "mass_factor": 0,
+      "inherited_order_check": "kappa^1",
+      "inherited_coefficient": "a=1/2"
+    },
+    {
+      "id": "V_af_c",
+      "order": "kappa^1",
+      "kappa_power": 1,
+      "fields": "c* c c",
+      "density": "-kappa a c*(c.partial c)",
+      "status": "Constructed_inheritance",
+      "source": "XVI-N",
+      "gh0_tree_externals": "c*,c,c",
+      "legs": {
+        "c*": 1,
+        "c": 2
+      },
+      "leg_species": [
+        "c*",
+        "c",
+        "c"
+      ],
+      "n_derivatives_total": 1,
+      "mass_factor": 0,
+      "inherited_order_check": "kappa^1",
+      "inherited_coefficient": "a=1/2"
+    },
+    {
+      "id": "V_af_cbar",
+      "order": "kappa^0",
+      "kappa_power": 0,
+      "fields": "cbar* b",
+      "density": "-i cbar* b",
+      "status": "Constructed_inheritance",
+      "source": "XVI-N",
+      "legs": {
+        "cbar*": 1,
+        "b": 1
+      },
+      "leg_species": [
+        "cbar*",
+        "b"
+      ],
+      "n_derivatives_total": 0,
+      "mass_factor": 0
+    },
+    {
+      "id": "V4_grav",
+      "order": "kappa^2",
+      "kappa_power": 2,
+      "fields": "h h h h",
+      "density": "quartic EH density in h (required at kappa^2)",
+      "status": "Constructed_nonzero_on_sparse_index_supports",
+      "source": "XI-A requires retention; full polynomial Unresolved",
+      "missing": "Full 10-component generating polynomial Unresolved",
+      "cert": "O2_eh_v4_general.json",
+      "legs": {
+        "h": 4
+      },
+      "leg_species": [
+        "h",
+        "h",
+        "h",
+        "h"
+      ],
+      "n_derivatives_total": 2,
+      "mass_factor": 0
+    },
+    {
+      "id": "V4_scalar_grav",
+      "order": "kappa^2",
+      "kappa_power": 2,
+      "fields": "phi phi h h",
+      "density": "(kappa^2/2) a2^{mu nu}[h] partial_mu phi partial_nu phi  [m=0]",
+      "status": "Constructed_from_authoritative_action",
+      "source": "XI-A Lag_q |_{kappa^2} = V_{2,g=1}",
+      "a2": "a2^{mu nu}=gamma^mu_rho gamma^{rho nu}-(1/2)tau gamma^{mu nu}+b2 eta^{mu nu}",
+      "legs": {
+        "phi": 2,
+        "h": 2
+      },
+      "leg_species": [
+        "phi",
+        "phi",
+        "h",
+        "h"
+      ],
+      "n_derivatives_total": 2,
+      "mass_factor": 0,
+      "derivative_placement_default": "on_phi"
+    },
+    {
+      "id": "CT_phiphi_local",
+      "order": "tree_CT_bookkeeping",
+      "kappa_power": null,
+      "hbar_power_hint": 1,
+      "fields": "phi phi",
+      "density": "local CT slot (O.7 bookkeeping)",
+      "status": "Bookkeeping_slot",
+      "source": "O.7",
+      "legs": {
+        "phi": 2
+      },
+      "leg_species": [
+        "phi",
+        "phi"
+      ],
+      "n_derivatives_total": 0,
+      "mass_factor": 0
+    },
+    {
+      "id": "V_ghost_kappa2",
+      "order": "kappa^2",
+      "kappa_power": 2,
+      "fields": "cbar c h h / ...",
+      "density": "from inherited s through O(kappa^2) on D[h] if present",
+      "status": "Absent_under_inherited_s_through_kappa_linear_D",
+      "source": "XI-A Taylor / XI-B lem:nilpotence / X-E lem:affine",
+      "note": "Not framed as missing s_2",
+      "legs": {},
+      "leg_species": [],
+      "n_derivatives_total": 0,
+      "mass_factor": 0
+    }
+  ],
+  "withdrawn_vertices": [
+    {
+      "id": "V_af_h",
+      "status": "WITHDRAWN_split",
+      "reason": "Single kappa^{0,1} entry with only two legs unsuitable for deriving source-loop graphs",
+      "replacement": [
+        "V_af_h_0",
+        "V_af_h_1"
+      ]
+    },
+    {
+      "id": "V_scalar_kin",
+      "status": "WITHDRAWN_sign",
+      "reason": "Old density -sqrt(-q) q^{mu nu} partial phi partial phi mismatched cubic/quartic +kappa/2 a1 expansion",
+      "replacement": "V2_scalar_kin from authoritative Lag_q = +1/2 sqrt(-q) (...)"
+    }
+  ],
+  "counts": {
+    "constructed_or_inherited": 13,
+    "provisional_structural": 0,
+    "absent_under_inherited_s": 1,
+    "bookkeeping_slots": 1
+  },
+  "master_through_kappa2": {
+    "status": "Partial",
+    "evaluation_cert": "O2_kappa2_master_check.json",
+    "no_invented_s2_slot": true,
+    "scaffold_cert": "O2_kappa2_master_scaffold.json"
+  },
+  "quantum_contractions_authorized": false,
+  "authorization_note": "D11 matter-loop subsector authorized as Partial calculation; NOT complete-sector Constructed amplitudes"
+}

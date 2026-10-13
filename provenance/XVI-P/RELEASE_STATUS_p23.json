@@ -1,0 +1,2230 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p23",
+  "contract_revision": "p23 (p14r contract + disclosed p15/p16/p17/p18 revisions + the p22 contract revision + the DISCLOSED p23 contract revision: polynomial-domain refusal for d and Dummy-only internal renames, one delimited block appended to code/p5_entry/dred.py; p18 core and p22 block byte-identical)",
+  "date": "2026-10-10",
+  "version_label": "XVI-P p23",
+  "deliverable": "p23 (stage release on the O.1 direction): O.1 exact requirement and scope; one-loop power counting and enlarge-rule check; P.6 ENTRY inventory (kappa^3 three-point, topology level, NOT evaluated); polynomial-domain refusal for d (p23 contract revision); EV value check; title qualifier",
+  "execution_pass": true,
+  "claim_status": "p23. O.1 requires the one-loop kappa^2 bulk two-point sector on S_inv to close under a VERIFIED retained identity with O.2 (classical kappa^2 master incl. grav ell_4), O.4, O.5, O.6, O.7 all earned. Exact power counting: every vertex is kappa^(legs-2), so one-loop graphs are kappa^E; the kappa^2 identity involves only E=2 and E=1, the enumeration reproduces the frozen kappa^2 inventory exactly, and the enlarge rule is NOT triggered (no one-loop three-point sector at kappa^2). Three-point first appears at kappa^3: P.6 ENTRY inventory = 15 one-loop graphs, NOT evaluated. O.1 is not closable inside XVI-P (O.2 and the bulk ST4b identity are XVI-O/XVI-N items, untouched). P.5 renormalized at one loop kappa^2 for the two-point functions with QdS external legs. Bulk symmetry NOT restored/claimed; O.1 NOT_CLOSED.",
+  "flag_definitions": {
+    "projected_defect_computed": "Delta = P_ch[(S_Psi, Gamma_Psi)]_{hbar kappa^2} assembled from every evaluated input of the three surviving rows (none Missing), exact in d, pole + nonlocal + MS-bar local parts, all seven external assignments",
+    "projected_identity_verified": "Delta = 0 for the REGULATED one-loop functional Gamma1: pole, nonlocal and local parts vanish for all seven assignments, exactly in d, with all controls true and every mutation changing the outcome",
+    "projected_restoration_verified": "p20 definition (replaces p19's, which follows from the identity + locality): FULL sigma_0 closure of the COMPLETE one-loop kappa^2 MS-bar counterterm S_ct = -(pole) in the declared domain, h.h + c.K + c.cb (ghost self-energy Sigma held fixed at its P15 value, orientation converted, derived relative factor +1), in every ghost +1 sector (h.c, c.b, c.cbs), together with projected_identity_verified.  Scope: the one-loop kappa^2 counterterm only; NOT bulk symmetry, NOT O.1",
+    "bulk_symmetry_restored": "hard stop: False regardless (not claimed; O.1 NOT_CLOSED)"
+  },
+  "projected_restoration_scope": "p20 definition: full sigma_0 closure (h.c, c.b, c.cbs) of the complete one-loop kappa^2 MS-bar counterterm incl. the c.cb ghost self-energy counterterm (held fixed, derived factor +1); NOT bulk symmetry, NOT O.1",
+  "route_consistency_control_p19_criterion": {
+    "label": "route-consistency control (the p19 restoration criterion, NOT a flag): P_ch sigma_0(S_ct) = 0 for the h.h + c.K MS-bar counterterm and the solve x = 0; implied by the identity + locality",
+    "holds": true
+  },
+  "full_closure_mutation_detector": {
+    "test": "full sigma_0 closure (all ghost +1 sectors) of the complete MS-bar counterterm, Sigma held fixed",
+    "cases": {
+      "drop_graph_D11": {
+        "closed": true,
+        "entries": 0,
+        "sectors": [],
+        "detected": false
+      },
+      "drop_graph_D13 (c.K data = 0, Sigma held fixed)": {
+        "closed": false,
+        "entries": 88,
+        "sectors": ["c.b"],
+        "detected": true
+      },
+      "flip_sign_Kc (c.K data -> -c.K, Sigma held fixed)": {
+        "closed": false,
+        "entries": 88,
+        "sectors": ["c.b"],
+        "detected": true
+      },
+      "drop_graph_D03": {
+        "closed": false,
+        "entries": 280,
+        "sectors": ["h.c"],
+        "detected": true
+      },
+      "drop_graph_D01": {
+        "closed": false,
+        "entries": 280,
+        "sectors": ["h.c"],
+        "detected": true
+      },
+      "flip_phase_D03": {
+        "closed": false,
+        "entries": 280,
+        "sectors": ["h.c"],
+        "detected": true
+      },
+      "symmetry_factor_D03_x2": {
+        "closed": false,
+        "entries": 280,
+        "sectors": ["h.c"],
+        "detected": true
+      },
+      "Sigma_orientation_unconverted (p19 error)": {
+        "closed": false,
+        "entries": 88,
+        "sectors": ["c.b"],
+        "detected": true
+      }
+    },
+    "reading": "detects drop D13 and flip K.c (the p19 blind spots) through the c.b sector, and the hh-row mutations through h.c; drop D11 stays undetected (D11 transverse => its pole is sigma_0-closed by itself): covered by M2 (P18) and the p20 D11 normalisation pin (P20_D11_pin.json)"
+  },
+  "p20_controls": {
+    "orientation_ratio_uniform_minus_one": true,
+    "tree_ghost_equation_V_cbc_eq_2iD_V_Kc": true,
+    "tree_sigma0_S0Kc_plus_S0cbc_zero": true,
+    "derived_ghost_relation_reproduces_P15_sigma": true,
+    "full_closure_detects_drop_D13_and_flip_Kc": true,
+    "full_closure_detects_p19_orientation_error": true,
+    "S_ct_without_ccb_not_closed (c.cb counterterm is needed)": true
+  },
+  "why_zero": "each surviving ch row vanishes separately in the projected slot; no counterterm cancellation and no cancellation between rows is involved: (i) hh row (D01+D02+D03+D11+D12): full-row transverse decoupling -- D01 and D03 are individually nonzero and cancel against each other in the slot (p17/p18 transverse sum), D11 is transverse by itself, D02 = D12 = 0; (ii) K.c row (D13): D13 reaches the ch slot only through T1 and E1 (T2, T3, E2 are longitudinal, E transverse) and A_T1 = A_E1 = 0 exactly in d; (iii) one-point row: the tadpoles D14a-c vanish under the declared prescription.  The defect is therefore zero without any counterterm (solve x = 0).",
+  "rests_on": ["M2 / D11 matching verified on the 4D components only (D11_matching_verified_scope = '4D components'; evanescent components of the D11 matching: not applicable, not verified)", "the evanescent decoupling proofs (P16 E2 decoupling, P17/P18 hh evanescent / full-row decoupling)", "the frozen P.3 projection and the P13 ch dependency ledger (three surviving rows)", "the declared prescription (DRED R1-R6, MS-bar, P14_prescription_D11_matching)"],
+  "findings": {
+    "J1_p14r_counterterm_domain_field": "FINDING ABOUT THE p14r CONTRACT (contract NOT modified): the p14r counterterm-domain counts (Im sigma_0 3, quotient 8, D cap ker 5, P_ch sigma_0 rank 4) are artefacts of a re/im split over Q (the densities carry explicit i for odd derivative counts, so i-multiples count as independent).  The counts over Q(i) -- sigma_0 rank 5, D cap ker 6, D cap Im 6, cohomology 0, quotient 5, P_ch sigma_0 rank 3 (= Route C) -- equal the real dimensions under a compatible real structure.  The p14r certificate stays as released; both are reported",
+    "K1_ghost_closure_sign": "p20 CORRECTION (erratum to p19): resolved -- an orientation bookkeeping error. With the P15 Sigma coordinates converted to the route-G (c,cb) orientation (ratio -1), the derived factor +1 gives full sigma_0 closure of the complete MS-bar counterterm in h.c, c.b, c.cbs.  The p19 text 'closure fails / needs -1 / unresolved' is retracted"
+  },
+  "K1_ghost_closure_convention": {
+    "ghost_equation_operator": "2 i D^rho (d13.deDonder_apply), verified by P15: Sigma = 2 i D[G_Kc]",
+    "M_2iD_cK_to_cbc": [
+      ["0", "2"],
+      ["-1", "0"],
+      ["0", "-1"]
+    ],
+    "z_cb_derived_from_cK_pole_cbc_orientation": ["-3/8", "1/4"],
+    "z_cb_P15_sigma_fit_cbc_orientation": ["-3/8", "1/4"],
+    "derived_equals_P15": true,
+    "relative_factor_derived": "1",
+    "orientation_ratio_routeG_over_cbc": ["-1", "-1"],
+    "Sigma_pole_routeG_c_cb_coordinates": ["3/8", "-1/4"],
+    "Sigma_local_routeG_c_cb_coordinates": ["2/3", "-5/12"],
+    "tree_controls": {
+      "ghost_equation_tree_V_cbc_eq_2iD_V_Kc": true,
+      "S0_Kc_terms": 16,
+      "S0_cbc_terms": 40,
+      "sigma0_S0Kc_plus_S0cbc_entries": 0,
+      "sigma0_S0Kc_alone_entries (control, nonzero)": 16,
+      "ok": true
+    },
+    "full_closure_complete_S_ct": {
+      "closed": true,
+      "entries": 0,
+      "sectors": []
+    },
+    "full_closure_S_ct_without_ccb (p19 package S_ct)": {
+      "closed": false,
+      "entries": 88,
+      "sectors": ["c.b"]
+    },
+    "full_closure_unconverted (p19 error)": {
+      "closed": false,
+      "entries": 88,
+      "sectors": ["c.b"],
+      "detected": true
+    },
+    "reading": "ERRATUM to p19: the p19 statement 'closure fails with the derived factor, needs -1, unresolved' was a Grassmann-orientation bookkeeping error (P15 (cb,c) coordinates placed in route-G (c,cb) slots).  Corrected: derived +1, full closure holds (finding K1 of the p19 independent rebuild)."
+  },
+  "scope": "ch projection only (one c, one h; one loop; kappa^2; off-shell); the evanescent poles of the hh and K.c Green functions remain regulated (not subtracted) and decouple from the ch slots; no statement about higher orders or bulk symmetry.  projected_restoration_verified (p20 definition) additionally tests full sigma_0 closure of the complete one-loop kappa^2 MS-bar counterterm in all ghost +1 sectors (h.c, c.b, c.cbs) -- a statement about that counterterm only, not bulk symmetry, not O.1",
+  "release_claim_accepted": true,
+  "release_claim_accepted_definition": "contract = registered p22 revision only (pinned) AND lower layers re-checked live AND p20/p21 layers AND absolute pin AND EV-M2 + EV-CT certificate AND live runtime guard probe AND every added/modified/removed file disclosed (no prefix exemption) AND the pinned p21 independent record AND the p22 hard stops",
+  "publication": "accepted",
+  "publication_gated_on": ["execution_pass", "quantum_inputs_evaluated (p18 layer + recheck)", "projected_defect_computed", "flag implications restoration => identity => computed"],
+  "flags": {
+    "library_certified": true,
+    "batchA_evaluated": {
+      "execution": true,
+      "claim": "D02, D12, D14a, D14b, D14c evaluated under the declared prescription (frozen p14r DRED + MS-bar + Feynman i0 + the explicit scaleless rule S0): each is vanishing_under_declared_prescription with no UV pole, finite part 0, no p14r counterterm required",
+      "scope": "massless declared action; DR-specific (S0): with an IR-regulator mass or a cutoff the tadpoles carry m^{2j}/Lambda^{omega} terms whose counterterms are order-0/2 contacts outside the p14r basis (N4) and vanish as m -> 0; D02 is only one of the three hh graphs (D01, D03 not evaluated); no slot is complete; NOT quantum_inputs_evaluated"
+    },
+    "D13_evaluated": {
+      "execution": true,
+      "claim": "D13 (kappa^2 K'.c) evaluated in closed form under the declared prescription: the UV pole of the 4D structures is local and in the span of the three p14r c.K' directions (the evanescent E2 pole is recorded, not absorbed), MS-bar finite part = nonlocal log(-p^2/mu^2) part + local cubic polynomial, two independent routes agree exactly in d, ghost equation verified, mutations rejected",
+      "scope": "one graph (D13) of the K'.c slot at kappa^2; MS-bar at mu with N_eps = i S_eps/(16 pi^2); external momenta in QdS (R2); evanescent Gt structures retained (their pole is NONZERO: an evanescent K'.c counterterm outside the p14r 4D basis is needed for full DRED renormalization); NOT quantum_inputs_evaluated; the slot's identity role is not evaluated (Batch C, D11 M2)"
+    },
+    "batchC_evaluated": {
+      "execution": true,
+      "claim": "D01 and D03 evaluated in closed form under the declared prescription (covariant route): exact covariant integrands (verified on all 100 components, regenerated from S_Psi), two independent loop-integration routes agree exactly in d, 4D UV poles local and in the p14r h.h span, MS-bar finite parts = nonlocal log + local quartic polynomial, evanescent poles recorded (R6), mutations rejected",
+      "scope": "two graphs (D01, D03) of the kappa^2 hh slot; massless; MS-bar at mu; external momenta in QdS; evanescent structures retained (their poles are NONZERO and not absorbed: no evanescent h.h counterterm is declared); D11 NOT evaluated, so the hh slot is incomplete; NOT quantum_inputs_evaluated"
+    },
+    "E2_decoupled_from_ch_slot": {
+      "execution": true,
+      "claim": "DECOUPLED (proof)",
+      "scope": "the ch-projected one-loop kappa^2 identity (row (S0,Gamma1^[2]) s1 h:h^2); the E2 pole remains a UV pole of the epsilon-scalar K'.c Green function outside this projection"
+    },
+    "hh_evanescent_decoupled_from_ch_slot": {
+      "execution": true,
+      "claim": "DECOUPLED (proof): as the sum D01 + D03 (+ D02 = D12 = 0); not graph by graph",
+      "scope": "the ch-projected one-loop kappa^2 identity, row (S0,Gamma1^[2]) s2 K:K.c, contributions of D01 + D03 (D02 = D12 = 0); the summed evanescent poles remain (transverse) UV poles of the hh Green function outside this projection; D11 (same row) NOT evaluated"
+    },
+    "D11_matching_M2": {
+      "execution": true,
+      "claim": "DISCHARGED (4D components)",
+      "scope": "4D (hatted) components; the evanescent gt structures are epsilon-scalar components outside the 4D statement of M2 (their L-coefficients are nonzero and recorded); IR: the massless bubble at p^2 != 0 is IR finite in DR (no scaleless pieces enter the nonlocal part); the XVI-N massless obstruction concerns the classical insertion and is not touched"
+    },
+    "hh_slot_full_row_decoupled": {
+      "execution": true,
+      "claim": "DECOUPLED (proof, full row): p_m G = 0 exactly in d for D11 by itself and for D01 + D03 as a sum; no evanescent structure survives in the slot",
+      "scope": "row (S0,Gamma1^[2]) s2 K:K.c; D01 + D02 + D03 + D11 + D12; the summed evanescent poles remain (transverse) UV poles of the hh Green function outside this projection"
+    },
+    "projected_ch_identity": {
+      "execution": true,
+      "claim": "ZERO",
+      "scope": "ch projection only (one c, one h; one loop; kappa^2; off-shell); the evanescent poles of the hh and K.c Green functions remain regulated (not subtracted) and decouple from the ch slots; no statement about higher orders or bulk symmetry.  projected_restoration_verified (p20 definition) additionally tests full sigma_0 closure of the complete one-loop kappa^2 MS-bar counterterm in all ghost +1 sectors (h.c, c.b, c.cbs) -- a statement about that counterterm only, not bulk symmetry, not O.1"
+    }
+  },
+  "projected_defect_computed": "earned",
+  "projected_identity_verified": "earned",
+  "projected_restoration_verified": "earned",
+  "projected_defect_summary": {
+    "defect_zero_exact_in_d": true,
+    "evanescent_in_assembly": "verified explicitly: the evanescent (gt) parts of the hh row (D01+D03+D11) and of the K.c row (D13 E1, E2) give ZERO for all seven external assignments, exactly in d; the evanescent poles themselves are nonzero (P18_hh_slot, P15_D13) -- they drop from the ch slots by the decoupling proofs, not by convention",
+    "quotient_coordinates": {
+      "complement_directions": ["h.h#0", "h.h#1", "h.h#2", "c.cb#0", "c.cb#1"],
+      "pole": ["0", "0", "0", "-3/8", "1/4"],
+      "nonlocal_L": ["0", "0", "0", "3/8", "-1/4"],
+      "local": ["0", "0", "0", "-2/3", "5/12"],
+      "reading": "coordinates modulo D cap Im sigma_0 (field redefinitions / s-exact); the h.h pole is transverse, i.e. in D cap Im sigma_0, so its quotient coordinates vanish"
+    },
+    "D_cap_ker_sigma0": {
+      "computed": true,
+      "dim": 6,
+      "dim_D_cap_Im_sigma0": 6,
+      "cohomology_dim": 0,
+      "sector_ranks": {
+        "h.h": {
+          "dim": 5,
+          "sigma0_rank": 3,
+          "P_ch_sigma0_rank": 3
+        },
+        "c.cb": {
+          "dim": 2,
+          "sigma0_rank": 2,
+          "P_ch_sigma0_rank": 0
+        },
+        "c.K": {
+          "dim": 3,
+          "sigma0_rank": 3,
+          "P_ch_sigma0_rank": 1
+        },
+        "phi.phi": {
+          "dim": 1,
+          "sigma0_rank": 0,
+          "P_ch_sigma0_rank": 0
+        }
+      }
+    },
+    "field_note": "Route G is computed over Q(i) (primary) and, for comparison, over Q with the re/im split used by the p14r domain certificate.  The p14r densities carry explicit factors i for odd derivative counts (c.K: 3 derivatives), so over Q an i-multiple counts as independent: e.g. the ch image of c.K#0 is i times an h.h image.  The counts over Q(i) equal the real dimensions under a compatible real structure (one real coefficient per density, the i fixed by reality of the action); ranks and solvability are quoted over Q(i)."
+  },
+  "counterterm_solve": {
+    "system": "Delta + P_ch sigma_0(x) = 0, x in the declared domain D (11 directions), part by part",
+    "rank_P_ch_sigma0_routeG": 3,
+    "rank_routeC": 3,
+    "routeC_image_relations": [
+      ["1/2", "-1/2", "-1", "1", "0", "0", "0", "0"],
+      ["1", "0", "-2", "0", "1", "0", "0", "0"],
+      ["-2*I", "0", "2*I", "0", "0", "1", "0", "0"],
+      ["0", "0", "0", "0", "0", "0", "1", "0"],
+      ["0", "0", "0", "0", "0", "0", "0", "1"]
+    ],
+    "outcome": "ZERO",
+    "residual": null,
+    "solution": "x = 0 (no counterterm needed beyond the MS-bar poles); the identity-preserving finite renormalisations are ker(P_ch sigma_0) cap D (dim 8), of which 2 modulo D cap Im sigma_0",
+    "MSbar_counterterm_ch_image_zero": true,
+    "MSbar_counterterm_full_sigma0_image_sectors": ["c.b"],
+    "full_closure_relative_factor_table_UNCONVERTED_p19_error": {
+      "1": false,
+      "-1": true,
+      "I": false,
+      "-I": false
+    },
+    "full_closure_reading": "p20 (corrects p19): with the P15 Sigma coordinates converted from the (cb,c) to the route-G (c,cb) orientation (measured ratio -1), the DERIVED factor +1 gives full sigma_0 closure of the complete MS-bar counterterm (h.h + c.K + c.cb) in every ghost +1 sector; the p19 table above (factors 1, -1, i, -i on UNCONVERTED coordinates) is the bookkeeping error, kept for the erratum",
+    "K1_ghost_closure_convention": {
+      "ghost_equation_operator": "2 i D^rho (d13.deDonder_apply), verified by P15: Sigma = 2 i D[G_Kc]",
+      "M_2iD_cK_to_cbc": [
+        ["0", "2"],
+        ["-1", "0"],
+        ["0", "-1"]
+      ],
+      "z_cb_derived_from_cK_pole_cbc_orientation": ["-3/8", "1/4"],
+      "z_cb_P15_sigma_fit_cbc_orientation": ["-3/8", "1/4"],
+      "derived_equals_P15": true,
+      "relative_factor_derived": "1",
+      "orientation_ratio_routeG_over_cbc": ["-1", "-1"],
+      "Sigma_pole_routeG_c_cb_coordinates": ["3/8", "-1/4"],
+      "Sigma_local_routeG_c_cb_coordinates": ["2/3", "-5/12"],
+      "tree_controls": {
+        "ghost_equation_tree_V_cbc_eq_2iD_V_Kc": true,
+        "S0_Kc_terms": 16,
+        "S0_cbc_terms": 40,
+        "sigma0_S0Kc_plus_S0cbc_entries": 0,
+        "sigma0_S0Kc_alone_entries (control, nonzero)": 16,
+        "ok": true
+      },
+      "full_closure_complete_S_ct": {
+        "closed": true,
+        "entries": 0,
+        "sectors": []
+      },
+      "full_closure_S_ct_without_ccb (p19 package S_ct)": {
+        "closed": false,
+        "entries": 88,
+        "sectors": ["c.b"]
+      },
+      "full_closure_unconverted (p19 error)": {
+        "closed": false,
+        "entries": 88,
+        "sectors": ["c.b"],
+        "detected": true
+      },
+      "reading": "ERRATUM to p19: the p19 statement 'closure fails with the derived factor, needs -1, unresolved' was a Grassmann-orientation bookkeeping error (P15 (cb,c) coordinates placed in route-G (c,cb) slots).  Corrected: derived +1, full closure holds (finding K1 of the p19 independent rebuild)."
+    },
+    "note_full_sigma0": "the h.h + c.K MS-bar counterterm ALONE has a nonzero (c, b) image (delta S0/delta h carries b); adding the c.cb ghost self-energy counterterm (correct orientation, derived factor +1) closes it: see K1_ghost_closure_convention.full_closure_complete_S_ct"
+  },
+  "defect_controls": {
+    "inventory_complete_no_missing": true,
+    "missing_input_refused_not_zero": true,
+    "s0h_longitudinal": true,
+    "E_transverse": true,
+    "hh_row_zero_exact_in_d_all_7": true,
+    "hh_row_evanescent_part_zero_all_7": true,
+    "hh_row_D01_D03_individually_nonzero": true,
+    "Kc_row_zero_exact_in_d_all_7": true,
+    "Kc_row_evanescent_part_zero_all_7": true,
+    "Kc_slot_map_nontrivial_T1_E1": true,
+    "E2_alone_zero_all_7": true,
+    "D13_A_T1_A_E1_zero_exact": true,
+    "onepoint_row_D14abc_vanishing": true,
+    "defect_zero_pole_nonlocal_local_all_7": true,
+    "defect_independent_of_row_signs": true,
+    "routeG_S0_check": true,
+    "routeG_defect_zero_by_sector": true,
+    "routeG_hh_local_data_in_span": true,
+    "routes_agree_on_ch_image_rank": true,
+    "routeG_hh_kernel_equals_p18_transverse_subspace": true,
+    "D_cap_Im_inside_D_cap_ker_sigma0": true,
+    "D_cap_Im_inside_ker_P_ch_sigma0": true,
+    "ghost_equation_relation_reproduces_P15_sigma_pole": true,
+    "MSbar_counterterm_in_ker_P_ch_sigma0": true,
+    "mutations_all_change_outcome": true,
+    "routeG_Q_split_reproduces_p14r_counts": true
+  },
+  "defect_mutations": {
+    "drop_graph_D03": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counterterm can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "-p.p**2*(a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p - a~.c~*b^.p)/48",
+          "QdS (hat)": "-p.p**2*(a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/48",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "-a~.b~*c^.p*p.p**2/16"
+        }
+      },
+      "note": "hh row without the ghost loop D03"
+    },
+    "drop_graph_D01": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counterterm can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "p.p**2*(a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p - a~.c~*b^.p)/48",
+          "QdS (hat)": "p.p**2*(a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/48",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "a~.b~*c^.p*p.p**2/16"
+        }
+      },
+      "note": "hh row without the graviton bubble D01"
+    },
+    "flip_phase_D03": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counterterm can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "-p.p**2*(a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p - a~.c~*b^.p)/24",
+          "QdS (hat)": "-p.p**2*(a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/24",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "-a~.b~*c^.p*p.p**2/8"
+        }
+      },
+      "note": "relative sign of D03 flipped"
+    },
+    "symmetry_factor_D03_x2": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counterterm can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "p.p**2*(a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p - a~.c~*b^.p)/48",
+          "QdS (hat)": "p.p**2*(a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/48",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "a~.b~*c^.p*p.p**2/16"
+        }
+      },
+      "note": "D03 doubled"
+    },
+    "wrong_projection_trace_operator_hh": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counterterm can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "-3*c^.p*p.p*(6*a.b*p.p - 6*a^.p*b^.p - a~.b~*p.p)/16",
+          "QdS (hat)": "-9*c^.p*p.p*(a^.b^*p.p - a^.p*b^.p)/8",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "-15*a~.b~*c^.p*p.p**2/16"
+        }
+      },
+      "note": "eta_mn p_v in place of s0 h (not the P.3 projection)"
+    },
+    "wrong_projection_gauge_fixed_operator_Kc": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counterterm can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "p.p*(a.b*c^.p*p.p - 3*a.c*b^.p*p.p - 3*a^.p*b.c*p.p + 4*a^.p*b^.p*c^.p - a^.p*b~.c~*p.p - a~.c~*b^.p*p.p)/16",
+          "QdS (hat)": "p.p*(a^.b^*c^.p*p.p - 3*a^.c^*b^.p*p.p - 3*a^.p*b^.c^*p.p + 4*a^.p*b^.p*c^.p)/16",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "-a~.c~*b^.p*p.p**2/4",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "a~.b~*c^.p*p.p**2/16"
+        }
+      },
+      "note": "de Donder q^2 P in place of the h^2-monomial operator E (not the P.3 projection)"
+    },
+    "naive_4D_D03_evanescent_dropped": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counterterm can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "p.p**2*(a^.p*b~.c~ - 2*a~.b~*c^.p + a~.c~*b^.p)/48",
+          "QdS (hat)": "0",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "a~.c~*b^.p*p.p**2/48",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "-a~.b~*c^.p*p.p**2/24"
+        }
+      },
+      "note": "D03 Gt parts dropped"
+    },
+    "naive_4D_D13_Gt_dropped": {
+      "outcome": "NONZERO, CANCELLABLE by a counterterm in the declared domain",
+      "changes_outcome": true,
+      "residual": {
+        "local": {
+          "Q4S (declared, R2)": "-c^.p*p.p*(a.b*p.p - a^.p*b^.p)/12",
+          "QdS (hat)": "-c^.p*p.p*(a^.b^*p.p - a^.p*b^.p)/12",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "-a~.b~*c^.p*p.p**2/12"
+        }
+      },
+      "note": "D13 evaluated with Gt dropped (P15_D13 mutation fit: T1 = -(d-4)/(16(d-1)))",
+      "finite_counterterm": {
+        "rank": 3,
+        "solvable": true,
+        "solution": ["(6*x3 + 12*x4 - 24*I*x5 - I)/12", "-x3/2", "-(12*x3 + 24*x4 - 24*I*x5 - I)/12", "x3", "x4", "x5", "x6", "x7"]
+      }
+    }
+  },
+  "defect_insensitive_variations": {
+    "drop_graph_D11": {
+      "outcome": "ZERO",
+      "changes_outcome": false,
+      "why_blind": "D11 is transverse by itself (p_m G_D11 = 0 exactly in d): the slot cannot see it; covered by M2 (P18) and by the inventory refusal below"
+    },
+    "drop_graph_D13": {
+      "outcome": "ZERO",
+      "changes_outcome": false,
+      "why_blind": "A_T1 = A_E1 = 0 and T2, T3, E2 are longitudinal: D13 reaches the slot with zero; covered by the D13 certificate (two routes, mutations)"
+    },
+    "flip_row_sign_Kc": {
+      "outcome": "ZERO",
+      "changes_outcome": false,
+      "why_blind": "each row vanishes separately"
+    }
+  },
+  "quantum_inputs_evaluated": "earned",
+  "quantum_inputs_inventory": [
+    {
+      "graph": "D01",
+      "slot_row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "evaluated": true,
+      "status": "regulated"
+    },
+    {
+      "graph": "D02",
+      "slot_row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "evaluated": true,
+      "status": "vanishing_under_declared_prescription"
+    },
+    {
+      "graph": "D03",
+      "slot_row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "evaluated": true,
+      "status": "regulated"
+    },
+    {
+      "graph": "D11",
+      "slot_row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "evaluated": true,
+      "status": "renormalized (4D) / regulated (evanescent poles nonzero, retained R6)"
+    },
+    {
+      "graph": "D12",
+      "slot_row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "evaluated": true,
+      "status": "vanishing_under_declared_prescription"
+    },
+    {
+      "graph": "D13",
+      "slot_row": "(S0,Gamma1^[2]) s1 h:h^2",
+      "evaluated": true,
+      "status": "evaluated"
+    },
+    {
+      "graph": "D14a",
+      "slot_row": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "evaluated": true,
+      "status": "vanishing_under_declared_prescription"
+    },
+    {
+      "graph": "D14b",
+      "slot_row": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "evaluated": true,
+      "status": "vanishing_under_declared_prescription"
+    },
+    {
+      "graph": "D14c",
+      "slot_row": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "evaluated": true,
+      "status": "vanishing_under_declared_prescription"
+    }
+  ],
+  "D11_matching_verified": true,
+  "D11_matching_verified_scope": "4D components: M2 discharged (P18_D11_M2, unchanged); evanescent components: EV-M2 proven (local poles + exact 4D decoupling of the renormalised remainder); NOT matched to XVI-O (no counterpart; both natural d-dim continuations refuted)",
+  "D11_evanescent_components_matching": "not_applicable_not_verified",
+  "M3_status": "unconditional on the 4D components (M2 discharged there; cited analytic inputs above)",
+  "D11_evaluated": true,
+  "hh_full_row_decoupling_proven": true,
+  "evanescent_hh_counterterm_added": true,
+  "batchA_evaluated": true,
+  "D13_evaluated": true,
+  "batchC_evaluated": true,
+  "library_certified": true,
+  "E2_status": "decoupled_from_ch_slot_proven",
+  "E2_decoupling_proven": true,
+  "hh_evanescent_status": "decoupled_from_ch_slot_proven_as_sum",
+  "hh_evanescent_decoupling_proven": true,
+  "D01_evaluated": true,
+  "D03_evaluated": true,
+  "graphs": {
+    "D02": {
+      "status": "vanishing_under_declared_prescription",
+      "UV_pole": "none: no 1/eps pole (every member is a pure power divergence, omega > 0); MS-bar counterterm 0",
+      "finite_part": "0 (all components)",
+      "routes_agree": true,
+      "kappa_order": 2,
+      "slot": "kappa^2 hh two-point (part of the hh slot with D01, D03 -- D01/D03 NOT evaluated in p15)"
+    },
+    "D12": {
+      "status": "vanishing_under_declared_prescription",
+      "UV_pole": "none: no 1/eps pole (every member is a pure power divergence, omega > 0); MS-bar counterterm 0",
+      "finite_part": "0 (all components)",
+      "routes_agree": true,
+      "kappa_order": 2,
+      "slot": "kappa^2 hh two-point, scalar tadpole (D12 slot; kept separate from the one-point slot)"
+    },
+    "D14a": {
+      "status": "vanishing_under_declared_prescription",
+      "UV_pole": "none: no 1/eps pole (every member is a pure power divergence, omega > 0); MS-bar counterterm 0",
+      "finite_part": "0 (all components)",
+      "routes_agree": true,
+      "kappa_order": 1,
+      "slot": "order-kappa one-point slot"
+    },
+    "D14b": {
+      "status": "vanishing_under_declared_prescription",
+      "UV_pole": "none: no 1/eps pole (every member is a pure power divergence, omega > 0); MS-bar counterterm 0",
+      "finite_part": "0 (all components)",
+      "routes_agree": true,
+      "kappa_order": 1,
+      "slot": "order-kappa one-point slot"
+    },
+    "D14c": {
+      "status": "vanishing_under_declared_prescription",
+      "UV_pole": "none: no 1/eps pole (every member is a pure power divergence, omega > 0); MS-bar counterterm 0",
+      "finite_part": "0 (all components)",
+      "routes_agree": true,
+      "kappa_order": 1,
+      "slot": "order-kappa one-point slot"
+    },
+    "D13": {
+      "status": "regulated",
+      "sector_status": {
+        "4D_structures_T1_T3": "renormalized",
+        "evanescent_structures_E1_E2": "regulated: pole nonzero (E2), recorded and retained (R6); its counterterm is an evanescent K'.c operator NOT in the p14r 4D basis (the p14r contract declares no evanescent counterterm: open contract item, not absorbed)"
+      },
+      "UV_pole": {
+        "T1": "0",
+        "T2": "3/16",
+        "T3": "-1/4",
+        "E1": "0",
+        "E2": "1/16"
+      },
+      "MSbar_finite": {
+        "T1": "0",
+        "T2": "1/3 - 3*L/16",
+        "T3": "L/4 - 5/12",
+        "E1": "0",
+        "E2": "1/6 - L/16"
+      },
+      "UV_pole_in_p14r_cK_basis": ["0", "3/8", "-1/4"],
+      "evanescent_pole_nonzero": true,
+      "E2_ch_slot": "decoupled_from_ch_slot_proven"
+    },
+    "D01": {
+      "status": "regulated",
+      "sector_status": {
+        "4D": "renormalized (pole in the p14r h.h span)",
+        "evanescent": "regulated: evanescent poles NONZERO, retained (R6); no evanescent h.h counterterm is declared"
+      },
+      "UV_pole": {
+        "g4_mn g4_rs (p.p)^2": "-27*I/80",
+        "g4_mn gt_rs (p.p)^2": "13*I/120",
+        "g4_mn p_r p_s (p.p)^1": "19*I/60",
+        "g4_mr g4_ns (p.p)^2": "-71*I/240",
+        "g4_mr gt_ns (p.p)^2": "-3*I/80",
+        "g4_mr p_n p_s (p.p)^1": "11*I/40",
+        "g4_rs gt_mn (p.p)^2": "13*I/120",
+        "g4_rs p_m p_n (p.p)^1": "19*I/60",
+        "gt_mn gt_rs (p.p)^2": "-I/240",
+        "gt_mn p_r p_s (p.p)^1": "-3*I/20",
+        "gt_mr gt_ns (p.p)^2": "-I/240",
+        "gt_mr p_n p_s (p.p)^1": "7*I/120",
+        "gt_rs p_m p_n (p.p)^1": "-3*I/20",
+        "p_m p_n p_r p_s": "-13*I/15"
+      },
+      "MSbar_finite": {
+        "g4_mn g4_rs (p.p)^2": "I*(405*L - 982)/1200",
+        "g4_mn gt_rs (p.p)^2": "I*(523 - 195*L)/1800",
+        "g4_mn p_r p_s (p.p)^1": "I*(724 - 285*L)/900",
+        "g4_mr g4_ns (p.p)^2": "I*(1065*L - 1946)/3600",
+        "g4_mr gt_ns (p.p)^2": "I*(45*L - 118)/1200",
+        "g4_mr p_n p_s (p.p)^1": "I*(97 - 55*L)/200",
+        "g4_rs gt_mn (p.p)^2": "I*(523 - 195*L)/1800",
+        "g4_rs p_m p_n (p.p)^1": "I*(724 - 285*L)/900",
+        "gt_mn gt_rs (p.p)^2": "I*(15*L - 46)/3600",
+        "gt_mn p_r p_s (p.p)^1": "I*(90*L - 241)/600",
+        "gt_mr gt_ns (p.p)^2": "I*(15*L - 46)/3600",
+        "gt_mr p_n p_s (p.p)^1": "I*(277 - 105*L)/1800",
+        "gt_rs p_m p_n (p.p)^1": "I*(90*L - 241)/600",
+        "p_m p_n p_r p_s": "I*(780*L - 1597)/900"
+      },
+      "UV_pole_in_p14r_hh_basis": ["-27*I/160", "-71*I/240", "19*I/60", "11*I/20", "-13*I/30"],
+      "evanescent_pole_nonzero": true,
+      "ch_slot": "decoupled as the sum D01 + D03 (evanescent and 4D parts; certificates/P17_hh_slot.json); NOT graph by graph"
+    },
+    "D03": {
+      "status": "regulated",
+      "sector_status": {
+        "4D": "renormalized (pole in the p14r h.h span)",
+        "evanescent": "regulated: evanescent poles NONZERO, retained (R6); no evanescent h.h counterterm is declared"
+      },
+      "UV_pole": {
+        "g4_mn g4_rs (p.p)^2": "7*I/48",
+        "g4_mn gt_rs (p.p)^2": "-I/24",
+        "g4_mn p_r p_s (p.p)^1": "-I/8",
+        "g4_mr g4_ns (p.p)^2": "I/24",
+        "g4_mr gt_ns (p.p)^2": "I/24",
+        "g4_mr p_n p_s (p.p)^1": "-I/48",
+        "g4_rs gt_mn (p.p)^2": "-I/24",
+        "g4_rs p_m p_n (p.p)^1": "-I/8",
+        "gt_mn p_r p_s (p.p)^1": "I/12",
+        "gt_mr p_n p_s (p.p)^1": "-I/16",
+        "gt_rs p_m p_n (p.p)^1": "I/12",
+        "p_m p_n p_r p_s": "I/6"
+      },
+      "MSbar_finite": {
+        "g4_mn g4_rs (p.p)^2": "I*(50 - 21*L)/144",
+        "g4_mn gt_rs (p.p)^2": "I*(3*L - 8)/72",
+        "g4_mn p_r p_s (p.p)^1": "I*(3*L - 8)/24",
+        "g4_mr g4_ns (p.p)^2": "I*(2 - 3*L)/72",
+        "g4_mr gt_ns (p.p)^2": "I*(8 - 3*L)/72",
+        "g4_mr p_n p_s (p.p)^1": "I*(3*L + 4)/144",
+        "g4_rs gt_mn (p.p)^2": "I*(3*L - 8)/72",
+        "g4_rs p_m p_n (p.p)^1": "I*(3*L - 8)/24",
+        "gt_mn p_r p_s (p.p)^1": "I*(8 - 3*L)/36",
+        "gt_mr p_n p_s (p.p)^1": "I*(3*L - 8)/48",
+        "gt_rs p_m p_n (p.p)^1": "I*(8 - 3*L)/36",
+        "p_m p_n p_r p_s": "I*(5 - 3*L)/18"
+      },
+      "UV_pole_in_p14r_hh_basis": ["7*I/96", "I/24", "-I/8", "-I/24", "I/12"],
+      "evanescent_pole_nonzero": true,
+      "ch_slot": "decoupled as the sum D01 + D03 (evanescent and 4D parts; certificates/P17_hh_slot.json); NOT graph by graph"
+    },
+    "D11": {
+      "status": "evaluated",
+      "certificate": "certificates/P18_D11.json",
+      "sector_status": "renormalized (4D) / regulated (evanescent poles nonzero, retained R6)",
+      "M2": "DISCHARGED (4D components)",
+      "ch_slot": "decoupled by itself (p_m G_D11 = 0 exactly in d)"
+    }
+  },
+  "D12_status": "vanishing_under_declared_prescription",
+  "contract_identity": {
+    "p14r_contract_files": 12,
+    "changed_vs_p14r": ["code/p5_entry/dred.py"],
+    "added": [],
+    "dred_byte_identical_to_p18": true,
+    "dred_registry_state_p22": "p18 + p22 guard block",
+    "contract_revision_in_p19": false,
+    "disclosed_revisions_p19": {}
+  },
+  "p18_layer": {
+    "p18_layer_files_byte_identical": true,
+    "P18_release_accepted": true,
+    "P18_quantum_inputs_evaluated": "earned",
+    "I1_gate": "the p19 gate requires the p18 layer record's quantum_inputs_evaluated == 'earned'"
+  },
+  "P5_entry_earned": true,
+  "P5_entry_flags": {
+    "quantum_action_defined": true,
+    "quantum_prescription_defined": true,
+    "D11_matching_defined": true,
+    "counterterm_domain_defined": true,
+    "amplitude_rules_verified": true
+  },
+  "P3_P4_frozen_as_P5_inputs": true,
+  "classical": {
+    "flags": {
+      "quartic_generator_verified": true,
+      "ch_projection_defined": true,
+      "ch_dependency_inventory_complete": true,
+      "gauge_fixing_map_constructed": true,
+      "required_classical_BV_components_verified": true
+    },
+    "classical_readiness_for_ch_identity": true,
+    "release_claim_accepted": true,
+    "deterministic_prerequisites": {
+      "C1_inverse_10comp": true,
+      "C2_det_tracelog_10comp": true,
+      "C3_boundary_identity_generic_and_conformal": true,
+      "C4_export_equals_independent_evaluator": true,
+      "C5_cubic_regression_Euler": true,
+      "C6_quadratic_regression_Euler": true,
+      "C7_grav_noether_k0_k1_k2_on_exports": true,
+      "quartic_mutations_all_rejected": true,
+      "master_grav_noether_deterministic_k0_k1_k2": true,
+      "master_engine_parts_exact": true,
+      "graviton_hessian_generic_symbolic_k": true,
+      "canonicity_all_23_antifield_components": true,
+      "ch_enumeration_lemma_mechanical": true,
+      "residual_record_invariants_all_certificates": true,
+      "quartic_C7_Q_terms_zero_and_flag_true_all_orders": true,
+      "master_grav_Q_terms_zero_and_flag_true_all_orders": true,
+      "cross_certificate_quartic_vs_master_agree": true,
+      "stored_C7_flag_equals_recomputation": true
+    },
+    "failed_prerequisites": [],
+    "hash_consistency": {
+      "consistent": true,
+      "ell": {
+        "ell2": {
+          "export_file": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+          "quartic_cert": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+          "master_input": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0"
+        },
+        "ell3": {
+          "export_file": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+          "quartic_cert": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+          "master_input": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1"
+        },
+        "ell4": {
+          "export_file": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+          "quartic_cert": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+          "master_input": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123"
+        }
+      }
+    },
+    "required_master_residuals": [],
+    "residual_records": {
+      "invariant_violations": {},
+      "quartic_C7_per_order": {
+        "kappa0": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        },
+        "kappa1": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        },
+        "kappa2": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        }
+      },
+      "master_grav_per_order": {
+        "kappa0": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        },
+        "kappa1": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        },
+        "kappa2": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        }
+      },
+      "cross_certificate": {
+        "same_inputs": true,
+        "differences": [],
+        "agree": true,
+        "quartic_parameters": {
+          "a_ghost": "1/2",
+          "transport_term": 1,
+          "s0": "a(eta_nn d_m c^n + eta_mm d_n c^m)",
+          "s1": "a(c^r d_r h_mn + h_rn d_m c^r + h_mr d_n c^r)",
+          "ell_sha256": {
+            "ell2": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+            "ell3": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+            "ell4": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123"
+          }
+        },
+        "master_parameters": {
+          "a_ghost": "1/2",
+          "transport_term": 1,
+          "s0": "a(eta_nn d_m c^n + eta_mm d_n c^m)",
+          "s1": "a(c^r d_r h_mn + h_rn d_m c^r + h_mr d_n c^r)",
+          "ell_sha256": {
+            "ell2": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+            "ell3": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+            "ell4": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123"
+          }
+        }
+      }
+    },
+    "hard_stops_p13_hold": true,
+    "hard_stops_p13": {
+      "quantum_inputs_evaluated": "not_earned",
+      "projected_identity_verified": "not_earned",
+      "D02_quantum_evaluated": false,
+      "D12_quantum_evaluated": false,
+      "D12_status": "Missing",
+      "symmetry_restored": false,
+      "O1_closure": "NOT_CLOSED",
+      "insertion_status": "Frozen_negative_obstruction_preserved",
+      "XV_B_opened": false,
+      "Route_B_discharged": false,
+      "P5_opened": false,
+      "loop_evaluations_performed": false,
+      "u_R_c_delta_added": false
+    },
+    "certificates": "P13_* (frozen P.3/P.4 inputs, regenerated by byte-identical p13 code)"
+  },
+  "hard_stops": {
+    "bulk_symmetry_restored": false,
+    "symmetry_restored": false,
+    "O1_closure": "NOT_CLOSED",
+    "insertion_status": "Frozen_negative_obstruction_preserved",
+    "XV_B_opened": false,
+    "XIV_J_opened": false,
+    "Route_B_discharged": false,
+    "u_R_c_delta_added": false,
+    "XVI_P_registered": false
+  },
+  "hard_stops_hold": true,
+  "milestones": {
+    "definitions": {
+      "P.3": "fixed output projection + exhaustive coefficient dependencies + graph topology inventory (complete for the declared ch target)",
+      "P.4": "required classical action, transformations, source terms, gauge map and master verification (classical readiness earned); P.4 means classical readiness, NOT coupled one-loop restoration",
+      "P.5_entry": "quantum prescription, amplitude rules and counterterm domain fixed",
+      "P.5_calculation": "coefficients evaluated and renormalized",
+      "P.5_identity": "projected defect computed and, if possible, cancelled"
+    },
+    "order": ["P.3", "P.4", "P.5_entry", "P.5_calculation", "P.5_identity"],
+    "status": {
+      "P.3": "complete (declared ch target)",
+      "P.4": "earned (classical readiness)",
+      "P.5_entry": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+      "P.5_calculation": "renormalized (one loop, kappa^2, two-point functions hh / K'.c / cb.c; MS-bar in DRED with the p22 evanescent counterterms; external legs in QdS)",
+      "P.5_identity": "projected defect computed (zero exactly in d, all parts, all seven assignments; each row vanishes separately); projected identity verified; projected restoration verified (p20 definition: full sigma_0 closure of the complete one-loop kappa^2 MS-bar counterterm incl. c.cb, h.c/c.b/c.cbs); K1 corrected in p20 (orientation erratum); D11 ratio pin verified; D11 absolute pin verified (p21); bulk symmetry NOT restored/claimed; O.1 NOT_CLOSED [p21: D11 absolute pin derived and verified] [p22: evanescent counterterms closed; identity unchanged]",
+      "P.6_entry": "inventory (one loop kappa^3 three-point, 15 graphs, topology level); not evaluated",
+      "O.1": "NOT_CLOSED (requirement recorded; not closable inside XVI-P)"
+    },
+    "definition_vs_status_note": "I3 (p18 reviewer): the P.5_calculation DEFINITION reads 'coefficients evaluated and renormalized'; the STATUS states exactly what holds: 4D sector renormalized, evanescent poles regulated and decoupled from the ch slots (not subtracted)",
+    "P5_entry_earned": true,
+    "P3_P4_frozen_as_P5_inputs": true,
+    "P4_is_NOT": "coupled one-loop restoration of the bulk symmetry (bulk_symmetry_restored false)"
+  },
+  "author_rebuild_passed": true,
+  "independent_rebuild_passed": "pending",
+  "independent_rebuild_passed_p18": true,
+  "independent_rebuild_passed_p17": true,
+  "independent_rebuild_passed_p16": true,
+  "independent_rebuild_passed_p15": true,
+  "independent_rebuild_passed_p14r": true,
+  "independent_rebuild_passed_p13": true,
+  "rebuild_flag_scope": "author/independent flags refer to the CURRENT (p23) tree only (independent: pending until a reviewer report exists); independent_rebuild_passed_p22 refers to the p22 tree 1bc6edff6ca0788bb0fee4e8bf259bf8a0c80791f6dd08be77f79e56b492a50c / zip ade2fa5c2dac6614c41ae38dc97d7c485975015a134650734d466ea6ffdef76f (same-box caveat), not inherited",
+  "p18_independent_rebuild": {
+    "report": "archival/p18/reproducibility/independent_rebuild_report_p18.json",
+    "present": true,
+    "report_sha256": "893f167ef7124d981c0569ca386035aed06e0dbb0c90a2362a6ceeafd1930cb2",
+    "report_sha256_pinned": true,
+    "pass": true,
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "bfab3b4b318fc37f2fcca209d097d27a24955e3b3d8469f5a8ab2e904ace7094",
+    "bound_to_source_zip_sha256": "7c7d5451adb459092edc2606e1b3322909325000d47bab89c14b7f7a6d25c92f",
+    "tree_matches_p18": true,
+    "zip_matches_p18": true,
+    "mismatches": 0,
+    "findings": ["I1_release_p18_publication_not_gated_on_quantum_inputs_evaluated", "I2_scan_pattern_gaps", "I3_scope_of_M2_and_evaluated", "I4_table_row_count", "I5_slot_blind_to_D11_normalisation", "I6_test_p16_victim_restriction", "I7_pdftotext_dehyphenation", "H1_H5_resolution", "bug_fixes_disclosed"],
+    "caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared kernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-only zip; it was NOT run on a second machine.",
+    "live_report_identical_to_archived": true,
+    "NOT_inherited_by_p19": "bound to the p18 tree/zip; the p19 tree has its own (pending) independent flag",
+    "archived_p18_records_pinned": {
+      "archival/p18/reference_values_p18.json": true,
+      "archival/p18/reproducibility/author_rebuild_report_p18.json": true,
+      "archival/p18/reproducibility/independent_rebuild_report_p18.json": true,
+      "archival/p18/p18_source_files.json": true
+    },
+    "pins_ok": true
+  },
+  "p17_independent_rebuild": {
+    "report": "archival/p17/reproducibility/independent_rebuild_report_p17.json",
+    "present": true,
+    "report_sha256": "92542a2215c24b984e2220f69ac52698d6b09dbb6b860402bbc367d970c176eb",
+    "report_sha256_pinned": true,
+    "pass": true,
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "2a5a6317f7322db910c26fb257e589b28aa017df740879194e0ac2eb505ddd92",
+    "bound_to_source_zip_sha256": "7f4f61df9ce9c6483d76fa7b7b024591d6abfbae80ddc3dc0bee387245d25416",
+    "tree_matches_p17": true,
+    "zip_matches_p17": true,
+    "mismatches": 0,
+    "findings": ["H1_static_scan_pattern_gaps", "H2_assignment_table_omits_c_hat_h_tilde", "H3_stale_comments", "H4_curly_apostrophes_in_typeset_listings", "H5_parse_d_srepr", "H6_scope", "G1_G2_G3_G4_resolution"],
+    "caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared kernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-only zip; it was NOT run on a second machine.",
+    "live_report_identical_to_archived": true,
+    "NOT_inherited_by_p18": "bound to the p17 tree/zip; the p18 tree has its own (pending) independent flag",
+    "archived_p17_records_pinned": {
+      "archival/p17/reference_values_p17.json": true,
+      "archival/p17/reproducibility/author_rebuild_report_p17.json": true,
+      "archival/p17/reproducibility/independent_rebuild_report_p17.json": true,
+      "archival/p17/p17_source_files.json": true
+    },
+    "pins_ok": true
+  },
+  "p16_independent_rebuild": {
+    "report": "archival/p16/reproducibility/independent_rebuild_report_p16.json",
+    "present": true,
+    "report_sha256": "1a8861964afe7ae4d4b38aaae5381230d8cda82610c51ef2b7919ebd6e326843",
+    "report_sha256_pinned": true,
+    "pass": true,
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "90b4a6659cddd341436a59d285a56eb14bdd575bb56e69faf4ba75be4d7b549e",
+    "bound_to_source_zip_sha256": "56d5887daa7a96dcc7cf2f70c6735e802125c9b19a33ac17a3ef975e330fef57",
+    "tree_matches_p16": true,
+    "zip_matches_p16": true,
+    "mismatches": 0,
+    "findings": ["G1_static_scan_scope_narrower_than_disclosure", "G2_plain_symbol_d_from_stored_strings", "G3_hook_coverage_detail", "G4_change_log_omits_new_reference_file", "G5_test_p15_assertion_relaxed", "G6_imaginary_normalisation", "G7_scope", "F3_F4_F5_from_p15"],
+    "caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared kernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-only zip; it was NOT run on a second machine.",
+    "live_report_identical_to_archived": true,
+    "NOT_inherited_by_p17": "bound to the p16 tree/zip; the p17 tree has its own (pending) independent flag",
+    "archived_p16_records_pinned": {
+      "archival/p16/reference_values_p16.json": true,
+      "archival/p16/reproducibility/author_rebuild_report_p16.json": true,
+      "archival/p16/reproducibility/independent_rebuild_report_p16.json": true,
+      "archival/p16/p16_source_files.json": true
+    },
+    "pins_ok": true
+  },
+  "p15_independent_rebuild": {
+    "report": "archival/p15/reproducibility/independent_rebuild_report_p15.json",
+    "present": true,
+    "report_sha256": "6bc760c24f48d61fe066dde62cbe5b41daa7e4eafc347f8fd72e1a84fcab4713",
+    "report_sha256_pinned": true,
+    "pass": true,
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "79f5375272d6e7327721572ae7eeff59d6bf69d2eb13d353204d38ce9c1dc84f",
+    "bound_to_source_zip_sha256": "54325c1ff6c079e0389f96d9c0875524c73f6a706e079fd1734c1b1701c707d3",
+    "tree_matches_p15": true,
+    "zip_matches_p15": true,
+    "mismatches": 0,
+    "findings": ["F1_F2_resolved", "F3_opaque_d_bypass", "F4_stale_page_footer_label", "F5_non_contract_changes", "F6_D13_spot_check_scope", "F7_evanescent_E2_pole"],
+    "caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared kernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-only zip; it was NOT run on a second machine.",
+    "live_report_identical_to_archived": true,
+    "NOT_inherited_by_p16": "bound to the p15 tree/zip; the p16 tree has its own (pending) independent flag",
+    "archived_p15_records_pinned": {
+      "archival/p15/reference_values_p15.json": true,
+      "archival/p15/reproducibility/author_rebuild_report_p15.json": true,
+      "archival/p15/p15_source_files.json": true
+    },
+    "pins_ok": true
+  },
+  "p14r_independent_rebuild": {
+    "report": "archival/p14r/reproducibility/independent_rebuild_report_p14r.json",
+    "present": true,
+    "report_sha256": "09cda7db0d1f8e1cf7409212e4ee88ef60f21975e1367472f2c3ed45f1f7004b",
+    "report_sha256_pinned": true,
+    "pass": true,
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "a64c0ae365980fa6b077f991df4316347527613075e87f17fecfe422db6e3894",
+    "bound_to_source_zip_sha256": "19e8bf599daf102d8e23382544e6c6991ea307b2c3f31a0a97ad66d0b8a3dba3",
+    "tree_matches_p14r": true,
+    "zip_matches_p14r": true,
+    "mismatches": 0,
+    "findings": ["F1_premature_d4_guard_heuristic", "F2_trace_ghat_4_mutation_scope"],
+    "caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared kernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-only zip; it was NOT run on a second machine.",
+    "live_report_identical_to_archived": true,
+    "NOT_inherited_by_p15": "bound to the p14r tree/zip; the p15 tree has its own (pending) independent flag",
+    "archived_p14r_records_pinned": {
+      "archival/p14r/reference_values_p14r.json": true,
+      "archival/p14r/reproducibility/author_rebuild_report_p14r.json": true
+    }
+  },
+  "p13_independent_rebuild": {
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "2b1baf335468944aa800c05eaa8b0b4df67ee893491079fcc944eb8fb0e69a70",
+    "bound_to_source_zip_sha256": "2f85a566c49689dea329df9fe3ea213eb6495759d4e95546495e245e7fdf3266",
+    "report": "archival/p13/reproducibility/independent_rebuild_report_p13.json",
+    "report_sha256": "7ce496cc446f2ef1948de6aaf034b09e9dcab0b9878cd6ae6015cda63a6515e4",
+    "comparisons": {
+      "reference_values_matched": {
+        "compared": 112,
+        "equal": 112
+      },
+      "independent_comparisons": 77,
+      "mismatches": 0
+    },
+    "caveat": "the p13 independent rebuild ran on the SAME box (shared kernel, TeX Live, poppler) in a fresh venv from the source-only zip; it was NOT run on a second machine",
+    "NOT_inherited_by_p14": "bound to the p13 tree; the p14 tree has its own (pending) independent flag"
+  },
+  "M2_summary": {
+    "verdict": "DISCHARGED (4D components)",
+    "D11_matching_verified_scope": "4D components",
+    "evanescent_components_matching": {
+      "status": "not_applicable_not_verified",
+      "what_they_are": "the 8 D11 structures carrying gt (the (4-d)-dimensional part of g4 = ghat + gt): components of the hh two-point function with at least one index pair in the epsilon-scalar (4-d) directions of DRED; they vanish on hatted 4D components",
+      "why_not_matched": "XVI-O (u^R_mu, K, Pi_tr^R) is strictly four-dimensional and has NO evanescent counterpart; M2 is a 4D statement, so there is nothing to match them to. Their L-coefficients are nonzero (recorded below); they are retained (R6) and drop out of the ch-projected slot (p_m G_D11 = 0 for the evanescent part separately)"
+    },
+    "M3_status": {
+      "status": "unconditional on the 4D components (M2 discharged there; cited analytic inputs above)",
+      "statement": "L_match = FT^-1[P^DR] - R R Pi_tr^R is supported at {0}; with kernel scaling degree <= 8 it is a finite sum of d^alpha delta with |alpha| <= 4 (bounds 4/8/4 of P14 M3)",
+      "evanescent_components": "not applicable (no XVI-O counterpart; see evanescent_components_matching)"
+    },
+    "statement": "M2 (P14_prescription_D11_matching.json): for all f in D(U), U = R^4 \\ {0}: <FT^-1[P^DR_AB], f> = <R_A R_B Pi_tr^R, f>, Pi_tr^R = (i kappa^2/4) K u^R, alpha = A^2/60, beta = A^2/18",
+    "route_B": {
+      "equation": "X_AB = -4 pi^2 c_FT A^2 Y_AB = -(i/4) Y_AB on every 4D component pair",
+      "pairs": 100,
+      "nonzero_pairs": 100,
+      "mismatches": 0,
+      "first": [],
+      "agree": true,
+      "constant": "-I/4"
+    },
+    "FT_constant": {
+      "master_pole": "1",
+      "master_finite": "2 - L",
+      "pole_is_1": true,
+      "L_coefficient_of_MB": "-1",
+      "c_FT_from_DR_bubble": "I*pi**2",
+      "c_FT_from_minus_r": "I*pi**2",
+      "r_certificate": "-i * pi**2",
+      "r_certificate_as_expected": true,
+      "agree": true
+    },
+    "controls": {
+      "route_B_all_100_pairs_agree": true,
+      "FT_constant_two_calibrations_agree": true,
+      "route_A_M1_integrand_identity": true,
+      "route_A_XVI_O_K_u_equals_T": true,
+      "D11_transverse_exact_in_d": true,
+      "routes_FP_PV_agree": true,
+      "covariant_fit_exact_unique": true,
+      "mutations_all_rejected": true
+    },
+    "analytic_inputs_cited": ["Fourier transform of (Q - i0)^zeta (Gel'fand-Shilov): meromorphic in zeta, residue at zeta = -2 is r delta, so FT[u^R] = -r log(-p^2 - i0) + const (Route B; cross-checked by the DR bubble)", "a polynomial in p is the Fourier transform of a distribution supported at {0}", "Route A only: two extensions of the product V V (C C + C C) from U differ by a distribution supported at 0 (XVI-O lem:BV_rules_on_U, Constructed)"],
+    "scope": "4D (hatted) components; the evanescent gt structures are epsilon-scalar components outside the 4D statement of M2 (their L-coefficients are nonzero and recorded); IR: the massless bubble at p^2 != 0 is IR finite in DR (no scaleless pieces enter the nonlocal part); the XVI-N massless obstruction concerns the classical insertion and is not touched",
+    "M3_consequence": "with M2 discharged, L_match = FT^-1[P^DR] - R R Pi_tr^R is supported at 0; both sides are transverse and homogeneous of degree four in p (massless; no mu^4, mu^2 p^2 contacts, consistent with N4), so L_match lies in the 2-dim transverse subspace of the p14r h.h span; its coordinates need the XVI-O finite constant of u^R and are NOT computed (M4: booked as P-side hh counterterm; u^R_mu unmodified, no c delta)"
+  },
+  "D11_summary": {
+    "status": "renormalized (4D) / regulated (evanescent poles nonzero, retained R6)",
+    "prescription": "operational DRED (R1-R6), d opaque, MS-bar, Feynman +i0, N4 contact exclusions, M3 bounds 4/8/4, exactly-degree-four normalization (massless: every local term is a homogeneous quartic in p)",
+    "prescription_usage": {
+      "exactly_degree_four_normalization": "every structure S_s (p.p)^e of Ghat has total momentum degree 4 (computed per structure: g4_mn g4_rs (p.p)^2: 4, g4_mn gt_rs (p.p)^2: 4, g4_mn p_r p_s (p.p)^1: 4, g4_mr g4_ns (p.p)^2: 4, g4_mr gt_ns (p.p)^2: 4, g4_mr p_n p_s (p.p)^1: 4, g4_rs gt_mn (p.p)^2: 4, g4_rs p_m p_n (p.p)^1: 4, gt_mn gt_rs (p.p)^2: 4, gt_mn p_r p_s (p.p)^1: 4, gt_mr gt_ns (p.p)^2: 4, gt_mr p_n p_s (p.p)^1: 4, gt_rs p_m p_n (p.p)^1: 4, p_m p_n p_r p_s: 4)",
+      "N4_contact_exclusions": "used as stated: the order-0/2 contacts (mu^4, mu^2 p^2) excluded by N4 do not arise (massless; every pole and local MS-bar term is a homogeneous quartic in p), so N4 removes nothing here and no order-0/2 counterterm is needed",
+      "M3_bounds_4_8_4": "degree of divergence 4; local terms of derivative order exactly 4 <= 4"
+    },
+    "UV_pole_in_p14r_hh_basis": ["-I/160", "-I/480", "I/80", "I/240", "-I/120"],
+    "evanescent_pole_nonzero": true,
+    "controls": {
+      "exactly_degree_four_every_structure": true,
+      "N4_no_order_0_or_2_contact_arises": true,
+      "export_sha_pinned": true,
+      "covariant_form_exact": true,
+      "covariant_form_unique": true,
+      "orbit_consistent": true,
+      "route_FP_equals_route_PV_exact_in_d": true,
+      "integrand_equals_XVI_O_convolution_M1": true,
+      "exchange_symmetric_mn_rs": true,
+      "nonlocal_equals_minus_pole": true,
+      "pole_4D_in_p14r_hh_span": true,
+      "R5_d_retained": true,
+      "M2_discharged": true,
+      "mutations_all_rejected": true
+    }
+  },
+  "hh_slot_summary": {
+    "verdict": "DECOUPLED (proof, full row): p_m G = 0 exactly in d for D11 by itself and for D01 + D03 as a sum; no evanescent structure survives in the slot",
+    "row": "(S0,Gamma1^[2]) s2 K:K.c",
+    "graphs": "D01 + D02 + D03 + D11 + D12 (D02 = D12 = 0, P15_batchA.json)",
+    "how_D11_decouples": "graph by graph: D11 (scalar loop, conserved matter stress tensor) is transverse by itself, 4D and evanescent parts separately; its evanescent poles are nonzero but transverse. Hence D11 mutations of phase or symmetry factor are NOT detectable by the slot (they are tested by M2 instead); the slot sees D11 only through a non-longitudinal operator (trace operator control: nonzero)",
+    "surviving_evanescent_structures_in_slot": [],
+    "consequence": "no evanescent h.h counterterm is required by the ch-projected identity at one loop (D11 included), so NO contract revision is made for it.  The summed evanescent poles of the hh Green function are nonzero but transverse; renormalising the hh Green function itself would need evanescent h.h counterterms -- outside this projection and NOT claimed.",
+    "controls": {
+      "operator_longitudinal": true,
+      "p_dot_G_D11_zero_exact_in_d": true,
+      "p_dot_G_sum_zero_exact_in_d": true,
+      "p_dot_G_evanescent_sum_zero": true,
+      "slot_sum_zero_all_7_assignments": true,
+      "evanescent_slot_sum_zero_all_7_assignments": true,
+      "D01_D03_individually_nonzero_incl_c_hat_h_tilde": true,
+      "D11_reaches_slot_under_trace_operator": true,
+      "4D_pole_sum_D01_D03_D11_transverse": true,
+      "4D_pole_D11_transverse": true,
+      "mutations_all_rejected": true
+    }
+  },
+  "D13_summary": {
+    "status": "regulated",
+    "sector_status": {
+      "4D_structures_T1_T3": "renormalized",
+      "evanescent_structures_E1_E2": "regulated: pole nonzero (E2), recorded and retained (R6); its counterterm is an evanescent K'.c operator NOT in the p14r 4D basis (the p14r contract declares no evanescent counterterm: open contract item, not absorbed)"
+    },
+    "convention": "G_{(mn) nu}(p) = V_Gamma1[K'_(mn)(-p), c^nu(p)] = kappa^2 * (i S_eps/(16 pi^2)) * Ghat, Ghat = sum A_i(d) T_i * MB, MB = Ihat(1,1) = 1/eps + 2 - L + O(eps), L = log(-p^2/mu^2 - i0); indices lower (K' slot dual to h_(mn), c^nu -> lower nu); p_r lower components; p^2 = eta^{rs} p_r p_s",
+    "UV_pole_in_p14r_cK_basis": {
+      "coordinates": ["0", "3/8", "-1/4"],
+      "basis": [
+        {
+          "density": "(I)*[('c', 0, ()), ('K', (0, 0), (0, 0, 0))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 1, 1))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 2, 2))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 3, 3))] + (-I)*[('c', 0, ()), ('K', (1, 1), (0, 0, 0))] + (I)*[('c', 0, ()), ('K', (1, 1), (0, 1, 1))] + (I)*[('c', 0, ",
+          "T_coordinates": ["1", "0", "0"]
+        },
+        {
+          "density": "(I)*[('c', 0, ()), ('K', (0, 0), (0, 0, 0))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 1, 1))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 2, 2))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 3, 3))] + (I/2)*[('c', 0, ()), ('K', (0, 1), (0, 0, 1))] + (-I/2)*[('c', 0, ()), ('K', (0, 1), (1, 1, 1))] + (-I/2)*[('",
+          "T_coordinates": ["0", "1/2", "0"]
+        },
+        {
+          "density": "(I)*[('c', 0, ()), ('K', (0, 0), (0, 0, 0))] + (I)*[('c', 0, ()), ('K', (0, 1), (0, 0, 1))] + (I)*[('c', 0, ()), ('K', (0, 2), (0, 0, 2))] + (I)*[('c', 0, ()), ('K', (0, 3), (0, 0, 3))] + (I)*[('c', 0, ()), ('K', (1, 1), (0, 1, 1))] + (I)*[('c', 0, ()), ('K', (1, 2), (0, 1, 2))] + (I)*[('c', 0, ()),",
+          "T_coordinates": ["0", "0", "1"]
+        }
+      ]
+    },
+    "local_polynomial_in_p14r_cK_basis": ["0", "2/3", "-5/12"],
+    "MSbar_counterterm": "delta S = - kappa^2 (i S_eps/(16 pi^2)) (1/eps) * sum_k z_k O_k  (O_k the p14r c.K' densities, z = UV_pole coordinates); plus, for the evanescent structures, an evanescent counterterm (Gt_mn p_nu p^2, (Gt p + Gt p) p^2) NOT in the p14r basis",
+    "evanescent_pole_nonzero": true,
+    "evanescent_counterterm_declared_in_p14r": false,
+    "local_ambiguity": "finite renormalization along the three p14r c.K' directions: G^R -> G^R + kappa^2 (i/(16 pi^2)) sum_k f_k O_k; a change of scale mu -> mu' shifts the local polynomial by + A_i(4) log(mu'^2/mu^2) along the UV-pole direction",
+    "renormalization_conditions": "MS-bar at mu: counterterm = pure pole (P14 normalization condition 0); no lower-degree K'.c contact (mu^2 K' dc) is generated (no scale but mu; pole is cubic in p); u^R_mu (XVI-O) not modified; an alternative momentum subtraction at p^2 = -M^2 differs by the finite renormalization A_i(4) log(M^2/mu^2) - (local MS-bar polynomial) along the same directions",
+    "controls": {
+      "export_sha_pinned": true,
+      "route1_equals_route2_exact_in_d": true,
+      "covariant_fit_exact": true,
+      "fits_agree": true,
+      "pole_local_in_p14r_cK_span": true,
+      "ghost_equation_2iD_G_equals_ghost_self_energy": true,
+      "ghost_self_energy_pole_in_p14r_c_cb_span": true,
+      "nonlocal_equals_minus_pole": true,
+      "R5_d_retained": true,
+      "R5_structural_safeguard_active": true,
+      "mutations_all_rejected": true
+    }
+  },
+  "E2_summary": {
+    "outcome": "DECOUPLED (proof)",
+    "E2_status": "decoupled_from_ch_slot_proven",
+    "proof": {
+      "L1": "p_m E^{(mn)(rs)} = 0 (covariant identity; only g4.p = p used, no trace) -> {'residual_terms': 0, 'transverse': True}",
+      "L2": "E2_{(mn)nu} = (gt_{m nu} p_n + gt_{n nu} p_m) p^2 is longitudinal in (mn)",
+      "L3": "E2 . E = 0 identically: slot value 0 for every external assignment, exact in d",
+      "L4": "T1, E1 (non-longitudinal) give nonzero slot values; A_T1 = A_E1 = 0 for D13",
+      "order": "one loop: the ch projection of the one-loop identity is LINEAR in Gamma1; the E2 contribution is exactly zero (not O(eps)); no product of evanescent poles arises at this order"
+    },
+    "consequence": "the E2 pole does not enter the ch-projected identity; no evanescent counterterm is needed for the slot, so NO contract revision is made for E2.  The E2 pole remains a UV pole of the epsilon-scalar (Gt) component of the K'.c Green function of Gamma1 (R6: retained, recorded); its renormalization is relevant only outside the ch projection (other projections, higher loops) and is NOT claimed here",
+    "D13_graph_status": "regulated (unchanged: the E2 pole is not absorbed by a declared counterterm); ch-slot status: zero contribution (proven)",
+    "D13_slot_contribution": {
+      "Q4S (declared, R2)": "0",
+      "QdS (hat)": "0",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0"
+    },
+    "controls": {
+      "E_covariant_form_exact": true,
+      "E_covariant_form_unique": true,
+      "L1_E_transverse": true,
+      "L2_E2_longitudinal": true,
+      "L3_E2_slot_zero_all_externals": true,
+      "L4_slot_map_nontrivial": true,
+      "D13_A_T1_and_A_E1_zero": true,
+      "D13_slot_contribution_zero": true,
+      "mutations_all_rejected": true
+    }
+  },
+  "batchC_summary": {
+    "finding_C1_component_route": {
+      "statement": "the p14r per-component R3 lift produces Gt-quadratic component sums for rank-4 numerators (D01/D03) whose abstract value cannot be recovered after the component sums; the linear realization Gt = (4-d)M is not faithful there; Batch C therefore uses the covariant route (C1-C5), which evaluates the same rules R1-R6 with free external indices only",
+      "components_with_Gt_quadratic_terms": {
+        "D01": 100,
+        "D03": 10
+      },
+      "demonstration": {
+        "expression": "sum_rs eta^rr eta^ss Gt_rs Gt_rs",
+        "abstract_value": "4 - d",
+        "realized_values": ["163215913117273*(d - 4)**2/154303081175887", "5518289693389*(d - 4)**2/353769196225", "2454341204199841*(d - 4)**2/2188546635429025", "42946156473193*(d - 4)**2/18012647945161"],
+        "realization_dependent": true,
+        "equals_abstract": false
+      },
+      "D13_unaffected": "rank 3, linear in Gt; reproduced exactly by the covariant route (control)",
+      "contract_change": false
+    },
+    "D01_plus_D03_4D_pole_in_p14r_hh_basis": ["-23*I/240", "-61*I/240", "23*I/120", "61*I/120", "-7*I/20"],
+    "controls": {
+      "D13_reproduced_by_covariant_route": true,
+      "hh_basis_fits_exact": true,
+      "R5_structural_safeguard_active": true,
+      "mutations_all_rejected": true,
+      "D01_evaluated": true,
+      "D03_evaluated": true
+    },
+    "D11": "NOT evaluated (M2 undischarged); the hh slot is incomplete (D01 + D02 + D03 + D11 + D12)"
+  },
+  "one_point_slot_kappa1": {
+    "graphs": ["D14a", "D14b", "D14c"],
+    "kappa_order": 1,
+    "status": "vanishing_under_declared_prescription",
+    "note": "the order-kappa one-point slot; kept separate from D12 (kappa^2 hh)"
+  },
+  "reproducibility": {
+    "contract": "REBUILD_INSTRUCTIONS.md",
+    "entrypoint": "python3 tools/rebuild_from_source.py",
+    "source_zip": "XVI-P-p23-source-only.zip",
+    "reference_values": "reproducibility/reference_values_p23.json",
+    "author": {
+      "report": "reproducibility/author_rebuild_report_p23.json",
+      "present": true,
+      "report_pass": true,
+      "report_source_tree_sha256": "262f1e46ecddcede2279e838299302669c80cd2f6d7644aee7cb54cb4c6a4fe4",
+      "current_source_tree_sha256": "262f1e46ecddcede2279e838299302669c80cd2f6d7644aee7cb54cb4c6a4fe4",
+      "bound_to_current_source": true,
+      "report_records_source_zip_sha256": true,
+      "inherited_mode": "auto",
+      "environment": {
+        "python": "3.13.5",
+        "sympy": "1.14.0",
+        "mpmath": "1.3.0",
+        "pytest": "9.1.1",
+        "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+        "pdftotext": "pdftotext version 25.03.0",
+        "platform": "Linux-6.12.94+-x86_64-with-glibc2.41"
+      }
+    },
+    "independent": {
+      "report": "reproducibility/independent_rebuild_report_p23.json",
+      "present": false,
+      "current_source_tree_sha256": "262f1e46ecddcede2279e838299302669c80cd2f6d7644aee7cb54cb4c6a4fe4"
+    },
+    "p22_archive": "archival/p22",
+    "kind": "package evidence (XVI-O conv:package); not a mathematical certificate"
+  },
+  "XVI_P_registered": false,
+  "XVI_M_sha256": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+  "XVI_M_pin_ok": true,
+  "symmetry_restored": false,
+  "bulk_symmetry_restored": false,
+  "O1_closure": "NOT_CLOSED",
+  "insertion_status": "Frozen_negative_obstruction_preserved",
+  "XV_B_opened": false,
+  "XIV_J_opened": false,
+  "Route_B_discharged": false,
+  "u_R_c_delta_added": false,
+  "inputs_content_sha256_ignoring_timings_and_run_specific_keys": {
+    "P22_release.json": "58877fceb7702beb30140f59d1e9573cc17ac2514ae16d1602470ac73b7bd96d",
+    "P23_O1_scope.json": "50c9cff03bfddc0280bff9bb6a5643296b8b8eca7b38c71dd6be3f504fc6e2ca"
+  },
+  "p19_layer_disclosed_test_revisions_p19": {
+    "tests/test_p14.py": "names p18 -> p19 (reference file, source zip, author report, status revision); generated prefixes certificates/ledgers P19_, manuscript/body/P19-",
+    "tests/test_p18.py": "rs() reads the p18 LAYER record certificates/P18_release.json; the live p18 independent report is bound to the p18 tree (pending or False here); test-file change log accepts p18 or disclosed p19 revisions; build label is the current revision"
+  },
+  "D11_ratio_pin_verified": "earned",
+  "D11_absolute_pin_verified": "earned",
+  "p18_layer_byte_identical": true,
+  "p20_layer_change_log_vs_p19": {
+    "base": "archival/p19/p19_source_files.json (pinned; files of the p19 zip sha256 da9242752d2e3753d8b2ce7fbb21e7cdb28487cc7966c2ca52d1ef1376658875)",
+    "base_pinned_ok": true,
+    "added": ["archival/p19/README.md", "archival/p19/p19_source_files.json", "archival/p19/reference_values_p19.json", "archival/p19/reproducibility/author_rebuild_report_p19.json", "archival/p19/reproducibility/independent_rebuild_report_p19.json", "archival/p20/README.md", "archival/p20/p20_source_files.json", "archival/p20/reference_values_p20.json", "archival/p20/reproducibility/author_rebuild_report_p20.json", "archival/p20/reproducibility/independent_rebuild_report_p20.json", "archival/p21/README.md", "archival/p21/p21_source_files.json", "archival/p21/reference_values_p21.json", "archival/p21/reproducibility/author_rebuild_report_p21.json", "archival/p21/reproducibility/independent_rebuild_report_p21.json", "archival/p22/README.md", "archival/p22/certificates/P22_evanescent.json", "archival/p22/p22_source_files.json", "archival/p22/reference_values_p22.json", "archival/p22/reproducibility/author_rebuild_report_p22.json", "archival/p22/reproducibility/independent_rebuild_report_p22.json", "code/p5_calc/contract_registry.py", "code/p5_calc/d11_pin.py", "code/p5_calc/evanescent.py", "code/p5_calc/p20_conventions.py", "code/p5_calc/p21_conventions.py", "code/p5_calc/p22_conventions.py", "code/p5_calc/p23_conventions.py", "code/p5_calc/power_counting.py", "code/p5_calc/release_p20.py", "code/p5_calc/release_p21.py", "code/p5_calc/release_p22.py", "code/p5_calc/release_p23.py", "manuscript/notes/P20_correction.tex", "manuscript/notes/P21_absolute_pin.tex", "manuscript/notes/P22_evanescent.tex", "manuscript/notes/P23_O1_scope.tex", "provenance/XVI-O/O_quantum_target.json", "reproducibility/reference_values_p23.json", "tests/test_p20.py", "tests/test_p21.py", "tests/test_p22.py", "tests/test_p23.py"],
+    "removed": ["reproducibility/reference_values_p19.json"],
+    "modified": ["README.md", "REBUILD_INSTRUCTIONS.md", "code/p5_calc/defect.py", "code/p5_calc/release_p18.py", "code/p5_calc/release_p19.py", "code/p5_entry/dred.py", "manuscript/body/XVI-P-body.tex", "manuscript/notes/P19_defect.tex", "tests/test_p14.py", "tests/test_p16.py", "tests/test_p17.py", "tests/test_p18.py", "tests/test_p19.py", "tools/build.py", "tools/rebuild_from_source.py", "tools/source_manifest.py"],
+    "contract_files_changed": [],
+    "counts": {
+      "added": 43,
+      "removed": 1,
+      "modified": 16
+    }
+  },
+  "p20_layer_disclosed_test_revisions_p20": {
+    "tests/test_p14.py": "names p19 -> p20; generated prefixes P20_",
+    "tests/test_p19.py": "K1 tests corrected (orientation, full closure with derived +1); restoration on the p20 definition; J1 wording; p19 independent report bound to the p19 tree; scan sites = p19 + p20 reviewed lists"
+  },
+  "p20_layer_disclosed_p19_layer_revisions_p20": {
+    "code/p5_calc/defect.py": "K1 orientation fix (measured ratio, Sigma converted to route-G (c,cb)); tree controls; full sigma_0 closure of the complete MS-bar S_ct; restoration REDEFINED; full-closure mutation detector; p19 criterion relabelled route-consistency control; J1 wording; K1 erratum texts",
+    "code/p5_calc/release_p19.py": "claim texts: K1 erratum (p19 'closure fails / needs -1' retracted); restoration content checks on the p20 definition; reject removes stale RELEASE_STATUS.json"
+  },
+  "p20_layer_p19_layer": {
+    "p19_conventions_byte_identical": true,
+    "disclosed_p20_revisions": {
+      "code/p5_calc/defect.py": {
+        "sha256": "675c1fa812c51b9955dd48a4149d309ff2e99ec7797fad753eb57b37e908ce6f",
+        "differs_from_p19": true,
+        "disclosed": true
+      },
+      "code/p5_calc/release_p19.py": {
+        "sha256": "4d048345270a39a77cc30f71d3bdcbef17fffec6c44c1ac89487135ea3555970",
+        "differs_from_p19": true,
+        "disclosed": true
+      }
+    },
+    "P19_release_accepted": true,
+    "lower_layers_rechecked_p21": {
+      "p18_layer_ok": true,
+      "P18_quantum_inputs_evaluated": "earned",
+      "inventory_recheck_ok": true
+    }
+  },
+  "p20_layer_erratum_p19": {
+    "K1": "p19 stated that full sigma_0 closure of the MS-bar counterterm fails with the derived ghost-equation factor +1 and needs -1 (unresolved). RETRACTED: Grassmann-orientation bookkeeping error -- the P15 Sigma coordinates are (cb,c)-oriented, the route-G c.cb slots (c,cb), V[c.cb#k] = -V[(cb,c)#k]. Corrected: Sigma = (+3/8, -1/4) in (c,cb) coordinates, derived +1, full closure in h.c, c.b, c.cbs.",
+    "restoration": "p19's projected_restoration_verified (P_ch sigma_0(S_ct) = 0, x = 0) followed from the identity + locality; REDEFINED in p20 as full sigma_0 closure of the complete MS-bar S_ct (incl. c.cb), kept as a labelled route-consistency control",
+    "J1": "'over Q(i), the physical field' replaced by: the Q(i) counts are the real dimensions under a compatible real structure",
+    "found_by": "p19 independent rebuild (report sha256 1b01f1d8e509afedcfd73d91685806205c56e7fe57a500b3a0bf008dd2811f45)"
+  },
+  "p20_layer_K1_correction": {
+    "content_revision_p20": true,
+    "orientation_ratio_minus_one": true,
+    "Sigma_pole_routeG_c_cb": true,
+    "derived_factor_plus_one": true,
+    "derived_relation_reproduces_P15": true,
+    "full_closure_complete_S_ct": true,
+    "without_ccb_not_closed": true,
+    "tree_controls_ok": true,
+    "p20_controls_all_true": true,
+    "detector_drop_D13": true,
+    "detector_flip_Kc": true,
+    "detector_drop_D11_recorded_blind": true,
+    "route_consistency_control_holds": true,
+    "quotient_incl_Sigma_zero": true,
+    "quotient_Sigma_alone_c_cb_plus_3_8_minus_1_4": true,
+    "J1_wording": true,
+    "restoration_definition_p20": true,
+    "bulk_false": true
+  },
+  "p20_layer_retraction_check": {
+    "phrases": ["full c.b / ghost-sector closure FAILS", "full c.b / ghost-sector closure of the MS-bar counterterm FAILS", "for which full closure fails", "with +1 full closure fails", "full closure \\emph{fails}", "This is unresolved", "This is not resolved in p19", "needs relative factor -1; the derived ghost-equation relation gives +1; not resolved", "factor +1 (K1) full c.b closure FAILS", "full c.b closure NOT established (K1)", "the physical field"],
+    "scope": ["README.md", "manuscript/notes/P19_defect.tex", "certificates/P19_defect.json", "certificates/P19_release.json", "manuscript/body/P19-results-table.tex"],
+    "hits": {}
+  },
+  "p20_layer_D11_pin": {
+    "check": {
+      "ratio_pin_PASS": true,
+      "ratio_10": true,
+      "transverse": true,
+      "C2_quadratic_form_half_P2": true,
+      "GaussBonnet_zero": true,
+      "absolute_pin_PASS": true,
+      "absolute_pin_flag": true,
+      "top_level_absolute_status_consistent": true,
+      "top_level_ratio_status_consistent": true,
+      "absolute_ratios_one": true,
+      "no_external_convention_choice": true,
+      "drop_D11_detected": true,
+      "x2_detected_by_absolute": true,
+      "sign_flip_detected_by_absolute": true,
+      "corrected_in_p21": true,
+      "literature_source_stated": true,
+      "revision": true
+    },
+    "ratio_pin": {
+      "status": "PASS",
+      "statement": "spin-0 : spin-2 of the D11 4D UV pole = 10 : 1, derived from the certificate; equals the minimal-scalar a_2 prediction (1/72)(3) : (1/120)(1/2)"
+    },
+    "absolute_pin": {
+      "status": "PASS",
+      "observed_common_factor_c2_vs_bare_a2": "-I",
+      "observed_common_factor_c0_vs_bare_a2": "-I",
+      "derivation_p21": {
+        "package_declarations_checked": {
+          "N_eps = i S_eps/(16 pi^2)": true,
+          "Gamma_1 = -i * graph sum": true,
+          "i Gamma_1 = int prefactor N/prod(q^2+i0)": true,
+          "G6: G = kappa^2 N_eps Ghat, Ghat = -i prefactor/kappa^2 int N/(D1D2)": true,
+          "g = eta + kappa h": true,
+          "S_phi = (1/2) int sqrt(-g) g^{mu nu} d phi d phi (minimal, xi = 0)": true,
+          "eta = (+,-,-,-)": true,
+          "d = 4 - 2 eps; Ihat(1,1) pole = +1/eps": true
+        },
+        "steps": {
+          "1_G_equals_Gamma2": "1",
+          "2_wick_sign_s_W_from_N_eps_and_Ihat_pole": "1",
+          "3_i_S_M_over_S_E (must be -1)": "-1",
+          "4_L_M_eff_over_L_E_eff": "-1",
+          "5_L_M_div_per_a2_over_eps": "1/(32*pi**2)",
+          "6_minkowski_quadratic_forms": {
+            "Riem2": {
+              "P2": "1",
+              "P0s": "1"
+            },
+            "Ric2": {
+              "P2": "1/4",
+              "P0s": "1"
+            },
+            "R2": {
+              "P2": "0",
+              "P0s": "3"
+            },
+            "C2": {
+              "P2": "1/2",
+              "P0s": "0"
+            },
+            "E_GaussBonnet": {
+              "P2": "0",
+              "P0s": "0"
+            }
+          }
+        },
+        "package_Gamma2_pole_per_kappa2_over_eps": {
+          "spin2": "1/(3840*pi**2)",
+          "spin0s": "1/(384*pi**2)"
+        },
+        "heat_kernel_prediction_per_kappa2_over_eps": {
+          "spin2": "1/(3840*pi**2)",
+          "spin0s": "1/(384*pi**2)"
+        },
+        "ratio_package_over_prediction": {
+          "spin2": "1",
+          "spin0s": "1"
+        },
+        "external_inputs": ["a_2 coefficients of a minimally coupled real scalar: C^2/120, (1/2)(xi-1/6)^2 R^2 (Birrell-Davies sec. 6.2; 't Hooft-Veltman 1974)", "heat-kernel pole Tr ln Delta|_div = -(1/(16 pi^2 eps)) int a_2 (Euclidean, d = 4-2eps)"],
+        "convention_choices_external": "none: every convention (G vs Gamma^(2), Minkowski i, Wick direction, sign of W_div, N_eps, kappa normalisation, signature) is fixed by the package declarations checked above",
+        "status": "PASS"
+      },
+      "statement": "p21: SIGN and MAGNITUDE derived exactly from 1/2 Tr ln of the minimal scalar loop under the package's declared conventions (G = Gamma^(2); N_eps = i/(16 pi^2) and the +1/eps bubble pole fix the Wick direction, i S_M = -S_E, L_M = -L_E; g = eta + kappa h; eta = (+,-,-,-)): Gamma^(2)|_pole = kappa^2/(16 pi^2 eps) [p^4 P2/240 + p^4 P0s/24], equal to the package pole kappa^2 N_eps Ghat/eps exactly (ratio 1, both spins).  External inputs are mathematics only (a_2 coefficients; heat-kernel pole formula); no external convention choice.  p20 had left this OPEN."
+    },
+    "spin_decomposition": {
+      "c2_spin2": "-I/240",
+      "c0_spin0s": "-I/24",
+      "projector_norms": ["5", "1"],
+      "transverse": true,
+      "only_spin2_and_spin0s": true,
+      "ratio_c0_over_c2": "10"
+    },
+    "mutations": {
+      "drop_graph_D11": {
+        "c2": "0",
+        "c0": "0",
+        "ratio": "None",
+        "ratio_pin_passes": false,
+        "detected_by_ratio_pin": true,
+        "absolute_pin_passes": false,
+        "detected_by_absolute_pin": true
+      },
+      "D11_normalisation_x2": {
+        "c2": "-I/120",
+        "c0": "-I/12",
+        "ratio": "10",
+        "ratio_pin_passes": true,
+        "detected_by_ratio_pin": false,
+        "absolute_pin_passes": false,
+        "detected_by_absolute_pin": true
+      },
+      "D11_sign_flip": {
+        "c2": "I/240",
+        "c0": "I/24",
+        "ratio": "10",
+        "ratio_pin_passes": true,
+        "detected_by_ratio_pin": false,
+        "absolute_pin_passes": false,
+        "detected_by_absolute_pin": true
+      },
+      "swap_g4g4_structures": {
+        "c2": "-I/40",
+        "c0": "-I/32",
+        "ratio": "5/4",
+        "ratio_pin_passes": false,
+        "detected_by_ratio_pin": true,
+        "absolute_pin_passes": false,
+        "detected_by_absolute_pin": true
+      }
+    }
+  },
+  "p20_layer_open_pins": [],
+  "p20_layer_open_pins_closed_in_p21": ["D11_absolute_normalisation (Ghat -> a_2 map not derived)"],
+  "p20_layer_p19_independent_rebuild": {
+    "report": "archival/p19/reproducibility/independent_rebuild_report_p19.json",
+    "present": true,
+    "report_sha256": "1b01f1d8e509afedcfd73d91685806205c56e7fe57a500b3a0bf008dd2811f45",
+    "report_sha256_pinned": true,
+    "pass": true,
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "fcf90354d746e244fa2839048118bd8d64b1859ffd3825c0bfa3e1138ee88f36",
+    "bound_to_source_zip_sha256": "da9242752d2e3753d8b2ce7fbb21e7cdb28487cc7966c2ca52d1ef1376658875",
+    "tree_matches_p19": true,
+    "zip_matches_p19": true,
+    "mismatches": 0,
+    "findings": ["K1_ghost_closure_sign_is_orientation_bookkeeping", "quotient_coordinates_c.cb_orientation", "restoration_flag_not_independent", "mutation_criterion_relabelled", "J1_wording", "I2_scan_misses", "gate_stale_RELEASE_STATUS"],
+    "caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared kernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-only zip; it was NOT run on a second machine.",
+    "live_report_identical_to_archived": true,
+    "NOT_inherited_by_p20": "bound to the p19 tree/zip; the p20 tree has its own (pending) independent flag",
+    "archived_p19_records_pinned": {
+      "archival/p19/reference_values_p19.json": true,
+      "archival/p19/reproducibility/author_rebuild_report_p19.json": true,
+      "archival/p19/reproducibility/independent_rebuild_report_p19.json": true,
+      "archival/p19/p19_source_files.json": true
+    },
+    "pins_ok": true
+  },
+  "p20_layer_independent_rebuild_passed_p19": true,
+  "p19_gate_change_log_vs_p18_recomputed_on_current_tree": {
+    "base": "archival/p18/p18_source_files.json (pinned; files of the p18 zip sha256 7c7d5451adb459092edc2606e1b3322909325000d47bab89c14b7f7a6d25c92f)",
+    "base_pinned_ok": true,
+    "reference_file": "reproducibility/reference_values_p23.json listed as added by declaration (written after the author build)",
+    "added": ["archival/p18/README.md", "archival/p18/p18_source_files.json", "archival/p18/reference_values_p18.json", "archival/p18/reproducibility/author_rebuild_report_p18.json", "archival/p18/reproducibility/independent_rebuild_report_p18.json", "archival/p19/README.md", "archival/p19/p19_source_files.json", "archival/p19/reference_values_p19.json", "archival/p19/reproducibility/author_rebuild_report_p19.json", "archival/p19/reproducibility/independent_rebuild_report_p19.json", "archival/p20/README.md", "archival/p20/p20_source_files.json", "archival/p20/reference_values_p20.json", "archival/p20/reproducibility/author_rebuild_report_p20.json", "archival/p20/reproducibility/independent_rebuild_report_p20.json", "archival/p21/README.md", "archival/p21/p21_source_files.json", "archival/p21/reference_values_p21.json", "archival/p21/reproducibility/author_rebuild_report_p21.json", "archival/p21/reproducibility/independent_rebuild_report_p21.json", "archival/p22/README.md", "archival/p22/certificates/P22_evanescent.json", "archival/p22/p22_source_files.json", "archival/p22/reference_values_p22.json", "archival/p22/reproducibility/author_rebuild_report_p22.json", "archival/p22/reproducibility/independent_rebuild_report_p22.json", "code/p5_calc/contract_registry.py", "code/p5_calc/d11_pin.py", "code/p5_calc/defect.py", "code/p5_calc/evanescent.py", "code/p5_calc/p19_conventions.py", "code/p5_calc/p20_conventions.py", "code/p5_calc/p21_conventions.py", "code/p5_calc/p22_conventions.py", "code/p5_calc/p23_conventions.py", "code/p5_calc/power_counting.py", "code/p5_calc/release_p19.py", "code/p5_calc/release_p20.py", "code/p5_calc/release_p21.py", "code/p5_calc/release_p22.py", "code/p5_calc/release_p23.py", "manuscript/notes/P19_defect.tex", "manuscript/notes/P20_correction.tex", "manuscript/notes/P21_absolute_pin.tex", "manuscript/notes/P22_evanescent.tex", "manuscript/notes/P23_O1_scope.tex", "provenance/XVI-O/O_quantum_target.json", "reproducibility/reference_values_p23.json", "tests/test_p19.py", "tests/test_p20.py", "tests/test_p21.py", "tests/test_p22.py", "tests/test_p23.py"],
+    "removed": ["reproducibility/reference_values_p18.json"],
+    "modified": ["README.md", "REBUILD_INSTRUCTIONS.md", "code/p5_calc/release_p18.py", "code/p5_entry/dred.py", "manuscript/body/XVI-P-body.tex", "tests/test_p14.py", "tests/test_p16.py", "tests/test_p17.py", "tests/test_p18.py", "tools/build.py", "tools/rebuild_from_source.py", "tools/source_manifest.py"],
+    "contract_files_changed": ["code/p5_entry/dred.py"],
+    "non_contract_files_changed": ["README.md", "REBUILD_INSTRUCTIONS.md", "archival/p18/README.md", "archival/p18/p18_source_files.json", "archival/p18/reference_values_p18.json", "archival/p18/reproducibility/author_rebuild_report_p18.json", "archival/p18/reproducibility/independent_rebuild_report_p18.json", "archival/p19/README.md", "archival/p19/p19_source_files.json", "archival/p19/reference_values_p19.json", "archival/p19/reproducibility/author_rebuild_report_p19.json", "archival/p19/reproducibility/independent_rebuild_report_p19.json", "archival/p20/README.md", "archival/p20/p20_source_files.json", "archival/p20/reference_values_p20.json", "archival/p20/reproducibility/author_rebuild_report_p20.json", "archival/p20/reproducibility/independent_rebuild_report_p20.json", "archival/p21/README.md", "archival/p21/p21_source_files.json", "archival/p21/reference_values_p21.json", "archival/p21/reproducibility/author_rebuild_report_p21.json", "archival/p21/reproducibility/independent_rebuild_report_p21.json", "archival/p22/README.md", "archival/p22/certificates/P22_evanescent.json", "archival/p22/p22_source_files.json", "archival/p22/reference_values_p22.json", "archival/p22/reproducibility/author_rebuild_report_p22.json", "archival/p22/reproducibility/independent_rebuild_report_p22.json", "code/p5_calc/contract_registry.py", "code/p5_calc/d11_pin.py", "code/p5_calc/defect.py", "code/p5_calc/evanescent.py", "code/p5_calc/p19_conventions.py", "code/p5_calc/p20_conventions.py", "code/p5_calc/p21_conventions.py", "code/p5_calc/p22_conventions.py", "code/p5_calc/p23_conventions.py", "code/p5_calc/power_counting.py", "code/p5_calc/release_p18.py", "code/p5_calc/release_p19.py", "code/p5_calc/release_p20.py", "code/p5_calc/release_p21.py", "code/p5_calc/release_p22.py", "code/p5_calc/release_p23.py", "manuscript/body/XVI-P-body.tex", "manuscript/notes/P19_defect.tex", "manuscript/notes/P20_correction.tex", "manuscript/notes/P21_absolute_pin.tex", "manuscript/notes/P22_evanescent.tex", "manuscript/notes/P23_O1_scope.tex", "provenance/XVI-O/O_quantum_target.json", "reproducibility/reference_values_p18.json", "reproducibility/reference_values_p23.json", "tests/test_p14.py", "tests/test_p16.py", "tests/test_p17.py", "tests/test_p18.py", "tests/test_p19.py", "tests/test_p20.py", "tests/test_p21.py", "tests/test_p22.py", "tests/test_p23.py", "tools/build.py", "tools/rebuild_from_source.py", "tools/source_manifest.py"],
+    "counts": {
+      "added": 53,
+      "removed": 1,
+      "modified": 12
+    }
+  },
+  "p21_layer_absolute_pin": {
+    "check": {
+      "ratio_pin_PASS": true,
+      "ratio_10": true,
+      "transverse": true,
+      "C2_quadratic_form_half_P2": true,
+      "GaussBonnet_zero": true,
+      "absolute_pin_PASS": true,
+      "absolute_pin_flag": true,
+      "top_level_absolute_status_consistent": true,
+      "top_level_ratio_status_consistent": true,
+      "absolute_ratios_one": true,
+      "no_external_convention_choice": true,
+      "drop_D11_detected": true,
+      "x2_detected_by_absolute": true,
+      "sign_flip_detected_by_absolute": true,
+      "corrected_in_p21": true,
+      "literature_source_stated": true,
+      "revision": true
+    },
+    "absolute_pin": {
+      "status": "PASS",
+      "observed_common_factor_c2_vs_bare_a2": "-I",
+      "observed_common_factor_c0_vs_bare_a2": "-I",
+      "derivation_p21": {
+        "package_declarations_checked": {
+          "N_eps = i S_eps/(16 pi^2)": true,
+          "Gamma_1 = -i * graph sum": true,
+          "i Gamma_1 = int prefactor N/prod(q^2+i0)": true,
+          "G6: G = kappa^2 N_eps Ghat, Ghat = -i prefactor/kappa^2 int N/(D1D2)": true,
+          "g = eta + kappa h": true,
+          "S_phi = (1/2) int sqrt(-g) g^{mu nu} d phi d phi (minimal, xi = 0)": true,
+          "eta = (+,-,-,-)": true,
+          "d = 4 - 2 eps; Ihat(1,1) pole = +1/eps": true
+        },
+        "steps": {
+          "1_G_equals_Gamma2": "1",
+          "2_wick_sign_s_W_from_N_eps_and_Ihat_pole": "1",
+          "3_i_S_M_over_S_E (must be -1)": "-1",
+          "4_L_M_eff_over_L_E_eff": "-1",
+          "5_L_M_div_per_a2_over_eps": "1/(32*pi**2)",
+          "6_minkowski_quadratic_forms": {
+            "Riem2": {
+              "P2": "1",
+              "P0s": "1"
+            },
+            "Ric2": {
+              "P2": "1/4",
+              "P0s": "1"
+            },
+            "R2": {
+              "P2": "0",
+              "P0s": "3"
+            },
+            "C2": {
+              "P2": "1/2",
+              "P0s": "0"
+            },
+            "E_GaussBonnet": {
+              "P2": "0",
+              "P0s": "0"
+            }
+          }
+        },
+        "package_Gamma2_pole_per_kappa2_over_eps": {
+          "spin2": "1/(3840*pi**2)",
+          "spin0s": "1/(384*pi**2)"
+        },
+        "heat_kernel_prediction_per_kappa2_over_eps": {
+          "spin2": "1/(3840*pi**2)",
+          "spin0s": "1/(384*pi**2)"
+        },
+        "ratio_package_over_prediction": {
+          "spin2": "1",
+          "spin0s": "1"
+        },
+        "external_inputs": ["a_2 coefficients of a minimally coupled real scalar: C^2/120, (1/2)(xi-1/6)^2 R^2 (Birrell-Davies sec. 6.2; 't Hooft-Veltman 1974)", "heat-kernel pole Tr ln Delta|_div = -(1/(16 pi^2 eps)) int a_2 (Euclidean, d = 4-2eps)"],
+        "convention_choices_external": "none: every convention (G vs Gamma^(2), Minkowski i, Wick direction, sign of W_div, N_eps, kappa normalisation, signature) is fixed by the package declarations checked above",
+        "status": "PASS"
+      },
+      "statement": "p21: SIGN and MAGNITUDE derived exactly from 1/2 Tr ln of the minimal scalar loop under the package's declared conventions (G = Gamma^(2); N_eps = i/(16 pi^2) and the +1/eps bubble pole fix the Wick direction, i S_M = -S_E, L_M = -L_E; g = eta + kappa h; eta = (+,-,-,-)): Gamma^(2)|_pole = kappa^2/(16 pi^2 eps) [p^4 P2/240 + p^4 P0s/24], equal to the package pole kappa^2 N_eps Ghat/eps exactly (ratio 1, both spins).  External inputs are mathematics only (a_2 coefficients; heat-kernel pole formula); no external convention choice.  p20 had left this OPEN."
+    },
+    "absolute_pin_status": "PASS",
+    "mutations": {
+      "drop_graph_D11": {
+        "c2": "0",
+        "c0": "0",
+        "ratio": "None",
+        "ratio_pin_passes": false,
+        "detected_by_ratio_pin": true,
+        "absolute_pin_passes": false,
+        "detected_by_absolute_pin": true
+      },
+      "D11_normalisation_x2": {
+        "c2": "-I/120",
+        "c0": "-I/12",
+        "ratio": "10",
+        "ratio_pin_passes": true,
+        "detected_by_ratio_pin": false,
+        "absolute_pin_passes": false,
+        "detected_by_absolute_pin": true
+      },
+      "D11_sign_flip": {
+        "c2": "I/240",
+        "c0": "I/24",
+        "ratio": "10",
+        "ratio_pin_passes": true,
+        "detected_by_ratio_pin": false,
+        "absolute_pin_passes": false,
+        "detected_by_absolute_pin": true
+      },
+      "swap_g4g4_structures": {
+        "c2": "-I/40",
+        "c0": "-I/32",
+        "ratio": "5/4",
+        "ratio_pin_passes": false,
+        "detected_by_ratio_pin": true,
+        "absolute_pin_passes": false,
+        "detected_by_absolute_pin": true
+      }
+    }
+  },
+  "p21_layer_lower_layers": {
+    "contract_identity": true,
+    "p18_layer": true,
+    "P18_quantum_inputs_evaluated": "earned",
+    "inventory": true,
+    "p19_layer": true,
+    "k1_correction": true,
+    "retraction": true,
+    "retraction_hits": {},
+    "contract_detail": {
+      "p14r_contract_files": 12,
+      "changed_vs_p14r": ["code/p5_entry/dred.py"],
+      "added": [],
+      "dred_byte_identical_to_p18": true,
+      "dred_registry_state_p22": "p18 + p22 guard block",
+      "contract_revision_in_p19": false,
+      "disclosed_revisions_p19": {}
+    },
+    "rechecked_live": true
+  },
+  "p21_layer_p20_layer": {
+    "p20_conventions_byte_identical": true,
+    "disclosed_p21_revisions": {
+      "code/p5_calc/d11_pin.py": {
+        "sha256": "a2e77eecc84263e254d3b7cd7b441731324e8d15b5d15c71dc05d61ff5fe54f8",
+        "differs_from_p20": true,
+        "disclosed": true
+      },
+      "code/p5_calc/release_p20.py": {
+        "sha256": "a1afba60c21c923886e682b960dda8b2619353712517f078c9967ad9c57e4d5f",
+        "differs_from_p20": true,
+        "disclosed": true
+      }
+    },
+    "P20_release_accepted": true,
+    "P20_D11_absolute_pin_verified": "earned"
+  },
+  "p21_layer_manuscript_disclosure": {
+    "manuscript/notes/P19_defect.tex": {
+      "current_equals_disclosed_p20": true,
+      "differs_from_p19": true,
+      "revised_in": "p20"
+    }
+  },
+  "p21_layer_change_log_vs_p20": {
+    "base": "archival/p20/p20_source_files.json (pinned; files of the p20 zip sha256 ca32ce018933f12d1a623217d6a98d647817360dd12211e2e9469cf850a63bb2)",
+    "base_pinned_ok": true,
+    "added": ["archival/p20/README.md", "archival/p20/p20_source_files.json", "archival/p20/reference_values_p20.json", "archival/p20/reproducibility/author_rebuild_report_p20.json", "archival/p20/reproducibility/independent_rebuild_report_p20.json", "archival/p21/README.md", "archival/p21/p21_source_files.json", "archival/p21/reference_values_p21.json", "archival/p21/reproducibility/author_rebuild_report_p21.json", "archival/p21/reproducibility/independent_rebuild_report_p21.json", "archival/p22/README.md", "archival/p22/certificates/P22_evanescent.json", "archival/p22/p22_source_files.json", "archival/p22/reference_values_p22.json", "archival/p22/reproducibility/author_rebuild_report_p22.json", "archival/p22/reproducibility/independent_rebuild_report_p22.json", "code/p5_calc/contract_registry.py", "code/p5_calc/evanescent.py", "code/p5_calc/p21_conventions.py", "code/p5_calc/p22_conventions.py", "code/p5_calc/p23_conventions.py", "code/p5_calc/power_counting.py", "code/p5_calc/release_p21.py", "code/p5_calc/release_p22.py", "code/p5_calc/release_p23.py", "manuscript/notes/P21_absolute_pin.tex", "manuscript/notes/P22_evanescent.tex", "manuscript/notes/P23_O1_scope.tex", "provenance/XVI-O/O_quantum_target.json", "reproducibility/reference_values_p23.json", "tests/test_p21.py", "tests/test_p22.py", "tests/test_p23.py"],
+    "removed": ["reproducibility/reference_values_p20.json"],
+    "modified": ["README.md", "REBUILD_INSTRUCTIONS.md", "code/p5_calc/d11_pin.py", "code/p5_calc/release_p18.py", "code/p5_calc/release_p19.py", "code/p5_calc/release_p20.py", "code/p5_entry/dred.py", "manuscript/body/XVI-P-body.tex", "manuscript/notes/P20_correction.tex", "tests/test_p14.py", "tests/test_p16.py", "tests/test_p17.py", "tests/test_p18.py", "tests/test_p19.py", "tests/test_p20.py", "tools/build.py", "tools/rebuild_from_source.py", "tools/source_manifest.py"],
+    "contract_files_changed": [],
+    "undisclosed_package_changes": [],
+    "counts": {
+      "added": 33,
+      "removed": 1,
+      "modified": 18
+    }
+  },
+  "p21_layer_open_pins": [],
+  "p21_layer_disclosed_p20_layer_revisions_p21": {
+    "code/p5_calc/d11_pin.py": "absolute_pin(): sign and magnitude derived from 1/2 Tr ln under the declared conventions (Minkowski quadratic forms curvature_forms_eta); absolute pin PASS; mutations x2 and sign flip; top-level absolute_pin_status from the derivation",
+    "code/p5_calc/release_p20.py": "absolute pin PASS required; top-level / nested status consistency; standalone run re-checks the p18 layer (q earned) and the graph inventory; claim texts"
+  },
+  "p21_layer_disclosed_test_revisions_p21": {
+    "tests/test_p14.py": "names p20 -> p21; generated prefixes P21_",
+    "tests/test_p19.py": "reviewed coefficient sites read from p21_conventions (adds the d11_pin Minkowski form site)",
+    "tests/test_p20.py": "D11 pin tests: absolute pin PASS (p21) instead of OPEN; gate mutations on the p21 checks; reviewed sites from p21_conventions; status/version expectations p21"
+  },
+  "p21_layer_disclosed_manuscript_revisions": {
+    "manuscript/notes/P19_defect.tex": {
+      "p19_sha256": "04b974b5ea742c6885f3d694ccad6bda7908105c0a23bf483e96bc113d90bbc8",
+      "p20_sha256": "1c71a71a48ce9c1749bd2164a0f720a3589f2d679877cfd04309d69670e5dfa8",
+      "revised_in": "p20",
+      "change": "K1 paragraph retracted/rewritten (Grassmann orientation erratum), restoration definition REDEFINED, J1 wording, blind-spot text; marked inline [corrected in p20] / [REDEFINED in p20]; unchanged in p21"
+    }
+  },
+  "p21_layer_independent_rebuild_passed_p20": true,
+  "p21_layer_p20_independent_rebuild": {
+    "report": "archival/p20/reproducibility/independent_rebuild_report_p20.json",
+    "present": true,
+    "report_sha256": "e8f358f9c4f13c76693968211b49e04d546a0bb3a4c0ab4b1a0e485f62595389",
+    "report_sha256_pinned": true,
+    "pass": true,
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "2c0aa1533b5a64d65f9169cc510ea3f0761c9471f9601cdec6973a2aa8d45700",
+    "bound_to_source_zip_sha256": "ca32ce018933f12d1a623217d6a98d647817360dd12211e2e9469cf850a63bb2",
+    "tree_matches_p20": true,
+    "zip_matches_p20": true,
+    "mismatches": 0,
+    "findings": ["p19_quotient_finding_withdrawn", "D11_absolute_pin_left_OPEN_but_derivable", "scan_misses_p20", "gate_top_level_absolute_pin_status_unchecked", "p20_gate_trusts_P19_layer_record", "P19_note_edit_disclosure", "restoration_scope", "p19_change_log_key_recomputed_on_p20_tree"],
+    "caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared kernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-only zip; it was NOT run on a second machine.",
+    "live_report_identical_to_archived": true,
+    "NOT_inherited_by_p21": "bound to the p20 tree/zip; the p21 tree has its own (pending) independent flag",
+    "archived_p20_records_pinned": {
+      "archival/p20/reference_values_p20.json": true,
+      "archival/p20/reproducibility/author_rebuild_report_p20.json": true,
+      "archival/p20/reproducibility/independent_rebuild_report_p20.json": true,
+      "archival/p20/p20_source_files.json": true
+    },
+    "pins_ok": true
+  },
+  "evanescent": {
+    "check": {
+      "EV_M2_proven": true,
+      "EV_CT_earned": true,
+      "controls_all_true": true,
+      "hc_closed": true,
+      "cb_closed": true,
+      "identity_unchanged": true,
+      "mutations_detected": true,
+      "continuations_refuted_recorded": true,
+      "Q4S_trace_remnant_disclosed": true,
+      "P5_status": true,
+      "contract_revision_named": true
+    },
+    "EV_M2": "EV-M2: the evanescent D11 poles are local evanescent operators (removed by the p22 evanescent counterterm), and the renormalised evanescent remainder vanishes identically on 4D external configurations, exactly in d.  No matching to XVI-O is asserted.",
+    "EV_M2_verdict": "PROVEN (exact, opaque d)",
+    "coefficients_hh_sum": {
+      "g4_mn gt_rs (p.p)^2": "-7*I/120",
+      "g4_mr gt_ns (p.p)^2": "-I/160",
+      "g4_rs gt_mn (p.p)^2": "-7*I/120",
+      "gt_mn gt_rs (p.p)^2": "I/160",
+      "gt_mn p_r p_s (p.p)^1": "7*I/120",
+      "gt_mr gt_ns (p.p)^2": "I/160",
+      "gt_mr p_n p_s (p.p)^1": "I/160",
+      "gt_rs p_m p_n (p.p)^1": "7*I/120"
+    },
+    "coefficient_Kc_E2": "-1/16",
+    "coefficient_ccb_SE": "1/8",
+    "remnants": {
+      "finite_evanescent_remainder": "MS-bar finite parts (local + L) x gt-structures: recorded per structure in P18_D11 / P16_batchC / P15_D13; NONZERO; identically zero on 4D (hatted) external legs, exactly in d (four_d_decoupling below)",
+      "O_eps_times_pole_at_this_order": "none with QdS (hatted) external legs: all four indices are external, so tr gt = 4 - d never arises and the evanescent operators are ZERO on hatted legs at every d; see the Q4S trace entry for the one place it can arise",
+      "trace_of_pole_tensor_g4^{mn}T_mn,rs (hatted r,s)": {
+        "per_graph": {
+          "D01": "-I*p.p*(d - 4)*(13*a^.b^*p.p - 18*a^.p*b^.p)/120",
+          "D03": "I*p.p*(d - 4)*(a^.b^*p.p - 2*a^.p*b^.p)/24",
+          "D11": "I*p.p*(d - 4)*(a^.b^*p.p - a^.p*b^.p)/120"
+        },
+        "sum": "-7*I*p.p*(d - 4)*(a^.b^*p.p - a^.p*b^.p)/120"
+      },
+      "O_eps_times_pole_Q4S_trace_external": {
+        "finite_term_if_external_trace_mode_uses_g4": "7*I*p.p*(a^.b^*p.p - a^.p*b^.p)/60",
+        "rule": "(d - 4) x (1/eps) -> -2 (d = 4 - 2 eps); times the residue above",
+        "status": "NONZERO: a finite local transverse term arises iff the external trace mode is defined with the quasi-4D g4 (it then carries eps-scalar components); with QdS (hatted) external legs it is zero.  This is a scheme / external-state convention (DRED eps-scalar sector), disclosed: the p22 renormalised result is stated for QdS external legs"
+      },
+      "where_O_eps_x_pole_would_enter": "insertions of the evanescent counterterms into loops (two loops) or into composite operators with traces: (4 - d) x (1/eps) = finite local terms -- beyond this order; not evaluated, not claimed"
+    }
+  },
+  "P5_calculation_status": "renormalized (one loop, kappa^2, two-point functions hh / K'.c / cb.c; MS-bar in DRED with the p22 evanescent counterterms; external legs in QdS)",
+  "d_runtime_guard": {
+    "ok": true,
+    "n_plants": 30,
+    "not_raised": {},
+    "other_outcomes": {},
+    "algebra_ok": "(d**2 + 30*d - 34)/(32*(d - 1)*(d + 1))",
+    "entry_points": ["OpaqueDimension.__eq__ (d == d)", "Atom.xreplace (bare d)", "Basic.subs", "Basic.xreplace", "Basic.replace", "evalf/n(subs=...)", "Poly.eval", "Poly.__call__", "Poly.all_coeffs", "Poly.coeffs", "Poly.terms", "Poly.all_terms", "Poly.as_dict", "Poly.as_list", "Poly.coeff_monomial", "Poly.nth", "Poly.LC", "Poly.TC", "Poly.EC", "Poly.as_expr", "Expr.coeff", "Expr.as_independent", "Expr.as_coeff_exponent", "Expr.series", "collect", "limit", "Lambda(d, ...)", "polytools.rem (d in domain)", "polytools.prem (d in domain)", "polytools.pdiv (d in domain)", "polytools.pquo (d in domain)", "polytools.pexquo (d in domain)", "polytools.div (d in domain)", "polytools.quo (d in domain)", "polytools.exquo (d in domain)", "polytools.gcdex (d in domain)", "polytools.half_gcdex (d in domain)", "polytools.invert (d in domain)", "polytools.subresultants (d in domain)", "polytools.resultant (d in domain)", "polytools.discriminant (d in domain)", "polytools.compose (d in domain)", "polytools.decompose (d in domain)", "polytools.sturm (d in domain)", "polytools.nroots (d in domain)", "polytools.real_roots (d in domain)", "polytools.count_roots (d in domain)", "polytools.ground_roots (d in domain)", "polytools.intervals (d in domain)", "polytools.refine_root (d in domain)", "polytools.nth_power_roots_poly (d in domain)", "Poly.rem (d in domain)", "Poly.prem (d in domain)", "Poly.pdiv (d in domain)", "Poly.pquo (d in domain)", "Poly.pexquo (d in domain)", "Poly.div (d in domain)", "Poly.quo (d in domain)", "Poly.exquo (d in domain)", "Poly.gcdex (d in domain)", "Poly.half_gcdex (d in domain)", "Poly.invert (d in domain)", "Poly.subresultants (d in domain)", "Poly.resultant (d in domain)", "Poly.discriminant (d in domain)", "Poly.compose (d in domain)", "Poly.decompose (d in domain)", "Poly.sturm (d in domain)", "Poly.nroots (d in domain)", "Poly.real_roots (d in domain)", "Poly.count_roots (d in domain)", "Poly.ground_roots (d in domain)", "Poly.intervals (d in domain)", "Poly.refine_root (d in domain)", "Poly.nth_power_roots_poly (d in domain)", "Poly.shift (d in domain)", "Poly.transform (d in domain)", "Poly.shift_list (d in domain)", "internal rename of d to a plain Symbol (Matrix.subs)"],
+    "residue_not_interceptable": "NOT runtime-interceptable (code-review matters; the static allow-list scan is the secondary barrier): identity / name / type tests in hand-written expression-tree rebuilds (`x is d`, x.name == 'd', isinstance), string round-trips (str(e).replace('d', '4')), low-level polynomial representations (Poly.rep, DMP, polyutils dict builders), and code that disguises its module name as sympy.  Symbol.__new__(Symbol, 'd') yields a PLAIN d that does not match the opaque d (no value is produced); parse_d / assert_opaque_d refuse plain d in loaded data.",
+    "static_scan": "secondary barrier (tests/test_p21.py scan4 allow-list, p22 sites reviewed)"
+  },
+  "contract": {
+    "dred_registry": {
+      "state": "p18 + p22 guard block",
+      "ok": true,
+      "sha256": "24112d9a6584613474e96f538840a9ff6aecbf9ebd588cd890fd38d2e295de5a",
+      "p18_core_byte_identical": true,
+      "registered_blocks": ["p22 runtime d guard", "p23 polynomial-domain refusal"]
+    },
+    "p22_block_unchanged": true,
+    "p23_registered": true,
+    "dred_sha256": "24112d9a6584613474e96f538840a9ff6aecbf9ebd588cd890fd38d2e295de5a",
+    "dred_pinned": "24112d9a6584613474e96f538840a9ff6aecbf9ebd588cd890fd38d2e295de5a",
+    "contract_revision_p23": "p23 (p14r contract + disclosed p15/p16/p17/p18 revisions + the p22 contract revision + the DISCLOSED p23 contract revision: polynomial-domain refusal for d and Dummy-only internal renames, one delimited block appended to code/p5_entry/dred.py; p18 core and p22 block byte-identical)",
+    "other_contract_files_changed": []
+  },
+  "lower_layers": {
+    "contract_identity": true,
+    "p18_layer": true,
+    "P18_quantum_inputs_evaluated": "earned",
+    "inventory": true,
+    "p19_layer": true,
+    "k1_correction": true,
+    "retraction": true,
+    "retraction_hits": {},
+    "contract_detail": {
+      "p14r_contract_files": 12,
+      "changed_vs_p14r": ["code/p5_entry/dred.py"],
+      "added": [],
+      "dred_byte_identical_to_p18": true,
+      "dred_registry_state_p22": "p18 + p22 guard block",
+      "contract_revision_in_p19": false,
+      "disclosed_revisions_p19": {}
+    },
+    "rechecked_live": true
+  },
+  "p20_layer": {
+    "p20_conventions_byte_identical": true,
+    "disclosed_p21_revisions": {
+      "code/p5_calc/d11_pin.py": {
+        "sha256": "a2e77eecc84263e254d3b7cd7b441731324e8d15b5d15c71dc05d61ff5fe54f8",
+        "differs_from_p20": true,
+        "disclosed": true
+      },
+      "code/p5_calc/release_p20.py": {
+        "sha256": "a1afba60c21c923886e682b960dda8b2619353712517f078c9967ad9c57e4d5f",
+        "differs_from_p20": true,
+        "disclosed": true
+      }
+    },
+    "P20_release_accepted": true,
+    "P20_D11_absolute_pin_verified": "earned"
+  },
+  "p21_layer": {
+    "p21_conventions_byte_identical": true,
+    "P21_release_accepted": true,
+    "P21_earned": {
+      "projected_defect_computed": "earned",
+      "projected_identity_verified": "earned",
+      "projected_restoration_verified": "earned",
+      "D11_ratio_pin_verified": "earned",
+      "D11_absolute_pin_verified": "earned"
+    }
+  },
+  "absolute_pin_check": {
+    "ratio_pin_PASS": true,
+    "ratio_10": true,
+    "transverse": true,
+    "C2_quadratic_form_half_P2": true,
+    "GaussBonnet_zero": true,
+    "absolute_pin_PASS": true,
+    "absolute_pin_flag": true,
+    "top_level_absolute_status_consistent": true,
+    "top_level_ratio_status_consistent": true,
+    "absolute_ratios_one": true,
+    "no_external_convention_choice": true,
+    "drop_D11_detected": true,
+    "x2_detected_by_absolute": true,
+    "sign_flip_detected_by_absolute": true,
+    "corrected_in_p21": true,
+    "literature_source_stated": true,
+    "revision": true
+  },
+  "manuscript_disclosure": {
+    "manuscript/notes/P20_correction.tex": {
+      "differs_from_p21": true,
+      "superseded_marker_present": true,
+      "revised_in": "p22"
+    }
+  },
+  "change_log_vs_p21": {
+    "base": "archival/p21/p21_source_files.json (pinned; files of the p21 zip sha256 a71d6b5203bc3914833db9fd13b9d186bef93d1ae3007b2e4c99fdfce11e0678)",
+    "base_pinned_ok": true,
+    "added": ["archival/p21/README.md", "archival/p21/p21_source_files.json", "archival/p21/reference_values_p21.json", "archival/p21/reproducibility/author_rebuild_report_p21.json", "archival/p21/reproducibility/independent_rebuild_report_p21.json", "archival/p22/README.md", "archival/p22/certificates/P22_evanescent.json", "archival/p22/p22_source_files.json", "archival/p22/reference_values_p22.json", "archival/p22/reproducibility/author_rebuild_report_p22.json", "archival/p22/reproducibility/independent_rebuild_report_p22.json", "code/p5_calc/contract_registry.py", "code/p5_calc/evanescent.py", "code/p5_calc/p22_conventions.py", "code/p5_calc/p23_conventions.py", "code/p5_calc/power_counting.py", "code/p5_calc/release_p22.py", "code/p5_calc/release_p23.py", "manuscript/notes/P22_evanescent.tex", "manuscript/notes/P23_O1_scope.tex", "provenance/XVI-O/O_quantum_target.json", "reproducibility/reference_values_p23.json", "tests/test_p22.py", "tests/test_p23.py"],
+    "removed": ["reproducibility/reference_values_p21.json"],
+    "modified": ["README.md", "REBUILD_INSTRUCTIONS.md", "code/p5_calc/release_p18.py", "code/p5_calc/release_p19.py", "code/p5_calc/release_p20.py", "code/p5_calc/release_p21.py", "code/p5_entry/dred.py", "manuscript/body/XVI-P-body.tex", "manuscript/notes/P20_correction.tex", "tests/test_p14.py", "tests/test_p16.py", "tests/test_p17.py", "tests/test_p18.py", "tests/test_p19.py", "tests/test_p20.py", "tests/test_p21.py", "tools/build.py", "tools/rebuild_from_source.py", "tools/source_manifest.py"],
+    "contract_files_changed": ["code/p5_entry/dred.py"],
+    "contract_changes_registered": true,
+    "undisclosed_changes": [],
+    "pinned_sha_mismatches": {},
+    "disclosed_but_unchanged": [],
+    "exemptions": {
+      "generated": ["reproducibility/reference_values_p22.json", "reproducibility/reference_values_p21.json"],
+      "added_archive_prefixes": ["archival/p21/"]
+    },
+    "counts": {
+      "added": 24,
+      "removed": 1,
+      "modified": 19
+    }
+  },
+  "open_pins": [],
+  "evanescent_M2_verified": "earned",
+  "evanescent_counterterms_verified": "earned",
+  "d_runtime_guard_verified": "earned",
+  "disclosed_revisions_p22": {
+    "code/p5_entry/dred.py": "CONTRACT REVISION p22: runtime d guard (one delimited additive block; p18 text unchanged)",
+    "code/p5_calc/p22_conventions.py": "new: p22 conventions",
+    "code/p5_calc/evanescent.py": "new: EV-M2 and EV-CT (priorities 1, 2)",
+    "code/p5_calc/contract_registry.py": "new: registry of the post-p18 contract revision (consulted by layer gates)",
+    "code/p5_calc/release_p22.py": "new: p22 release gate",
+    "code/p5_calc/release_p18.py": "p22: accept the registered dred.py revision in place of the p17 AST identity",
+    "code/p5_calc/release_p19.py": "p22: contract identity accepts the registered dred.py revision; p18-layer pin accepts the registered release_p18.py revision",
+    "code/p5_calc/release_p20.py": "p22: change log ignores the registered contract revision; p18-layer pin accepts the registered release_p18.py revision",
+    "code/p5_calc/release_p21.py": "p22: change log ignores the registered contract revision and treats the p22 revised files (contract_registry.P22_REVISED_FILES) as disclosed",
+    "tests/test_p14.py": "names p21 -> p22",
+    "tests/test_p16.py": "the replace(lambda x: x == d, ..) demonstration now RAISES (p22 runtime guard)",
+    "tests/test_p17.py": "g1 scan reviews the p18 contract core of the registered dred revision (contract_registry.scan_view; the p22 block is covered by the runtime probe + scan4)",
+    "tests/test_p18.py": "h1 scan via contract_registry.scan_view; h3/h5 accept the registered p18+p22-block dred state",
+    "tests/test_p19.py": "i2 scan via contract_registry.scan_view; p18 calc layer accepts the registered p22 revision of release_p18.py (contract_registry.layer_file_ok)",
+    "tests/test_p20.py": "status / version expectations p22; p21 tree no longer current; scan3 via scan_view; p18 calc layer via contract_registry.layer_file_ok",
+    "tests/test_p21.py": "scan allow-lists read from p22_conventions; the power-base subs limitation test now asserts the p22 fix; status/version expectations p22; p21 layer independent flag not current",
+    "tests/test_p22.py": "new: p22 tests",
+    "manuscript/notes/P20_correction.tex": "inline [superseded in p21] marker on the 'Absolute pin: OPEN' item",
+    "manuscript/notes/P22_evanescent.tex": "new: p22 note",
+    "manuscript/body/XVI-P-body.tex": "input of the p22 note",
+    "tools/build.py": "p22 build: release_p22 stage, p22 listings, value blocks, generated files",
+    "tools/source_manifest.py": "reference file / zip name p22; p21 archive records",
+    "tools/rebuild_from_source.py": "p22 reference values, release criteria, archival pins",
+    "README.md": "p22 section",
+    "REBUILD_INSTRUCTIONS.md": "p22 instructions"
+  },
+  "disclosed_manuscript_revisions_p22": {
+    "manuscript/notes/P20_correction.tex": {
+      "p21_sha256": "138c858852906d4daf3ed86d2e48a8d5ee8ef48717514bde00d4ca7151d3e7fb",
+      "revised_in": "p22",
+      "change": "inline [superseded in p21] marker on the 'Absolute pin: OPEN' item (reviewer stale_OPEN_text)"
+    }
+  },
+  "independent_rebuild_passed_p21": true,
+  "p21_independent_rebuild": {
+    "report": "archival/p21/reproducibility/independent_rebuild_report_p21.json",
+    "present": true,
+    "report_sha256": "8a582b332cd242689c54b1f962dc88270b9592040c0ba432576a505f0e36a60d",
+    "report_sha256_pinned": true,
+    "pass": true,
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "b835353ffe16a8ff159e2916fe3efdf2b9d89a4d512e80e9e6da587cecd0fe5e",
+    "bound_to_source_zip_sha256": "a71d6b5203bc3914833db9fd13b9d186bef93d1ae3007b2e4c99fdfce11e0678",
+    "tree_matches_p21": true,
+    "zip_matches_p21": true,
+    "mismatches": 0,
+    "findings": ["p21_gate_disclosure_prefix_exemptions", "scan_misses_p21", "d_guard_power_base_hole", "stale_OPEN_text_in_p20_section", "p20_gate_standalone_scope", "absolute_pin_step1_hardcoded", "reviewer_rule_note"],
+    "caveat": "same box (disclosed)",
+    "live_report_identical_to_archived": true,
+    "NOT_inherited_by_p22": "bound to the p21 tree/zip; the p22 tree has its own (pending) independent flag",
+    "archived_p21_records_pinned": {
+      "archival/p21/reference_values_p21.json": true,
+      "archival/p21/reproducibility/author_rebuild_report_p21.json": true,
+      "archival/p21/reproducibility/independent_rebuild_report_p21.json": true,
+      "archival/p21/p21_source_files.json": true
+    },
+    "pins_ok": true
+  },
+  "O1": {
+    "requirement": "O.1 closes iff the one-loop kappa^2 bulk two-point sector on S_inv closes under a VERIFIED retained quantum identity: every checklist item (O.2 classical kappa^2 master Constructed incl. grav ell_4; O.4 inventory; O.5 all graphs evaluated; O.6 identity verified; O.7 remainder cancellation / CT solution) earned, and the target enlarged first if the identity constrains more legs/orders at kappa^2.",
+    "items_scope": {
+      "State retained quantum identity (O.6)": {
+        "scope": "PARTLY in XVI-P",
+        "evidence": "projected ch identity at one loop kappa^2 stated and verified (P19/P20), incl. evanescent CTs (P22); the BULK retained identity (ST4b functional) is XVI-O's statement, not changed"
+      },
+      "List amplitudes constrained by identity (O.4)": {
+        "scope": "IN XVI-P (this record)",
+        "evidence": "one-loop kappa^2: exactly the E=2 two-point and E=1 one-point graphs; enumeration reproduces the frozen inventory; completeness at topology level only"
+      },
+      "S_inv^{[2]} classical consistency (O.2)": {
+        "scope": "OUT OF SCOPE",
+        "evidence": "classical kappa^2 master 2(S0,S2)+(S1,S1): grav ell_4 Incomplete in XVI-O/XVI-N; XVI-A..O untouched -> O.1 cannot close inside XVI-P"
+      },
+      "Evaluate inventory graphs (O.5)": {
+        "scope": "IN XVI-P",
+        "evidence": "all E=2 kappa^2 graphs evaluated (P15..P18, D12 Missing never zero per P14 -> see open items)"
+      },
+      "Demonstrate identity remainder cancellation / CT solution (O.6/O.7)": {
+        "scope": "PARTLY in XVI-P",
+        "evidence": "projected: closure + restoration earned (P20, P22); bulk ST4a/ST4b split: XVI-O"
+      },
+      "Enlarge target if identity requires more legs/orders (O.1)": {
+        "scope": "IN XVI-P (this record)",
+        "evidence": "NOT triggered at kappa^2 at one loop (three-point one-loop sector empty at kappa^2); next order kappa^3 three-point = P.6 entry"
+      }
+    },
+    "closable_in_XVI_P": false,
+    "reason": "O.2 (classical kappa^2 master, grav ell_4 Incomplete) and the bulk ST4b identity are owned by XVI-O/XVI-N, which stay untouched",
+    "ledger": "provenance/XVI-O/O_quantum_target.json",
+    "ledger_sha256": "3cd3d1ba491381ba0a73d1677bfed10d3743e0575f61c71c325e626e4a78a645"
+  },
+  "power_counting": {
+    "vertex_rule": true,
+    "kappa_equals_E": true,
+    "identity_at_kappa2": {
+      "terms": ["(S^(0), Gamma_1^(2))  [E=2]", "(S^(1), Gamma_1^(1))  [E=1]", "(S^(2), Gamma_1^(0)) = 0  [field independent]"],
+      "orders_entering": ["E=2 two-point (hh, phiphi, c.cb, K.c)", "E=1 one-point"],
+      "three_point_one_loop_at_kappa2": "EMPTY (kappa^E with E=3 is kappa^3)",
+      "enlarge_rule_triggered": false
+    },
+    "frozen_E2_match": {
+      "enumerated": 9,
+      "frozen": 9,
+      "missing_from_enumeration": [],
+      "not_in_frozen_inventory": [],
+      "equal": true
+    }
+  },
+  "P6_entry": {
+    "sector": "one loop, kappa^3, three-point (incl. antifield K,c,h and cs,c,c / phis,c,phi)",
+    "n_graphs": 15,
+    "by_external": {
+      "K,c,h": 2,
+      "c,c,cs": 1,
+      "c,cb,h": 2,
+      "c,phi,phis": 1,
+      "h,h,h": 5,
+      "h,phi,phi": 4
+    },
+    "status": "inventory only (topology level); amplitude rules, counterterm domain, evaluation, defect and closure NOT done",
+    "evaluated": false
+  },
+  "three_point_defect": "not computed (no graph evaluated)",
+  "title_qualifier": {
+    "title_line": "# XVI-P \u2014 revision p23 (stage release on the O.1 direction: O.1 requirement recorded, one-loop power counting and enlarge-rule check, P.6 entry inventory (\u03ba\u00b3 three-point, not evaluated), polynomial-domain refusal for d; P.5 renormalized at one loop \u03ba\u00b2 for the two-point functions with QdS external legs; bulk symmetry not claimed; O.1 NOT_CLOSED) \u2014 2026-10-10",
+    "pdf_title_lines_with_qualifier": 2,
+    "required": "P.5 renormalized at one loop kappa^2 for the two-point functions with QdS external legs"
+  },
+  "d_poly_domain_refusal": {
+    "ok": true,
+    "n_plants": 9,
+    "not_raised": {},
+    "algebra": {
+      "cancel_factor": "(d**2 + 30*d - 34)/(32*(d - 1)*(d + 1))",
+      "apart": "1/32 - 1/(64*(d + 1)) - 3/(64*(d - 1))",
+      "together": "(d**2 - 2*d - 2)/(32*(d**2 - 1))",
+      "authorised_value": "1/80"
+    },
+    "algebra_ok": true
+  },
+  "EV_values": {
+    "archived_cert_pinned": true,
+    "values": {
+      "calibration_rho_from_4D_pair": {
+        "expected": "1/2",
+        "current": "1/2",
+        "archived_p22": "1/2",
+        "ok": true
+      },
+      "coefficient_Kc_E2": {
+        "expected": "-1/16",
+        "current": "-1/16",
+        "archived_p22": "-1/16",
+        "ok": true
+      },
+      "coefficient_ccb_SE": {
+        "expected": "1/8",
+        "current": "1/8",
+        "archived_p22": "1/8",
+        "ok": true
+      },
+      "coefficients_hh_counterterm_sum": {
+        "expected": {
+          "g4_mn gt_rs (p.p)^2": "-7*I/120",
+          "g4_mr gt_ns (p.p)^2": "-I/160",
+          "g4_rs gt_mn (p.p)^2": "-7*I/120",
+          "gt_mn gt_rs (p.p)^2": "I/160",
+          "gt_mn p_r p_s (p.p)^1": "7*I/120",
+          "gt_mr gt_ns (p.p)^2": "I/160",
+          "gt_mr p_n p_s (p.p)^1": "I/160",
+          "gt_rs p_m p_n (p.p)^1": "7*I/120"
+        },
+        "current": {
+          "g4_mn gt_rs (p.p)^2": "-7*I/120",
+          "g4_mr gt_ns (p.p)^2": "-I/160",
+          "g4_rs gt_mn (p.p)^2": "-7*I/120",
+          "gt_mn gt_rs (p.p)^2": "I/160",
+          "gt_mn p_r p_s (p.p)^1": "7*I/120",
+          "gt_mr gt_ns (p.p)^2": "I/160",
+          "gt_mr p_n p_s (p.p)^1": "I/160",
+          "gt_rs p_m p_n (p.p)^1": "7*I/120"
+        },
+        "archived_p22": {
+          "g4_mn gt_rs (p.p)^2": "-7*I/120",
+          "g4_mr gt_ns (p.p)^2": "-I/160",
+          "g4_rs gt_mn (p.p)^2": "-7*I/120",
+          "gt_mn gt_rs (p.p)^2": "I/160",
+          "gt_mn p_r p_s (p.p)^1": "7*I/120",
+          "gt_mr gt_ns (p.p)^2": "I/160",
+          "gt_mr p_n p_s (p.p)^1": "I/160",
+          "gt_rs p_m p_n (p.p)^1": "7*I/120"
+        },
+        "ok": true
+      }
+    }
+  },
+  "p22_layer": {
+    "publication": "accepted",
+    "earned": {
+      "projected_defect_computed": true,
+      "projected_identity_verified": true,
+      "projected_restoration_verified": true,
+      "D11_ratio_pin_verified": true,
+      "D11_absolute_pin_verified": true,
+      "evanescent_M2_verified": true,
+      "evanescent_counterterms_verified": true,
+      "d_runtime_guard_verified": true
+    },
+    "p22_conventions_byte_identical": true,
+    "live_contract_check": true,
+    "live_guard_probe": true,
+    "guard_not_raised": {},
+    "live_evanescent_check": true,
+    "hard_stops_hold": true,
+    "bulk_symmetry_restored": false,
+    "O1_closure": "NOT_CLOSED"
+  },
+  "o1_scope_check": {
+    "present": true,
+    "ledger_sha_pinned": true,
+    "cert_ledger_sha": true,
+    "ledger_outcome_NOT_CLOSED": true,
+    "vertex_rule_holds": true,
+    "one_loop_kappa_equals_E": true,
+    "frozen_E2_match": true,
+    "enlarge_rule_not_triggered": true,
+    "O1_not_closable_in_XVI_P": true,
+    "E1_count": true,
+    "E3_count": true,
+    "E3_by_external": true,
+    "mutations_detected": true,
+    "pass": true
+  },
+  "change_log_vs_p22": {
+    "base": "archival/p22/p22_source_files.json (pinned; files of the p22 zip sha256 ade2fa5c2dac6614c41ae38dc97d7c485975015a134650734d466ea6ffdef76f)",
+    "base_pinned_ok": true,
+    "added": ["archival/p22/README.md", "archival/p22/certificates/P22_evanescent.json", "archival/p22/p22_source_files.json", "archival/p22/reference_values_p22.json", "archival/p22/reproducibility/author_rebuild_report_p22.json", "archival/p22/reproducibility/independent_rebuild_report_p22.json", "code/p5_calc/p23_conventions.py", "code/p5_calc/power_counting.py", "code/p5_calc/release_p23.py", "manuscript/notes/P23_O1_scope.tex", "provenance/XVI-O/O_quantum_target.json", "reproducibility/reference_values_p23.json", "tests/test_p23.py"],
+    "removed": ["reproducibility/reference_values_p22.json"],
+    "modified": ["README.md", "REBUILD_INSTRUCTIONS.md", "code/p5_calc/contract_registry.py", "code/p5_calc/release_p21.py", "code/p5_calc/release_p22.py", "code/p5_entry/dred.py", "manuscript/body/XVI-P-body.tex", "tests/test_p14.py", "tests/test_p21.py", "tests/test_p22.py", "tools/build.py", "tools/rebuild_from_source.py", "tools/source_manifest.py"],
+    "undisclosed_changes": [],
+    "pinned_sha_mismatches": {},
+    "disclosed_but_unpinned": [],
+    "disclosed_but_unchanged": [],
+    "registry_lists_match_disclosure": true,
+    "counts": {
+      "added": 13,
+      "removed": 1,
+      "modified": 13
+    }
+  },
+  "O1_requirement_recorded": "earned",
+  "one_loop_power_counting_verified": "earned",
+  "P6_entry_inventory": "earned",
+  "d_poly_domain_refusal_verified": "earned",
+  "EV_values_verified": "earned",
+  "disclosed_revisions_p23": {
+    "code/p5_entry/dred.py": "p23 contract revision: polynomial-domain refusal + Dummy-only internal renames (appended block)",
+    "code/p5_calc/contract_registry.py": "p23 block recognised; p22 block pinned byte-identical; p23 revised/added lists",
+    "code/p5_calc/release_p21.py": "accepts the p23 registered revisions (contract_registry.P23_REVISED_FILES)",
+    "code/p5_calc/release_p22.py": "accepts the registered p23 dred state and p23-disclosed files (pinned by the p23 gate)",
+    "code/p5_calc/power_counting.py": "new: O.1 requirement, one-loop power counting, enlarge rule, P.6 entry inventory",
+    "code/p5_calc/p23_conventions.py": "new",
+    "code/p5_calc/release_p23.py": "new: p23 gate",
+    "tests/test_p14.py": "p23 names / status expectations",
+    "tests/test_p21.py": "allow-list scan reads p23 sites; status expectations",
+    "tests/test_p22.py": "p22 layer record read from certificates/P22_release.json; version label current",
+    "tests/test_p23.py": "new",
+    "tools/build.py": "p23 stages (power_counting, release_p23), listings, value blocks, archival p22",
+    "tools/source_manifest.py": "p23 zip / reference; p22 archive records",
+    "tools/rebuild_from_source.py": "p23 reference / certificates / ledgers",
+    "README.md": "p23 section; title line with the two-point / QdS qualifier",
+    "REBUILD_INSTRUCTIONS.md": "p23",
+    "manuscript/body/XVI-P-body.tex": "input of the p23 note",
+    "manuscript/notes/P23_O1_scope.tex": "new: p23 note",
+    "provenance/XVI-O/O_quantum_target.json": "new: verbatim read-only copy of the XVI-O O.1 ledger (sha pinned)"
+  },
+  "independent_rebuild_passed_p22": true,
+  "p22_independent_rebuild": {
+    "report": "archival/p22/reproducibility/independent_rebuild_report_p22.json",
+    "report_sha256_pinned": true,
+    "pass": true,
+    "independent_rebuild_passed": true,
+    "tree_matches_p22": true,
+    "zip_matches_p22": true,
+    "mismatches": 0,
+    "findings": ["runtime_guard_bypass_poly_algebra", "p22_gate_does_not_check_EV_values", "pins_live_in_unpinned_conventions", "earlier_layer_gates_accept_p22_cert_edits", "ev_decoupling_structural", "rho_single_equation_test", "renormalized_scope", "not_recomputed"],
+    "caveat": "same box (disclosed)",
+    "NOT_inherited_by_p23": "bound to the p22 tree/zip; the p23 tree has its own (pending) independent flag",
+    "archived_p22_records_pinned": {
+      "archival/p22/p22_source_files.json": true,
+      "archival/p22/reference_values_p22.json": true,
+      "archival/p22/reproducibility/author_rebuild_report_p22.json": true,
+      "archival/p22/reproducibility/independent_rebuild_report_p22.json": true,
+      "archival/p22/certificates/P22_evanescent.json": true
+    },
+    "pins_ok": true
+  }
+}

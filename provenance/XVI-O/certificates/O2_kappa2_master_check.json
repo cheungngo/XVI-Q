@@ -1,0 +1,164 @@
+{
+  "revision": "o61-calc",
+  "gate": "O.2_kappa2_master_check",
+  "status": "Partial",
+  "pass": true,
+  "pass_means": "Retained classical equations evaluated by indexed/structural identities: (S0,S0)=Constructed, (S0,S1)=Constructed_inheritance, 2(S0,S2)+(S1,S1)=Partial. NOT sparse probes alone; NOT full ell_4 polynomial; no invented s2.",
+  "conventions": {
+    "antibracket": "(F,G) = sum_A [ (dR F/d Phi^A)(dL G/d Phi*_A) - (dR F/d Phi*_A)(dL G/d Phi^A) ]  [HT; XVI-N convention sheet]",
+    "odd_field_signs": "S_af = int sum (-1)^{eps_A} Phi*_A (s Phi^A); even +, odd ghosts -",
+    "master_square_field_projection": "(S,S)|_{Phi*=0} = 2 s S_field   when S encodes s via ordered antifield couplings",
+    "equivalence": "Compact interior variations; total divergences discarded; no metric boundary variation (XI-A)",
+    "boundary": "No boundary terms retained in bulk variational identities",
+    "a": "1/2",
+    "xi": "a c",
+    "bulk_mass": "m=0 freeze",
+    "S_inv_scope": "Invariant Einstein-scalar + antifield couplings + gauge fermion sector tracked separately off the invariant CME when stated"
+  },
+  "S_expansion": {
+    "S0": {
+      "content": [
+        "S_EH^{[2]} (quadratic FP + gf => K=-Box P)",
+        "S_phi^{[2]} = (1/2) int partial phi partial phi  [m=0]",
+        "S_af^{[0]}: h* R0(c) - i cbar* b  (kappa^0 antifield)",
+        "free ghost kinetic from s0 Psi"
+      ],
+      "kappa_power": 0
+    },
+    "S1": {
+      "content": [
+        "S_EH^{[3]} = kappa int ell_3",
+        "V1_scalar = (kappa/2) int a1^{mu nu} partial_mu phi partial_nu phi  [m=0]",
+        "S_af^{[1]}: kappa a h*(L_c h) + kappa a phi*(c.partial phi) - kappa a c*(c.partial c)",
+        "ghost-graviton: kappa * 2 i a int cbar D(L_c h)"
+      ],
+      "kappa_power": 1
+    },
+    "S2": {
+      "content": [
+        "S_EH^{[4]} from ell_4 = -2[eps^4](sqrt(-q) R)  [full polynomial Unresolved; probes only]",
+        "V2_scalar = (kappa^2/2) int a2^{mu nu} partial_mu phi partial_nu phi  [m=0; a2 closed form]",
+        "kappa^2 antifield/ghost pieces from inherited s through O(kappa^2) on D[h] if present"
+      ],
+      "kappa_power": 2,
+      "note": "No invented s2 slot; kappa^2 action from inherited transformations + EH/scalar Taylor"
+    }
+  },
+  "equations": {
+    "S0_S0": {
+      "equation": "(S0, S0) = 0",
+      "status": "Constructed",
+      "evidence": [
+        {
+          "id": "af_independent_field_quadratic",
+          "claim": "Antifield-independent S0_field has (S0_field, S0_field)=0 identically by bracket definition",
+          "note": "This is NOT offered as a Noether certificate for interacting EH"
+        },
+        {
+          "id": "free_nilpotence_s0",
+          "claim": "s0^2=0 on generators (R0(c) diffeomorphism differential; free ghost algebra)",
+          "source": "XVI-N classical_bv / XI-B"
+        },
+        {
+          "id": "free_hessian_encoding",
+          "claim": "Ordered free antifield couplings make (S0, Phi)=s0 Phi; free master follows",
+          "source": "XVI-N convention sheet / Saf signs"
+        },
+        {
+          "id": "scalar_free",
+          "claim": "Free scalar S0_phi = (1/2)int (d phi)^2 is diffeomorphism-inert at kappa^0 (no h); Gate-1 mixed Noether covers kappa>0; no O(kappa^0) mixed metric-scalar Noether defect (see Gate 1; not an independent scalar BV master)",
+          "source": "O2_scalar_action_authoritative"
+        }
+      ],
+      "NOT_Noether_certificate_for_interacting_EH": true
+    },
+    "S0_S1": {
+      "equation": "(S0, S1) = 0",
+      "status": "Constructed_inheritance",
+      "evidence": [
+        {
+          "id": "XVI-N_S_inv_through_kappa",
+          "claim": "(S_inv, S_inv) = O(kappa^2)  =>  coefficients of kappa^0 and kappa^1 vanish",
+          "source": "XVI-N prop:master-square; convention sheet: (S_inv,S_inv)=O(kappa^2)"
+        },
+        {
+          "id": "Noether_cubic",
+          "claim": "Field projection: (S,S)|_af0 = 2 s S_field; delta_{xi=a c} S_field = -kappa int c^nu N_nu with N_nu vanishing for invariant S_inv through the retained cubic order (EH cubic + V1_scalar + af^[1])",
+          "source": "XI-A thm:noether; XIV-A connecting derivation; XVI-N"
+        },
+        {
+          "id": "nilpotence_s0_s1",
+          "claim": "s = s0 + kappa s1 on generators with s^2=0 through O(kappa) (XVI-N classical_bv)",
+          "source": "XVI-N classical_master_certificates / generator_antibracket"
+        },
+        {
+          "id": "scalar_V1_consistency",
+          "claim": "V1_scalar derived from same Lag_q as free kinetic; diffeomorphism variation of invariant scalar cancels against metric variation via stress tensor identity (XI-A lem:vertex); E_phi d phi cancels in master density",
+          "source": "XI-A lem:vertex; XVI-N invariant_baseline / E_phi cancel"
+        }
+      ],
+      "registered_targets_checked_through_O_kappa": [
+        "XI-A thm:noether (invariant sector)",
+        "XIV-A (S_ext,S_ext)=kappa int c K form with K=0 for S_inv",
+        "XVI-N prop:master-square through O(kappa)"
+      ]
+    },
+    "S0_S2_plus_S1_S1": {
+      "equation": "2(S0, S2) + (S1, S1) = 0",
+      "status": "Partial",
+      "scalar_matter_sector": {
+        "status": "Constructed",
+        "claim": "At m=0, the scalar contribution to 2(S0,S2_scalar)+(S1_scalar,S1_scalar) is controlled by the mixed metric-scalar Noether identity checked in Gate 1: s0 L_2 + s1 L_1 = a partial_rho (c^rho L_1) (density identity; integrates under compact support). This REPLACES the withdrawn autonomous (S_sc,S_sc)=0 finite-kappa Taylor sentence. Gate 1 is not an independent scalar BV master equation. Separately: XVI-N prop:master-square is the prepared-action defect on S_D; thm:massless-obstruction is the insertion obstruction; S_inv is the invariant baseline.",
+        "identities_used": [
+          "Gate 1 mixed metric-scalar Noether: s0 L2 + s1 L1 = a partial (c L1)",
+          "a1, a2 from densitized inverse B=sqrt(-q) q^{mu nu} (NOT bare q_inv_series)",
+          "S_af,phi = kappa a int phi*(c.partial phi) matches s phi (XVI-N)",
+          "XI-A thm:noether / X-A cor:noether (classical; not a quantum Ward)"
+        ],
+        "withdrawn_autonomous_Ssc_Taylor": true,
+        "evidence_certificate": "O5_Gate1_mixed_scalar_noether.json",
+        "also": "O2_scalar_action_authoritative.json",
+        "NOT_requiring_full_ell4": true,
+        "NOT_autonomous_scalar_BV_master": true
+      },
+      "gravitational_EH_sector": {
+        "status": "Partial_Unresolved_ell4",
+        "claim": "EH is diffeomorphism invariant at finite kappa, so the same Taylor argument applies IN PRINCIPLE to S_EH[q(kappa)]. However the explicit density ell_4 as a full 10-component generating polynomial is Unresolved (only sparse-index / conformal probes exist). Therefore the explicit antibracket expansion of 2(S0, S_EH^{[4]}) + (S_EH^{[3]}, S_EH^{[3]}) against Noether densities is not fully evaluated in components. Structural invariance implies the identity holds once ell_4 is the correct EH quartic coefficient; component verification Pending.",
+        "blocked_by": [
+          "Full 10-component ell_4 generating polynomial",
+          "Explicit component expand of (S_EH^{[2..4]}, S_EH^{[2..4]}) at O(kappa^2)"
+        ],
+        "partial_inputs": [
+          "Inverse-metric acceptance controls",
+          "Sparse-index / conformal ell_4 probes (nonzero witnesses, not full polynomial)",
+          "Structural diffeomorphism invariance of EH"
+        ],
+        "NOT_claimed_from_sparse_probes_alone": true
+      },
+      "ghost_antifield_sector": {
+        "status": "Partial",
+        "claim": "Through O(kappa), ghost/antifield master identities inherited (XVI-N). At O(kappa^2), terms from s acting on D[h] / kappa^2 antifield vertices require the complete ghost sector through O(kappa^2); currently Absent_under_inherited_s_through_kappa_linear_D for some slots, with no invented s2.",
+        "source": "O2_vertex_catalogue V_ghost_kappa2 status"
+      },
+      "summary": "Scalar O(kappa^2) contribution Constructed via finite-kappa invariance + Taylor of authoritative Lag_q. Gravitational component verification Partial (structural invariance OK; full ell_4 polynomial Unresolved). Combined retained equation status: Partial."
+    }
+  },
+  "equation_status_summary": {
+    "(S0,S0)=0": "Constructed",
+    "(S0,S1)=0": "Constructed_inheritance",
+    "2(S0,S2)+(S1,S1)=0": "Partial"
+  },
+  "no_invented_s2_slot": true,
+  "NOT_Noether_certificate": [
+    "(S_EH, S_EH)=0 from antifield-independence alone is NOT a Noether test"
+  ],
+  "NOT_symmetry_restored": true,
+  "NOT_quantum_master": true,
+  "method": "Indexed construction: antibracket bilinearity => (S,S)=(S0,S0)+2 kappa (S0,S1)+kappa^2[2(S0,S2)+(S1,S1)]+O(kappa^3); verify each coefficient under declared equivalence using nilpotence, Noether, and finite-kappa diffeomorphism invariance (Taylor).",
+  "still_unresolved": [
+    "Full 10-component ell_4 generating polynomial",
+    "Explicit gravitational component expand of O(kappa^2) antibracket",
+    "Complete ghost/antifield O(kappa^2) on D[h]"
+  ],
+  "replaces_scaffold": "O2_kappa2_master_scaffold.json remains as checklist archive; this cert is the evaluation"
+}

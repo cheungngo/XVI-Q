@@ -1,0 +1,240 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p18",
+  "deliverable": "D11 evaluation under the declared prescription",
+  "graph": "D11",
+  "export": {
+    "file": "exports/P14_integrands/D11.json",
+    "sha256_recomputed": "6afa9cc07776ed4a77077986ffa3aa2ab50936cff13068f98fba9c3017958609",
+    "sha256_stored": "6afa9cc07776ed4a77077986ffa3aa2ab50936cff13068f98fba9c3017958609",
+    "sha256_p14r_certificate": "6afa9cc07776ed4a77077986ffa3aa2ab50936cff13068f98fba9c3017958609",
+    "pinned": true
+  },
+  "prefactor_export": "kappa**2/2",
+  "normalization": "Ghat = -I/2 * int N/(D1 D2) / N_eps",
+  "prescription": "operational DRED (R1-R6), d opaque, MS-bar, Feynman +i0, N4 contact exclusions, M3 bounds 4/8/4, exactly-degree-four normalization (massless: every local term is a homogeneous quartic in p)",
+  "covariant_form": {
+    "n_ansatz": 51,
+    "n_used": 15,
+    "exact": true,
+    "bad_components": [],
+    "rank": 51,
+    "unique": true,
+    "offdiag_weight": "2",
+    "upper": true
+  },
+  "prescription_usage": {
+    "exactly_degree_four_normalization": "every structure S_s (p.p)^e of Ghat has total momentum degree 4 (computed per structure: g4_mn g4_rs (p.p)^2: 4, g4_mn gt_rs (p.p)^2: 4, g4_mn p_r p_s (p.p)^1: 4, g4_mr g4_ns (p.p)^2: 4, g4_mr gt_ns (p.p)^2: 4, g4_mr p_n p_s (p.p)^1: 4, g4_rs gt_mn (p.p)^2: 4, g4_rs p_m p_n (p.p)^1: 4, gt_mn gt_rs (p.p)^2: 4, gt_mn p_r p_s (p.p)^1: 4, gt_mr gt_ns (p.p)^2: 4, gt_mr p_n p_s (p.p)^1: 4, gt_rs p_m p_n (p.p)^1: 4, p_m p_n p_r p_s: 4)",
+    "N4_contact_exclusions": "used as stated: the order-0/2 contacts (mu^4, mu^2 p^2) excluded by N4 do not arise (massless; every pole and local MS-bar term is a homogeneous quartic in p), so N4 removes nothing here and no order-0/2 counterterm is needed",
+    "M3_bounds_4_8_4": "degree of divergence 4; local terms of derivative order exactly 4 <= 4"
+  },
+  "result": {
+    "g4_mn g4_rs (p.p)^2": {
+      "evanescent": false,
+      "A_exact_d_times_MB": "I*(-d**2 + 2*d + 2)/(32*(d**2 - 1))",
+      "UV_pole": "-I/80",
+      "MSbar_finite": "I*(15*L - 16)/1200",
+      "nonlocal_coefficient_of_L": "I/80",
+      "local_polynomial": "-I/75",
+      "finite_if_d_set_to_4_first": "I*(L - 2)/80",
+      "local_shift_from_d_dependence": "7*I/600"
+    },
+    "g4_mn gt_rs (p.p)^2": {
+      "evanescent": true,
+      "A_exact_d_times_MB": "-I*d/(32*d**2 - 32)",
+      "UV_pole": "-I/120",
+      "MSbar_finite": "I*(30*L - 77)/3600",
+      "nonlocal_coefficient_of_L": "I/120",
+      "local_polynomial": "-77*I/3600",
+      "finite_if_d_set_to_4_first": "I*(L - 2)/120",
+      "local_shift_from_d_dependence": "-17*I/3600"
+    },
+    "g4_mn p_r p_s (p.p)^1": {
+      "evanescent": false,
+      "A_exact_d_times_MB": "I*(d**2 - 2*d - 2)/(32*(d**2 - 1))",
+      "UV_pole": "I/80",
+      "MSbar_finite": "I*(16 - 15*L)/1200",
+      "nonlocal_coefficient_of_L": "-I/80",
+      "local_polynomial": "I/75",
+      "finite_if_d_set_to_4_first": "I*(2 - L)/80",
+      "local_shift_from_d_dependence": "-7*I/600"
+    },
+    "g4_mr g4_ns (p.p)^2": {
+      "evanescent": false,
+      "A_exact_d_times_MB": "-I/(32*d**2 - 32)",
+      "UV_pole": "-I/480",
+      "MSbar_finite": "I*(15*L - 46)/7200",
+      "nonlocal_coefficient_of_L": "I/480",
+      "local_polynomial": "-23*I/3600",
+      "finite_if_d_set_to_4_first": "I*(L - 2)/480",
+      "local_shift_from_d_dependence": "-I/450"
+    },
+    "g4_mr gt_ns (p.p)^2": {
+      "evanescent": true,
+      "A_exact_d_times_MB": "I/(32*(d**2 - 1))",
+      "UV_pole": "I/480",
+      "MSbar_finite": "I*(46 - 15*L)/7200",
+      "nonlocal_coefficient_of_L": "-I/480",
+      "local_polynomial": "23*I/3600",
+      "finite_if_d_set_to_4_first": "I*(2 - L)/480",
+      "local_shift_from_d_dependence": "I/450"
+    },
+    "g4_mr p_n p_s (p.p)^1": {
+      "evanescent": false,
+      "A_exact_d_times_MB": "I/(32*(d**2 - 1))",
+      "UV_pole": "I/480",
+      "MSbar_finite": "I*(46 - 15*L)/7200",
+      "nonlocal_coefficient_of_L": "-I/480",
+      "local_polynomial": "23*I/3600",
+      "finite_if_d_set_to_4_first": "I*(2 - L)/480",
+      "local_shift_from_d_dependence": "I/450"
+    },
+    "g4_rs gt_mn (p.p)^2": {
+      "evanescent": true,
+      "A_exact_d_times_MB": "-I*d/(32*d**2 - 32)",
+      "UV_pole": "-I/120",
+      "MSbar_finite": "I*(30*L - 77)/3600",
+      "nonlocal_coefficient_of_L": "I/120",
+      "local_polynomial": "-77*I/3600",
+      "finite_if_d_set_to_4_first": "I*(L - 2)/120",
+      "local_shift_from_d_dependence": "-17*I/3600"
+    },
+    "g4_rs p_m p_n (p.p)^1": {
+      "evanescent": false,
+      "A_exact_d_times_MB": "I*(d**2 - 2*d - 2)/(32*(d**2 - 1))",
+      "UV_pole": "I/80",
+      "MSbar_finite": "I*(16 - 15*L)/1200",
+      "nonlocal_coefficient_of_L": "-I/80",
+      "local_polynomial": "I/75",
+      "finite_if_d_set_to_4_first": "I*(2 - L)/80",
+      "local_shift_from_d_dependence": "-7*I/600"
+    },
+    "gt_mn gt_rs (p.p)^2": {
+      "evanescent": true,
+      "A_exact_d_times_MB": "-I/(32*d**2 - 32)",
+      "UV_pole": "-I/480",
+      "MSbar_finite": "I*(15*L - 46)/7200",
+      "nonlocal_coefficient_of_L": "I/480",
+      "local_polynomial": "-23*I/3600",
+      "finite_if_d_set_to_4_first": "I*(L - 2)/480",
+      "local_shift_from_d_dependence": "-I/450"
+    },
+    "gt_mn p_r p_s (p.p)^1": {
+      "evanescent": true,
+      "A_exact_d_times_MB": "I*d/(32*(d**2 - 1))",
+      "UV_pole": "I/120",
+      "MSbar_finite": "I*(77 - 30*L)/3600",
+      "nonlocal_coefficient_of_L": "-I/120",
+      "local_polynomial": "77*I/3600",
+      "finite_if_d_set_to_4_first": "I*(2 - L)/120",
+      "local_shift_from_d_dependence": "17*I/3600"
+    },
+    "gt_mr gt_ns (p.p)^2": {
+      "evanescent": true,
+      "A_exact_d_times_MB": "-I/(32*d**2 - 32)",
+      "UV_pole": "-I/480",
+      "MSbar_finite": "I*(15*L - 46)/7200",
+      "nonlocal_coefficient_of_L": "I/480",
+      "local_polynomial": "-23*I/3600",
+      "finite_if_d_set_to_4_first": "I*(L - 2)/480",
+      "local_shift_from_d_dependence": "-I/450"
+    },
+    "gt_mr p_n p_s (p.p)^1": {
+      "evanescent": true,
+      "A_exact_d_times_MB": "-I/(32*d**2 - 32)",
+      "UV_pole": "-I/480",
+      "MSbar_finite": "I*(15*L - 46)/7200",
+      "nonlocal_coefficient_of_L": "I/480",
+      "local_polynomial": "-23*I/3600",
+      "finite_if_d_set_to_4_first": "I*(L - 2)/480",
+      "local_shift_from_d_dependence": "-I/450"
+    },
+    "gt_rs p_m p_n (p.p)^1": {
+      "evanescent": true,
+      "A_exact_d_times_MB": "I*d/(32*(d**2 - 1))",
+      "UV_pole": "I/120",
+      "MSbar_finite": "I*(77 - 30*L)/3600",
+      "nonlocal_coefficient_of_L": "-I/120",
+      "local_polynomial": "77*I/3600",
+      "finite_if_d_set_to_4_first": "I*(2 - L)/120",
+      "local_shift_from_d_dependence": "17*I/3600"
+    },
+    "p_m p_n p_r p_s": {
+      "evanescent": false,
+      "A_exact_d_times_MB": "I*d*(2 - d)/(32*(d**2 - 1))",
+      "UV_pole": "-I/60",
+      "MSbar_finite": "I*(30*L - 47)/1800",
+      "nonlocal_coefficient_of_L": "I/60",
+      "local_polynomial": "-47*I/1800",
+      "finite_if_d_set_to_4_first": "I*(L - 2)/60",
+      "local_shift_from_d_dependence": "13*I/1800"
+    }
+  },
+  "evaluated": true,
+  "status": "renormalized (4D) / regulated (evanescent poles nonzero, retained R6)",
+  "UV_pole_in_p14r_hh_basis": ["-I/160", "-I/480", "I/80", "I/240", "-I/120"],
+  "evanescent_poles": {
+    "g4_mn gt_rs (p.p)^2": "-I/120",
+    "g4_rs gt_mn (p.p)^2": "-I/120",
+    "gt_mn gt_rs (p.p)^2": "-I/480",
+    "g4_mr gt_ns (p.p)^2": "I/480",
+    "gt_mr gt_ns (p.p)^2": "-I/480",
+    "gt_mn p_r p_s (p.p)^1": "I/120",
+    "gt_mr p_n p_s (p.p)^1": "-I/480",
+    "gt_rs p_m p_n (p.p)^1": "I/120"
+  },
+  "evanescent_pole_nonzero": true,
+  "longitudinal_projection_p_m_G": {},
+  "controls": {
+    "exactly_degree_four_every_structure": true,
+    "N4_no_order_0_or_2_contact_arises": true,
+    "export_sha_pinned": true,
+    "covariant_form_exact": true,
+    "covariant_form_unique": true,
+    "orbit_consistent": true,
+    "route_FP_equals_route_PV_exact_in_d": true,
+    "integrand_equals_XVI_O_convolution_M1": true,
+    "exchange_symmetric_mn_rs": true,
+    "nonlocal_equals_minus_pole": true,
+    "pole_4D_in_p14r_hh_span": true,
+    "R5_d_retained": true,
+    "M2_discharged": true,
+    "mutations_all_rejected": true
+  },
+  "mutations": {
+    "premature_d4": {
+      "rejected": true,
+      "changes_result": true,
+      "reason": "PrematureD4Substitution: d -> 4 via subs outside substitute_d (R5)",
+      "accepted_as_rejection": true
+    },
+    "drop_evanescent_gt": {
+      "changes_result": true,
+      "rejected": true,
+      "reason": "FP route with gt dropped != PV route (R6 retention check)",
+      "accepted_as_rejection": true
+    },
+    "wrong_external_index_position": {
+      "changes_result": true,
+      "rejected": true,
+      "accepted_as_rejection": true
+    },
+    "wrong_offdiagonal_weight": {
+      "changes_result": true,
+      "rejected": true,
+      "accepted_as_rejection": true
+    }
+  },
+  "D11_evaluated": true,
+  "D11_matching_verified": true,
+  "authorised_d_substitutions": {
+    "d11: L-coefficient A(4) of D11 (after exact-d algebra; M2 nonlocal comparison)": 14,
+    "d11: M2 mutation: D01 in place of D11 (A(4))": 14,
+    "d11: evanescent UV pole A(4) of the summed hh function (record only)": 22,
+    "d13.expand_coeff: Laurent expansion after all contractions and the fit": 28,
+    "d13.expand_coeff: diagnostic A'(4)": 28,
+    "d13.expand_coeff: diagnostic A(4) (d-dependence proof only)": 28,
+    "hh_slot: UV pole A(4) of a 4D structure (after exact-d algebra)": 18,
+    "integrals.laurent: d = 4 - 2 eps after all contractions": 1
+  }
+}

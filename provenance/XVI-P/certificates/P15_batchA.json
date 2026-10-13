@@ -1,0 +1,414 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p15",
+  "deliverable": "P.5 calculation Batch A (tadpoles)",
+  "contract_revision": "p14r",
+  "prescription": "frozen p14r P14_DRED_MSbar_FeynmanI0 + S0 (certificates/P15_integral_library.json)",
+  "graphs": {
+    "D02": {
+      "graph": "D02",
+      "slot": "kappa^2 hh two-point (part of the hh slot with D01, D03 -- D01/D03 NOT evaluated in p15)",
+      "kappa_order": 2,
+      "export": {
+        "file": "exports/P14_integrands/D02.json",
+        "sha256_recomputed": "e37cb4152690018ec8ce2ac1a0539a29864528e65e06a9efe09441b14fb6a063",
+        "sha256_stored": "e37cb4152690018ec8ce2ac1a0539a29864528e65e06a9efe09441b14fb6a063",
+        "sha256_p14r_certificate": "e37cb4152690018ec8ce2ac1a0539a29864528e65e06a9efe09441b14fb6a063",
+        "pinned": true
+      },
+      "prefactor": "-kappa**2/2",
+      "denominators": ["l^2+i0"],
+      "massless_declared": true,
+      "status": "vanishing_under_declared_prescription",
+      "regulated_expression": {
+        "form": "iGamma_1 = N_eps * (-kappa**2/2) * sum_comp [ sum_k c_k(d, p, Gt) J_D02[k,0] ],  J_D02[k,0] = int (l^2)^k / (l^2 + i0)",
+        "components": 94,
+        "J_members_k": [0, 1],
+        "components_with_evanescent_Gt_part": 70,
+        "examples": {
+          "0,0": "-9*Gt_00*J_D02[1,0]/(2*d) + 5*Gt_11*J_D02[1,0]/(2*d) + 5*Gt_22*J_D02[1,0]/(2*d) + 5*Gt_33*J_D02[1,0]/(2*d) + 12*J_D02[1,0]/d",
+          "0,1": "2*Gt_01*J_D02[1,0]/d",
+          "0,2": "2*Gt_02*J_D02[1,0]/d"
+        }
+      },
+      "UV_subtraction": "none: no 1/eps pole (every member is a pure power divergence, omega > 0); MS-bar counterterm 0",
+      "finite_part": "0 (all components)",
+      "local_ambiguity": "none generated in the declared prescription; the kappa^2 hh slot's local freedom is the p14r h.h counterterm directions (degree 4 in p) and is NOT touched by D02/D12 (no pole, no finite local term)",
+      "renormalization_conditions": "MS-bar at mu (P14 normalization condition 0) + N4 (no mu^4, mu^2 p^2 contacts); no counterterm is required",
+      "scaleless_analysis": {
+        "S0_applications": [
+          {
+            "context": "D02: int (l^2)^0/l^2",
+            "k": 0,
+            "nu": 1,
+            "omega": 2,
+            "class": "UV power divergence Lambda^2: no pole on either side at d = 4"
+          },
+          {
+            "context": "D02: int (l^2)^1/l^2",
+            "k": 1,
+            "nu": 1,
+            "omega": 4,
+            "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+          }
+        ],
+        "logarithmic_members": [],
+        "UV_IR_reading": "no member is logarithmic (omega = 0): the DR zero is NOT a 1/eps_UV - 1/eps_IR cancellation here; it discards pure power divergences (omega = 2, 4); the IR region converges at d = 4 and neither the UV nor the IR part has a pole at d = 4"
+      },
+      "prescription_dependence": {
+        "IR_regulator_mass": {
+          "rule": "1/(l^2 + i0) -> 1/(l^2 - m^2 + i0) on the loop line (analysis only; m is not in the action)",
+          "pole_powers_of_m2": [1, 2],
+          "pole_examples": {
+            "0,0": "-9*Gt_00*m2**2/8 + 5*Gt_11*m2**2/8 + 5*Gt_22*m2**2/8 + 5*Gt_33*m2**2/8 + 3*m2**2",
+            "0,1": "Gt_01*m2**2/2",
+            "0,2": "Gt_02*m2**2/2"
+          },
+          "finite_examples": {
+            "0,0": "9*Gt_00*Lm*m2**2/8 - 27*Gt_00*m2**2/16 - 5*Gt_11*Lm*m2**2/8 + 15*Gt_11*m2**2/16 - 5*Gt_22*Lm*m2**2/8 + 15*Gt_22*m2**2/16 - 5*Gt_33*Lm*m2**2/8 + 15*Gt_33*m2**2/16 - 3*Lm*m2**2 + 9*m2**2/2",
+            "0,1": "-Gt_01*Lm*m2**2/2 + 3*Gt_01*m2**2/4",
+            "0,2": "-Gt_02*Lm*m2**2/2 + 3*Gt_02*m2**2/4"
+          },
+          "limit_m_to_0": "0 (pole ~ m^{2j}, finite ~ m^{2j}(a + b log m^2), j >= 1)",
+          "counterterm_needed_at_finite_m": "poles ~ kappa^2 m^4 hh and kappa^2 m^2 p^2 hh: order-0/order-2 contacts, OUTSIDE the p14r h.h basis (excluded by N4); they vanish as m -> 0"
+        },
+        "analytic_regulator": "(l^2)^{-1-nu}: the integrand stays scaleless for every nu, the value stays 0; an analytic regulator alone does not separate UV from IR here",
+        "cutoff_split": "each member splits into IR (+Lambda^omega/omega...) and UV (-Lambda^omega/omega...) pieces with no pole at d = 4; with a hard cutoff the would-be counterterms are kappa^2 Lambda^4 hh and kappa^2 Lambda^2 p^2 hh (order 0/2: excluded by N4, not p14r directions)",
+        "p14r_counterterm_required": false
+      },
+      "verification_controls": {
+        "export_sha_pinned_to_p14r_certificate": true,
+        "independent_integrand_route_p14r": "W6 Hessian/Tr-log route (P14_amplitude_rules W6_exports)",
+        "route1_dred_lift_equals_route2_symmetric_integration": true,
+        "components_compared": 94,
+        "all_components_vanish": true
+      },
+      "value_imported_from_XVI_O": false,
+      "XVI_O_comparison": "n/a"
+    },
+    "D12": {
+      "graph": "D12",
+      "slot": "kappa^2 hh two-point, scalar tadpole (D12 slot; kept separate from the one-point slot)",
+      "kappa_order": 2,
+      "export": {
+        "file": "exports/P14_integrands/D12.json",
+        "sha256_recomputed": "044080e17dc3acdfcbd2640995d831b69ab2d637712f27148fa60a6a2a99b6fa",
+        "sha256_stored": "044080e17dc3acdfcbd2640995d831b69ab2d637712f27148fa60a6a2a99b6fa",
+        "sha256_p14r_certificate": "044080e17dc3acdfcbd2640995d831b69ab2d637712f27148fa60a6a2a99b6fa",
+        "pinned": true
+      },
+      "prefactor": "-kappa**2/2",
+      "denominators": ["l^2+i0"],
+      "massless_declared": true,
+      "status": "vanishing_under_declared_prescription",
+      "regulated_expression": {
+        "form": "iGamma_1 = N_eps * (-kappa**2/2) * sum_comp [ sum_k c_k(d, p, Gt) J_D12[k,0] ],  J_D12[k,0] = int (l^2)^k / (l^2 + i0)",
+        "components": 94,
+        "J_members_k": [1],
+        "components_with_evanescent_Gt_part": 94,
+        "examples": {
+          "0,0": "-3*Gt_00*J_D12[1,0]/(4*d) - Gt_11*J_D12[1,0]/(4*d) - Gt_22*J_D12[1,0]/(4*d) - Gt_33*J_D12[1,0]/(4*d)",
+          "0,1": "Gt_01*J_D12[1,0]/d",
+          "0,2": "Gt_02*J_D12[1,0]/d"
+        }
+      },
+      "UV_subtraction": "none: no 1/eps pole (every member is a pure power divergence, omega > 0); MS-bar counterterm 0",
+      "finite_part": "0 (all components)",
+      "local_ambiguity": "none generated in the declared prescription; the kappa^2 hh slot's local freedom is the p14r h.h counterterm directions (degree 4 in p) and is NOT touched by D02/D12 (no pole, no finite local term)",
+      "renormalization_conditions": "MS-bar at mu (P14 normalization condition 0) + N4 (no mu^4, mu^2 p^2 contacts); no counterterm is required",
+      "scaleless_analysis": {
+        "S0_applications": [
+          {
+            "context": "D12: int (l^2)^1/l^2",
+            "k": 1,
+            "nu": 1,
+            "omega": 4,
+            "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+          }
+        ],
+        "logarithmic_members": [],
+        "UV_IR_reading": "no member is logarithmic (omega = 0): the DR zero is NOT a 1/eps_UV - 1/eps_IR cancellation here; it discards pure power divergences (omega = 4); the IR region converges at d = 4 and neither the UV nor the IR part has a pole at d = 4"
+      },
+      "prescription_dependence": {
+        "IR_regulator_mass": {
+          "rule": "1/(l^2 + i0) -> 1/(l^2 - m^2 + i0) on the loop line (analysis only; m is not in the action)",
+          "pole_powers_of_m2": [2],
+          "pole_examples": {
+            "0,0": "-3*Gt_00*m2**2/16 - Gt_11*m2**2/16 - Gt_22*m2**2/16 - Gt_33*m2**2/16",
+            "0,1": "Gt_01*m2**2/4",
+            "0,2": "Gt_02*m2**2/4"
+          },
+          "finite_examples": {
+            "0,0": "3*Gt_00*Lm*m2**2/16 - 9*Gt_00*m2**2/32 + Gt_11*Lm*m2**2/16 - 3*Gt_11*m2**2/32 + Gt_22*Lm*m2**2/16 - 3*Gt_22*m2**2/32 + Gt_33*Lm*m2**2/16 - 3*Gt_33*m2**2/32",
+            "0,1": "-Gt_01*Lm*m2**2/4 + 3*Gt_01*m2**2/8",
+            "0,2": "-Gt_02*Lm*m2**2/4 + 3*Gt_02*m2**2/8"
+          },
+          "limit_m_to_0": "0 (pole ~ m^{2j}, finite ~ m^{2j}(a + b log m^2), j >= 1)",
+          "counterterm_needed_at_finite_m": "poles ~ kappa^2 m^4 hh and kappa^2 m^2 p^2 hh: order-0/order-2 contacts, OUTSIDE the p14r h.h basis (excluded by N4); they vanish as m -> 0"
+        },
+        "analytic_regulator": "(l^2)^{-1-nu}: the integrand stays scaleless for every nu, the value stays 0; an analytic regulator alone does not separate UV from IR here",
+        "cutoff_split": "each member splits into IR (+Lambda^omega/omega...) and UV (-Lambda^omega/omega...) pieces with no pole at d = 4; with a hard cutoff the would-be counterterms are kappa^2 Lambda^4 hh and kappa^2 Lambda^2 p^2 hh (order 0/2: excluded by N4, not p14r directions)",
+        "p14r_counterterm_required": false
+      },
+      "verification_controls": {
+        "export_sha_pinned_to_p14r_certificate": true,
+        "independent_integrand_route_p14r": "W6 Hessian/Tr-log route (P14_amplitude_rules W6_exports)",
+        "route1_dred_lift_equals_route2_symmetric_integration": true,
+        "components_compared": 94,
+        "all_components_vanish": true
+      },
+      "value_imported_from_XVI_O": false,
+      "XVI_O_comparison": "XVI-O declares the D12/one-point value 0 by dimensional_regularization_m0 (coincident prescription); p15 DERIVES the same vanishing under P's own declared prescription; not imported"
+    },
+    "D14a": {
+      "graph": "D14a",
+      "slot": "order-kappa one-point slot",
+      "kappa_order": 1,
+      "export": {
+        "file": "exports/P14_integrands/D14a.json",
+        "sha256_recomputed": "e141db64f2ed3ef1cb09709b03b8bbaf6c55d29604cb6873e09d05387473e606",
+        "sha256_stored": "e141db64f2ed3ef1cb09709b03b8bbaf6c55d29604cb6873e09d05387473e606",
+        "sha256_p14r_certificate": "e141db64f2ed3ef1cb09709b03b8bbaf6c55d29604cb6873e09d05387473e606",
+        "pinned": true
+      },
+      "prefactor": "-kappa/2",
+      "denominators": ["l^2+i0"],
+      "massless_declared": true,
+      "status": "vanishing_under_declared_prescription",
+      "regulated_expression": {
+        "form": "iGamma_1 = N_eps * (-kappa/2) * sum_comp [ sum_k c_k(d, p, Gt) J_D14a[k,0] ],  J_D14a[k,0] = int (l^2)^k / (l^2 + i0)",
+        "components": 10,
+        "J_members_k": [1],
+        "components_with_evanescent_Gt_part": 10,
+        "examples": {
+          "0": "3*Gt_00*J_D14a[1,0]/d - Gt_11*J_D14a[1,0]/d - Gt_22*J_D14a[1,0]/d - Gt_33*J_D14a[1,0]/d - 6*J_D14a[1,0]/d",
+          "1": "-4*Gt_01*J_D14a[1,0]/d",
+          "2": "-4*Gt_02*J_D14a[1,0]/d"
+        }
+      },
+      "UV_subtraction": "none: no 1/eps pole (every member is a pure power divergence, omega > 0); MS-bar counterterm 0",
+      "finite_part": "0 (all components)",
+      "local_ambiguity": "none: the p14r kappa^1 counterterm basis is empty (one-leg local functionals are total derivatives or need a dimension-5 field)",
+      "renormalization_conditions": "MS-bar at mu (P14 normalization condition 0) + N4 (no mu^4, mu^2 p^2 contacts); no counterterm is required",
+      "scaleless_analysis": {
+        "S0_applications": [
+          {
+            "context": "D14a: int (l^2)^1/l^2",
+            "k": 1,
+            "nu": 1,
+            "omega": 4,
+            "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+          }
+        ],
+        "logarithmic_members": [],
+        "UV_IR_reading": "no member is logarithmic (omega = 0): the DR zero is NOT a 1/eps_UV - 1/eps_IR cancellation here; it discards pure power divergences (omega = 4); the IR region converges at d = 4 and neither the UV nor the IR part has a pole at d = 4"
+      },
+      "prescription_dependence": {
+        "IR_regulator_mass": {
+          "rule": "1/(l^2 + i0) -> 1/(l^2 - m^2 + i0) on the loop line (analysis only; m is not in the action)",
+          "pole_powers_of_m2": [2],
+          "pole_examples": {
+            "0": "3*Gt_00*m2**2/4 - Gt_11*m2**2/4 - Gt_22*m2**2/4 - Gt_33*m2**2/4 - 3*m2**2/2",
+            "1": "-Gt_01*m2**2",
+            "2": "-Gt_02*m2**2"
+          },
+          "finite_examples": {
+            "0": "-3*Gt_00*Lm*m2**2/4 + 9*Gt_00*m2**2/8 + Gt_11*Lm*m2**2/4 - 3*Gt_11*m2**2/8 + Gt_22*Lm*m2**2/4 - 3*Gt_22*m2**2/8 + Gt_33*Lm*m2**2/4 - 3*Gt_33*m2**2/8 + 3*Lm*m2**2/2 - 9*m2**2/4",
+            "1": "Gt_01*Lm*m2**2 - 3*Gt_01*m2**2/2",
+            "2": "Gt_02*Lm*m2**2 - 3*Gt_02*m2**2/2"
+          },
+          "limit_m_to_0": "0 (pole ~ m^{2j}, finite ~ m^{2j}(a + b log m^2), j >= 1)",
+          "counterterm_needed_at_finite_m": "pole ~ kappa m^4 h: a one-point (cosmological-type) contact, OUTSIDE the p14r basis (kappa^1 basis empty); it vanishes as m -> 0"
+        },
+        "analytic_regulator": "(l^2)^{-1-nu}: the integrand stays scaleless for every nu, the value stays 0; an analytic regulator alone does not separate UV from IR here",
+        "cutoff_split": "each member splits into IR (+Lambda^omega/omega...) and UV (-Lambda^omega/omega...) pieces with no pole at d = 4; with a hard cutoff the would-be counterterms are kappa Lambda^4 h (one-point; no p14r kappa^1 direction)",
+        "p14r_counterterm_required": false
+      },
+      "verification_controls": {
+        "export_sha_pinned_to_p14r_certificate": true,
+        "independent_integrand_route_p14r": "W5 independent sympy regeneration",
+        "route1_dred_lift_equals_route2_symmetric_integration": true,
+        "components_compared": 10,
+        "all_components_vanish": true
+      },
+      "value_imported_from_XVI_O": false,
+      "XVI_O_comparison": "n/a"
+    },
+    "D14b": {
+      "graph": "D14b",
+      "slot": "order-kappa one-point slot",
+      "kappa_order": 1,
+      "export": {
+        "file": "exports/P14_integrands/D14b.json",
+        "sha256_recomputed": "630ff664eec930d2c3eab60f5782dc9a3d4151c85304549f315cd94ad68d94de",
+        "sha256_stored": "630ff664eec930d2c3eab60f5782dc9a3d4151c85304549f315cd94ad68d94de",
+        "sha256_p14r_certificate": "630ff664eec930d2c3eab60f5782dc9a3d4151c85304549f315cd94ad68d94de",
+        "pinned": true
+      },
+      "prefactor": "kappa",
+      "denominators": ["l^2+i0"],
+      "massless_declared": true,
+      "status": "vanishing_under_declared_prescription",
+      "regulated_expression": {
+        "form": "iGamma_1 = N_eps * (kappa) * sum_comp [ sum_k c_k(d, p, Gt) J_D14b[k,0] ],  J_D14b[k,0] = int (l^2)^k / (l^2 + i0)",
+        "components": 4,
+        "J_members_k": [1],
+        "components_with_evanescent_Gt_part": 4,
+        "examples": {
+          "0": "-Gt_00*J_D14b[1,0]/d + Gt_11*J_D14b[1,0]/d + Gt_22*J_D14b[1,0]/d + Gt_33*J_D14b[1,0]/d + 4*J_D14b[1,0]/d",
+          "4": "Gt_00*J_D14b[1,0]/d - Gt_11*J_D14b[1,0]/d - Gt_22*J_D14b[1,0]/d - Gt_33*J_D14b[1,0]/d - 4*J_D14b[1,0]/d",
+          "7": "Gt_00*J_D14b[1,0]/d - Gt_11*J_D14b[1,0]/d - Gt_22*J_D14b[1,0]/d - Gt_33*J_D14b[1,0]/d - 4*J_D14b[1,0]/d"
+        }
+      },
+      "UV_subtraction": "none: no 1/eps pole (every member is a pure power divergence, omega > 0); MS-bar counterterm 0",
+      "finite_part": "0 (all components)",
+      "local_ambiguity": "none: the p14r kappa^1 counterterm basis is empty (one-leg local functionals are total derivatives or need a dimension-5 field)",
+      "renormalization_conditions": "MS-bar at mu (P14 normalization condition 0) + N4 (no mu^4, mu^2 p^2 contacts); no counterterm is required",
+      "scaleless_analysis": {
+        "S0_applications": [
+          {
+            "context": "D14b: int (l^2)^1/l^2",
+            "k": 1,
+            "nu": 1,
+            "omega": 4,
+            "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+          }
+        ],
+        "logarithmic_members": [],
+        "UV_IR_reading": "no member is logarithmic (omega = 0): the DR zero is NOT a 1/eps_UV - 1/eps_IR cancellation here; it discards pure power divergences (omega = 4); the IR region converges at d = 4 and neither the UV nor the IR part has a pole at d = 4"
+      },
+      "prescription_dependence": {
+        "IR_regulator_mass": {
+          "rule": "1/(l^2 + i0) -> 1/(l^2 - m^2 + i0) on the loop line (analysis only; m is not in the action)",
+          "pole_powers_of_m2": [2],
+          "pole_examples": {
+            "0": "-Gt_00*m2**2/4 + Gt_11*m2**2/4 + Gt_22*m2**2/4 + Gt_33*m2**2/4 + m2**2",
+            "4": "Gt_00*m2**2/4 - Gt_11*m2**2/4 - Gt_22*m2**2/4 - Gt_33*m2**2/4 - m2**2",
+            "7": "Gt_00*m2**2/4 - Gt_11*m2**2/4 - Gt_22*m2**2/4 - Gt_33*m2**2/4 - m2**2"
+          },
+          "finite_examples": {
+            "0": "Gt_00*Lm*m2**2/4 - 3*Gt_00*m2**2/8 - Gt_11*Lm*m2**2/4 + 3*Gt_11*m2**2/8 - Gt_22*Lm*m2**2/4 + 3*Gt_22*m2**2/8 - Gt_33*Lm*m2**2/4 + 3*Gt_33*m2**2/8 - Lm*m2**2 + 3*m2**2/2",
+            "4": "-Gt_00*Lm*m2**2/4 + 3*Gt_00*m2**2/8 + Gt_11*Lm*m2**2/4 - 3*Gt_11*m2**2/8 + Gt_22*Lm*m2**2/4 - 3*Gt_22*m2**2/8 + Gt_33*Lm*m2**2/4 - 3*Gt_33*m2**2/8 + Lm*m2**2 - 3*m2**2/2",
+            "7": "-Gt_00*Lm*m2**2/4 + 3*Gt_00*m2**2/8 + Gt_11*Lm*m2**2/4 - 3*Gt_11*m2**2/8 + Gt_22*Lm*m2**2/4 - 3*Gt_22*m2**2/8 + Gt_33*Lm*m2**2/4 - 3*Gt_33*m2**2/8 + Lm*m2**2 - 3*m2**2/2"
+          },
+          "limit_m_to_0": "0 (pole ~ m^{2j}, finite ~ m^{2j}(a + b log m^2), j >= 1)",
+          "counterterm_needed_at_finite_m": "pole ~ kappa m^4 h: a one-point (cosmological-type) contact, OUTSIDE the p14r basis (kappa^1 basis empty); it vanishes as m -> 0"
+        },
+        "analytic_regulator": "(l^2)^{-1-nu}: the integrand stays scaleless for every nu, the value stays 0; an analytic regulator alone does not separate UV from IR here",
+        "cutoff_split": "each member splits into IR (+Lambda^omega/omega...) and UV (-Lambda^omega/omega...) pieces with no pole at d = 4; with a hard cutoff the would-be counterterms are kappa Lambda^4 h (one-point; no p14r kappa^1 direction)",
+        "p14r_counterterm_required": false
+      },
+      "verification_controls": {
+        "export_sha_pinned_to_p14r_certificate": true,
+        "independent_integrand_route_p14r": "W5 independent sympy regeneration",
+        "route1_dred_lift_equals_route2_symmetric_integration": true,
+        "components_compared": 4,
+        "all_components_vanish": true
+      },
+      "value_imported_from_XVI_O": false,
+      "XVI_O_comparison": "n/a"
+    },
+    "D14c": {
+      "graph": "D14c",
+      "slot": "order-kappa one-point slot",
+      "kappa_order": 1,
+      "export": {
+        "file": "exports/P14_integrands/D14c.json",
+        "sha256_recomputed": "26d8a239783f101b997843a91ba11acaea453cab04a9fa1266974ad0e2a7f120",
+        "sha256_stored": "26d8a239783f101b997843a91ba11acaea453cab04a9fa1266974ad0e2a7f120",
+        "sha256_p14r_certificate": "26d8a239783f101b997843a91ba11acaea453cab04a9fa1266974ad0e2a7f120",
+        "pinned": true
+      },
+      "prefactor": "-kappa/2",
+      "denominators": ["l^2+i0"],
+      "massless_declared": true,
+      "status": "vanishing_under_declared_prescription",
+      "regulated_expression": {
+        "form": "iGamma_1 = N_eps * (-kappa/2) * sum_comp [ sum_k c_k(d, p, Gt) J_D14c[k,0] ],  J_D14c[k,0] = int (l^2)^k / (l^2 + i0)",
+        "components": 10,
+        "J_members_k": [1],
+        "components_with_evanescent_Gt_part": 10,
+        "examples": {
+          "0": "Gt_00*J_D14c[1,0]/(2*d) + Gt_11*J_D14c[1,0]/(2*d) + Gt_22*J_D14c[1,0]/(2*d) + Gt_33*J_D14c[1,0]/(2*d) + J_D14c[1,0]/d",
+          "1": "-2*Gt_01*J_D14c[1,0]/d",
+          "2": "-2*Gt_02*J_D14c[1,0]/d"
+        }
+      },
+      "UV_subtraction": "none: no 1/eps pole (every member is a pure power divergence, omega > 0); MS-bar counterterm 0",
+      "finite_part": "0 (all components)",
+      "local_ambiguity": "none: the p14r kappa^1 counterterm basis is empty (one-leg local functionals are total derivatives or need a dimension-5 field)",
+      "renormalization_conditions": "MS-bar at mu (P14 normalization condition 0) + N4 (no mu^4, mu^2 p^2 contacts); no counterterm is required",
+      "scaleless_analysis": {
+        "S0_applications": [
+          {
+            "context": "D14c: int (l^2)^1/l^2",
+            "k": 1,
+            "nu": 1,
+            "omega": 4,
+            "class": "UV power divergence Lambda^4: no pole on either side at d = 4"
+          }
+        ],
+        "logarithmic_members": [],
+        "UV_IR_reading": "no member is logarithmic (omega = 0): the DR zero is NOT a 1/eps_UV - 1/eps_IR cancellation here; it discards pure power divergences (omega = 4); the IR region converges at d = 4 and neither the UV nor the IR part has a pole at d = 4"
+      },
+      "prescription_dependence": {
+        "IR_regulator_mass": {
+          "rule": "1/(l^2 + i0) -> 1/(l^2 - m^2 + i0) on the loop line (analysis only; m is not in the action)",
+          "pole_powers_of_m2": [2],
+          "pole_examples": {
+            "0": "Gt_00*m2**2/8 + Gt_11*m2**2/8 + Gt_22*m2**2/8 + Gt_33*m2**2/8 + m2**2/4",
+            "1": "-Gt_01*m2**2/2",
+            "2": "-Gt_02*m2**2/2"
+          },
+          "finite_examples": {
+            "0": "-Gt_00*Lm*m2**2/8 + 3*Gt_00*m2**2/16 - Gt_11*Lm*m2**2/8 + 3*Gt_11*m2**2/16 - Gt_22*Lm*m2**2/8 + 3*Gt_22*m2**2/16 - Gt_33*Lm*m2**2/8 + 3*Gt_33*m2**2/16 - Lm*m2**2/4 + 3*m2**2/8",
+            "1": "Gt_01*Lm*m2**2/2 - 3*Gt_01*m2**2/4",
+            "2": "Gt_02*Lm*m2**2/2 - 3*Gt_02*m2**2/4"
+          },
+          "limit_m_to_0": "0 (pole ~ m^{2j}, finite ~ m^{2j}(a + b log m^2), j >= 1)",
+          "counterterm_needed_at_finite_m": "pole ~ kappa m^4 h: a one-point (cosmological-type) contact, OUTSIDE the p14r basis (kappa^1 basis empty); it vanishes as m -> 0"
+        },
+        "analytic_regulator": "(l^2)^{-1-nu}: the integrand stays scaleless for every nu, the value stays 0; an analytic regulator alone does not separate UV from IR here",
+        "cutoff_split": "each member splits into IR (+Lambda^omega/omega...) and UV (-Lambda^omega/omega...) pieces with no pole at d = 4; with a hard cutoff the would-be counterterms are kappa Lambda^4 h (one-point; no p14r kappa^1 direction)",
+        "p14r_counterterm_required": false
+      },
+      "verification_controls": {
+        "export_sha_pinned_to_p14r_certificate": true,
+        "independent_integrand_route_p14r": "W5 independent sympy regeneration",
+        "route1_dred_lift_equals_route2_symmetric_integration": true,
+        "components_compared": 10,
+        "all_components_vanish": true
+      },
+      "value_imported_from_XVI_O": false,
+      "XVI_O_comparison": "XVI-O declares the D12/one-point value 0 by dimensional_regularization_m0 (coincident prescription); p15 DERIVES the same vanishing under P's own declared prescription; not imported"
+    }
+  },
+  "D12_slot": {
+    "graph": "D12",
+    "kappa_order": 2,
+    "status": "vanishing_under_declared_prescription",
+    "derivation": "certificates/P15_batchA.json graphs.D12 (route 1 frozen-dred lift + S0, route 2 symmetric integration, IR-mass and cutoff analysis)",
+    "previous_status": "Missing (p14r)"
+  },
+  "one_point_slot_kappa1": {
+    "graphs": ["D14a", "D14b", "D14c"],
+    "kappa_order": 1,
+    "status": "vanishing_under_declared_prescription",
+    "note": "the order-kappa one-point slot; kept separate from D12 (kappa^2 hh)"
+  },
+  "gate_checks": {
+    "D02": true,
+    "D12": true,
+    "D14a": true,
+    "D14b": true,
+    "D14c": true,
+    "D12_separate_from_one_point_slot": true
+  },
+  "batchA_evaluated": {
+    "execution": true,
+    "claim": "D02, D12, D14a, D14b, D14c evaluated under the declared prescription (frozen p14r DRED + MS-bar + Feynman i0 + the explicit scaleless rule S0): each is vanishing_under_declared_prescription with no UV pole, finite part 0, no p14r counterterm required",
+    "scope": "massless declared action; DR-specific (S0): with an IR-regulator mass or a cutoff the tadpoles carry m^{2j}/Lambda^{omega} terms whose counterterms are order-0/2 contacts outside the p14r basis (N4) and vanish as m -> 0; D02 is only one of the three hh graphs (D01, D03 not evaluated); no slot is complete; NOT quantum_inputs_evaluated"
+  },
+  "loop_evaluations_performed": true,
+  "seconds": 1216.9
+}

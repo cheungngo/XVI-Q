@@ -1,0 +1,575 @@
+{
+ "landmark": "XVI-P",
+ "revision": "p23",
+ "deliverable": "p23 stage 1: O.1 exact requirement, one-loop power counting, enlarge-rule check, P.6 entry inventory",
+ "O1_source": {
+  "file": "provenance/XVI-O/O_quantum_target.json",
+  "sha256": "3cd3d1ba491381ba0a73d1677bfed10d3743e0575f61c71c325e626e4a78a645",
+  "read_only": true,
+  "gate": "O.1",
+  "target": {
+   "name": "one-loop_order_kappa2_bulk_two_point_on_S_inv",
+   "loop_order": 1,
+   "coupling_order": "kappa^2",
+   "external": "bulk two-point (graviton, scalar, ghost) including Einstein-scalar hh channels + vertex-derived gh=0 BV/source tree seeds; bulk mass frozen m=0",
+   "baseline_action": "S_inv (NOT S_D)",
+   "gauge": "frozen gauge fermion Psi=-i int cbar_mu (2 D^mu[h]-b^mu); b off shell",
+   "bulk_mass": "m=0 (Track II massless-obstruction alignment)"
+  },
+  "closure_question": "Does this sector close under the retained quantum identity?",
+  "outcome": "NOT_CLOSED",
+  "checklist": [
+   {
+    "item": "State retained quantum identity",
+    "status": "Constructed_as_statement",
+    "owner": "O.6"
+   },
+   {
+    "item": "List amplitudes constrained by identity",
+    "status": "manually_specified_partially_checked_O.4",
+    "owner": "O.4"
+   },
+   {
+    "item": "S_inv^{[2]} classical consistency",
+    "status": "Provisional_foundation_repaired_master_Partial",
+    "owner": "O.2"
+   },
+   {
+    "item": "Evaluate inventory graphs",
+    "status": "D11_kernel_Constructed_subsector_under_prescription_o70-sync_bulk_incomplete",
+    "owner": "O.5"
+   },
+   {
+    "item": "Demonstrate identity remainder cancellation / CT solution",
+    "status": "Unresolved_ST4a_ST4b_split",
+    "owner": "O.6/O.7"
+   },
+   {
+    "item": "Enlarge target if identity requires more legs/orders",
+    "status": "rule_active_not_triggered",
+    "owner": "O.1"
+   }
+  ],
+  "enlarge_rules": [
+   "If the stated identity constrains n-point or higher-loop pieces at the same coupling order, enlarge the target before Constructed.",
+   "If classical kappa^2 consistency fails, downgrade or repair O.2 before quantum contractions.",
+   "Never close the sector by silently identifying XVI-M selected graph with an action graph via ell_3."
+  ]
+ },
+ "O1_requirement": "O.1 closes iff the one-loop kappa^2 bulk two-point sector on S_inv closes under a VERIFIED retained quantum identity: every checklist item (O.2 classical kappa^2 master Constructed incl. grav ell_4; O.4 inventory; O.5 all graphs evaluated; O.6 identity verified; O.7 remainder cancellation / CT solution) earned, and the target enlarged first if the identity constrains more legs/orders at kappa^2.",
+ "O1_items_scope": {
+  "State retained quantum identity (O.6)": {
+   "scope": "PARTLY in XVI-P",
+   "evidence": "projected ch identity at one loop kappa^2 stated and verified (P19/P20), incl. evanescent CTs (P22); the BULK retained identity (ST4b functional) is XVI-O's statement, not changed"
+  },
+  "List amplitudes constrained by identity (O.4)": {
+   "scope": "IN XVI-P (this record)",
+   "evidence": "one-loop kappa^2: exactly the E=2 two-point and E=1 one-point graphs; enumeration reproduces the frozen inventory; completeness at topology level only"
+  },
+  "S_inv^{[2]} classical consistency (O.2)": {
+   "scope": "OUT OF SCOPE",
+   "evidence": "classical kappa^2 master 2(S0,S2)+(S1,S1): grav ell_4 Incomplete in XVI-O/XVI-N; XVI-A..O untouched -> O.1 cannot close inside XVI-P"
+  },
+  "Evaluate inventory graphs (O.5)": {
+   "scope": "IN XVI-P",
+   "evidence": "all E=2 kappa^2 graphs evaluated (P15..P18, D12 Missing never zero per P14 -> see open items)"
+  },
+  "Demonstrate identity remainder cancellation / CT solution (O.6/O.7)": {
+   "scope": "PARTLY in XVI-P",
+   "evidence": "projected: closure + restoration earned (P20, P22); bulk ST4a/ST4b split: XVI-O"
+  },
+  "Enlarge target if identity requires more legs/orders (O.1)": {
+   "scope": "IN XVI-P (this record)",
+   "evidence": "NOT triggered at kappa^2 at one loop (three-point one-loop sector empty at kappa^2); next order kappa^3 three-point = P.6 entry"
+  }
+ },
+ "O1_closable_in_XVI_P": false,
+ "O1_closure_status": "NOT_CLOSED",
+ "P6_entry_n_graphs": 15,
+ "one_point_n_graphs": 3,
+ "O1_closable_reason": "O.2 (classical kappa^2 master, grav ell_4 Incomplete) and the bulk ST4b identity are owned by XVI-O/XVI-N, which stay untouched",
+ "vertex_kappa_power_equals_legs_minus_2": {
+  "V2_grav": true,
+  "V3_grav": true,
+  "V4_grav": true,
+  "M0_ghost": true,
+  "V_cb_c_h": true,
+  "V_K_c": true,
+  "V_K_c_h": true,
+  "V_cs_c_c": true,
+  "V_phis_c_phi": true,
+  "V_b_h": true,
+  "V_b_b": true,
+  "V_cbs_b": true,
+  "M_phi": true,
+  "V_h_phi_phi": true,
+  "V_hh_phi_phi": true
+ },
+ "vertex_rule_holds": true,
+ "one_loop_kappa_equals_E": true,
+ "identity_at_kappa2": {
+  "terms": [
+   "(S^(0), Gamma_1^(2))  [E=2]",
+   "(S^(1), Gamma_1^(1))  [E=1]",
+   "(S^(2), Gamma_1^(0)) = 0  [field independent]"
+  ],
+  "orders_entering": [
+   "E=2 two-point (hh, phiphi, c.cb, K.c)",
+   "E=1 one-point"
+  ],
+  "three_point_one_loop_at_kappa2": "EMPTY (kappa^E with E=3 is kappa^3)",
+  "enlarge_rule_triggered": false
+ },
+ "graphs_E1": [
+  {
+   "external": "h",
+   "vertices": [
+    "V3_grav"
+   ]
+  },
+  {
+   "external": "h",
+   "vertices": [
+    "V_cb_c_h"
+   ]
+  },
+  {
+   "external": "h",
+   "vertices": [
+    "V_h_phi_phi"
+   ]
+  }
+ ],
+ "graphs_E2": [
+  {
+   "vertices": [
+    "V3_grav",
+    "V3_grav"
+   ],
+   "loop_lines": [
+    "h-h",
+    "h-h"
+   ],
+   "external": "h,h",
+   "kappa_power": 2,
+   "V": 2,
+   "I": 2,
+   "L": 1,
+   "kappa_equals_E": true
+  },
+  {
+   "vertices": [
+    "V4_grav"
+   ],
+   "loop_lines": [
+    "h-h"
+   ],
+   "external": "h,h",
+   "kappa_power": 2,
+   "V": 1,
+   "I": 1,
+   "L": 1,
+   "kappa_equals_E": true
+  },
+  {
+   "vertices": [
+    "V_K_c_h",
+    "V_cb_c_h"
+   ],
+   "loop_lines": [
+    "h-h",
+    "cb-c"
+   ],
+   "external": "K,c",
+   "kappa_power": 2,
+   "V": 2,
+   "I": 2,
+   "L": 1,
+   "kappa_equals_E": true
+  },
+  {
+   "vertices": [
+    "V_cb_c_h",
+    "V_cb_c_h"
+   ],
+   "loop_lines": [
+    "cb-c",
+    "cb-c"
+   ],
+   "external": "h,h",
+   "kappa_power": 2,
+   "V": 2,
+   "I": 2,
+   "L": 1,
+   "kappa_equals_E": true
+  },
+  {
+   "vertices": [
+    "V_cb_c_h",
+    "V_cb_c_h"
+   ],
+   "loop_lines": [
+    "h-h",
+    "cb-c"
+   ],
+   "external": "c,cb",
+   "kappa_power": 2,
+   "V": 2,
+   "I": 2,
+   "L": 1,
+   "kappa_equals_E": true
+  },
+  {
+   "vertices": [
+    "V_h_phi_phi",
+    "V_h_phi_phi"
+   ],
+   "loop_lines": [
+    "phi-phi",
+    "h-h"
+   ],
+   "external": "phi,phi",
+   "kappa_power": 2,
+   "V": 2,
+   "I": 2,
+   "L": 1,
+   "kappa_equals_E": true
+  },
+  {
+   "vertices": [
+    "V_h_phi_phi",
+    "V_h_phi_phi"
+   ],
+   "loop_lines": [
+    "phi-phi",
+    "phi-phi"
+   ],
+   "external": "h,h",
+   "kappa_power": 2,
+   "V": 2,
+   "I": 2,
+   "L": 1,
+   "kappa_equals_E": true
+  },
+  {
+   "vertices": [
+    "V_hh_phi_phi"
+   ],
+   "loop_lines": [
+    "h-h"
+   ],
+   "external": "phi,phi",
+   "kappa_power": 2,
+   "V": 1,
+   "I": 1,
+   "L": 1,
+   "kappa_equals_E": true
+  },
+  {
+   "vertices": [
+    "V_hh_phi_phi"
+   ],
+   "loop_lines": [
+    "phi-phi"
+   ],
+   "external": "h,h",
+   "kappa_power": 2,
+   "V": 1,
+   "I": 1,
+   "L": 1,
+   "kappa_equals_E": true
+  }
+ ],
+ "frozen_E2_match": {
+  "enumerated": 9,
+  "frozen": 9,
+  "missing_from_enumeration": [],
+  "not_in_frozen_inventory": [],
+  "equal": true
+ },
+ "P6_entry_kappa3_three_point": {
+  "n_graphs": 15,
+  "by_external": {
+   "K,c,h": 2,
+   "c,c,cs": 1,
+   "c,cb,h": 2,
+   "c,phi,phis": 1,
+   "h,h,h": 5,
+   "h,phi,phi": 4
+  },
+  "graphs": [
+   {
+    "vertices": [
+     "V3_grav",
+     "V3_grav",
+     "V3_grav"
+    ],
+    "loop_lines": [
+     "h-h",
+     "h-h",
+     "h-h"
+    ],
+    "external": "h,h,h",
+    "kappa_power": 3,
+    "V": 3,
+    "I": 3,
+    "L": 1,
+    "kappa_equals_E": true
+   },
+   {
+    "vertices": [
+     "V3_grav",
+     "V4_grav"
+    ],
+    "loop_lines": [
+     "h-h",
+     "h-h"
+    ],
+    "external": "h,h,h",
+    "kappa_power": 3,
+    "V": 2,
+    "I": 2,
+    "L": 1,
+    "kappa_equals_E": true
+   },
+   {
+    "vertices": [
+     "V3_grav",
+     "V_K_c_h",
+     "V_cb_c_h"
+    ],
+    "loop_lines": [
+     "h-h",
+     "c-cb",
+     "h-h"
+    ],
+    "external": "K,c,h",
+    "kappa_power": 3,
+    "V": 3,
+    "I": 3,
+    "L": 1,
+    "kappa_equals_E": true
+   },
+   {
+    "vertices": [
+     "V3_grav",
+     "V_cb_c_h",
+     "V_cb_c_h"
+    ],
+    "loop_lines": [
+     "h-h",
+     "c-cb",
+     "h-h"
+    ],
+    "external": "c,cb,h",
+    "kappa_power": 3,
+    "V": 3,
+    "I": 3,
+    "L": 1,
+    "kappa_equals_E": true
+   },
+   {
+    "vertices": [
+     "V3_grav",
+     "V_h_phi_phi",
+     "V_h_phi_phi"
+    ],
+    "loop_lines": [
+     "h-h",
+     "phi-phi",
+     "h-h"
+    ],
+    "external": "h,phi,phi",
+    "kappa_power": 3,
+    "V": 3,
+    "I": 3,
+    "L": 1,
+    "kappa_equals_E": true
+   },
+   {
+    "vertices": [
+     "V3_grav",
+     "V_hh_phi_phi"
+    ],
+    "loop_lines": [
+     "h-h",
+     "h-h"
+    ],
+    "external": "h,phi,phi",
+    "kappa_power": 3,
+    "V": 2,
+    "I": 2,
+    "L": 1,
+    "kappa_equals_E": true
+   },
+   {
+    "vertices": [
+     "V_K_c_h",
+     "V_cb_c_h",
+     "V_cb_c_h"
+    ],
+    "loop_lines": [
+     "h-h",
+     "cb-c",
+     "cb-c"
+    ],
+    "external": "K,c,h",
+    "kappa_power": 3,
+    "V": 3,
+    "I": 3,
+    "L": 1,
+    "kappa_equals_E": true
+   },
+   {
+    "vertices": [
+     "V_cb_c_h",
+     "V_cb_c_h",
+     "V_cb_c_h"
+    ],
+    "loop_lines": [
+     "cb-c",
+     "cb-c",
+     "cb-c"
+    ],
+    "external": "h,h,h",
+    "kappa_power": 3,
+    "V": 3,
+    "I": 3,
+    "L": 1,
+    "kappa_equals_E": true
+   },
+   {
+    "vertices": [
+     "V_cb_c_h",
+     "V_cb_c_h",
+     "V_cb_c_h"
+    ],
+    "loop_lines": [
+     "cb-c",
+     "h-h",
+     "cb-c"
+    ],
+    "external": "c,cb,h",
+    "kappa_power": 3,
+    "V": 3,
+    "I": 3,
+    "L": 1,
+    "kappa_equals_E": true
+   },
+   {
+    "vertices": [
+     "V_cb_c_h",
+     "V_cb_c_h",
+     "V_cs_c_c"
+    ],
+    "loop_lines": [
+     "h-h",
+     "cb-c",
+     "c-cb"
+    ],
+    "external": "c,c,cs",
+    "kappa_power": 3,
+    "V": 3,
+    "I": 3,
+    "L": 1,
+    "kappa_equals_E": true
+   },
+   {
+    "vertices": [
+     "V_cb_c_h",
+     "V_h_phi_phi",
+     "V_phis_c_phi"
+    ],
+    "loop_lines": [
+     "h-h",
+     "phi-phi",
+     "c-cb"
+    ],
+    "external": "c,phi,phis",
+    "kappa_power": 3,
+    "V": 3,
+    "I": 3,
+    "L": 1,
+    "kappa_equals_E": true
+   },
+   {
+    "vertices": [
+     "V_h_phi_phi",
+     "V_h_phi_phi",
+     "V_h_phi_phi"
+    ],
+    "loop_lines": [
+     "phi-phi",
+     "phi-phi",
+     "h-h"
+    ],
+    "external": "h,phi,phi",
+    "kappa_power": 3,
+    "V": 3,
+    "I": 3,
+    "L": 1,
+    "kappa_equals_E": true
+   },
+   {
+    "vertices": [
+     "V_h_phi_phi",
+     "V_hh_phi_phi"
+    ],
+    "loop_lines": [
+     "phi-phi",
+     "h-h"
+    ],
+    "external": "h,phi,phi",
+    "kappa_power": 3,
+    "V": 2,
+    "I": 2,
+    "L": 1,
+    "kappa_equals_E": true
+   },
+   {
+    "vertices": [
+     "V_h_phi_phi",
+     "V_h_phi_phi",
+     "V_h_phi_phi"
+    ],
+    "loop_lines": [
+     "phi-phi",
+     "phi-phi",
+     "phi-phi"
+    ],
+    "external": "h,h,h",
+    "kappa_power": 3,
+    "V": 3,
+    "I": 3,
+    "L": 1,
+    "kappa_equals_E": true
+   },
+   {
+    "vertices": [
+     "V_h_phi_phi",
+     "V_hh_phi_phi"
+    ],
+    "loop_lines": [
+     "phi-phi",
+     "phi-phi"
+    ],
+    "external": "h,h,h",
+    "kappa_power": 3,
+    "V": 2,
+    "I": 2,
+    "L": 1,
+    "kappa_equals_E": true
+   }
+  ],
+  "status": "inventory only (topology level). NOT evaluated: amplitude rules, counterterm domain and evaluation are the next release"
+ },
+ "mutations": {
+  "V3_grav_kappa_power_+1": true,
+  "drop_V_cb_c_h": true,
+  "drop_V_hh_phi_phi": true,
+  "spurious_c_h_propagator": true
+ },
+ "mutations_detected": true,
+ "seconds": 9.33,
+ "pass": true
+}

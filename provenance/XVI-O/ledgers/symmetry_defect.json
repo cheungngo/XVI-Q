@@ -1,0 +1,182 @@
+{
+  "revision": "o70-sync",
+  "gate": "O.6",
+  "identity_status": "Constructed_as_statement",
+  "verification_status": "not_Constructed_Conditional_on_foundations",
+  "symmetry_restored": false,
+  "symmetry_restored_subsector": true,
+  "subsector_verdict": "Constructed_subsector_under_prescription",
+  "D11_kernel_counterterm": "earned",
+  "kernel_NOT_bulk": true,
+  "separate_ledgers": {
+    "1_full_renormalized_amplitudes": "Unresolved",
+    "2_local_divergent_contact_ST4a": "schematic_candidate_only",
+    "3_finite_renormalization_freedom": "bookkeeping_slots_unfixed",
+    "4_Ward_BV_defect_ST4b": "verification_not_Constructed"
+  },
+  "ST4_split": {
+    "ST4a": "Gamma_1,local = sum z_i C_i (gh=0)",
+    "ST4b": "P_ret(S,C)=-P_ret A_1 (gh(C)=0; defect gh=1)",
+    "withdrawn_OR": "local_OR_defect single target"
+  },
+  "defects": [
+    {
+      "diagram_id": "D01_hh_bubble_cubic",
+      "classification": "omitted_contribution_pending_coeff",
+      "after_candidate_CT_list": "candidate_organization_only_not_must_reduce",
+      "matched_to_CT_ansatz": false,
+      "obstruction_within_declared_domain": "not_established",
+      "D_derivative_aware_superficial_schematic": 4,
+      "CT_candidate_list_size": 7,
+      "coverage_claim": false,
+      "independence_proven": false
+    },
+    {
+      "diagram_id": "D02_hh_tadpole_quartic",
+      "classification": "omitted_contribution_pending_coeff",
+      "after_candidate_CT_list": "candidate_organization_only_not_must_reduce",
+      "matched_to_CT_ansatz": false,
+      "obstruction_within_declared_domain": "not_established",
+      "D_derivative_aware_superficial_schematic": 4,
+      "CT_candidate_list_size": 7,
+      "coverage_claim": false,
+      "independence_proven": false
+    },
+    {
+      "diagram_id": "D03_hh_ghost_loop",
+      "classification": "omitted_contribution_pending_coeff",
+      "after_candidate_CT_list": "candidate_organization_only_not_must_reduce",
+      "matched_to_CT_ansatz": false,
+      "obstruction_within_declared_domain": "not_established",
+      "D_derivative_aware_superficial_schematic": 4,
+      "CT_candidate_list_size": 7,
+      "coverage_claim": false,
+      "independence_proven": false
+    },
+    {
+      "diagram_id": "D04_phiphi_bubble",
+      "classification": "omitted_contribution_pending_coeff",
+      "after_candidate_CT_list": "candidate_organization_only_not_must_reduce",
+      "matched_to_CT_ansatz": false,
+      "obstruction_within_declared_domain": "not_established",
+      "D_derivative_aware_superficial_schematic": 4,
+      "CT_candidate_list_size": 4,
+      "coverage_claim": false,
+      "independence_proven": false
+    },
+    {
+      "diagram_id": "D05a_phiphi_grav_tadpole",
+      "classification": "omitted_contribution_pending_coeff",
+      "after_candidate_CT_list": "candidate_organization_only_not_must_reduce",
+      "matched_to_CT_ansatz": false,
+      "obstruction_within_declared_domain": "not_established",
+      "D_derivative_aware_superficial_schematic": 4,
+      "CT_candidate_list_size": 4,
+      "coverage_claim": false,
+      "independence_proven": false
+    },
+    {
+      "diagram_id": "D05b_phiphi_tree_CT",
+      "classification": "omitted_contribution_pending_coeff",
+      "after_candidate_CT_list": "candidate_organization_only_not_must_reduce",
+      "matched_to_CT_ansatz": false,
+      "obstruction_within_declared_domain": "not_established",
+      "D_derivative_aware_superficial_schematic": 0,
+      "CT_candidate_list_size": 1,
+      "coverage_claim": false,
+      "independence_proven": false
+    },
+    {
+      "diagram_id": "D06_cc_ghost_two_point",
+      "classification": "omitted_contribution_pending_coeff",
+      "after_candidate_CT_list": "candidate_organization_only_not_must_reduce",
+      "matched_to_CT_ansatz": false,
+      "obstruction_within_declared_domain": "not_established",
+      "D_derivative_aware_superficial_schematic": 4,
+      "CT_candidate_list_size": 3,
+      "coverage_claim": false,
+      "independence_proven": false
+    },
+    {
+      "diagram_id": "D07_hstar_c_tree",
+      "classification": "omitted_contribution_pending_coeff",
+      "after_candidate_CT_list": "candidate_organization_only_not_must_reduce",
+      "matched_to_CT_ansatz": false,
+      "obstruction_within_declared_domain": "not_established",
+      "D_derivative_aware_superficial_schematic": 0,
+      "CT_candidate_list_size": 1,
+      "coverage_claim": false,
+      "independence_proven": false
+    },
+    {
+      "diagram_id": "D08_phistar_c_phi_tree",
+      "classification": "omitted_contribution_pending_coeff",
+      "after_candidate_CT_list": "candidate_organization_only_not_must_reduce",
+      "matched_to_CT_ansatz": false,
+      "obstruction_within_declared_domain": "not_established",
+      "D_derivative_aware_superficial_schematic": 0,
+      "CT_candidate_list_size": 1,
+      "coverage_claim": false,
+      "independence_proven": false
+    },
+    {
+      "diagram_id": "D09_cstar_cc_tree",
+      "classification": "omitted_contribution_pending_coeff",
+      "after_candidate_CT_list": "candidate_organization_only_not_must_reduce",
+      "matched_to_CT_ansatz": false,
+      "obstruction_within_declared_domain": "not_established",
+      "D_derivative_aware_superficial_schematic": 0,
+      "CT_candidate_list_size": 1,
+      "coverage_claim": false,
+      "independence_proven": false
+    },
+    {
+      "diagram_id": "D11_hh_scalar_loop",
+      "classification": "omitted_contribution_pending_coeff",
+      "after_candidate_CT_list": "candidate_organization_only_not_must_reduce",
+      "matched_to_CT_ansatz": false,
+      "obstruction_within_declared_domain": "not_established",
+      "D_derivative_aware_superficial_schematic": 4,
+      "CT_candidate_list_size": 7,
+      "coverage_claim": false,
+      "independence_proven": false
+    },
+    {
+      "diagram_id": "D12_hh_scalar_tadpole",
+      "classification": "omitted_contribution_pending_coeff",
+      "after_candidate_CT_list": "candidate_organization_only_not_must_reduce",
+      "matched_to_CT_ansatz": false,
+      "obstruction_within_declared_domain": "not_established",
+      "D_derivative_aware_superficial_schematic": 4,
+      "CT_candidate_list_size": 7,
+      "coverage_claim": false,
+      "independence_proven": false
+    },
+    {
+      "diagram_id": "D10_selected_M_graph_comparison_only",
+      "classification": "omitted_from_sector_by_nonclaim_comparison_data"
+    },
+    {
+      "diagram_id": "ST4a_local_action_matching",
+      "classification": "candidate_organization_to_be_tested",
+      "task": "Gamma_1,local = sum z_i C_i",
+      "detail": "Local divergent/contact part of one-loop EA equals linear combination of admitted gh=0 action CTs. NOT the full amplitude. Explicit identity Unresolved.",
+      "ghost_number_CT": 0,
+      "target_object": "Gamma_1_local_divergent_contact",
+      "NOT_full_amplitude": true,
+      "removable_by_admitted_finite_CT": "unverified_candidate"
+    },
+    {
+      "diagram_id": "ST4b_anomaly_cancellation",
+      "classification": "candidate_organization_to_be_tested",
+      "task": "P_ret(S,C) = -P_ret A_1 with gh(C)=0",
+      "detail": "Ward/BV defect A_1 has gh=1; cannot itself equal a linear combo of gh=0 hh CTs. Restoration = defect is BRST/BV variation of an admitted gh=0 CT. Unresolved.",
+      "ghost_number_defect": 1,
+      "ghost_number_CT": 0,
+      "target_object": "anomaly_BRST_defect_as_variation_of_admitted_CT",
+      "NOT_OR_with_ST4a": true,
+      "removable_by_admitted_finite_CT": "unverified_candidate"
+    }
+  ],
+  "refinement": "ST4a/ST4b split; independence_proven=false; D10 comparison; o61-calc inventory (mixed D04/D06, V_af_phi kappa^1, m=0); symmetry_restored=false"
+}

@@ -1,0 +1,1802 @@
+{
+  "revision": "o62-matter",
+  "gate": "O.4",
+  "relative_to_target": "Manually specified, partially checked inventory (o62-matter: structured edges + kappa/hbar powers) on S_inv at m=0 (+ vertex-derived gh=0 BV/source tree seeds for future O.6 identity)",
+  "status": "manually_specified_partially_checked_inventory",
+  "status_alias": "provisional_inventory",
+  "NOT_complete_claim": true,
+  "note": "o62-matter: manually specified, partially checked inventory. Implements species leg-balance, vertex-catalogue load, coupling-order check, declared 1PI/connected. Does NOT derive symmetry factors. Does NOT claim every contribution listed. D04 mixed bubble; D06 h-h+c-cbar; V_af_phi kappa^1 a=1/2; m=0 freeze. Source-loop channels remain Unresolved.",
+  "bulk_mass_policy": {
+    "freeze": "m=0",
+    "reason": "Bulk quantum target aligned to Track II massless obstruction. Inherited free Hessian -(Box+m^2) specializes to -Box at m=0 (NOT bare 'Box'). Massful cubic/quartic matter vertices omitted.",
+    "Hessian_at_m0": "-Box",
+    "NOT_arbitrary_m_gt_0": true
+  },
+  "ghost_number_table": {
+    "h": 0,
+    "h*": -1,
+    "phi": 0,
+    "phi*": -1,
+    "c": 1,
+    "c*": -2,
+    "cbar": -1,
+    "rule": "gh(Phi*_A)=-1-gh(Phi^A) (XIV-A/XI-B); admitted action terms even gh=0 (XIII-B)"
+  },
+  "withdrawn": [
+    {
+      "id": "D07_h_antifield_source",
+      "status": "WITHDRAWN",
+      "reason": "Declared external (h,h*) has gh_external=-1. For a ghost-number-zero effective action with ordinary numerical coefficients and no compensating external data, this cannot be a nonzero action term (XIV-A/XI-B; XIII-B).",
+      "former_external": "h, h*",
+      "gh_external": -1,
+      "replacement": "D07_hstar_c_tree (and unresolved one-loop source channels)"
+    },
+    {
+      "id": "D08_phi_antifield_source",
+      "status": "WITHDRAWN",
+      "reason": "Declared external (phi,phi*) has gh_external=-1  -  forbidden as gh=0 action term.",
+      "former_external": "phi, phi*",
+      "gh_external": -1,
+      "replacement": "D08_phistar_c_phi_tree"
+    },
+    {
+      "id": "D09_c_antifield_source",
+      "status": "WITHDRAWN",
+      "reason": "Declared external (c,c*) has gh_external=1-2=-1  -  forbidden as gh=0 action term.",
+      "former_external": "c, c*",
+      "gh_external": -1,
+      "replacement": "D09_cstar_cc_tree"
+    },
+    {
+      "id": "D05_phiphi_quartic_contact",
+      "status": "WITHDRAWN_split",
+      "reason": "Conflated quartic scalar-gravity / tree-contact / 'one-loop or tree' / L=I=0. Split into D05a (one-loop graviton tadpole on hhphiphi) and D05b (tree CT slot).",
+      "replacement": [
+        "D05a_phiphi_grav_tadpole",
+        "D05b_phiphi_tree_CT"
+      ]
+    },
+    {
+      "id": "D04_channel_split_unresolved_and_or",
+      "status": "WITHDRAWN_wording",
+      "reason": "o59 'graviton or scalar / and/or / channel split unresolved' replaced by explicit mixed bubble (one graviton + one scalar propagator).",
+      "replacement": "D04_phiphi_bubble mixed pairing"
+    }
+  ],
+  "unresolved_source_channels": {
+    "status": "Unresolved",
+    "note": "One-loop / kappa^2 BV-source amplitudes with antifields require derived propagator pairings from V_af_* plus bulk vertices. They are NOT obtained by assigning external (field, antifield) pairs. Candidate structures h* h c, etc., need explicit topology derivation before listing as Constructed inventory entries.",
+    "forbidden_pattern": "external (Phi, Phi*) with gh_external=-1"
+  },
+  "diagrams": [
+    {
+      "id": "D01_hh_bubble_cubic",
+      "kappa_power": 2,
+      "hbar_power": 1,
+      "internal_edges": [
+        {
+          "key": "h-h",
+          "multiplicity": 2
+        }
+      ],
+      "external": "h,h",
+      "external_leg_species": [
+        "h",
+        "h"
+      ],
+      "external_legs_explicit": [
+        "h_{mu nu}(x)",
+        "h_{rho sigma}(y)"
+      ],
+      "vertices": [
+        "V3_grav",
+        "V3_grav"
+      ],
+      "vertex_source": "O2_vertex_catalogue / XII-C ell_3",
+      "propagator_pairings": [
+        "h-h internal (2 lines)"
+      ],
+      "species": "graviton loop",
+      "order": "1-loop, kappa^2",
+      "topology": {
+        "L": 1,
+        "I": 2,
+        "V": 2
+      },
+      "sym_factor": "1/2",
+      "sym_factor_status": "Unverified",
+      "ghost_sign": "+1",
+      "support_WF": "standard Epstein-Glaser two-point; extension Unresolved",
+      "extension": "required",
+      "role": "bulk graviton two-point",
+      "status": "provisional_listed",
+      "connected": true,
+      "one_particle_irreducible": true,
+      "ipi_note": "1PI bubble; EA route",
+      "difference_variable_radial_model": "applicable_if_evaluated",
+      "coincident_prescription": "n/a",
+      "mass_policy": "m=0_bulk_freeze_n/a_pure_grav",
+      "checks": {
+        "topology": {
+          "L": 1,
+          "I": 2,
+          "V": 2,
+          "L_equals_I_minus_V_plus_1": true,
+          "predicted_L": 1
+        },
+        "gh_external": 0,
+        "gh_external_zero": true,
+        "leg_balance": {
+          "pass": true,
+          "skipped": false,
+          "vertex_leg_counts": {
+            "h": 6
+          },
+          "external_leg_counts": {
+            "h": 2
+          },
+          "parsed_pairings": [
+            {
+              "key": "h-h",
+              "multiplicity": 2
+            }
+          ],
+          "per_species": {
+            "h": {
+              "vertex_legs": 6,
+              "external_legs": 2,
+              "internal_contraction_endpoints": 4,
+              "balanced": true
+            }
+          },
+          "rule": "vertex_legs = external_legs + internal_contraction_endpoints"
+        },
+        "vertex_catalogue": {
+          "refs": [
+            "V3_grav",
+            "V3_grav"
+          ],
+          "all_loaded": true,
+          "missing": []
+        },
+        "coupling_order": {
+          "catalogue_orders": [
+            {
+              "id": "V3_grav",
+              "catalogue_order": "kappa^1",
+              "kappa_power": 1
+            },
+            {
+              "id": "V3_grav",
+              "catalogue_order": "kappa^1",
+              "kappa_power": 1
+            }
+          ],
+          "declared_order": "1-loop, kappa^2",
+          "kappa_power_sum_vertices": 2,
+          "declared_kappa_power": 2,
+          "declared_hbar_power": 1,
+          "issues": [],
+          "pass": true
+        },
+        "internal_edges_structured": {
+          "edges": [
+            {
+              "key": "h-h",
+              "multiplicity": 2
+            }
+          ],
+          "note": "Structured edges; global leg balance does not prove connectedness/1PI"
+        },
+        "connectedness_1PI": {
+          "connected": true,
+          "one_particle_irreducible": true,
+          "note": "1PI bubble; EA route",
+          "NOT_inferred_from_leg_balance": true
+        },
+        "symmetry_factor": {
+          "value": "1/2",
+          "status": "Unverified",
+          "note": "NOT derived from vertex-normalization convention in this builder"
+        }
+      },
+      "inventory_valid_for_gh0_action": true
+    },
+    {
+      "id": "D02_hh_tadpole_quartic",
+      "kappa_power": 2,
+      "hbar_power": 1,
+      "internal_edges": [
+        {
+          "key": "h-h",
+          "multiplicity": 1,
+          "kind": "self-contraction"
+        }
+      ],
+      "external": "h,h",
+      "external_leg_species": [
+        "h",
+        "h"
+      ],
+      "external_legs_explicit": [
+        "h_{mu nu}(x)",
+        "h_{rho sigma}(x) coincident"
+      ],
+      "vertices": [
+        "V4_grav"
+      ],
+      "vertex_source": "O2_vertex_catalogue V4_grav (ell_4 probes only)",
+      "propagator_pairings": [
+        "h-h self-contraction on V4 (contract two of four h legs; two external)"
+      ],
+      "species": "graviton tadpole",
+      "order": "1-loop, kappa^2",
+      "topology": {
+        "L": 1,
+        "I": 1,
+        "V": 1
+      },
+      "sym_factor": "1/2",
+      "sym_factor_status": "Unverified",
+      "ghost_sign": "+1",
+      "support_WF": "tadpole extension Unresolved",
+      "extension": "required",
+      "role": "quartic required at kappa^2; omission would break inventory",
+      "status": "provisional_listed",
+      "connected": true,
+      "one_particle_irreducible": true,
+      "difference_variable_radial_model": "not_applicable",
+      "coincident_prescription": "unresolved",
+      "tadpole_note": "Coincident contraction; prescription may vanish or exclude self-contractions --- must be declared before evaluation. Not a two-vertex difference-variable kernel.",
+      "checks": {
+        "topology": {
+          "L": 1,
+          "I": 1,
+          "V": 1,
+          "L_equals_I_minus_V_plus_1": true,
+          "predicted_L": 1
+        },
+        "gh_external": 0,
+        "gh_external_zero": true,
+        "leg_balance": {
+          "pass": true,
+          "skipped": false,
+          "vertex_leg_counts": {
+            "h": 4
+          },
+          "external_leg_counts": {
+            "h": 2
+          },
+          "parsed_pairings": [
+            {
+              "key": "h-h",
+              "multiplicity": 1
+            }
+          ],
+          "per_species": {
+            "h": {
+              "vertex_legs": 4,
+              "external_legs": 2,
+              "internal_contraction_endpoints": 2,
+              "balanced": true
+            }
+          },
+          "rule": "vertex_legs = external_legs + internal_contraction_endpoints"
+        },
+        "vertex_catalogue": {
+          "refs": [
+            "V4_grav"
+          ],
+          "all_loaded": true,
+          "missing": []
+        },
+        "coupling_order": {
+          "catalogue_orders": [
+            {
+              "id": "V4_grav",
+              "catalogue_order": "kappa^2",
+              "kappa_power": 2
+            }
+          ],
+          "declared_order": "1-loop, kappa^2",
+          "kappa_power_sum_vertices": 2,
+          "declared_kappa_power": 2,
+          "declared_hbar_power": 1,
+          "issues": [],
+          "pass": true
+        },
+        "internal_edges_structured": {
+          "edges": [
+            {
+              "key": "h-h",
+              "multiplicity": 1,
+              "kind": "self-contraction"
+            }
+          ],
+          "note": "Structured edges; global leg balance does not prove connectedness/1PI"
+        },
+        "connectedness_1PI": {
+          "connected": true,
+          "one_particle_irreducible": true,
+          "note": "Manually declared; global leg balance != connectedness/1PI proof",
+          "NOT_inferred_from_leg_balance": true
+        },
+        "symmetry_factor": {
+          "value": "1/2",
+          "status": "Unverified",
+          "note": "NOT derived from vertex-normalization convention in this builder"
+        }
+      },
+      "inventory_valid_for_gh0_action": true
+    },
+    {
+      "id": "D03_hh_ghost_loop",
+      "kappa_power": 2,
+      "hbar_power": 1,
+      "internal_edges": [
+        {
+          "key": "c-cbar",
+          "multiplicity": 2
+        }
+      ],
+      "external": "h,h",
+      "external_leg_species": [
+        "h",
+        "h"
+      ],
+      "external_legs_explicit": [
+        "h_{mu nu}(x)",
+        "h_{rho sigma}(y)"
+      ],
+      "vertices": [
+        "V3_cbar_c_h",
+        "V3_cbar_c_h"
+      ],
+      "vertex_source": "O2_vertex_catalogue V3_cbar_c_h",
+      "propagator_pairings": [
+        "c-cbar internal (2 lines)"
+      ],
+      "species": "ghost loop",
+      "order": "1-loop, kappa^2",
+      "topology": {
+        "L": 1,
+        "I": 2,
+        "V": 2
+      },
+      "sym_factor": "1",
+      "sym_factor_status": "Unverified",
+      "ghost_sign": "-1",
+      "support_WF": "ghost two-point product Unresolved",
+      "extension": "required",
+      "role": "gauge-fixed graviton two-point",
+      "status": "provisional_listed",
+      "connected": true,
+      "one_particle_irreducible": true,
+      "difference_variable_radial_model": "applicable_if_evaluated",
+      "coincident_prescription": "n/a",
+      "checks": {
+        "topology": {
+          "L": 1,
+          "I": 2,
+          "V": 2,
+          "L_equals_I_minus_V_plus_1": true,
+          "predicted_L": 1
+        },
+        "gh_external": 0,
+        "gh_external_zero": true,
+        "leg_balance": {
+          "pass": true,
+          "skipped": false,
+          "vertex_leg_counts": {
+            "cbar": 2,
+            "c": 2,
+            "h": 2
+          },
+          "external_leg_counts": {
+            "h": 2
+          },
+          "parsed_pairings": [
+            {
+              "key": "c-cbar",
+              "multiplicity": 2
+            }
+          ],
+          "per_species": {
+            "c": {
+              "vertex_legs": 2,
+              "external_legs": 0,
+              "internal_contraction_endpoints": 2,
+              "balanced": true
+            },
+            "cbar": {
+              "vertex_legs": 2,
+              "external_legs": 0,
+              "internal_contraction_endpoints": 2,
+              "balanced": true
+            },
+            "h": {
+              "vertex_legs": 2,
+              "external_legs": 2,
+              "internal_contraction_endpoints": 0,
+              "balanced": true
+            }
+          },
+          "rule": "vertex_legs = external_legs + internal_contraction_endpoints"
+        },
+        "vertex_catalogue": {
+          "refs": [
+            "V3_cbar_c_h",
+            "V3_cbar_c_h"
+          ],
+          "all_loaded": true,
+          "missing": []
+        },
+        "coupling_order": {
+          "catalogue_orders": [
+            {
+              "id": "V3_cbar_c_h",
+              "catalogue_order": "kappa^1",
+              "kappa_power": 1
+            },
+            {
+              "id": "V3_cbar_c_h",
+              "catalogue_order": "kappa^1",
+              "kappa_power": 1
+            }
+          ],
+          "declared_order": "1-loop, kappa^2",
+          "kappa_power_sum_vertices": 2,
+          "declared_kappa_power": 2,
+          "declared_hbar_power": 1,
+          "issues": [],
+          "pass": true
+        },
+        "internal_edges_structured": {
+          "edges": [
+            {
+              "key": "c-cbar",
+              "multiplicity": 2
+            }
+          ],
+          "note": "Structured edges; global leg balance does not prove connectedness/1PI"
+        },
+        "connectedness_1PI": {
+          "connected": true,
+          "one_particle_irreducible": true,
+          "note": "Manually declared; global leg balance != connectedness/1PI proof",
+          "NOT_inferred_from_leg_balance": true
+        },
+        "symmetry_factor": {
+          "value": "1",
+          "status": "Unverified",
+          "note": "NOT derived from vertex-normalization convention in this builder"
+        }
+      },
+      "inventory_valid_for_gh0_action": true
+    },
+    {
+      "id": "D04_phiphi_bubble",
+      "kappa_power": 2,
+      "hbar_power": 1,
+      "internal_edges": [
+        {
+          "key": "h-h",
+          "multiplicity": 1
+        },
+        {
+          "key": "phi-phi",
+          "multiplicity": 1
+        }
+      ],
+      "external": "phi,phi",
+      "external_leg_species": [
+        "phi",
+        "phi"
+      ],
+      "external_legs_explicit": [
+        "phi(x)",
+        "phi(y)"
+      ],
+      "vertices": [
+        "V3_hphiphi",
+        "V3_hphiphi"
+      ],
+      "vertex_source": "V3_hphiphi (XI-A minimal coupling @ m=0)",
+      "propagator_pairings": [
+        "one h-h graviton propagator AND one phi-phi scalar propagator (mixed bubble)"
+      ],
+      "species": "mixed graviton-scalar bubble",
+      "order": "1-loop, kappa^2",
+      "topology": {
+        "L": 1,
+        "I": 2,
+        "V": 2
+      },
+      "sym_factor": "1/2",
+      "sym_factor_status": "Unverified",
+      "ghost_sign": "+1",
+      "support_WF": "Unresolved",
+      "extension": "required",
+      "role": "bulk scalar two-point (mixed internal pairing)",
+      "status": "provisional_listed",
+      "connected": true,
+      "one_particle_irreducible": true,
+      "ipi_note": "1PI mixed bubble on EA route. Two V3_hphiphi with one external scalar each leave one h and one phi per vertex => internals MUST be one graviton and one scalar propagator. Other connected patterns (if any) would be enumerated separately; none listed here.",
+      "difference_variable_radial_model": "applicable_if_evaluated",
+      "coincident_prescription": "n/a",
+      "pairing_derivation": "Per vertex legs (h,phi,phi). External one phi each => remaining (h,phi) per vertex => contract h-h and phi-phi across vertices.",
+      "withdrawn_wording": "graviton or scalar / and/or / channel split unresolved",
+      "mass_policy": "m=0_bulk_freeze",
+      "checks": {
+        "topology": {
+          "L": 1,
+          "I": 2,
+          "V": 2,
+          "L_equals_I_minus_V_plus_1": true,
+          "predicted_L": 1
+        },
+        "gh_external": 0,
+        "gh_external_zero": true,
+        "leg_balance": {
+          "pass": true,
+          "skipped": false,
+          "vertex_leg_counts": {
+            "h": 2,
+            "phi": 4
+          },
+          "external_leg_counts": {
+            "phi": 2
+          },
+          "parsed_pairings": [
+            {
+              "key": "h-h",
+              "multiplicity": 1
+            },
+            {
+              "key": "phi-phi",
+              "multiplicity": 1
+            }
+          ],
+          "per_species": {
+            "h": {
+              "vertex_legs": 2,
+              "external_legs": 0,
+              "internal_contraction_endpoints": 2,
+              "balanced": true
+            },
+            "phi": {
+              "vertex_legs": 4,
+              "external_legs": 2,
+              "internal_contraction_endpoints": 2,
+              "balanced": true
+            }
+          },
+          "rule": "vertex_legs = external_legs + internal_contraction_endpoints"
+        },
+        "vertex_catalogue": {
+          "refs": [
+            "V3_hphiphi",
+            "V3_hphiphi"
+          ],
+          "all_loaded": true,
+          "missing": []
+        },
+        "coupling_order": {
+          "catalogue_orders": [
+            {
+              "id": "V3_hphiphi",
+              "catalogue_order": "kappa^1",
+              "kappa_power": 1
+            },
+            {
+              "id": "V3_hphiphi",
+              "catalogue_order": "kappa^1",
+              "kappa_power": 1
+            }
+          ],
+          "declared_order": "1-loop, kappa^2",
+          "kappa_power_sum_vertices": 2,
+          "declared_kappa_power": 2,
+          "declared_hbar_power": 1,
+          "issues": [],
+          "pass": true
+        },
+        "internal_edges_structured": {
+          "edges": [
+            {
+              "key": "h-h",
+              "multiplicity": 1
+            },
+            {
+              "key": "phi-phi",
+              "multiplicity": 1
+            }
+          ],
+          "note": "Structured edges; global leg balance does not prove connectedness/1PI"
+        },
+        "connectedness_1PI": {
+          "connected": true,
+          "one_particle_irreducible": true,
+          "note": "1PI mixed bubble on EA route. Two V3_hphiphi with one external scalar each leave one h and one phi per vertex => internals MUST be one graviton and one scalar propagator. Other connected patterns (if any) would be enumerated separately; none listed here.",
+          "NOT_inferred_from_leg_balance": true
+        },
+        "symmetry_factor": {
+          "value": "1/2",
+          "status": "Unverified",
+          "note": "NOT derived from vertex-normalization convention in this builder"
+        }
+      },
+      "inventory_valid_for_gh0_action": true
+    },
+    {
+      "id": "D05a_phiphi_grav_tadpole",
+      "kappa_power": 2,
+      "hbar_power": 1,
+      "internal_edges": [
+        {
+          "key": "h-h",
+          "multiplicity": 1,
+          "kind": "self-contraction"
+        }
+      ],
+      "external": "phi,phi",
+      "external_leg_species": [
+        "phi",
+        "phi"
+      ],
+      "external_legs_explicit": [
+        "phi(x)",
+        "phi(x) coincident"
+      ],
+      "vertices": [
+        "V4_scalar_grav"
+      ],
+      "vertex_source": "V4_scalar_grav (hh phiphi) @ m=0 kinetic",
+      "propagator_pairings": [
+        "contract two graviton legs of hhphiphi vertex (h-h self-contraction)"
+      ],
+      "species": "graviton tadpole on scalar self-energy",
+      "order": "1-loop, kappa^2",
+      "topology": {
+        "L": 1,
+        "I": 1,
+        "V": 1
+      },
+      "sym_factor": "1/2",
+      "sym_factor_status": "Unverified",
+      "ghost_sign": "+1",
+      "support_WF": "tadpole Unresolved",
+      "extension": "required",
+      "role": "one-loop scalar self-energy tadpole (graviton contraction of hhphiphi)",
+      "status": "provisional_listed",
+      "connected": true,
+      "one_particle_irreducible": true,
+      "difference_variable_radial_model": "not_applicable",
+      "coincident_prescription": "unresolved",
+      "origin": "loop_amplitude",
+      "split_from": "D05_phiphi_quartic_contact",
+      "derivative_accounting": {
+        "total_vertex_derivatives": 2,
+        "internal_line_derivatives": 0,
+        "external_field_derivatives": 2,
+        "mass_factors": 0,
+        "note": "Kinetic hhphiphi carries 2 derivatives on phi (external). Do NOT use d_v=0 as stand-in. m=0 freeze => mass_factors=0."
+      },
+      "tadpole_note": "Coincident graviton contraction; prescription unresolved (may vanish). Distinct from tree CT insertion D05b.",
+      "mass_policy": "m=0_bulk_freeze",
+      "checks": {
+        "topology": {
+          "L": 1,
+          "I": 1,
+          "V": 1,
+          "L_equals_I_minus_V_plus_1": true,
+          "predicted_L": 1
+        },
+        "gh_external": 0,
+        "gh_external_zero": true,
+        "leg_balance": {
+          "pass": true,
+          "skipped": false,
+          "vertex_leg_counts": {
+            "phi": 2,
+            "h": 2
+          },
+          "external_leg_counts": {
+            "phi": 2
+          },
+          "parsed_pairings": [
+            {
+              "key": "h-h",
+              "multiplicity": 1
+            }
+          ],
+          "per_species": {
+            "h": {
+              "vertex_legs": 2,
+              "external_legs": 0,
+              "internal_contraction_endpoints": 2,
+              "balanced": true
+            },
+            "phi": {
+              "vertex_legs": 2,
+              "external_legs": 2,
+              "internal_contraction_endpoints": 0,
+              "balanced": true
+            }
+          },
+          "rule": "vertex_legs = external_legs + internal_contraction_endpoints"
+        },
+        "vertex_catalogue": {
+          "refs": [
+            "V4_scalar_grav"
+          ],
+          "all_loaded": true,
+          "missing": []
+        },
+        "coupling_order": {
+          "catalogue_orders": [
+            {
+              "id": "V4_scalar_grav",
+              "catalogue_order": "kappa^2",
+              "kappa_power": 2
+            }
+          ],
+          "declared_order": "1-loop, kappa^2",
+          "kappa_power_sum_vertices": 2,
+          "declared_kappa_power": 2,
+          "declared_hbar_power": 1,
+          "issues": [],
+          "pass": true
+        },
+        "internal_edges_structured": {
+          "edges": [
+            {
+              "key": "h-h",
+              "multiplicity": 1,
+              "kind": "self-contraction"
+            }
+          ],
+          "note": "Structured edges; global leg balance does not prove connectedness/1PI"
+        },
+        "connectedness_1PI": {
+          "connected": true,
+          "one_particle_irreducible": true,
+          "note": "Manually declared; global leg balance != connectedness/1PI proof",
+          "NOT_inferred_from_leg_balance": true
+        },
+        "symmetry_factor": {
+          "value": "1/2",
+          "status": "Unverified",
+          "note": "NOT derived from vertex-normalization convention in this builder"
+        }
+      },
+      "inventory_valid_for_gh0_action": true
+    },
+    {
+      "id": "D05b_phiphi_tree_CT",
+      "kappa_power": null,
+      "hbar_power": 1,
+      "internal_edges": [],
+      "classical_or_CT_seed": true,
+      "external": "phi,phi",
+      "external_leg_species": [
+        "phi",
+        "phi"
+      ],
+      "external_legs_explicit": [
+        "phi(x)",
+        "phi(y)"
+      ],
+      "vertices": [
+        "CT_phiphi_local"
+      ],
+      "vertex_source": "separately specified local counterterm vertex (O.7 bookkeeping)",
+      "propagator_pairings": [
+        "none (tree/contact)"
+      ],
+      "species": "tree contact / CT insertion",
+      "order": "tree, local CT at kappa^2 bookkeeping",
+      "topology": {
+        "L": 0,
+        "I": 0,
+        "V": 1
+      },
+      "sym_factor": "n/a",
+      "sym_factor_status": "n/a",
+      "ghost_sign": "+1",
+      "support_WF": "local",
+      "extension": "local counterterm slot",
+      "role": "tree-level local CT insertion --- different origin from D05a",
+      "status": "provisional_listed_bookkeeping",
+      "connected": true,
+      "one_particle_irreducible": null,
+      "ipi_note": "Tree CT insertion; 1PI N/A",
+      "difference_variable_radial_model": "not_applicable",
+      "coincident_prescription": "n/a",
+      "origin": "tree_CT_insertion",
+      "split_from": "D05_phiphi_quartic_contact",
+      "checks": {
+        "topology": {
+          "L": 0,
+          "I": 0,
+          "V": 1,
+          "L_equals_I_minus_V_plus_1": true,
+          "predicted_L": 0
+        },
+        "gh_external": 0,
+        "gh_external_zero": true,
+        "leg_balance": {
+          "pass": true,
+          "skipped": true,
+          "reason": "CT or comparison entry"
+        },
+        "vertex_catalogue": {
+          "refs": [
+            "CT_phiphi_local"
+          ],
+          "all_loaded": true,
+          "missing": []
+        },
+        "coupling_order": {
+          "catalogue_orders": [
+            {
+              "id": "CT_phiphi_local",
+              "catalogue_order": "tree_CT_bookkeeping",
+              "kappa_power": null
+            }
+          ],
+          "declared_order": "tree, local CT at kappa^2 bookkeeping",
+          "kappa_power_sum_vertices": 0,
+          "declared_kappa_power": null,
+          "declared_hbar_power": 1,
+          "issues": [],
+          "pass": true
+        },
+        "internal_edges_structured": {
+          "edges": [],
+          "note": "Structured edges; global leg balance does not prove connectedness/1PI"
+        },
+        "connectedness_1PI": {
+          "connected": true,
+          "one_particle_irreducible": null,
+          "note": "Tree CT insertion; 1PI N/A",
+          "NOT_inferred_from_leg_balance": true
+        },
+        "symmetry_factor": {
+          "value": "n/a",
+          "status": "n/a",
+          "note": "NOT derived from vertex-normalization convention in this builder"
+        }
+      },
+      "inventory_valid_for_gh0_action": true
+    },
+    {
+      "id": "D06_cc_ghost_two_point",
+      "kappa_power": 2,
+      "hbar_power": 1,
+      "internal_edges": [
+        {
+          "key": "h-h",
+          "multiplicity": 1
+        },
+        {
+          "key": "c-cbar",
+          "multiplicity": 1
+        }
+      ],
+      "external": "c,cbar",
+      "external_leg_species": [
+        "c",
+        "cbar"
+      ],
+      "external_legs_explicit": [
+        "c^mu(x)",
+        "cbar_nu(y)"
+      ],
+      "vertices": [
+        "V3_cbar_c_h",
+        "V3_cbar_c_h"
+      ],
+      "vertex_source": "O2_vertex_catalogue V3_cbar_c_h",
+      "propagator_pairings": [
+        "one h-h graviton line AND one c-cbar ghost line (I=2)"
+      ],
+      "species": "mixed graviton-ghost bubble",
+      "order": "1-loop, kappa^2",
+      "topology": {
+        "L": 1,
+        "I": 2,
+        "V": 2
+      },
+      "sym_factor": "1",
+      "sym_factor_status": "Unverified",
+      "ghost_sign": "+1",
+      "support_WF": "Unresolved",
+      "extension": "required",
+      "role": "ghost two-point sector",
+      "status": "provisional_listed",
+      "connected": true,
+      "one_particle_irreducible": true,
+      "ipi_note": "1PI. Two cbar-c-h vertices with external (c,cbar) leave two graviton legs plus one ghost and one antighost => one h-h and one c-cbar internal.",
+      "difference_variable_radial_model": "applicable_if_evaluated",
+      "coincident_prescription": "n/a",
+      "pairing_derivation": "Per vertex (cbar,c,h). External c + cbar => remaining: 2 h + 1 c + 1 cbar.",
+      "withdrawn_wording": "propagator_pairings=['h-h internal'] only (I=2 mismatch)",
+      "checks": {
+        "topology": {
+          "L": 1,
+          "I": 2,
+          "V": 2,
+          "L_equals_I_minus_V_plus_1": true,
+          "predicted_L": 1
+        },
+        "gh_external": 0,
+        "gh_external_zero": true,
+        "leg_balance": {
+          "pass": true,
+          "skipped": false,
+          "vertex_leg_counts": {
+            "cbar": 2,
+            "c": 2,
+            "h": 2
+          },
+          "external_leg_counts": {
+            "c": 1,
+            "cbar": 1
+          },
+          "parsed_pairings": [
+            {
+              "key": "h-h",
+              "multiplicity": 1
+            },
+            {
+              "key": "c-cbar",
+              "multiplicity": 1
+            }
+          ],
+          "per_species": {
+            "c": {
+              "vertex_legs": 2,
+              "external_legs": 1,
+              "internal_contraction_endpoints": 1,
+              "balanced": true
+            },
+            "cbar": {
+              "vertex_legs": 2,
+              "external_legs": 1,
+              "internal_contraction_endpoints": 1,
+              "balanced": true
+            },
+            "h": {
+              "vertex_legs": 2,
+              "external_legs": 0,
+              "internal_contraction_endpoints": 2,
+              "balanced": true
+            }
+          },
+          "rule": "vertex_legs = external_legs + internal_contraction_endpoints"
+        },
+        "vertex_catalogue": {
+          "refs": [
+            "V3_cbar_c_h",
+            "V3_cbar_c_h"
+          ],
+          "all_loaded": true,
+          "missing": []
+        },
+        "coupling_order": {
+          "catalogue_orders": [
+            {
+              "id": "V3_cbar_c_h",
+              "catalogue_order": "kappa^1",
+              "kappa_power": 1
+            },
+            {
+              "id": "V3_cbar_c_h",
+              "catalogue_order": "kappa^1",
+              "kappa_power": 1
+            }
+          ],
+          "declared_order": "1-loop, kappa^2",
+          "kappa_power_sum_vertices": 2,
+          "declared_kappa_power": 2,
+          "declared_hbar_power": 1,
+          "issues": [],
+          "pass": true
+        },
+        "internal_edges_structured": {
+          "edges": [
+            {
+              "key": "h-h",
+              "multiplicity": 1
+            },
+            {
+              "key": "c-cbar",
+              "multiplicity": 1
+            }
+          ],
+          "note": "Structured edges; global leg balance does not prove connectedness/1PI"
+        },
+        "connectedness_1PI": {
+          "connected": true,
+          "one_particle_irreducible": true,
+          "note": "1PI. Two cbar-c-h vertices with external (c,cbar) leave two graviton legs plus one ghost and one antighost => one h-h and one c-cbar internal.",
+          "NOT_inferred_from_leg_balance": true
+        },
+        "symmetry_factor": {
+          "value": "1",
+          "status": "Unverified",
+          "note": "NOT derived from vertex-normalization convention in this builder"
+        }
+      },
+      "inventory_valid_for_gh0_action": true
+    },
+    {
+      "id": "D07_hstar_c_tree",
+      "kappa_power": 0,
+      "hbar_power": 0,
+      "internal_edges": [],
+      "classical_source_seed": true,
+      "NOT_one_loop_CT_slot": true,
+      "external": "h*,c",
+      "external_leg_species": [
+        "h*",
+        "c"
+      ],
+      "external_legs_explicit": [
+        "h^{* mu nu}(x)",
+        "c^rho(y)"
+      ],
+      "vertices": [
+        "V_af_h_0"
+      ],
+      "vertex_source": "O2_vertex_catalogue V_af_h_0: h* R0(c)",
+      "propagator_pairings": [
+        "none (tree from single vertex; R0(c) part)"
+      ],
+      "species": "BV antifield-ghost tree",
+      "order": "tree, kappa^0 (R0 piece)",
+      "topology": {
+        "L": 0,
+        "I": 0,
+        "V": 1
+      },
+      "sym_factor": "1",
+      "sym_factor_status": "Unverified",
+      "ghost_sign": "+1",
+      "support_WF": "local / tree",
+      "extension": "n/a (tree)",
+      "role": "BV linear coupling seed h* partial c (gh=0); identity-domain input, not a loop bulk two-point",
+      "status": "provisional_listed_vertex_derived",
+      "structure_candidate": "h* partial c",
+      "connected": true,
+      "one_particle_irreducible": null,
+      "difference_variable_radial_model": "not_applicable",
+      "coincident_prescription": "n/a",
+      "replaces": "D07_h_antifield_source",
+      "checks": {
+        "topology": {
+          "L": 0,
+          "I": 0,
+          "V": 1,
+          "L_equals_I_minus_V_plus_1": true,
+          "predicted_L": 0
+        },
+        "gh_external": 0,
+        "gh_external_zero": true,
+        "leg_balance": {
+          "pass": true,
+          "skipped": false,
+          "vertex_leg_counts": {
+            "h*": 1,
+            "c": 1
+          },
+          "external_leg_counts": {
+            "h*": 1,
+            "c": 1
+          },
+          "parsed_pairings": [],
+          "per_species": {
+            "c": {
+              "vertex_legs": 1,
+              "external_legs": 1,
+              "internal_contraction_endpoints": 0,
+              "balanced": true
+            },
+            "h*": {
+              "vertex_legs": 1,
+              "external_legs": 1,
+              "internal_contraction_endpoints": 0,
+              "balanced": true
+            }
+          },
+          "rule": "vertex_legs = external_legs + internal_contraction_endpoints"
+        },
+        "vertex_catalogue": {
+          "refs": [
+            "V_af_h_0"
+          ],
+          "all_loaded": true,
+          "missing": []
+        },
+        "coupling_order": {
+          "catalogue_orders": [
+            {
+              "id": "V_af_h_0",
+              "catalogue_order": "kappa^0",
+              "kappa_power": 0
+            }
+          ],
+          "declared_order": "tree, kappa^0 (R0 piece)",
+          "kappa_power_sum_vertices": 0,
+          "declared_kappa_power": 0,
+          "declared_hbar_power": 0,
+          "issues": [],
+          "pass": true
+        },
+        "internal_edges_structured": {
+          "edges": [],
+          "note": "Structured edges; global leg balance does not prove connectedness/1PI"
+        },
+        "connectedness_1PI": {
+          "connected": true,
+          "one_particle_irreducible": null,
+          "note": "Manually declared; global leg balance != connectedness/1PI proof",
+          "NOT_inferred_from_leg_balance": true
+        },
+        "symmetry_factor": {
+          "value": "1",
+          "status": "Unverified",
+          "note": "NOT derived from vertex-normalization convention in this builder"
+        }
+      },
+      "inventory_valid_for_gh0_action": true
+    },
+    {
+      "id": "D08_phistar_c_phi_tree",
+      "kappa_power": 1,
+      "hbar_power": 0,
+      "internal_edges": [],
+      "classical_source_seed": true,
+      "NOT_one_loop_CT_slot": true,
+      "external": "phi*,c,phi",
+      "external_leg_species": [
+        "phi*",
+        "c",
+        "phi"
+      ],
+      "external_legs_explicit": [
+        "phi^*(x)",
+        "c^mu(y)",
+        "phi(z)"
+      ],
+      "vertices": [
+        "V_af_phi"
+      ],
+      "vertex_source": "XVI-N frozen V_af_phi: S_af,phi = kappa a int phi*(c^rho partial_rho phi), a=1/2",
+      "propagator_pairings": [
+        "none (tree)"
+      ],
+      "species": "BV antifield-ghost-scalar tree",
+      "order": "tree, kappa^1",
+      "topology": {
+        "L": 0,
+        "I": 0,
+        "V": 1
+      },
+      "sym_factor": "1",
+      "sym_factor_status": "Unverified",
+      "ghost_sign": "+1",
+      "support_WF": "local / tree",
+      "extension": "n/a (tree)",
+      "role": "BV scalar coupling seed phi* c partial phi (gh=0); three-point tree at kappa^1",
+      "status": "provisional_listed_vertex_derived",
+      "structure_candidate": "kappa a phi* c partial phi",
+      "factor_a": "1/2",
+      "derivation": "XVI-N frozen: s phi = kappa a c^rho partial_rho phi with a=1/2, hence S_af,phi = kappa a int phi*(...). External (phi*,c,phi) has gh=-1+1+0=0. Order kappa^1 (NOT kappa^0). Imported --- not reconstructed as provisional order-zero.",
+      "connected": true,
+      "one_particle_irreducible": null,
+      "difference_variable_radial_model": "not_applicable",
+      "coincident_prescription": "n/a",
+      "replaces": "D08_phi_antifield_source",
+      "catalogue_status": "V_af_phi Constructed_inheritance (XVI-N)",
+      "withdrawn_order_claim": "tree, kappa^0 / Provisional_structural",
+      "checks": {
+        "topology": {
+          "L": 0,
+          "I": 0,
+          "V": 1,
+          "L_equals_I_minus_V_plus_1": true,
+          "predicted_L": 0
+        },
+        "gh_external": 0,
+        "gh_external_zero": true,
+        "leg_balance": {
+          "pass": true,
+          "skipped": false,
+          "vertex_leg_counts": {
+            "phi*": 1,
+            "c": 1,
+            "phi": 1
+          },
+          "external_leg_counts": {
+            "phi*": 1,
+            "c": 1,
+            "phi": 1
+          },
+          "parsed_pairings": [],
+          "per_species": {
+            "c": {
+              "vertex_legs": 1,
+              "external_legs": 1,
+              "internal_contraction_endpoints": 0,
+              "balanced": true
+            },
+            "phi": {
+              "vertex_legs": 1,
+              "external_legs": 1,
+              "internal_contraction_endpoints": 0,
+              "balanced": true
+            },
+            "phi*": {
+              "vertex_legs": 1,
+              "external_legs": 1,
+              "internal_contraction_endpoints": 0,
+              "balanced": true
+            }
+          },
+          "rule": "vertex_legs = external_legs + internal_contraction_endpoints"
+        },
+        "vertex_catalogue": {
+          "refs": [
+            "V_af_phi"
+          ],
+          "all_loaded": true,
+          "missing": []
+        },
+        "coupling_order": {
+          "catalogue_orders": [
+            {
+              "id": "V_af_phi",
+              "catalogue_order": "kappa^1",
+              "kappa_power": 1
+            }
+          ],
+          "declared_order": "tree, kappa^1",
+          "kappa_power_sum_vertices": 1,
+          "declared_kappa_power": 1,
+          "declared_hbar_power": 0,
+          "issues": [],
+          "pass": true
+        },
+        "internal_edges_structured": {
+          "edges": [],
+          "note": "Structured edges; global leg balance does not prove connectedness/1PI"
+        },
+        "connectedness_1PI": {
+          "connected": true,
+          "one_particle_irreducible": null,
+          "note": "Manually declared; global leg balance != connectedness/1PI proof",
+          "NOT_inferred_from_leg_balance": true
+        },
+        "symmetry_factor": {
+          "value": "1",
+          "status": "Unverified",
+          "note": "NOT derived from vertex-normalization convention in this builder"
+        }
+      },
+      "inventory_valid_for_gh0_action": true
+    },
+    {
+      "id": "D09_cstar_cc_tree",
+      "kappa_power": 1,
+      "hbar_power": 0,
+      "internal_edges": [],
+      "classical_source_seed": true,
+      "NOT_one_loop_CT_slot": true,
+      "external": "c*,c,c",
+      "external_leg_species": [
+        "c*",
+        "c",
+        "c"
+      ],
+      "external_legs_explicit": [
+        "c^*_mu(x)",
+        "c^nu(y)",
+        "c^rho(z)"
+      ],
+      "vertices": [
+        "V_af_c"
+      ],
+      "vertex_source": "O2_vertex_catalogue V_af_c: -kappa a c*(c.partial c)",
+      "propagator_pairings": [
+        "none (tree)"
+      ],
+      "species": "BV antifield-ghost tree",
+      "order": "tree, kappa^1",
+      "topology": {
+        "L": 0,
+        "I": 0,
+        "V": 1
+      },
+      "sym_factor": "1",
+      "sym_factor_status": "Unverified",
+      "ghost_sign": "diagram-dependent (odd ghosts)",
+      "support_WF": "local / tree",
+      "extension": "n/a (tree)",
+      "role": "BV ghost coupling seed c* c partial c (gh=0); three-point tree",
+      "status": "provisional_listed_vertex_derived",
+      "structure_candidate": "c* c partial c",
+      "connected": true,
+      "one_particle_irreducible": null,
+      "difference_variable_radial_model": "not_applicable",
+      "coincident_prescription": "n/a",
+      "replaces": "D09_c_antifield_source",
+      "checks": {
+        "topology": {
+          "L": 0,
+          "I": 0,
+          "V": 1,
+          "L_equals_I_minus_V_plus_1": true,
+          "predicted_L": 0
+        },
+        "gh_external": 0,
+        "gh_external_zero": true,
+        "leg_balance": {
+          "pass": true,
+          "skipped": false,
+          "vertex_leg_counts": {
+            "c*": 1,
+            "c": 2
+          },
+          "external_leg_counts": {
+            "c*": 1,
+            "c": 2
+          },
+          "parsed_pairings": [],
+          "per_species": {
+            "c": {
+              "vertex_legs": 2,
+              "external_legs": 2,
+              "internal_contraction_endpoints": 0,
+              "balanced": true
+            },
+            "c*": {
+              "vertex_legs": 1,
+              "external_legs": 1,
+              "internal_contraction_endpoints": 0,
+              "balanced": true
+            }
+          },
+          "rule": "vertex_legs = external_legs + internal_contraction_endpoints"
+        },
+        "vertex_catalogue": {
+          "refs": [
+            "V_af_c"
+          ],
+          "all_loaded": true,
+          "missing": []
+        },
+        "coupling_order": {
+          "catalogue_orders": [
+            {
+              "id": "V_af_c",
+              "catalogue_order": "kappa^1",
+              "kappa_power": 1
+            }
+          ],
+          "declared_order": "tree, kappa^1",
+          "kappa_power_sum_vertices": 1,
+          "declared_kappa_power": 1,
+          "declared_hbar_power": 0,
+          "issues": [],
+          "pass": true
+        },
+        "internal_edges_structured": {
+          "edges": [],
+          "note": "Structured edges; global leg balance does not prove connectedness/1PI"
+        },
+        "connectedness_1PI": {
+          "connected": true,
+          "one_particle_irreducible": null,
+          "note": "Manually declared; global leg balance != connectedness/1PI proof",
+          "NOT_inferred_from_leg_balance": true
+        },
+        "symmetry_factor": {
+          "value": "1",
+          "status": "Unverified",
+          "note": "NOT derived from vertex-normalization convention in this builder"
+        }
+      },
+      "inventory_valid_for_gh0_action": true
+    },
+    {
+      "id": "D11_hh_scalar_loop",
+      "kappa_power": 2,
+      "hbar_power": 1,
+      "internal_edges": [
+        {
+          "key": "phi-phi",
+          "multiplicity": 2
+        }
+      ],
+      "external": "h,h",
+      "external_leg_species": [
+        "h",
+        "h"
+      ],
+      "external_legs_explicit": [
+        "h_{mu nu}(x)",
+        "h_{rho sigma}(y)"
+      ],
+      "vertices": [
+        "V3_hphiphi",
+        "V3_hphiphi"
+      ],
+      "vertex_source": "V3_hphiphi @ m=0",
+      "propagator_pairings": [
+        "phi-phi internal (2 lines); scalar loop"
+      ],
+      "species": "scalar loop",
+      "order": "1-loop, kappa^2",
+      "topology": {
+        "L": 1,
+        "I": 2,
+        "V": 2
+      },
+      "sym_factor": "1/2",
+      "sym_factor_status": "Unverified",
+      "ghost_sign": "+1",
+      "support_WF": "Unresolved",
+      "extension": "required",
+      "role": "Einstein-scalar: scalar-loop contribution to graviton two-point",
+      "status": "provisional_listed",
+      "connected": true,
+      "one_particle_irreducible": true,
+      "difference_variable_radial_model": "applicable_if_evaluated",
+      "coincident_prescription": "n/a",
+      "mass_policy": "m=0_bulk_freeze",
+      "inventory_gap_closed": "o59-inv: scalar hh channel",
+      "checks": {
+        "topology": {
+          "L": 1,
+          "I": 2,
+          "V": 2,
+          "L_equals_I_minus_V_plus_1": true,
+          "predicted_L": 1
+        },
+        "gh_external": 0,
+        "gh_external_zero": true,
+        "leg_balance": {
+          "pass": true,
+          "skipped": false,
+          "vertex_leg_counts": {
+            "h": 2,
+            "phi": 4
+          },
+          "external_leg_counts": {
+            "h": 2
+          },
+          "parsed_pairings": [
+            {
+              "key": "phi-phi",
+              "multiplicity": 2
+            }
+          ],
+          "per_species": {
+            "h": {
+              "vertex_legs": 2,
+              "external_legs": 2,
+              "internal_contraction_endpoints": 0,
+              "balanced": true
+            },
+            "phi": {
+              "vertex_legs": 4,
+              "external_legs": 0,
+              "internal_contraction_endpoints": 4,
+              "balanced": true
+            }
+          },
+          "rule": "vertex_legs = external_legs + internal_contraction_endpoints"
+        },
+        "vertex_catalogue": {
+          "refs": [
+            "V3_hphiphi",
+            "V3_hphiphi"
+          ],
+          "all_loaded": true,
+          "missing": []
+        },
+        "coupling_order": {
+          "catalogue_orders": [
+            {
+              "id": "V3_hphiphi",
+              "catalogue_order": "kappa^1",
+              "kappa_power": 1
+            },
+            {
+              "id": "V3_hphiphi",
+              "catalogue_order": "kappa^1",
+              "kappa_power": 1
+            }
+          ],
+          "declared_order": "1-loop, kappa^2",
+          "kappa_power_sum_vertices": 2,
+          "declared_kappa_power": 2,
+          "declared_hbar_power": 1,
+          "issues": [],
+          "pass": true
+        },
+        "internal_edges_structured": {
+          "edges": [
+            {
+              "key": "phi-phi",
+              "multiplicity": 2
+            }
+          ],
+          "note": "Structured edges; global leg balance does not prove connectedness/1PI"
+        },
+        "connectedness_1PI": {
+          "connected": true,
+          "one_particle_irreducible": true,
+          "note": "Manually declared; global leg balance != connectedness/1PI proof",
+          "NOT_inferred_from_leg_balance": true
+        },
+        "symmetry_factor": {
+          "value": "1/2",
+          "status": "Unverified",
+          "note": "NOT derived from vertex-normalization convention in this builder"
+        }
+      },
+      "inventory_valid_for_gh0_action": true
+    },
+    {
+      "id": "D12_hh_scalar_tadpole",
+      "kappa_power": 2,
+      "hbar_power": 1,
+      "internal_edges": [
+        {
+          "key": "phi-phi",
+          "multiplicity": 1,
+          "kind": "self-contraction"
+        }
+      ],
+      "external": "h,h",
+      "external_leg_species": [
+        "h",
+        "h"
+      ],
+      "external_legs_explicit": [
+        "h_{mu nu}(x)",
+        "h_{rho sigma}(x) coincident"
+      ],
+      "vertices": [
+        "V4_scalar_grav"
+      ],
+      "vertex_source": "V4_scalar_grav (hh phiphi) @ m=0",
+      "propagator_pairings": [
+        "contract two scalar legs of hhphiphi vertex (phi-phi self-contraction)"
+      ],
+      "species": "scalar tadpole on graviton two-point",
+      "order": "1-loop, kappa^2",
+      "topology": {
+        "L": 1,
+        "I": 1,
+        "V": 1
+      },
+      "sym_factor": "1/2",
+      "sym_factor_status": "Unverified",
+      "ghost_sign": "+1",
+      "support_WF": "tadpole dim-reg m=0 => 0",
+      "extension": "required",
+      "role": "Einstein-scalar: scalar tadpole from hhphiphi",
+      "status": "provisional_listed",
+      "connected": true,
+      "one_particle_irreducible": true,
+      "difference_variable_radial_model": "not_applicable",
+      "coincident_prescription": "dimensional_regularization_m0",
+      "derivative_accounting": {
+        "total_vertex_derivatives": 2,
+        "internal_line_derivatives": 2,
+        "external_field_derivatives": 0,
+        "mass_factors": 0,
+        "note": "Kinetic derivatives sit on internal scalar legs. Do NOT use d_v=0 as stand-in. m=0 => mass_factors=0."
+      },
+      "tadpole_note": "Coincident scalar contraction on V4_scalar_grav. Prescription unresolved.",
+      "mass_policy": "m=0_bulk_freeze",
+      "inventory_gap_closed": "o59-inv: scalar hh tadpole channel",
+      "checks": {
+        "topology": {
+          "L": 1,
+          "I": 1,
+          "V": 1,
+          "L_equals_I_minus_V_plus_1": true,
+          "predicted_L": 1
+        },
+        "gh_external": 0,
+        "gh_external_zero": true,
+        "leg_balance": {
+          "pass": true,
+          "skipped": false,
+          "vertex_leg_counts": {
+            "phi": 2,
+            "h": 2
+          },
+          "external_leg_counts": {
+            "h": 2
+          },
+          "parsed_pairings": [
+            {
+              "key": "phi-phi",
+              "multiplicity": 1
+            }
+          ],
+          "per_species": {
+            "h": {
+              "vertex_legs": 2,
+              "external_legs": 2,
+              "internal_contraction_endpoints": 0,
+              "balanced": true
+            },
+            "phi": {
+              "vertex_legs": 2,
+              "external_legs": 0,
+              "internal_contraction_endpoints": 2,
+              "balanced": true
+            }
+          },
+          "rule": "vertex_legs = external_legs + internal_contraction_endpoints"
+        },
+        "vertex_catalogue": {
+          "refs": [
+            "V4_scalar_grav"
+          ],
+          "all_loaded": true,
+          "missing": []
+        },
+        "coupling_order": {
+          "catalogue_orders": [
+            {
+              "id": "V4_scalar_grav",
+              "catalogue_order": "kappa^2",
+              "kappa_power": 2
+            }
+          ],
+          "declared_order": "1-loop, kappa^2",
+          "kappa_power_sum_vertices": 2,
+          "declared_kappa_power": 2,
+          "declared_hbar_power": 1,
+          "issues": [],
+          "pass": true
+        },
+        "internal_edges_structured": {
+          "edges": [
+            {
+              "key": "phi-phi",
+              "multiplicity": 1,
+              "kind": "self-contraction"
+            }
+          ],
+          "note": "Structured edges; global leg balance does not prove connectedness/1PI"
+        },
+        "connectedness_1PI": {
+          "connected": true,
+          "one_particle_irreducible": true,
+          "note": "Manually declared; global leg balance != connectedness/1PI proof",
+          "NOT_inferred_from_leg_balance": true
+        },
+        "symmetry_factor": {
+          "value": "1/2",
+          "status": "Unverified",
+          "note": "NOT derived from vertex-normalization convention in this builder"
+        }
+      },
+      "inventory_valid_for_gh0_action": true
+    },
+    {
+      "id": "D10_selected_M_graph_comparison_only",
+      "external": "N/A (not an action amplitude)",
+      "external_leg_species": [],
+      "vertices": [
+        "XVI-M selected graph"
+      ],
+      "species": "comparison data",
+      "order": "imported Target I",
+      "topology": {
+        "L": null,
+        "I": null,
+        "V": null
+      },
+      "sym_factor": "n/a",
+      "sym_factor_status": "n/a",
+      "ghost_sign": "n/a",
+      "support_WF": "XVI-M",
+      "extension": "XVI-M",
+      "role": "NOT identified with action inventory graphs; listed to forbid silent ell_3 collapse",
+      "omission_from_sector_amplitudes": "justified: M.8 / non-claim 12 / O.3 hard rule",
+      "status": "Non-claim_comparison_data",
+      "inventory_valid_for_gh0_action": null,
+      "difference_variable_radial_model": "n/a",
+      "coincident_prescription": "n/a",
+      "connected": null,
+      "one_particle_irreducible": null,
+      "checks": {
+        "vertex_catalogue": {
+          "refs": [
+            "XVI-M selected graph"
+          ],
+          "all_loaded": true,
+          "missing": []
+        },
+        "coupling_order": {
+          "catalogue_orders": [],
+          "declared_order": "imported Target I",
+          "kappa_power_sum_vertices": 0,
+          "declared_kappa_power": null,
+          "declared_hbar_power": null,
+          "issues": [],
+          "pass": true
+        },
+        "connectedness_1PI": {
+          "connected": null,
+          "one_particle_irreducible": null,
+          "note": "Manually declared; global leg balance != connectedness/1PI proof",
+          "NOT_inferred_from_leg_balance": true
+        },
+        "symmetry_factor": {
+          "value": "n/a",
+          "status": "n/a",
+          "note": "NOT derived from vertex-normalization convention in this builder"
+        }
+      }
+    }
+  ],
+  "justified_omissions": [
+    {
+      "item": "Prepared S_D quantum sector",
+      "reason": "Baseline is S_inv; prepared theory has broken classical square"
+    },
+    {
+      "item": "Insertion F_t / I_t graphs as bulk sector amplitudes",
+      "reason": "Track II separate; obstruction-preserving audit; not bulk two-point"
+    },
+    {
+      "item": "En01/Em01",
+      "reason": "Explicit non-premises"
+    },
+    {
+      "item": "Higher than one-loop",
+      "reason": "Outside frozen provisional target"
+    },
+    {
+      "item": "Full one-loop antifield correlators at kappa^2",
+      "reason": "Topology not yet derived; tree seeds listed; loops Unresolved"
+    },
+    {
+      "item": "Massive (m>0) bulk matter vertices",
+      "reason": "Bulk target explicitly frozen at m=0 (Track II alignment); arbitrary m>0 Unresolved"
+    }
+  ],
+  "inventory_checks_implemented": {
+    "gh_external_0": true,
+    "L_equals_I_minus_V_plus_1": true,
+    "vertex_catalogue_load_and_validate": true,
+    "species_leg_balance": true,
+    "allowed_internal_pairings_parsed": true,
+    "coupling_orders_vs_catalogue": true,
+    "connectedness_1PI_declared": true,
+    "symmetry_factors_derived": false,
+    "note": "Policy flags alone are insufficient; builder now runs leg-balance and catalogue checks. Result remains manually specified + partially checked --- NOT a complete or auto-derived inventory."
+  },
+  "inventory_checks_policy": {
+    "require_gh_external_0": true,
+    "require_L_equals_I_minus_V_plus_1": true,
+    "require_vertex_catalogue_ref": true,
+    "require_propagator_pairings_stated": true,
+    "require_species_leg_balance": true,
+    "require_coupling_order_vs_catalogue": true,
+    "derive_symmetry_factors": false
+  },
+  "pass": true,
+  "pass_means": "Manually specified, partially checked gh-valid inventory with mixed D04, fixed D06, XVI-N V_af_phi kappa^1, m=0 freeze, leg-balance tests; NOT complete-sector; NOT evaluated amplitudes; NOT symmetry restore"
+}

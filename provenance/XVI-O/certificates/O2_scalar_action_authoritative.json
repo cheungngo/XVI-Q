@@ -1,0 +1,85 @@
+{
+  "revision": "o61-calc",
+  "gate": "O.2_scalar_action_authoritative",
+  "pass": true,
+  "pass_means": "Single authoritative Lag_q from XI-A; a1,a2 defined; V3/V4 derived; Hessian at m=0 is -Box; sign mismatch with old catalogue repaired",
+  "authoritative_action": {
+    "source": "XI-A eq:scalar-action / eq:a1 / eq:a2 / eq:vertex / eq:V2 (via XVI-N provenance pin)",
+    "Lag_q": "(1/2) sqrt(-q) ( q^{mu nu} partial_mu phi partial_nu phi - m^2 phi^2 )",
+    "Lag_eta": "(1/2) ( partial_mu phi partial^mu phi - m^2 phi^2 )",
+    "metric": "q_{mu nu} = eta_{mu nu} + kappa gamma_{mu nu}",
+    "b1": "(1/2) tau",
+    "b2": "(1/8) tau^2 - (1/4) gamma_{mu nu} gamma^{mu nu}",
+    "a1": "a1^{mu nu}[gamma] = (1/2) tau eta^{mu nu} - gamma^{mu nu}",
+    "a2": "a2^{mu nu}[gamma] = gamma^mu_rho gamma^{rho nu} - (1/2) tau gamma^{mu nu} + b2[gamma] eta^{mu nu}",
+    "sqrt_minus_q_series": "1 + kappa b1 + kappa^2 b2 + O(kappa^3)",
+    "B_densitized_inverse_series": "B^{mu nu}:=sqrt(-q) q^{mu nu} = eta^{mu nu} + kappa a1^{mu nu} + kappa^2 a2^{mu nu} + O(kappa^3)",
+    "NOT_bare_q_inv_series": true,
+    "note_B_vs_qinv": "a1,a2 are coefficients of the densitized inverse B, not of q^{mu nu} alone",
+    "bulk_mass_freeze": "m=0",
+    "NOT_arbitrary_m_gt_0": true
+  },
+  "derived_vertices": {
+    "V2_scalar_kin": {
+      "id": "V2_scalar_kin",
+      "order": "kappa^0",
+      "kappa_power": 0,
+      "density": "(1/2) eta^{mu nu} partial_mu phi partial_nu phi   [m=0: mass term off]",
+      "derived_from": "Lag_q |_{kappa^0}",
+      "sign_relative_to_old_catalogue": "OLD V_scalar_kin used '-sqrt(-q) q^{mu nu} partial phi partial phi' (wrong overall sign and missing 1/2). REPLACED by +1/2 form."
+    },
+    "V3_hphiphi": {
+      "id": "V3_hphiphi",
+      "order": "kappa^1",
+      "kappa_power": 1,
+      "density": "(kappa/2) a1^{mu nu}[h] partial_mu phi partial_nu phi   [m=0: no -m^2 b1 phi^2]",
+      "derived_from": "Lag_q |_{kappa^1} = (kappa/2) a1^{mu nu} p_mu p_nu",
+      "a1_definition": "a1^{mu nu}[gamma] = (1/2) tau eta^{mu nu} - gamma^{mu nu}",
+      "fields": "h phi phi",
+      "legs": {
+        "h": 1,
+        "phi": 2
+      },
+      "n_derivatives_total": 2,
+      "derivative_placement_default": "on_phi",
+      "mass_factor": 0,
+      "matches_XI_A_V1": "V_{1,g=1} = (1/2) int (a1^{mu nu} p_mu p_nu)  [eq:vertex at g=1, m=0]"
+    },
+    "V4_scalar_grav": {
+      "id": "V4_scalar_grav",
+      "order": "kappa^2",
+      "kappa_power": 2,
+      "density": "(kappa^2/2) a2^{mu nu}[h] partial_mu phi partial_nu phi   [m=0: no -m^2 b2 phi^2]",
+      "derived_from": "Lag_q |_{kappa^2} = (kappa^2/2) a2^{mu nu} p_mu p_nu",
+      "a2_definition": "a2^{mu nu}[gamma] = gamma^mu_rho gamma^{rho nu} - (1/2) tau gamma^{mu nu} + b2[gamma] eta^{mu nu}",
+      "fields": "phi phi h h",
+      "legs": {
+        "phi": 2,
+        "h": 2
+      },
+      "n_derivatives_total": 2,
+      "derivative_placement_default": "on_phi",
+      "mass_factor": 0,
+      "matches_XI_A_V2": "V_{2,g=1} = (1/2) int (a2^{mu nu} p_mu p_nu)  [eq:V2 at g=1, m=0]"
+    }
+  },
+  "hessian": {
+    "free_action_m0": "S0_phi = (1/2) int eta^{mu nu} partial_mu phi partial_nu phi",
+    "integration_by_parts": "S0_phi = - (1/2) int phi Box phi  (compact support / total-deriv equivalence)",
+    "Euler_derivative": "E_phi = delta S0_phi / delta phi = - Box phi",
+    "Hessian_operator": "-Box",
+    "Hessian_at_m0_from_full": "Full free Hessian is -(Box + m^2). At m=0 this specializes to -Box (NOT '+Box' and NOT bare 'Box').",
+    "old_error_withdrawn": "o60-hard mass-policy text said Hessian -(Box+m^2) specializes to 'Box' at m=0; literal specialization is -Box.",
+    "status": "Constructed_from_authoritative_action"
+  },
+  "vertex_tensor": {
+    "V3_kernel": "L_int = (kappa/2) a1^{alpha beta}(h) partial_alpha phi partial_beta phi",
+    "a1_variation": "V^{alpha beta}_{mu nu} := partial a1^{alpha beta}/partial h^{mu nu} = (1/2) eta_{mu nu} eta^{alpha beta} - (1/2)(delta^alpha_mu delta^beta_nu + delta^alpha_nu delta^beta_mu)",
+    "note": "Symmetric in (mu nu) and in (alpha beta). Used by D11 matter-loop subsector."
+  },
+  "normalization_repair": {
+    "withdrawn_catalogue_density": "-sqrt(-q) q^{mu nu} partial phi partial phi",
+    "replacement": "+ (1/2) sqrt(-q) q^{mu nu} partial phi partial phi  [m=0 kinetic]",
+    "cubic_quartic_signs": "Now visibly the kappa^1 / kappa^2 coefficients of the SAME Lag_q expansion (+ kappa/2 a1 and + kappa^2/2 a2), not independent guesses."
+  }
+}

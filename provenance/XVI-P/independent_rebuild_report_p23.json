@@ -1,0 +1,142 @@
+{
+ "landmark": "XVI-P",
+ "revision": "p23",
+ "reviewer": "independent (Grok Bot executor)",
+ "verdict": "PASS (reproduction) with findings",
+ "source": {
+  "zip_sha256": "3f4a88db462923553272e8a41407c0c06aacbc431736efdfeda10c27aae8a177",
+  "tree_sha256": "262f1e46ecddcede2279e838299302669c80cd2f6d7644aee7cb54cb4c6a4fe4",
+  "n_files": 206
+ },
+ "entrypoint": {
+  "pass": true,
+  "all_10_steps": true,
+  "tests": "562 passed (474 baseline + 84 cert-mutation + 4 resumed)",
+  "reference_comparison": "773/773 equal"
+ },
+ "own_checks": {
+  "pytest_p22_p23": "214 passed",
+  "manifest": "pass (56 entries)",
+  "amplitude": "pass",
+  "certs": "pass",
+  "readback_layout_and_raw": "pass",
+  "footers": "'XVI-P p23' present in all 3 PDFs (science 37, appendix 836, combined 873); 'XVI-P p22' only inside code listings",
+  "README_title_qualifier": "'two-point functions with QdS external legs' present",
+  "determinism": "P22_evanescent and P23_O1_scope content-identical across build, PYTHONHASHSEED=0, 4242 (only timing fields differ)",
+  "P22_EV_CT_unchanged_vs_p22": true
+ },
+ "O1_scope": {
+  "ledger_copy_verbatim": "provenance copy sha 3cd3d1ba... == /workspace/XVI-O/ledgers/O_quantum_target.json (o70-sync)",
+  "requirement_faithful": true,
+  "ell4_analysis": "XVI-O O2_kappa2_master_check grav sector blocked_by: [0] full 10-component ell_4 polynomial, [1] explicit O(kappa^2) antibracket expansion; ghost/antifield sector also Partial. XVI-P P13 quartic generator (3360 terms, Gamma-Gamma form = sqrt(-g)R mod total derivative, verified) evaluated on XVI-O's conformal probe reproduces XVI-O's ell_4 probe exactly (o1/ell4_probe.json). So it would discharge blocker [0] if XVI-O were reopened, but NOT [1] nor the ghost sector: O.2 would still not be Constructed. 'Not closable inside XVI-P' is correct (ownership + remaining blockers), but the stated reason 'grav ell_4 Incomplete' is stale/incomplete."
+ },
+ "power_counting": {
+  "vertex_kappa_legs_minus_2": "15/15 own==pkg",
+  "one_loop_kappa_E": "algebraic (I=V) and per graph",
+  "E1": 3,
+  "E2": "9 == frozen D01-D06,D11,D12,D13",
+  "E3_kappa3": "15 (hhh5,hphiphi4,ccbh2,Kch2,c*cc1,phi*cphi1) reproduced by own enumerator",
+  "kappa2_three_point": "empty"
+ },
+ "D04_question": {
+  "in_frozen_E2_inventory": true,
+  "in_P18_inventory_or_evaluated": false,
+  "justification": "P13_ch_source_audit.phi_rows: phi->-phi parity => phi.phi rows cannot source the ch projection; so D04/D05a are legitimately outside the ch identity; quantum_inputs_evaluated is explicitly scoped to the 9-graph ch inventory (D01,D02,D03,D11,D12,D13,D14a-c) -> NOT an overclaim",
+  "O5_evidence_line": "P23_O1_scope O.5 'IN XVI-P: all E=2 kappa^2 graphs evaluated' is an overclaim against XVI-O's bulk O.5: D04, D05a never evaluated; D06 only via ghost self-energy in P15_D13; also self-contradictory with 'D12 Missing'"
+ },
+ "poly_guard": {
+  "p22_bypasses_now_raise": [
+   "rem",
+   "resultant",
+   "compose",
+   "div",
+   "Poly.shift",
+   "Matrix.subs d->y"
+  ],
+  "new_runtime_bypasses": [
+   "sympy.polys.rem (sympy.polys namespace not patched)",
+   "polytools.rem captured before dred import",
+   "sp.reduced(t,[d-4],d)",
+   "sp.groebner elimination",
+   "Matrix.subs d->Dummy then Dummy->4 (power-base case)",
+   "Poly(...).rep.eval (pre-existing)"
+  ],
+  "static_scan_misses": [
+   "sp.polys.rem",
+   "sp.reduced",
+   "sp.groebner"
+  ],
+  "package_uses_any": false
+ },
+ "gate_value_checks": {
+  "control_unmodified|release_p22": "accepted",
+  "control_unmodified|release_p23": "accepted",
+  "ev_rho_changed|release_p22": "accepted",
+  "ev_rho_changed|release_p23": "rejected",
+  "ev_E2_coeff_wrong|release_p22": "accepted",
+  "ev_E2_coeff_wrong|release_p23": "rejected",
+  "ev_SE_coeff_wrong|release_p22": "accepted",
+  "ev_SE_coeff_wrong|release_p23": "rejected",
+  "ev_hh_sum_coeff_wrong|release_p22": "accepted",
+  "ev_hh_sum_coeff_wrong|release_p23": "rejected",
+  "ev_hh_per_graph_coeff_wrong|release_p22": "accepted",
+  "ev_hh_per_graph_coeff_wrong|release_p23": "accepted",
+  "ev_cb_not_closed|release_p22": "rejected",
+  "ev_cb_not_closed|release_p23": "rejected",
+  "scope_O1_closable_true|release_p22": "accepted",
+  "scope_O1_closable_true|release_p23": "rejected",
+  "scope_P6_n_graphs_14|release_p22": "accepted",
+  "scope_P6_n_graphs_14|release_p23": "accepted",
+  "scope_enlarge_triggered|release_p22": "accepted",
+  "scope_enlarge_triggered|release_p23": "rejected",
+  "provenance_ledger_edited|release_p22": "accepted",
+  "provenance_ledger_edited|release_p23": "rejected",
+  "power_counting_py_edit|release_p22": "accepted",
+  "power_counting_py_edit|release_p23": "rejected",
+  "dred_edit_inside_p23_block|release_p22": "accepted",
+  "dred_edit_inside_p23_block|release_p23": "rejected",
+  "dred_edit_inside_p22_block|release_p22": "rejected",
+  "dred_edit_inside_p22_block|release_p23": "rejected",
+  "dred_edit_outside_block|release_p22": "rejected",
+  "dred_edit_outside_block|release_p23": "rejected",
+  "tools_build_edit|release_p22": "accepted",
+  "tools_build_edit|release_p23": "rejected",
+  "added_code_file|release_p22": "rejected",
+  "added_code_file|release_p23": "rejected",
+  "p23_conventions_edit|release_p22": "accepted",
+  "p23_conventions_edit|release_p23": "accepted",
+  "archived_p22_report_tampered|release_p22": "accepted",
+  "archived_p22_report_tampered|release_p23": "rejected"
+ },
+ "findings": [
+  {
+   "id": "O5_all_E2_evaluated_overclaim",
+   "severity": "medium",
+   "text": "P23_O1_scope O.5 evidence says all E=2 kappa^2 graphs evaluated; D04/D05a (phi phi) never evaluated anywhere in P15-P18, D06 only as ghost SE. Excluding them from the ch identity is justified (phi parity) but the O.5 mapping to XVI-O's bulk item is wrong. quantum_inputs_evaluated itself is honestly scoped (not an overclaim). Not high: no certified value depends on it, O.1 stays NOT_CLOSED."
+  },
+  {
+   "id": "poly_guard_new_bypasses",
+   "severity": "low",
+   "text": "reduced/groebner/sympy.polys.rem/pre-import capture/Dummy-rename evaluate d at 4 from outside; package clean."
+  },
+  {
+   "id": "gate_partial_value_checks",
+   "severity": "low",
+   "text": "p23 gate rejects rho, E2, SE, hh-sum edits, closable=True, enlarge=True, provenance/power_counting/dred/tools/added-file/archived-report tampering; but ACCEPTS per-graph hh CT coefficient edit, P6_entry_n_graphs=14, and p23_conventions.py edit (unpinned). Entrypoint comparison would catch cert edits."
+  },
+  {
+   "id": "ell4_reason_stale",
+   "severity": "low",
+   "text": "O.2 reason should cite remaining blockers (explicit antibracket expansion, ghost sector) and note XVI-P P13 ell_4 discharges the polynomial blocker."
+  },
+  {
+   "id": "P6_inventory_frozen_vertex_set",
+   "severity": "low",
+   "text": "15-graph kappa^3 inventory uses the kappa<=2 frozen vertex set; 5-leg kappa^3 vertex tadpoles (V5_grav, hhh phi phi) omitted (scaleless, no value impact); should be stated."
+  }
+ ],
+ "caveats": [
+  "same box/author environment: not an independent machine; shared sympy pin",
+  "executor first build waited/monitored, single build (not restarted); D-guard/gate tests on sandbox copies only"
+ ]
+}

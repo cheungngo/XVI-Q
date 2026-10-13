@@ -1,0 +1,85 @@
+{
+  "revision": "o58-fix",
+  "gate": "O.2_eh_quartic_probe_and_ghost",
+  "conventions": {
+    "eta": "diag(1,-1,-1,-1)",
+    "q": "eta + kappa h",
+    "a": "1/2",
+    "S_EH": "-(2/kappa^2) int sqrt(-q) R",
+    "ell_4": "-2 [eps^4](sqrt(-q) R)",
+    "probe": "conformal h_mn = phi eta_mn",
+    "inverse_on_probe": "exact ETA[m]/(1+eps phi)"
+  },
+  "acceptance_controls": {
+    "negative_control_pass": true,
+    "qid_identity_pass": true,
+    "pass": true
+  },
+  "withdrawn_prior": {
+    "O2_eh_quartic_probe.json@o57-eval": "Withdrawn as part of o58-fix foundation repair (paired with buggy general V4 inverse); conformal probe itself used exact inverse."
+  },
+  "series_sqrt_gR": {
+    "eps2_nonzero": true,
+    "eps3_nonzero": true,
+    "eps4_nonzero": true,
+    "ell4_nonzero": true,
+    "eps2_max_deriv_order": 1,
+    "eps3_max_deriv_order": 1,
+    "eps4_max_deriv_order": 1,
+    "eps1_has_second_deriv_Box_probe": true,
+    "ell4_probe_density": "ell_4 = -2 * [eps^4](sqrt(-q) R) on conformal ansatz",
+    "ell4_probe_nonzero": true,
+    "eps4_expr_head": "3*phi(x0, x1, x2, x3)**2*Derivative(phi(x0, x1, x2, x3), x0)**2/2 - 3*phi(x0, x1, x2, x3)**2*Derivative(phi(x0, x1, x2, x3), x1)**2/2 - 3*phi(x0, x1, x2, x3)**2*Derivative(phi(x0, x1, x2, x3), x2)**2/2 - 3*phi(x0, x1, x2, x3)**2*Derivative(phi(x0, x1, x2, x3), x3)**2/2",
+    "eps4_expr_len": 269,
+    "ell4_expr_head": "-3*phi(x0, x1, x2, x3)**2*Derivative(phi(x0, x1, x2, x3), x0)**2 + 3*phi(x0, x1, x2, x3)**2*Derivative(phi(x0, x1, x2, x3), x1)**2 + 3*phi(x0, x1, x2, x3)**2*Derivative(phi(x0, x1, x2, x3), x2)**2 + 3*phi(x0, x1, x2, x3)**2*Derivative(phi(x0, x1, x2, x3), x3)**2"
+  },
+  "claims": {
+    "quartic_density_required_at_kappa2": {
+      "status": "Constructed_on_conformal_probe",
+      "meaning": "Nonvanishing ell_4 on conformal probe after controls; general index ell_4 table still Unresolved. Does not by itself certify frozen EH density."
+    },
+    "quadratic_probe_second_order": {
+      "status": "Constructed"
+    },
+    "cubic_probe_nonzero": {
+      "status": "Constructed"
+    },
+    "general_ell4_index_table": {
+      "status": "Unresolved"
+    },
+    "master_kappa2_against_Noether_densities": {
+      "status": "Unresolved"
+    },
+    "no_invented_s2_slot": true
+  },
+  "ghost_from_Psi": {
+    "Psi": "-i int cbar_mu (2 D^mu[h] - b^mu)",
+    "D_definition": "D^nu[h] = partial_mu (P h)^{mu nu}  (LINEAR in h on flat background)",
+    "s_h_through_O_kappa": "R0(c) + kappa a L_c h   (XVI-N / XI-A)",
+    "inherited_transformations": "XI-A Taylor data kappa xi + kappa^2 zeta; XI-B lem:nilpotence (free derivation linear in ghost); X-E lem:affine (quadratic metric slot). kappa^2 action terms are read from those inherited transformations. No invented s_2 slot is a registered obligation.",
+    "sPsi_ghost_grav": {
+      "formula": "2 i int cbar_mu D^mu[s h]",
+      "O_kappa^0": "2 i int cbar D[R0(c)] -> i int cbar Box c  (kinetic)",
+      "O_kappa^1": "2 i kappa a int cbar D[L_c h]  => V3_cbar_c_h",
+      "O_kappa^2_from_Psi_with_linear_D_and_s_through_kappa": "ABSENT: no additional cbar-c-h-h from Psi alone under inherited s through O(kappa) and linear D. Not framed as missing s_2."
+    },
+    "V_ghost_kappa2_status": "Absent_from_Psi_under_inherited_s_through_kappa_linear_D",
+    "V3_cbar_c_h_status": "Constructed_inheritance",
+    "no_invented_s2_slot": true,
+    "conclusion": "Through retained order (inherited s through O(kappa), D linear), Psi produces ghost kinetic + single kappa^1 vertex V3_cbar_c_h only. kappa^2 EH/scalar action terms come from the signed density expansion and inherited transformations, not from an invented s_2.",
+    "pass_structural": true
+  },
+  "certifies_frozen_EH_density": false,
+  "quantum_contractions_gate": {
+    "authorized_as_Constructed": false,
+    "authorized_as_Conditional": true,
+    "explicit_gap": [
+      "general V4 index coefficients Unresolved",
+      "kappa^2 master expand against Noether densities Unresolved",
+      "conformal probe does not replace general vertex"
+    ],
+    "note": "O.5 may proceed only as schematic/candidate; not fake Constructed bases"
+  },
+  "seconds": 1.239,
+  "pass": true
+}

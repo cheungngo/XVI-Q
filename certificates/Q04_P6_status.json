@@ -1,0 +1,37 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q04",
+ "P6_outcome": "Partial",
+ "stages": {
+  "inventory": "Constructed",
+  "kappa3_vertices": "Constructed (V_hhh_phi_phi); V5_grav not needed (scaleless only)",
+  "power_counting_kappa3_1pt_2pt_empty": true,
+  "identity_ledger_rows": "Constructed (14 gh1 three-field rows; 4 need P.6 inputs)",
+  "counterterm_domain_kappa3": "Partial (structural counts; BRST/sigma_0 reduction not done)",
+  "engine_validated_vs_XVI_P_D11": true,
+  "evaluation": "Partial: 2 graphs at pole level, 3 tadpoles derived 0, 13 Missing",
+  "matter_subsector_ward_c_h_h_pole": "verified",
+  "defect_assembly": "Missing (inputs Missing for every needs_inputs row)",
+  "counterterm_solve_kappa3": "Missing",
+  "sigma0_closure_kappa3": "Missing"
+ },
+ "rows_status": {
+  "h.h.c": "Missing inputs",
+  "h.phi.c": "zero (phi-parity odd (every vertex even in {ph)",
+  "h.b.c": "aux",
+  "h.c.cbs": "aux",
+  "phi.phi.c": "Missing inputs",
+  "phi.b.c": "zero (phi-parity odd (every vertex even in {ph)",
+  "phi.c.cbs": "zero (phi-parity odd (every vertex even in {ph)",
+  "b.b.c": "aux",
+  "b.c.cbs": "aux",
+  "c.c.cb": "Missing inputs",
+  "c.c.hs": "Missing inputs",
+  "c.c.phis": "zero (phi-parity odd (every vertex even in {ph)",
+  "c.c.bs": "aux",
+  "c.cbs.cbs": "aux"
+ },
+ "O1_closure_unchanged": "CLOSED (scoped) -- kappa^2 two-point; P.6 is outside that scope",
+ "bulk_symmetry_restored": false,
+ "seconds": 115.9
+}

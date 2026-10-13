@@ -1,0 +1,317 @@
+{
+ "engine": "code/q04/uvpole.py (own Feynman rules, symbolic d via qguard, DRED hat/tilde split, IR-rearranged Taylor UV pole; units U = i/(16 pi^2 eps); 'i Gamma' convention)",
+ "validation_D11": {
+  "trace_coef": "1/2",
+  "ratio_mine_over_XVI_P": "I",
+  "constant_ratio": true,
+  "n_structures": 14,
+  "gt_reading": "tilde (evanescent Q(4-d)S metric); g4 = hat + tilde; XVI-P 'upper' structures weighted by their (m<->n, r<->s) orbit size"
+ },
+ "validation_mutation_trace_coef_1": {
+  "trace_coef": "1",
+  "ratio_mine_over_XVI_P": "(41*I*H_a1_a1*H_a2_a2*H_p1_p1**2 - 16*I*H_a1_a1*H_a2_p1**2*H_p1_p1 + 50*I*H_a1_a1*H_p1_p1**2*T_a2_a2 + 2*I*H_a1_a2**2*H_p1_p1**2 - 4*I*H_a1_a2*H_a1_p1*H_a2_p1*H_p1_p1 - 16*I*H_a1_p1**2*H_a2_a2*H_p1_p1 + 8*I*H_a1_p1**2*H_a2_p1**2 - 20*I*H_a1_p1**2*H_p1_p1*T_a2_a2 + 50*I*H_a2_a2*H_p1_p1**2*T_a1_a1 - 20*I*H_a2_p1**2*H_p1_p1*T_a1_a1 + 60*I*H_p1_p1**2*T_a1_a1*T_a2_a2)/(6*H_a1_a1*H_a2_a2*H_p1_p1**2 - 6*H_a1_a1*H_a2_p1**2*H_p1_p1 + 10*H_a1_a1*H_p1_p1**2*T_a2_a2 + 2*H_a1_a2**2*H_p1_p1**2 - 4*H_a1_a2*H_a1_p1*H_a2_p1*H_p1_p1 - 6*H_a1_p1**2*H_a2_a2*H_p1_p1 + 8*H_a1_p1**2*H_a2_p1**2 - 10*H_a1_p1**2*H_p1_p1*T_a2_a2 + 10*H_a2_a2*H_p1_p1**2*T_a1_a1 - 10*H_a2_p1**2*H_p1_p1*T_a1_a1 + 15*H_p1_p1**2*T_a1_a1*T_a2_a2)",
+  "constant_ratio": false,
+  "n_structures": 14,
+  "gt_reading": "tilde (evanescent Q(4-d)S metric); g4 = hat + tilde; XVI-P 'upper' structures weighted by their (m<->n, r<->s) orbit size"
+ },
+ "scalar_loop_hhh": {
+  "residue_d4_n_terms": 467,
+  "residue_d4_sha256": "7c19fb73e61f58501255e48c07d908bbc46d5d9c7690d43241226e00474528c9",
+  "residue_d4_n_evanescent_terms": 270,
+  "residue_d4": "H_a1_a1*H_a2_a2*H_a3_a3*H_p1_p1**2/160 + H_a1_a1*H_a2_a2*H_a3_a3*H_p1_p1*H_p1_p2/80 + H_a1_a1*H_a2_a2*H_a3_a3*H_p1_p1*H_p2_p2/144 + 17*H_a1_a1*H_a2_a2*H_a3_a3*H_p1_p2**2/1440 + H_a1_a1*H_a2_a2*H_a3_a3*H_p1_p2*H_p2_p2/80 + H_a1_a1*H_a2_a2*H_a3_a3*H_p2_p2**2/160 - H_a1_a1*H_a2_a2*H_a3_p1**2*H_p1_p1/160 - H_a1_a1*H_a2_a2*H_a3_p1**2*H_p1_p2/160 - H_a1_a1*H_a2_a2*H_a3_p1**2*H_p2_p2/144 - H_a1_a1*H_a2_a2*H_a3_p1*H_a3_p2*H_p1_p2/90 - H_a1_a1*H_a2_a2*H_a3_p2**2*H_p1_p1/144 - H_a1_a1*H_a2_a2*H_a3_p2**2*H_p1_p2/160 - H_a1_a1*H_a2_a2*H_a3_p2**2*H_p2_p2/160 + H_a1_a1*H_a2_a2*H_p1_p1**2*T_a3_a3/96 + H_a1_a1*H_a2_a2*H_p1_p1*H_p1_p2*T_a3_a3/48 + H_a1_a1*H_a2_a2*H_p1_p2**2*T_a3_a3/48 + H_a1_a1*H_a2_a2*H_p1_p2*H_p2_p2*T_a3_a3/48 + H_a1_a1*H_a2_a2*H_p2_p2**2*T_a3_a3/96 - H_a1_a1*H_a2_a3**2*H_p1_p1**2/80 - H_a1_a1*H_a2_a3**2*H_p1_p1*H_p1_p2/160 - H_a1_a1*H_a2_a3**2*H_p1_p1*H_p2_p2/144 + H_a1_a1*H_a2_a3**2*H_p1_p2**2/360 + H_a1_a1*H_a2_a3**2*H_p1_p2*H_p2_p2/240 + H_a1_a1*H_a2_a3**2*H_p2_p2**2/480 + H_a1_a1*H_a2_a3*H_a2_p1*H_a3_p1*H_p1_p1/40 + H_a1_a1*H_a2_a3*H_a2_p1*H_a3_p1*H_p2_p2/720 + H_a1_a1*H_a2_a3*H_a2_p1*H_a3_p2*H_p1_p1/80 - H_a1_a1*H_a2_a3*H_a2_p1*H_a3_p2*H_p1_p2/180 - H_a1_a1*H_a2_a3*H_a2_p1*H_a3_p2*H_p2_p2/240 - H_a1_a1*H_a2_a3*H_a2_p2*H_a3_p1*H_p1_p2/720 + H_a1_a1*H_a2_a3*H_a2_p2*H_a3_p2*H_p1_p1/72 - H_a1_a1*H_a2_a3*H_a2_p2*H_a3_p2*H_p1_p2/240 - H_a1_a1*H_a2_a3*H_a2_p2*H_a3_p2*H_p2_p2/240 - H_a1_a1*H_a2_a3*H_p1_p1**2*T_a2_a3/40 - H_a1_a1*H_a2_p1**2*H_a3_a3*H_p1_p1/40 - H_a1_a1*H_a2_p1**2*H_a3_a3*H_p1_p2/40 - 19*H_a1_a1*H_a2_p1**2*H_a3_a3*H_p2_p2/1440 + H_a1_a1*H_a2_p1**2*H_a3_p1**2/80 + H_a1_a1*H_a2_p1**2*H_a3_p1*H_a3_p2/40 + 11*H_a1_a1*H_a2_p1**2*H_a3_p2**2/720 - H_a1_a1*H_a2_p1**2*H_p1_p1*T_a3_a3/24 - H_a1_a1*H_a2_p1**2*H_p1_p2*T_a3_a3/24 - H_a1_a1*H_a2_p1**2*H_p2_p2*T_a3_a3/48 - H_a1_a1*H_a2_p1*H_a2_p2*H_a3_a3*H_p1_p1/40 - 17*H_a1_a1*H_a2_p1*H_a2_p2*H_a3_a3*H_p1_p2/720 - H_a1_a1*H_a2_p1*H_a2_p2*H_a3_a3*H_p2_p2/80 + H_a1_a1*H_a2_p1*H_a2_p2*H_a3_p1**2/80 + 17*H_a1_a1*H_a2_p1*H_a2_p2*H_a3_p1*H_a3_p2/720 + H_a1_a1*H_a2_p1*H_a2_p2*H_a3_p2**2/60 - H_a1_a1*H_a2_p1*H_a2_p2*H_p1_p1*T_a3_a3/24 - H_a1_a1*H_a2_p1*H_a2_p2*H_p1_p2*T_a3_a3/24 - H_a1_a1*H_a2_p1*H_a2_p2*H_p2_p2*T_a3_a3/48 + H_a1_a1*H_a2_p1*H_a3_p1*H_p1_p1*T_a2_a3/40 - H_a1_a1*H_a2_p2**2*H_a3_a3*H_p1_p1/144 - H_a1_a1*H_a2_p2**2*H_a3_a3*H_p1_p2/160 - H_a1_a1*H_a2_p2**2*H_a3_a3*H_p2_p2/160 + H_a1_a1*H_a2_p2**2*H_a3_p1**2/144 + H_a1_a1*H_a2_p2**2*H_a3_p2**2/120 - H_a1_a1*H_a2_p2**2*H_p1_p2*T_a3_a3/96 - H_a1_a1*H_a2_p2**2*H_p2_p2*T_a3_a3/96 + H_a1_a1*H_a3_a3*H_p1_p2**2*T_a2_a2/48 + H_a1_a1*H_a3_a3*H_p1_p2*H_p2_p2*T_a2_a2/48 + H_a1_a1*H_a3_a3*H_p2_p2**2*T_a2_a2/96 - H_a1_a1*H_a3_p1**2*H_p1_p2*T_a2_a2/96 - H_a1_a1*H_a3_p1**2*H_p2_p2*T_a2_a2/96 + H_a1_a1*H_a3_p1*H_a3_p2*H_p1_p1*T_a2_a2/48 - H_a1_a1*H_a3_p1*H_a3_p2*H_p1_p2*T_a2_a2/48 - H_a1_a1*H_a3_p2**2*H_p1_p2*T_a2_a2/96 - H_a1_a1*H_a3_p2**2*H_p2_p2*T_a2_a2/96 - H_a1_a1*H_p1_p1**2*T_a2_a3**2/48 + H_a1_a1*H_p1_p1*H_p1_p2*T_a2_a2*T_a3_a3/192 - H_a1_a1*H_p1_p1*H_p2_p2*T_a2_a2*T_a3_a3/96 + H_a1_a1*H_p1_p2**2*T_a2_a2*T_a3_a3/32 + H_a1_a1*H_p1_p2*H_p2_p2*T_a2_a2*T_a3_a3/32 + H_a1_a1*H_p2_p2**2*T_a2_a2*T_a3_a3/64 - H_a1_a2**2*H_a3_a3*H_p1_p1**2/80 - 7*H_a1_a2**2*H_a3_a3*H_p1_p1*H_p1_p2/160 - 37*H_a1_a2**2*H_a3_a3*H_p1_p1*H_p2_p2/1440 - 5*H_a1_a2**2*H_a3_a3*H_p1_p2**2/144 - 7*H_a1_a2**2*H_a3_a3*H_p1_p2*H_p2_p2/160 - H_a1_a2**2*H_a3_a3*H_p2_p2**2/80 + H_a1_a2**2*H_a3_p1**2*H_p1_p1/80 + H_a1_a2**2*H_a3_p1**2*H_p1_p2/60 + H_a1_a2**2*H_a3_p1**2*H_p2_p2/90 + 7*H_a1_a2**2*H_a3_p1*H_a3_p2*H_p1_p1/240 + 13*H_a1_a2**2*H_a3_p1*H_a3_p2*H_p1_p2/360 + 7*H_a1_a2**2*H_a3_p1*H_a3_p2*H_p2_p2/240 + H_a1_a2**2*H_a3_p2**2*H_p1_p1/90 + H_a1_a2**2*H_a3_p2**2*H_p1_p2/60 + H_a1_a2**2*H_a3_p2**2*H_p2_p2/80 - H_a1_a2**2*H_p1_p1**2*T_a3_a3/48 - 7*H_a1_a2**2*H_p1_p1*H_p1_p2*T_a3_a3/96 - H_a1_a2**2*H_p1_p1*H_p2_p2*T_a3_a3/24 - H_a1_a2**2*H_p1_p2**2*T_a3_a3/16 - 7*H_a1_a2**2*H_p1_p2*H_p2_p2*T_a3_a3/96 - H_a1_a2**2*H_p2_p2**2*T_a3_a3/48 - H_a1_a2*H_a1_a3*H_a2_a3*H_p1_p1**2/120 - H_a1_a2*H_a1_a3*H_a2_a3*H_p1_p1*H_p1_p2/60 - H_a1_a2*H_a1_a3*H_a2_a3*H_p1_p1*H_p2_p2/360 - H_a1_a2*H_a1_a3*H_a2_a3*H_p1_p2**2/45 - H_a1_a2*H_a1_a3*H_a2_a3*H_p1_p2*H_p2_p2/60 - H_a1_a2*H_a1_a3*H_a2_a3*H_p2_p2**2/120 + H_a1_a2*H_a1_a3*H_a2_p1*H_a3_p1*H_p1_p1/120 + H_a1_a2*H_a1_a3*H_a2_p1*H_a3_p1*H_p1_p2/60 + H_a1_a2*H_a1_a3*H_a2_p1*H_a3_p1*H_p2_p2/90 - H_a1_a2*H_a1_a3*H_a2_p1*H_a3_p2*H_p1_p1/120 + H_a1_a2*H_a1_a3*H_a2_p1*H_a3_p2*H_p1_p2/180 + H_a1_a2*H_a1_a3*H_a2_p2*H_a3_p1*H_p1_p1/120 + H_a1_a2*H_a1_a3*H_a2_p2*H_a3_p1*H_p1_p2/72 + H_a1_a2*H_a1_a3*H_a2_p2*H_a3_p1*H_p2_p2/120 - H_a1_a2*H_a1_a3*H_a2_p2*H_a3_p2*H_p1_p1/180 + H_a1_a2*H_a1_a3*H_a2_p2*H_a3_p2*H_p1_p2/120 + H_a1_a2*H_a1_a3*H_a2_p2*H_a3_p2*H_p2_p2/120 - H_a1_a2*H_a1_a3*H_p1_p1**2*T_a2_a3/120 + H_a1_a2*H_a1_p1*H_a2_a3*H_a3_p1*H_p1_p1/120 + H_a1_a2*H_a1_p1*H_a2_a3*H_a3_p1*H_p1_p2/120 - H_a1_a2*H_a1_p1*H_a2_a3*H_a3_p1*H_p2_p2/180 + H_a1_a2*H_a1_p1*H_a2_a3*H_a3_p2*H_p1_p1/120 + H_a1_a2*H_a1_p1*H_a2_a3*H_a3_p2*H_p1_p2/72 + H_a1_a2*H_a1_p1*H_a2_a3*H_a3_p2*H_p2_p2/120 + H_a1_a2*H_a1_p1*H_a2_p1*H_a3_a3*H_p1_p1/40 + H_a1_a2*H_a1_p1*H_a2_p1*H_a3_a3*H_p1_p2/20 + 19*H_a1_a2*H_a1_p1*H_a2_p1*H_a3_a3*H_p2_p2/720 - H_a1_a2*H_a1_p1*H_a2_p1*H_a3_p1**2/30 - 7*H_a1_a2*H_a1_p1*H_a2_p1*H_a3_p1*H_a3_p2/120 - 11*H_a1_a2*H_a1_p1*H_a2_p1*H_a3_p2**2/360 + H_a1_a2*H_a1_p1*H_a2_p1*H_p1_p1*T_a3_a3/24 + H_a1_a2*H_a1_p1*H_a2_p1*H_p1_p2*T_a3_a3/12 + H_a1_a2*H_a1_p1*H_a2_p1*H_p2_p2*T_a3_a3/24 + H_a1_a2*H_a1_p1*H_a2_p2*H_a3_a3*H_p1_p1/40 + 7*H_a1_a2*H_a1_p1*H_a2_p2*H_a3_a3*H_p1_p2/144 + H_a1_a2*H_a1_p1*H_a2_p2*H_a3_a3*H_p2_p2/40 - H_a1_a2*H_a1_p1*H_a2_p2*H_a3_p1**2/30 - 19*H_a1_a2*H_a1_p1*H_a2_p2*H_a3_p1*H_a3_p2/360 - H_a1_a2*H_a1_p1*H_a2_p2*H_a3_p2**2/30 + H_a1_a2*H_a1_p1*H_a2_p2*H_p1_p1*T_a3_a3/24 + H_a1_a2*H_a1_p1*H_a2_p2*H_p1_p2*T_a3_a3/12 + H_a1_a2*H_a1_p1*H_a2_p2*H_p2_p2*T_a3_a3/24 + H_a1_a2*H_a1_p1*H_a3_p1*H_p1_p1*T_a2_a3/120 + H_a1_a2*H_a1_p2*H_a2_a3*H_a3_p1*H_p1_p2/180 - H_a1_a2*H_a1_p2*H_a2_a3*H_a3_p1*H_p2_p2/120 + H_a1_a2*H_a1_p2*H_a2_a3*H_a3_p2*H_p1_p1/90 + H_a1_a2*H_a1_p2*H_a2_a3*H_a3_p2*H_p1_p2/60 + H_a1_a2*H_a1_p2*H_a2_a3*H_a3_p2*H_p2_p2/120 + H_a1_a2*H_a1_p2*H_a2_p1*H_a3_a3*H_p1_p1/80 + 7*H_a1_a2*H_a1_p2*H_a2_p1*H_a3_a3*H_p1_p2/360 + H_a1_a2*H_a1_p2*H_a2_p1*H_a3_a3*H_p2_p2/80 - H_a1_a2*H_a1_p2*H_a2_p1*H_a3_p1**2/60 - H_a1_a2*H_a1_p2*H_a2_p1*H_a3_p1*H_a3_p2/36 - H_a1_a2*H_a1_p2*H_a2_p1*H_a3_p2**2/60 + H_a1_a2*H_a1_p2*H_a2_p1*H_p1_p1*T_a3_a3/48 + H_a1_a2*H_a1_p2*H_a2_p1*H_p1_p2*T_a3_a3/24 + H_a1_a2*H_a1_p2*H_a2_p1*H_p2_p2*T_a3_a3/48 + 19*H_a1_a2*H_a1_p2*H_a2_p2*H_a3_a3*H_p1_p1/720 + H_a1_a2*H_a1_p2*H_a2_p2*H_a3_a3*H_p1_p2/20 + H_a1_a2*H_a1_p2*H_a2_p2*H_a3_a3*H_p2_p2/40 - 11*H_a1_a2*H_a1_p2*H_a2_p2*H_a3_p1**2/360 - 7*H_a1_a2*H_a1_p2*H_a2_p2*H_a3_p1*H_a3_p2/120 - H_a1_a2*H_a1_p2*H_a2_p2*H_a3_p2**2/30 + H_a1_a2*H_a1_p2*H_a2_p2*H_p1_p1*T_a3_a3/24 + H_a1_a2*H_a1_p2*H_a2_p2*H_p1_p2*T_a3_a3/12 + H_a1_a2*H_a1_p2*H_a2_p2*H_p2_p2*T_a3_a3/24 - H_a1_a2*H_a2_a3*H_p2_p2**2*T_a1_a3/120 + H_a1_a2*H_a2_p2*H_a3_p2*H_p2_p2*T_a1_a3/120 - H_a1_a2*H_a3_a3*H_p1_p1**2*T_a1_a2/40 - H_a1_a2*H_a3_a3*H_p1_p1*H_p1_p2*T_a1_a2/10 - H_a1_a2*H_a3_a3*H_p1_p1*H_p2_p2*T_a1_a2/20 - H_a1_a2*H_a3_a3*H_p1_p2**2*T_a1_a2/10 - H_a1_a2*H_a3_a3*H_p1_p2*H_p2_p2*T_a1_a2/10 - H_a1_a2*H_a3_a3*H_p2_p2**2*T_a1_a2/40 + H_a1_a2*H_a3_p1**2*H_p1_p1*T_a1_a2/40 + H_a1_a2*H_a3_p1**2*H_p1_p2*T_a1_a2/20 + H_a1_a2*H_a3_p1**2*H_p2_p2*T_a1_a2/40 + H_a1_a2*H_a3_p1*H_a3_p2*H_p1_p1*T_a1_a2/20 + H_a1_a2*H_a3_p1*H_a3_p2*H_p1_p2*T_a1_a2/10 + H_a1_a2*H_a3_p1*H_a3_p2*H_p2_p2*T_a1_a2/20 + H_a1_a2*H_a3_p2**2*H_p1_p1*T_a1_a2/40 + H_a1_a2*H_a3_p2**2*H_p1_p2*T_a1_a2/20 + H_a1_a2*H_a3_p2**2*H_p2_p2*T_a1_a2/40 - H_a1_a2*H_p1_p1**2*T_a1_a2*T_a3_a3/24 - H_a1_a2*H_p1_p1*H_p1_p2*T_a1_a2*T_a3_a3/6 - H_a1_a2*H_p1_p1*H_p2_p2*T_a1_a2*T_a3_a3/12 - H_a1_a2*H_p1_p2**2*T_a1_a2*T_a3_a3/6 - H_a1_a2*H_p1_p2*H_p2_p2*T_a1_a2*T_a3_a3/6 - H_a1_a2*H_p2_p2**2*T_a1_a2*T_a3_a3/24 + H_a1_a3**2*H_a2_a2*H_p1_p1**2/480 + H_a1_a3**2*H_a2_a2*H_p1_p1*H_p1_p2/240 - H_a1_a3**2*H_a2_a2*H_p1_p1*H_p2_p2/144 + H_a1_a3**2*H_a2_a2*H_p1_p2**2/360 - H_a1_a3**2*H_a2_a2*H_p1_p2*H_p2_p2/160 - H_a1_a3**2*H_a2_a2*H_p2_p2**2/80 - H_a1_a3**2*H_a2_p1**2*H_p1_p1/120 - H_a1_a3**2*H_a2_p1**2*H_p1_p2/120 - H_a1_a3**2*H_a2_p1**2*H_p2_p2/180 - H_a1_a3**2*H_a2_p1*H_a2_p2*H_p1_p1/120 - H_a1_a3**2*H_a2_p1*H_a2_p2*H_p1_p2/180 - H_a1_a3**2*H_a2_p1*H_a2_p2*H_p2_p2/240 + H_a1_a3**2*H_a2_p2**2*H_p1_p1/144 + H_a1_a3**2*H_a2_p2**2*H_p1_p2/120 + H_a1_a3**2*H_a2_p2**2*H_p2_p2/80 - H_a1_a3**2*H_p1_p1*H_p2_p2*T_a2_a2/96 - H_a1_a3**2*H_p1_p2*H_p2_p2*T_a2_a2/96 - H_a1_a3**2*H_p2_p2**2*T_a2_a2/48 - H_a1_a3*H_a1_p1*H_a2_a2*H_a3_p1*H_p1_p1/240 - H_a1_a3*H_a1_p1*H_a2_a2*H_a3_p1*H_p1_p2/240 + H_a1_a3*H_a1_p1*H_a2_a2*H_a3_p1*H_p2_p2/72 - H_a1_a3*H_a1_p1*H_a2_a2*H_a3_p2*H_p1_p2/720 + H_a1_a3*H_a1_p1*H_a2_a3*H_a2_p1*H_p1_p1/120 + H_a1_a3*H_a1_p1*H_a2_a3*H_a2_p1*H_p2_p2/360 - H_a1_a3*H_a1_p1*H_a2_a3*H_a2_p2*H_p1_p2/360 + H_a1_a3*H_a1_p1*H_a2_p1**2*H_a3_p1/120 + H_a1_a3*H_a1_p1*H_a2_p1**2*H_a3_p2/120 + H_a1_a3*H_a1_p1*H_a2_p1*H_a2_p2*H_a3_p1/120 + H_a1_a3*H_a1_p1*H_a2_p1*H_a2_p2*H_a3_p2/180 + H_a1_a3*H_a1_p1*H_a2_p1*H_p1_p1*T_a2_a3/120 - H_a1_a3*H_a1_p1*H_a2_p2**2*H_a3_p1/72 + H_a1_a3*H_a1_p1*H_a3_p1*H_p2_p2*T_a2_a2/48 - H_a1_a3*H_a1_p2*H_a2_a2*H_a3_p1*H_p1_p1/240 - H_a1_a3*H_a1_p2*H_a2_a2*H_a3_p1*H_p1_p2/180 + H_a1_a3*H_a1_p2*H_a2_a2*H_a3_p1*H_p2_p2/80 + H_a1_a3*H_a1_p2*H_a2_a2*H_a3_p2*H_p1_p1/720 + H_a1_a3*H_a1_p2*H_a2_a2*H_a3_p2*H_p2_p2/40 + H_a1_a3*H_a1_p2*H_a2_a3*H_a2_p1*H_p1_p1/60 + H_a1_a3*H_a1_p2*H_a2_a3*H_a2_p1*H_p1_p2/45 + H_a1_a3*H_a1_p2*H_a2_a3*H_a2_p1*H_p2_p2/60 + H_a1_a3*H_a1_p2*H_a2_a3*H_a2_p2*H_p1_p1/360 + H_a1_a3*H_a1_p2*H_a2_a3*H_a2_p2*H_p2_p2/120 - H_a1_a3*H_a1_p2*H_a2_p1**2*H_a3_p2/180 - H_a1_a3*H_a1_p2*H_a2_p1*H_a2_p2*H_a3_p1/360 - H_a1_a3*H_a1_p2*H_a2_p1*H_a2_p2*H_a3_p2/120 - H_a1_a3*H_a1_p2*H_a2_p2**2*H_a3_p1/60 - H_a1_a3*H_a1_p2*H_a2_p2**2*H_a3_p2/30 + H_a1_a3*H_a1_p2*H_a3_p1*H_p2_p2*T_a2_a2/48 + H_a1_a3*H_a1_p2*H_a3_p2*H_p2_p2*T_a2_a2/24 - H_a1_a3*H_a2_a2*H_p2_p2**2*T_a1_a3/40 - H_a1_a3*H_a2_a3*H_p1_p1**2*T_a1_a2/120 - H_a1_a3*H_a2_a3*H_p1_p1*H_p1_p2*T_a1_a2/30 - H_a1_a3*H_a2_a3*H_p1_p1*H_p2_p2*T_a1_a2/60 - H_a1_a3*H_a2_a3*H_p1_p2**2*T_a1_a2/30 - H_a1_a3*H_a2_a3*H_p1_p2*H_p2_p2*T_a1_a2/30 - H_a1_a3*H_a2_a3*H_p2_p2**2*T_a1_a2/120 + H_a1_a3*H_a2_p1*H_a3_p1*H_p1_p1*T_a1_a2/120 + H_a1_a3*H_a2_p1*H_a3_p1*H_p1_p2*T_a1_a2/60 + H_a1_a3*H_a2_p1*H_a3_p1*H_p2_p2*T_a1_a2/120 + H_a1_a3*H_a2_p1*H_a3_p2*H_p1_p1*T_a1_a2/120 + H_a1_a3*H_a2_p1*H_a3_p2*H_p1_p2*T_a1_a2/60 + H_a1_a3*H_a2_p1*H_a3_p2*H_p2_p2*T_a1_a2/120 + H_a1_a3*H_a2_p2**2*H_p2_p2*T_a1_a3/40 + H_a1_a3*H_a2_p2*H_a3_p1*H_p1_p1*T_a1_a2/120 + H_a1_a3*H_a2_p2*H_a3_p1*H_p1_p2*T_a1_a2/60 + H_a1_a3*H_a2_p2*H_a3_p1*H_p2_p2*T_a1_a2/120 + H_a1_a3*H_a2_p2*H_a3_p2*H_p1_p1*T_a1_a2/120 + H_a1_a3*H_a2_p2*H_a3_p2*H_p1_p2*T_a1_a2/60 + H_a1_a3*H_a2_p2*H_a3_p2*H_p2_p2*T_a1_a2/120 - H_a1_a3*H_p2_p2**2*T_a1_a3*T_a2_a2/24 - H_a1_p1**2*H_a2_a2*H_a3_a3*H_p1_p1/160 - H_a1_p1**2*H_a2_a2*H_a3_a3*H_p1_p2/160 - H_a1_p1**2*H_a2_a2*H_a3_a3*H_p2_p2/144 + H_a1_p1**2*H_a2_a2*H_a3_p1**2/120 + H_a1_p1**2*H_a2_a2*H_a3_p2**2/144 - H_a1_p1**2*H_a2_a2*H_p1_p1*T_a3_a3/96 - H_a1_p1**2*H_a2_a2*H_p1_p2*T_a3_a3/96 + H_a1_p1**2*H_a2_a3**2*H_p1_p1/80 + H_a1_p1**2*H_a2_a3**2*H_p1_p2/120 + H_a1_p1**2*H_a2_a3**2*H_p2_p2/144 - H_a1_p1**2*H_a2_a3*H_a2_p1*H_a3_p1/30 - H_a1_p1**2*H_a2_a3*H_a2_p1*H_a3_p2/60 - H_a1_p1**2*H_a2_a3*H_a2_p2*H_a3_p2/72 + H_a1_p1**2*H_a2_a3*H_p1_p1*T_a2_a3/40 + H_a1_p1**2*H_a2_p1**2*H_a3_a3/80 + H_a1_p1**2*H_a2_p1**2*T_a3_a3/48 + H_a1_p1**2*H_a2_p1*H_a2_p2*H_a3_a3/80 + H_a1_p1**2*H_a2_p1*H_a2_p2*T_a3_a3/48 - H_a1_p1**2*H_a2_p1*H_a3_p1*T_a2_a3/30 + H_a1_p1**2*H_a2_p2**2*H_a3_a3/144 + H_a1_p1**2*H_a3_a3*H_p1_p2*T_a2_a2/96 - H_a1_p1**2*H_a3_p1*H_a3_p2*T_a2_a2/48 + H_a1_p1**2*H_p1_p1*T_a2_a3**2/48 + H_a1_p1**2*H_p1_p2*T_a2_a2*T_a3_a3/96 + H_a1_p1**2*H_p2_p2*T_a2_a2*T_a3_a3/96 - H_a1_p1*H_a1_p2*H_a2_a2*H_a3_a3*H_p1_p1/80 - 17*H_a1_p1*H_a1_p2*H_a2_a2*H_a3_a3*H_p1_p2/720 - H_a1_p1*H_a1_p2*H_a2_a2*H_a3_a3*H_p2_p2/40 + H_a1_p1*H_a1_p2*H_a2_a2*H_a3_p1**2/60 + 17*H_a1_p1*H_a1_p2*H_a2_a2*H_a3_p1*H_a3_p2/720 + H_a1_p1*H_a1_p2*H_a2_a2*H_a3_p2**2/80 - H_a1_p1*H_a1_p2*H_a2_a2*H_p1_p1*T_a3_a3/48 - H_a1_p1*H_a1_p2*H_a2_a2*H_p1_p2*T_a3_a3/24 - H_a1_p1*H_a1_p2*H_a2_a2*H_p2_p2*T_a3_a3/24 - H_a1_p1*H_a1_p2*H_a2_a3**2*H_p1_p1/240 - H_a1_p1*H_a1_p2*H_a2_a3**2*H_p1_p2/180 - H_a1_p1*H_a1_p2*H_a2_a3**2*H_p2_p2/120 - H_a1_p1*H_a1_p2*H_a2_a3*H_a2_p1*H_a3_p1/120 - H_a1_p1*H_a1_p2*H_a2_a3*H_a2_p1*H_a3_p2/360 + H_a1_p1*H_a1_p2*H_a2_a3*H_a2_p2*H_a3_p1/180 + H_a1_p1*H_a1_p2*H_a2_a3*H_a2_p2*H_a3_p2/120 - H_a1_p1*H_a1_p2*H_a2_p1*H_a2_p2*H_a3_a3/720 + H_a1_p1*H_a1_p2*H_a2_p2**2*H_a3_a3/80 + H_a1_p1*H_a1_p2*H_a2_p2**2*T_a3_a3/48 - H_a1_p1*H_a1_p2*H_a3_a3*H_p1_p1*T_a2_a2/48 - H_a1_p1*H_a1_p2*H_a3_a3*H_p1_p2*T_a2_a2/24 - H_a1_p1*H_a1_p2*H_a3_a3*H_p2_p2*T_a2_a2/24 + H_a1_p1*H_a1_p2*H_a3_p1**2*T_a2_a2/48 + H_a1_p1*H_a1_p2*H_a3_p1*H_a3_p2*T_a2_a2/24 + H_a1_p1*H_a1_p2*H_a3_p2**2*T_a2_a2/48 - H_a1_p1*H_a1_p2*H_p1_p1*T_a2_a2*T_a3_a3/32 - H_a1_p1*H_a1_p2*H_p1_p2*T_a2_a2*T_a3_a3/16 - H_a1_p1*H_a1_p2*H_p2_p2*T_a2_a2*T_a3_a3/16 + H_a1_p1*H_a2_a3*H_a3_p1*H_p1_p1*T_a1_a2/120 + H_a1_p1*H_a2_a3*H_a3_p1*H_p1_p2*T_a1_a2/60 + H_a1_p1*H_a2_a3*H_a3_p1*H_p2_p2*T_a1_a2/120 + H_a1_p1*H_a2_a3*H_a3_p2*H_p1_p1*T_a1_a2/120 + H_a1_p1*H_a2_a3*H_a3_p2*H_p1_p2*T_a1_a2/60 + H_a1_p1*H_a2_a3*H_a3_p2*H_p2_p2*T_a1_a2/120 + H_a1_p1*H_a2_p1*H_a3_a3*H_p1_p1*T_a1_a2/40 + H_a1_p1*H_a2_p1*H_a3_a3*H_p1_p2*T_a1_a2/20 + H_a1_p1*H_a2_p1*H_a3_a3*H_p2_p2*T_a1_a2/40 - H_a1_p1*H_a2_p1*H_a3_p1**2*T_a1_a2/30 - H_a1_p1*H_a2_p1*H_a3_p1*H_a3_p2*T_a1_a2/15 - H_a1_p1*H_a2_p1*H_a3_p2**2*T_a1_a2/30 + H_a1_p1*H_a2_p1*H_p1_p1*T_a1_a2*T_a3_a3/24 + H_a1_p1*H_a2_p1*H_p1_p2*T_a1_a2*T_a3_a3/12 + H_a1_p1*H_a2_p1*H_p2_p2*T_a1_a2*T_a3_a3/24 + H_a1_p1*H_a2_p2*H_a3_a3*H_p1_p1*T_a1_a2/40 + H_a1_p1*H_a2_p2*H_a3_a3*H_p1_p2*T_a1_a2/20 + H_a1_p1*H_a2_p2*H_a3_a3*H_p2_p2*T_a1_a2/40 - H_a1_p1*H_a2_p2*H_a3_p1**2*T_a1_a2/30 - H_a1_p1*H_a2_p2*H_a3_p1*H_a3_p2*T_a1_a2/15 - H_a1_p1*H_a2_p2*H_a3_p2**2*T_a1_a2/30 + H_a1_p1*H_a2_p2*H_p1_p1*T_a1_a2*T_a3_a3/24 + H_a1_p1*H_a2_p2*H_p1_p2*T_a1_a2*T_a3_a3/12 + H_a1_p1*H_a2_p2*H_p2_p2*T_a1_a2*T_a3_a3/24 - 19*H_a1_p2**2*H_a2_a2*H_a3_a3*H_p1_p1/1440 - H_a1_p2**2*H_a2_a2*H_a3_a3*H_p1_p2/40 - H_a1_p2**2*H_a2_a2*H_a3_a3*H_p2_p2/40 + 11*H_a1_p2**2*H_a2_a2*H_a3_p1**2/720 + H_a1_p2**2*H_a2_a2*H_a3_p1*H_a3_p2/40 + H_a1_p2**2*H_a2_a2*H_a3_p2**2/80 - H_a1_p2**2*H_a2_a2*H_p1_p1*T_a3_a3/48 - H_a1_p2**2*H_a2_a2*H_p1_p2*T_a3_a3/24 - H_a1_p2**2*H_a2_a2*H_p2_p2*T_a3_a3/24 - H_a1_p2**2*H_a2_a3**2*H_p1_p1/180 - H_a1_p2**2*H_a2_a3**2*H_p1_p2/120 - H_a1_p2**2*H_a2_a3**2*H_p2_p2/120 - H_a1_p2**2*H_a2_a3*H_a2_p1*H_a3_p1/180 + H_a1_p2**2*H_a2_a3*H_a2_p2*H_a3_p1/120 + H_a1_p2**2*H_a2_a3*H_a2_p2*H_a3_p2/120 + H_a1_p2**2*H_a2_p1**2*H_a3_a3/360 + H_a1_p2**2*H_a2_p2**2*H_a3_a3/80 + H_a1_p2**2*H_a2_p2**2*T_a3_a3/48 - H_a1_p2**2*H_a3_a3*H_p1_p1*T_a2_a2/48 - H_a1_p2**2*H_a3_a3*H_p1_p2*T_a2_a2/24 - H_a1_p2**2*H_a3_a3*H_p2_p2*T_a2_a2/24 + H_a1_p2**2*H_a3_p1**2*T_a2_a2/48 + H_a1_p2**2*H_a3_p1*H_a3_p2*T_a2_a2/24 + H_a1_p2**2*H_a3_p2**2*T_a2_a2/48 - H_a1_p2**2*H_p1_p1*T_a2_a2*T_a3_a3/32 - H_a1_p2**2*H_p1_p2*T_a2_a2*T_a3_a3/16 - H_a1_p2**2*H_p2_p2*T_a2_a2*T_a3_a3/16 + H_a1_p2*H_a2_a2*H_a3_p2*H_p2_p2*T_a1_a3/40 + H_a1_p2*H_a2_a3*H_a2_p2*H_p2_p2*T_a1_a3/120 + H_a1_p2*H_a2_a3*H_a3_p1*H_p1_p1*T_a1_a2/120 + H_a1_p2*H_a2_a3*H_a3_p1*H_p1_p2*T_a1_a2/60 + H_a1_p2*H_a2_a3*H_a3_p1*H_p2_p2*T_a1_a2/120 + H_a1_p2*H_a2_a3*H_a3_p2*H_p1_p1*T_a1_a2/120 + H_a1_p2*H_a2_a3*H_a3_p2*H_p1_p2*T_a1_a2/60 + H_a1_p2*H_a2_a3*H_a3_p2*H_p2_p2*T_a1_a2/120 + H_a1_p2*H_a2_p1*H_a3_a3*H_p1_p1*T_a1_a2/40 + H_a1_p2*H_a2_p1*H_a3_a3*H_p1_p2*T_a1_a2/20 + H_a1_p2*H_a2_p1*H_a3_a3*H_p2_p2*T_a1_a2/40 - H_a1_p2*H_a2_p1*H_a3_p1**2*T_a1_a2/30 - H_a1_p2*H_a2_p1*H_a3_p1*H_a3_p2*T_a1_a2/15 - H_a1_p2*H_a2_p1*H_a3_p2**2*T_a1_a2/30 + H_a1_p2*H_a2_p1*H_p1_p1*T_a1_a2*T_a3_a3/24 + H_a1_p2*H_a2_p1*H_p1_p2*T_a1_a2*T_a3_a3/12 + H_a1_p2*H_a2_p1*H_p2_p2*T_a1_a2*T_a3_a3/24 - H_a1_p2*H_a2_p2**2*H_a3_p2*T_a1_a3/30 + H_a1_p2*H_a2_p2*H_a3_a3*H_p1_p1*T_a1_a2/40 + H_a1_p2*H_a2_p2*H_a3_a3*H_p1_p2*T_a1_a2/20 + H_a1_p2*H_a2_p2*H_a3_a3*H_p2_p2*T_a1_a2/40 - H_a1_p2*H_a2_p2*H_a3_p1**2*T_a1_a2/30 - H_a1_p2*H_a2_p2*H_a3_p1*H_a3_p2*T_a1_a2/15 - H_a1_p2*H_a2_p2*H_a3_p2**2*T_a1_a2/30 + H_a1_p2*H_a2_p2*H_p1_p1*T_a1_a2*T_a3_a3/24 + H_a1_p2*H_a2_p2*H_p1_p2*T_a1_a2*T_a3_a3/12 + H_a1_p2*H_a2_p2*H_p2_p2*T_a1_a2*T_a3_a3/24 + H_a1_p2*H_a3_p2*H_p2_p2*T_a1_a3*T_a2_a2/24 + H_a2_a2*H_a3_a3*H_p1_p1**2*T_a1_a1/96 + H_a2_a2*H_a3_a3*H_p1_p1*H_p1_p2*T_a1_a1/48 + H_a2_a2*H_a3_a3*H_p1_p2**2*T_a1_a1/48 - H_a2_a2*H_a3_p1**2*H_p1_p1*T_a1_a1/96 - H_a2_a2*H_a3_p1**2*H_p1_p2*T_a1_a1/96 - H_a2_a2*H_a3_p1*H_a3_p2*H_p1_p2*T_a1_a1/48 + H_a2_a2*H_a3_p1*H_a3_p2*H_p2_p2*T_a1_a1/48 - H_a2_a2*H_a3_p2**2*H_p1_p1*T_a1_a1/96 - H_a2_a2*H_a3_p2**2*H_p1_p2*T_a1_a1/96 + H_a2_a2*H_p1_p1**2*T_a1_a1*T_a3_a3/64 + H_a2_a2*H_p1_p1*H_p1_p2*T_a1_a1*T_a3_a3/32 - H_a2_a2*H_p1_p1*H_p2_p2*T_a1_a1*T_a3_a3/96 + H_a2_a2*H_p1_p2**2*T_a1_a1*T_a3_a3/32 + H_a2_a2*H_p1_p2*H_p2_p2*T_a1_a1*T_a3_a3/192 - H_a2_a2*H_p2_p2**2*T_a1_a3**2/48 - H_a2_a3**2*H_p1_p1**2*T_a1_a1/48 - H_a2_a3**2*H_p1_p1*H_p1_p2*T_a1_a1/96 - H_a2_a3**2*H_p1_p1*H_p2_p2*T_a1_a1/96 + H_a2_a3*H_a2_p1*H_a3_p1*H_p1_p1*T_a1_a1/24 + H_a2_a3*H_a2_p1*H_a3_p2*H_p1_p1*T_a1_a1/48 + H_a2_a3*H_a2_p2*H_a3_p2*H_p1_p1*T_a1_a1/48 - H_a2_a3*H_p1_p1**2*T_a1_a1*T_a2_a3/24 - H_a2_p1**2*H_a3_a3*H_p1_p1*T_a1_a1/24 - H_a2_p1**2*H_a3_a3*H_p1_p2*T_a1_a1/24 - H_a2_p1**2*H_a3_a3*H_p2_p2*T_a1_a1/48 + H_a2_p1**2*H_a3_p1**2*T_a1_a1/48 + H_a2_p1**2*H_a3_p1*H_a3_p2*T_a1_a1/24 + H_a2_p1**2*H_a3_p2**2*T_a1_a1/48 - H_a2_p1**2*H_p1_p1*T_a1_a1*T_a3_a3/16 - H_a2_p1**2*H_p1_p2*T_a1_a1*T_a3_a3/16 - H_a2_p1**2*H_p2_p2*T_a1_a1*T_a3_a3/32 - H_a2_p1*H_a2_p2*H_a3_a3*H_p1_p1*T_a1_a1/24 - H_a2_p1*H_a2_p2*H_a3_a3*H_p1_p2*T_a1_a1/24 - H_a2_p1*H_a2_p2*H_a3_a3*H_p2_p2*T_a1_a1/48 + H_a2_p1*H_a2_p2*H_a3_p1**2*T_a1_a1/48 + H_a2_p1*H_a2_p2*H_a3_p1*H_a3_p2*T_a1_a1/24 + H_a2_p1*H_a2_p2*H_a3_p2**2*T_a1_a1/48 - H_a2_p1*H_a2_p2*H_p1_p1*T_a1_a1*T_a3_a3/16 - H_a2_p1*H_a2_p2*H_p1_p2*T_a1_a1*T_a3_a3/16 - H_a2_p1*H_a2_p2*H_p2_p2*T_a1_a1*T_a3_a3/32 + H_a2_p1*H_a3_p1*H_p1_p1*T_a1_a1*T_a2_a3/24 + H_a2_p2**2*H_a3_a3*H_p1_p2*T_a1_a1/96 - H_a2_p2**2*H_a3_p1*H_a3_p2*T_a1_a1/48 + H_a2_p2**2*H_p1_p1*T_a1_a1*T_a3_a3/96 + H_a2_p2**2*H_p1_p2*T_a1_a1*T_a3_a3/96 + H_a2_p2**2*H_p2_p2*T_a1_a3**2/48 - H_a3_a3*H_p1_p1**2*T_a1_a2**2/48 - H_a3_a3*H_p1_p1*H_p1_p2*T_a1_a1*T_a2_a2/192 - H_a3_a3*H_p1_p1*H_p1_p2*T_a1_a2**2/12 - H_a3_a3*H_p1_p1*H_p2_p2*T_a1_a1*T_a2_a2/64 - H_a3_a3*H_p1_p1*H_p2_p2*T_a1_a2**2/24 + H_a3_a3*H_p1_p2**2*T_a1_a1*T_a2_a2/48 - H_a3_a3*H_p1_p2**2*T_a1_a2**2/12 - H_a3_a3*H_p1_p2*H_p2_p2*T_a1_a1*T_a2_a2/192 - H_a3_a3*H_p1_p2*H_p2_p2*T_a1_a2**2/12 - H_a3_a3*H_p2_p2**2*T_a1_a2**2/48 + H_a3_p1**2*H_p1_p1*T_a1_a2**2/48 - H_a3_p1**2*H_p1_p2*T_a1_a1*T_a2_a2/96 + H_a3_p1**2*H_p1_p2*T_a1_a2**2/24 + H_a3_p1**2*H_p2_p2*T_a1_a2**2/48 + H_a3_p1*H_a3_p2*H_p1_p1*T_a1_a1*T_a2_a2/32 + H_a3_p1*H_a3_p2*H_p1_p1*T_a1_a2**2/24 - H_a3_p1*H_a3_p2*H_p1_p2*T_a1_a1*T_a2_a2/48 + H_a3_p1*H_a3_p2*H_p1_p2*T_a1_a2**2/12 + H_a3_p1*H_a3_p2*H_p2_p2*T_a1_a1*T_a2_a2/32 + H_a3_p1*H_a3_p2*H_p2_p2*T_a1_a2**2/24 + H_a3_p2**2*H_p1_p1*T_a1_a2**2/48 - H_a3_p2**2*H_p1_p2*T_a1_a1*T_a2_a2/96 + H_a3_p2**2*H_p1_p2*T_a1_a2**2/24 + H_a3_p2**2*H_p2_p2*T_a1_a2**2/48 - H_p1_p1**2*T_a1_a1*T_a2_a3**2/32 - H_p1_p1**2*T_a1_a2**2*T_a3_a3/32 - H_p1_p1*H_p1_p2*T_a1_a2**2*T_a3_a3/8 - H_p1_p1*H_p2_p2*T_a1_a1*T_a2_a2*T_a3_a3/32 - H_p1_p1*H_p2_p2*T_a1_a2**2*T_a3_a3/16 + H_p1_p2**2*T_a1_a1*T_a2_a2*T_a3_a3/32 - H_p1_p2**2*T_a1_a2**2*T_a3_a3/8 - H_p1_p2*H_p2_p2*T_a1_a2**2*T_a3_a3/8 - H_p2_p2**2*T_a1_a2**2*T_a3_a3/32 - H_p2_p2**2*T_a1_a3**2*T_a2_a2/32",
+  "per_part_n_terms": {
+   "triangle(0, 1, 2)": 368,
+   "triangle(0, 2, 1)": 368,
+   "bubble_X2(1, 2)_X10": 53,
+   "bubble_X2(0, 2)_X11": 53,
+   "bubble_X2(0, 1)_X12": 459
+  },
+  "bose_symmetric_a1_a2": true
+ },
+ "matter_ward_three_point": {
+  "identity": "Gamma3(d0h, e1, e2) + Gamma2(d1h[xi,e1], e2) + Gamma2(d1h[xi,e2], e1) = 0 (diffeomorphism invariance of the scalar-loop W[g]); row c.h.h, matter subsector",
+  "declared": {
+   "lie_sign": 1,
+   "drop_bubbles": false,
+   "residue_d4_zero": true,
+   "residue_d4_4D_part_zero": true,
+   "n_terms_residue_d4": 0,
+   "coefficient_exact_in_d_zero": false,
+   "n_terms_generic_d": 1720
+  },
+  "mutation_wrong_Lie_sign": {
+   "lie_sign": -1,
+   "drop_bubbles": false,
+   "residue_d4_zero": false,
+   "residue_d4_4D_part_zero": false,
+   "n_terms_residue_d4": 36,
+   "coefficient_exact_in_d_zero": false,
+   "n_terms_generic_d": 1836
+  },
+  "mutation_drop_X2_bubbles": {
+   "lie_sign": 1,
+   "drop_bubbles": true,
+   "residue_d4_zero": false,
+   "residue_d4_4D_part_zero": false,
+   "n_terms_residue_d4": 118,
+   "coefficient_exact_in_d_zero": false,
+   "n_terms_generic_d": 1500
+  },
+  "reading": "the MS-bar pole residue satisfies the identity exactly, incl. the evanescent (tilde) structures; the d-dependent coefficient differs by O(d-4) x U, i.e. only finite (non-pole) terms, which Q04 does not evaluate"
+ },
+ "graph_table": [
+  {
+   "id": "P6-G01",
+   "vertices": [
+    "V3_grav",
+    "V3_grav",
+    "V3_grav"
+   ],
+   "lines": [
+    "h-h",
+    "h-h",
+    "h-h"
+   ],
+   "external": "h,h,h",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G02",
+   "vertices": [
+    "V3_grav",
+    "V4_grav"
+   ],
+   "lines": [
+    "h-h",
+    "h-h"
+   ],
+   "external": "h,h,h",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G03",
+   "vertices": [
+    "V3_grav",
+    "V_K_c_h",
+    "V_cb_c_h"
+   ],
+   "lines": [
+    "h-h",
+    "c-cb",
+    "h-h"
+   ],
+   "external": "K,c,h",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G04",
+   "vertices": [
+    "V3_grav",
+    "V_cb_c_h",
+    "V_cb_c_h"
+   ],
+   "lines": [
+    "h-h",
+    "c-cb",
+    "h-h"
+   ],
+   "external": "c,cb,h",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G05",
+   "vertices": [
+    "V3_grav",
+    "V_h_phi_phi",
+    "V_h_phi_phi"
+   ],
+   "lines": [
+    "h-h",
+    "phi-phi",
+    "h-h"
+   ],
+   "external": "h,phi,phi",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G06",
+   "vertices": [
+    "V3_grav",
+    "V_hh_phi_phi"
+   ],
+   "lines": [
+    "h-h",
+    "h-h"
+   ],
+   "external": "h,phi,phi",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G07",
+   "vertices": [
+    "V_K_c_h",
+    "V_cb_c_h",
+    "V_cb_c_h"
+   ],
+   "lines": [
+    "h-h",
+    "cb-c",
+    "cb-c"
+   ],
+   "external": "K,c,h",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G08",
+   "vertices": [
+    "V_cb_c_h",
+    "V_cb_c_h",
+    "V_cb_c_h"
+   ],
+   "lines": [
+    "cb-c",
+    "cb-c",
+    "cb-c"
+   ],
+   "external": "h,h,h",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G09",
+   "vertices": [
+    "V_cb_c_h",
+    "V_cb_c_h",
+    "V_cb_c_h"
+   ],
+   "lines": [
+    "cb-c",
+    "h-h",
+    "cb-c"
+   ],
+   "external": "c,cb,h",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G10",
+   "vertices": [
+    "V_cb_c_h",
+    "V_cb_c_h",
+    "V_cs_c_c"
+   ],
+   "lines": [
+    "h-h",
+    "cb-c",
+    "c-cb"
+   ],
+   "external": "c,c,cs",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G11",
+   "vertices": [
+    "V_cb_c_h",
+    "V_h_phi_phi",
+    "V_phis_c_phi"
+   ],
+   "lines": [
+    "h-h",
+    "phi-phi",
+    "c-cb"
+   ],
+   "external": "c,phi,phis",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G12",
+   "vertices": [
+    "V_h_phi_phi",
+    "V_h_phi_phi",
+    "V_h_phi_phi"
+   ],
+   "lines": [
+    "phi-phi",
+    "phi-phi",
+    "h-h"
+   ],
+   "external": "h,phi,phi",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G13",
+   "vertices": [
+    "V_h_phi_phi",
+    "V_hh_phi_phi"
+   ],
+   "lines": [
+    "phi-phi",
+    "h-h"
+   ],
+   "external": "h,phi,phi",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G14",
+   "vertices": [
+    "V_h_phi_phi",
+    "V_h_phi_phi",
+    "V_h_phi_phi"
+   ],
+   "lines": [
+    "phi-phi",
+    "phi-phi",
+    "phi-phi"
+   ],
+   "external": "h,h,h",
+   "status": "UV pole evaluated (exact residue, own rules, validated vs D11; Ward-checked); finite part Missing"
+  },
+  {
+   "id": "P6-G15",
+   "vertices": [
+    "V_h_phi_phi",
+    "V_hh_phi_phi"
+   ],
+   "lines": [
+    "phi-phi",
+    "phi-phi"
+   ],
+   "external": "h,h,h",
+   "status": "UV pole evaluated (exact residue, own rules, validated vs D11; Ward-checked); finite part Missing"
+  },
+  {
+   "id": "P6-T1",
+   "vertices": [
+    "V5_grav"
+   ],
+   "lines": [
+    "h-h"
+   ],
+   "external": "h,h,h",
+   "status": "derived 0 (scaleless, no log member)"
+  },
+  {
+   "id": "P6-T2",
+   "vertices": [
+    "V_hhh_phi_phi"
+   ],
+   "lines": [
+    "phi-phi"
+   ],
+   "external": "h,h,h",
+   "status": "derived 0 (scaleless, no log member)"
+  },
+  {
+   "id": "P6-T3",
+   "vertices": [
+    "V_hhh_phi_phi"
+   ],
+   "lines": [
+    "h-h"
+   ],
+   "external": "h,phi,phi",
+   "status": "derived 0 (scaleless, no log member)"
+  }
+ ],
+ "n_evaluated_pole": 2,
+ "n_missing": 13,
+ "n_derived_zero": 3
+}

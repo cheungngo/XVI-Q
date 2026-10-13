@@ -1,0 +1,43 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q07",
+ "P6_outcome": "Partial",
+ "stages": {
+  "row_c_phi_phi": "closed at pole level (Q05)",
+  "row_c_c_cbar": "4D closed (Q06); evanescent remainder cancellable by local evanescent CT (Q07)",
+  "row_c_c_K": "4D closed (Q06); evanescent remainder cancellable by local evanescent CT (Q07)",
+  "row_h_h_c": "4D closed (Q07, all channels +1, sigma_F tree-calibrated); evanescent remainder cancellable by local evanescent CT (Q07)",
+  "graphs_missing": [],
+  "graphs_derived_zero": [
+   "T1",
+   "T2",
+   "T3"
+  ]
+ },
+ "kappa3_CT_domain_reduction": "Partial: three-point kappa^3 CT = -Gamma_pole (4D part, sigma0-closed on all four rows) + X (local evanescent, existence shown, non-unique); reduction to a basis of local invariant operators / field redefinitions not performed",
+ "kappa3_defect": "zero on the 4D part of all four three-point rows; evanescent part sigma0-exact (pole level)",
+ "kappa3_CT_solve": "solved at pole level (particular solution certified, Q07_evanescent_CT.json)",
+ "sigma0_closure_kappa3": "CLOSED at pole level on the kappa^3 one-loop THREE-POINT rows (c.phi.phi, c.c.cbar, c.c.K, h.h.c) in the enlarged (evanescent) CT domain",
+ "not_implied": [
+  "kappa^3 four-point / higher rows",
+  "finite parts",
+  "ghost-equation compatibility of X",
+  "uniqueness of X",
+  "bulk symmetry restoration",
+  "any change to the O.1 record"
+ ],
+ "errata": {
+  "Q06-E2": "addressed: the F(h).Gamma_{cbar c h} channel is required (tree: sigma_F = i; mutation drop_E detected)"
+ },
+ "disclosed_revisions": {
+  "Q07-R1": "disclosed scope revision of the frozen Q06 layer gate (code/p6q06/release_q06.py): files under code/p6q06/q07/ and tools/*q07* are left to the Q07 gate, and the pinned Q05_guard_scan file count is a lower bound (as Q06-R1 did for the Q05 gate). Q05 gate untouched. release_q06.py is pinned by q07_expected.json."
+ },
+ "O1_closure_unchanged": "CLOSED (scoped)",
+ "bulk_symmetry_restored": false,
+ "flags": {
+  "execution_pass": true,
+  "claim_status": "partial",
+  "scope": "pole level, one loop, kappa^3, three-point rows"
+ },
+ "seconds": 651.7
+}

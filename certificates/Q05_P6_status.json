@@ -1,0 +1,62 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q05",
+ "P6_outcome": "Partial",
+ "stages": {
+  "rules_V3_ghost_validated": true,
+  "graphs_evaluated_pole": [
+   "G03",
+   "G04",
+   "G05",
+   "G06",
+   "G07",
+   "G08",
+   "G09",
+   "G10",
+   "G11",
+   "G12",
+   "G13",
+   "G14",
+   "G15"
+  ],
+  "graphs_missing": [
+   "G01",
+   "G02"
+  ],
+  "graphs_derived_zero": [
+   "T1",
+   "T2",
+   "T3"
+  ],
+  "row_c_phi_phi": "closed at pole level",
+  "row_c_c_cbar": "OPEN (unresolved assembly)",
+  "row_c_c_K": "OPEN (unresolved assembly)",
+  "row_h_h_c": "Missing"
+ },
+ "counterterms": {
+  "h_phi_phi + phi*_c_phi sector": "MS-bar CT = -(pole) of G05+G06+G12+G13 and G11 (local; Q(i) coefficients as certified); its sigma_0 / (S, CT) consistency in row c.phi.phi is exactly the closed row above",
+  "other sectors": "Missing (rows not closed / graphs missing)",
+  "kappa3_domain_reduction": "NOT done (structural counts only, Q04)"
+ },
+ "defect": "c.phi.phi: zero at pole level; c.c.cbar, c.c.K: Open; h.h.c: Missing",
+ "sigma0_closure_kappa3": "NOT established (only the c.phi.phi row)",
+ "finite_parts": "Missing (pole level only)",
+ "O1_closure_unchanged": "CLOSED (scoped)",
+ "bulk_symmetry_restored": false,
+ "errata": {
+  "Q05-E1": "Q04 identity ledger row c.phi.phi omitted the (S1 h-phi-phi x Gamma_Kc) channel (medium; fixed in Q05 rows)",
+  "Q05-E2": "code/q04/scalar_loop3.py docstring says G13/G14; the graphs are P6-G14/G15 (info; file is pinned by the Q04 layer gate and left unchanged)",
+  "Q05-E3": "own D13 orientation = -I x XVI-P (convention, disclosed in Q05_rules_validation)",
+  "Q05-E4": "G10 loop momentum shifts had the wrong sign in the first Q05 evaluation (found while assembling the ghost rows; fixed before release; certified G10 is the corrected one)"
+ },
+ "review_q04_folded": {
+  "guard_scan": "hardened (Q05_guard_scan: recursive, 7 reviewer forms flagged) AND claim downgraded to best-effort policy scan (not a security boundary)",
+  "gate_unpinned_files": "Q05 gate rejects any code/**/*.py, tools/*.py or tests/*.py not pinned",
+  "docstring": "Q05-E2"
+ },
+ "flags": {
+  "execution_pass": true,
+  "claim_status": "partial",
+  "scope": "pole level, one loop, kappa^3"
+ }
+}

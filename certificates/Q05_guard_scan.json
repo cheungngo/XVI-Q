@@ -1,0 +1,35 @@
+{
+ "scope": "every .py under code/ (recursive), minus declared probe files",
+ "probe_files": [
+  "code/p6q05/guard_scan2.py",
+  "code/q01/guard_probe.py",
+  "code/q04/guard_scan.py"
+ ],
+ "n_files_scanned": 65,
+ "rules": [
+  "F1 primitive reference/alias/string",
+  "F2 non-literal getattr",
+  "F3 .replace on non-literal",
+  "F4 builtin rebinding",
+  "F5 .name comparison",
+  "F6 dynamic exec/eval/import"
+ ],
+ "reviewer_evasions_flagged": {
+  "aliased_lambdify": true,
+  "getattr_concat_srepr": true,
+  "fstring_replace": true,
+  "dunder_str_replace": true,
+  "format_replace": true,
+  "rebound_str": true,
+  "name_based_walk": true
+ },
+ "reviewed_exceptions": {
+  "code/q01/o2_q01.py:34": "__import__('zipfile') for provenance zip hashing; no expression data",
+  "code/q01/qguard.py:132": "getattr(klass, meth) inside the guard's own wrapper installation"
+ },
+ "all_reviewer_evasions_flagged": true,
+ "scan_hits": [],
+ "scan_clean": true,
+ "claim": "best-effort policy scan; NOT a security boundary (dynamic Python can still evade it)",
+ "runtime_closable": false
+}

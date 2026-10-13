@@ -1,0 +1,202 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q04",
+ "version_label": "XVI-Q Q04",
+ "date": "2026-10-11",
+ "kind": "P.6 entry (one-loop kappa^3 three-point): honest partial",
+ "execution_pass": true,
+ "publication": "accepted",
+ "value_checks": {
+  "expected_file_pinned": true,
+  "every_certified_value_matches_pinned": true,
+  "_value_mismatches": [],
+  "code_rehashed": true,
+  "_file_mismatches": [],
+  "provenance_rehashed_all_pinned": true,
+  "bound_q02_report_rehashed": true,
+  "bound_q03_report_rehashed": true,
+  "tools_source_set_pinned": true,
+  "guard_leave_sympy_class_disclosed_and_scan_clean": true,
+  "inventory_15_plus_3_tadpoles": true,
+  "kappa_equals_E_and_1pt_2pt_counts": true,
+  "vertex_hhhphiphi_two_routes_and_mutation": true,
+  "engine_validated_vs_D11": true,
+  "matter_ward_residue_zero_mutations_detect": true,
+  "scalar_hhh_bose_symmetric": true,
+  "graph_table_counts": true,
+  "honest_partial_outcome": true,
+  "no_missing_set_to_zero": true,
+  "bulk_symmetry_restored_false": true,
+  "Q01_release_layer_accepted": true,
+  "Q02_release_layer_accepted": true,
+  "Q03_release_layer_accepted": true,
+  "O1_record_unchanged": true,
+  "every_gate_read_in_source_set": true,
+  "_reads_outside_source_set": []
+ },
+ "P6_outcome": "Partial",
+ "P6_stages": {
+  "inventory": "Constructed",
+  "kappa3_vertices": "Constructed (V_hhh_phi_phi); V5_grav not needed (scaleless only)",
+  "power_counting_kappa3_1pt_2pt_empty": true,
+  "identity_ledger_rows": "Constructed (14 gh1 three-field rows; 4 need P.6 inputs)",
+  "counterterm_domain_kappa3": "Partial (structural counts; BRST/sigma_0 reduction not done)",
+  "engine_validated_vs_XVI_P_D11": true,
+  "evaluation": "Partial: 2 graphs at pole level, 3 tadpoles derived 0, 13 Missing",
+  "matter_subsector_ward_c_h_h_pole": "verified",
+  "defect_assembly": "Missing (inputs Missing for every needs_inputs row)",
+  "counterterm_solve_kappa3": "Missing",
+  "sigma0_closure_kappa3": "Missing"
+ },
+ "P6_rows": {
+  "h.h.c": "Missing inputs",
+  "h.phi.c": "zero (phi-parity odd (every vertex even in {ph)",
+  "h.b.c": "aux",
+  "h.c.cbs": "aux",
+  "phi.phi.c": "Missing inputs",
+  "phi.b.c": "zero (phi-parity odd (every vertex even in {ph)",
+  "phi.c.cbs": "zero (phi-parity odd (every vertex even in {ph)",
+  "b.b.c": "aux",
+  "b.c.cbs": "aux",
+  "c.c.cb": "Missing inputs",
+  "c.c.hs": "Missing inputs",
+  "c.c.phis": "zero (phi-parity odd (every vertex even in {ph)",
+  "c.c.bs": "aux",
+  "c.cbs.cbs": "aux"
+ },
+ "P6_graphs": [
+  {
+   "id": "P6-G01",
+   "external": "h,h,h",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G02",
+   "external": "h,h,h",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G03",
+   "external": "K,c,h",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G04",
+   "external": "c,cb,h",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G05",
+   "external": "h,phi,phi",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G06",
+   "external": "h,phi,phi",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G07",
+   "external": "K,c,h",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G08",
+   "external": "h,h,h",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G09",
+   "external": "c,cb,h",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G10",
+   "external": "c,c,cs",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G11",
+   "external": "c,phi,phis",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G12",
+   "external": "h,phi,phi",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G13",
+   "external": "h,phi,phi",
+   "status": "Missing (not evaluated in Q04)"
+  },
+  {
+   "id": "P6-G14",
+   "external": "h,h,h",
+   "status": "UV pole evaluated (exact residue, own rules, validated vs D11; Ward-checked); finite part Missing"
+  },
+  {
+   "id": "P6-G15",
+   "external": "h,h,h",
+   "status": "UV pole evaluated (exact residue, own rules, validated vs D11; Ward-checked); finite part Missing"
+  },
+  {
+   "id": "P6-T1",
+   "external": "h,h,h",
+   "status": "derived 0 (scaleless, no log member)"
+  },
+  {
+   "id": "P6-T2",
+   "external": "h,h,h",
+   "status": "derived 0 (scaleless, no log member)"
+  },
+  {
+   "id": "P6-T3",
+   "external": "h,phi,phi",
+   "status": "derived 0 (scaleless, no log member)"
+  }
+ ],
+ "O1_closure": "CLOSED (scoped)",
+ "O1_closure_confirmed": true,
+ "O1_closure_scope": "one-loop, order kappa^2, bulk two-point retained sector of S_inv (h, phi, c, cbar, b + antifields; gh0 seeds), m=0, frozen gauge fermion, under XVI-P's declared prescription (DRED: QdS loop momenta, Q4S vertex indices, MS-bar) INCLUDING the p22 evanescent counterterm contract revision; NOT the functional ST4b, NOT bulk symmetry restoration, NOT XVI-O's own ledger (read-only, still NOT_CLOSED there)",
+ "O1_not_implied": [
+  "the functional / all-n-point ST4b identity (only the retained two-point projection is verified)",
+  "bulk symmetry restoration (bulk_symmetry_restored stays false)",
+  "any change to XVI-O's own O.1 ledger: XVI-O is read-only and its O.1 stays NOT_CLOSED there",
+  "the three-point sector / P.6 (kappa^3) and higher orders or loops",
+  "the insertion (frozen; XVI-N massless obstruction untouched)",
+  "finite renormalised amplitudes with non-QdS (epsilon-scalar) external components (p22 Q4S-trace O(eps)x pole remnant stays disclosed)"
+ ],
+ "O1_caveats": [
+  "same-box reviews: Q01/Q02 independent rebuilds ran on the author's machine (shared Python/sympy pin and TeX Live); not an independent machine",
+  "D01/D03 pole values were never recomputed from independent Feynman rules in any review; cross-checked only via the exact cancellation of the c.h defect in d",
+  "full sigma_0 closure and the c.h defect were not re-derived in the Q02 review; they rely on the earlier p19-p22 independent checks on byte-identical inputs",
+  "D06 accepted via exact equality with XVI-P P15 Sigma (ghost equation), not via the reviewer's own Feynman rules"
+ ],
+ "XVI_O_ledger_O1": "NOT_CLOSED (read-only, unchanged)",
+ "bulk_symmetry_restored": false,
+ "symmetry_restored": false,
+ "guard_leave_sympy_class": "disclosed; runtime-unclosable; enforced by static scan of package code (clean)",
+ "flags": {
+  "P6_inventory": "earned",
+  "P6_identity_ledger": "earned",
+  "P6_engine_validated": "earned",
+  "P6_matter_subsector_ward_pole": "earned",
+  "P6_evaluated": "partial",
+  "P6_counterterms": "Missing",
+  "P6_sigma0_closure": "Missing",
+  "independent_rebuild_passed_q02": true,
+  "independent_rebuild_passed_q03": true,
+  "independent_rebuild_passed_q04": "pending",
+  "author_rebuild_passed": "see reproducibility"
+ },
+ "hard_stops": {
+  "bulk_symmetry_restored": false,
+  "insertion": "frozen",
+  "XV_B_opened": false,
+  "XIV_J_opened": false,
+  "Route_B_discharged": false,
+  "Missing_never_zero": true
+ },
+ "XVI_Q_registered": "locally; not published"
+}

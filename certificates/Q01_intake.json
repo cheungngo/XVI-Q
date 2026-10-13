@@ -1,0 +1,90 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q01",
+ "pins_ok": true,
+ "n_pins": 33,
+ "pins": {
+  "provenance/XVI-N/RELEASE_STATUS_r10.json": true,
+  "provenance/XVI-N/XVI-N.tex": true,
+  "provenance/XVI-O/RELEASE_STATUS.json": true,
+  "provenance/XVI-O/certificates/O2_classical_consistency.json": true,
+  "provenance/XVI-O/certificates/O2_eh_quartic_probe.json": true,
+  "provenance/XVI-O/certificates/O2_eh_v4_general.json": true,
+  "provenance/XVI-O/certificates/O2_kappa2_master_check.json": true,
+  "provenance/XVI-O/certificates/O2_scalar_action_authoritative.json": true,
+  "provenance/XVI-O/certificates/O2_vertex_catalogue.json": true,
+  "provenance/XVI-O/ledgers/O_quantum_target.json": true,
+  "provenance/XVI-O/ledgers/diagram_inventory.json": true,
+  "provenance/XVI-O/manuscript/notes/quantum_convention_sheet.tex": true,
+  "provenance/XVI-P/RELEASE_STATUS_p23.json": true,
+  "provenance/XVI-P/XVI-P-p23-source-only.zip": true,
+  "provenance/XVI-P/independent_rebuild_report_p23.json": true,
+  "provenance/XVI-P/certificates/P13_boundary_identity.json": true,
+  "provenance/XVI-P/certificates/P13_brst_derivation.json": true,
+  "provenance/XVI-P/certificates/P13_gauge_fixing_map.json": true,
+  "provenance/XVI-P/certificates/P13_master_kappa2.json": true,
+  "provenance/XVI-P/certificates/P13_quartic_verified.json": true,
+  "provenance/XVI-P/ell4_generating_polynomial.srepr": true,
+  "provenance/XVI-P/certificates/P14_amplitude_rules.json": true,
+  "provenance/XVI-P/certificates/P15_D13.json": true,
+  "provenance/XVI-P/certificates/P15_batchA.json": true,
+  "provenance/XVI-P/certificates/P16_batchC.json": true,
+  "provenance/XVI-P/certificates/P18_D11.json": true,
+  "provenance/XVI-P/certificates/P18_hh_slot.json": true,
+  "provenance/XVI-P/certificates/P22_evanescent.json": true,
+  "provenance/XVI-P/certificates/P23_O1_scope.json": true,
+  "provenance/XVI-P/certificates/P19_defect.json": true,
+  "provenance/XVI-P/certificates/P14_counterterm_domain.json": true,
+  "provenance/XVI-O/ledgers/symmetry_defect.json": true,
+  "provenance/XVI-O/ledgers/amplitude_status.json": true
+ },
+ "XVI_P_p23_zip_ok": true,
+ "XVI_P_p23_extracted_identical": true,
+ "n_extracted": 206,
+ "O1_ledger_sha_ok": true,
+ "errata": [
+  {
+   "id": "E1",
+   "severity": "medium",
+   "item": "P23_O1_scope O.5 line 'all E=2 kappa^2 graphs evaluated'",
+   "correction": "OVERCLAIM vs XVI-O bulk O.5: D04 (phi phi bubble) and D05a (phi phi grav tadpole) never evaluated (legitimately outside the ch projection by phi -> -phi parity), D06 only as the ghost self-energy inside P15_D13; D12 Missing. Bulk O.5 is open; carried to Q02."
+  },
+  {
+   "id": "E2",
+   "severity": "low",
+   "item": "P23 reason for O.1 not closable ('grav ell_4 Incomplete')",
+   "correction": "stale/incomplete: XVI-P ell_4 (3360 terms) reproduces XVI-O's conformal probe exactly (blocker [0]); remaining XVI-O blockers were [1] explicit O(kappa^2) antibracket expansion and the ghost/antifield sector -- addressed in Q01 O.2 (b),(c)."
+  },
+  {
+   "id": "E3",
+   "severity": "low",
+   "item": "d guard bypasses",
+   "correction": "sympy.polys.rem namespace; polytools.rem captured before dred import; sp.reduced; sp.groebner; Matrix.subs d->Dummy then Dummy->4; Poly(...).rep.eval -- fixed in the XVI-Q guard (entry-point rule at the sympy.polys construction level)."
+  },
+  {
+   "id": "E4",
+   "severity": "low",
+   "item": "p23 gate",
+   "correction": "misses per-graph h.h counterterm edits and P6_entry_n_graphs edits -- the XVI-Q gate value-checks every certified number it imports. Also: p23 accepted p23_conventions.py UNPINNED (its sha was not in P23_PINNED_SHA256; README/REBUILD likewise) -- the XVI-Q gate pins every conventions/expected-values file it relies on."
+  },
+  {
+   "id": "E5",
+   "severity": "low",
+   "item": "P.6 entry kappa^3 inventory",
+   "correction": "omits scaleless 5-leg-vertex tadpoles (zero in DRED but must be listed, never Missing->zero); recorded for the P.6 continuation (out of Q01 scope)."
+  },
+  {
+   "id": "E6",
+   "severity": "low",
+   "item": "P23_O1_scope O.5 evidence 'D12 Missing never zero per P14'",
+   "correction": "stale p14r status: D12 was evaluated in XVI-P p15 (vanishing_under_declared_prescription, derived; two routes, IR-mass and cutoff analysis) and independently confirmed in XVI-Q Q02; XVI-O never labelled D12 'Missing' (provisional_listed, unevaluated)."
+  },
+  {
+   "id": "E7",
+   "severity": "low",
+   "item": "XVI-O diagram_inventory D04 sym_factor '1/2' (Unverified)",
+   "correction": "D04 has two internal lines of different species and no automorphism fixing the external legs: symmetry factor 1 (used in Q02; irrelevant to the value since D04 = 0 exactly)."
+  }
+ ],
+ "registration": "locally (this file only); NOT published, NOT pushed; no GitHub edit"
+}

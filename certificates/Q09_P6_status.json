@@ -1,0 +1,37 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q09",
+ "P6_outcome": "Partial",
+ "sigma0_status_kappa3": "evanescent kappa^3 three-point defect sigma0-exact at pole level; X non-unique (ghost-eq compatible)",
+ "relabel_note": "supersedes the Q07/Q08 wording 'sigma0 closure CLOSED at pole level' (Q07 review, medium); frozen Q07/Q08 certificates left unchanged",
+ "goals": {
+  "a_derived_normalisations": "Partial: lambda_F = lambda_P = -1, lambda_G = +1 derived; F verified on 139/204 generators (failures all trace-type, OPEN); G, P constructions not closed (OPEN)",
+  "b_classification": "Partial: derived trivial span 59 (27 inside the ghost-equation subspace of dim 104); the remaining directions are NOT classified (trivial vs physical)",
+  "c_invariant_operator_basis": "OPEN: not constructed; X not expressed in an operator basis",
+  "d_p22_consistency": "OPEN: not reached"
+ },
+ "review_fixes": {
+  "sigma0_relabel": true,
+  "Q04_report_bound": true,
+  "scan_extension": true
+ },
+ "not_implied": [
+  "uniqueness or physicality of X",
+  "kappa^3 four-point / higher rows",
+  "finite parts",
+  "p22 consistency",
+  "bulk symmetry restoration",
+  "any change to the O.1 record"
+ ],
+ "disclosed_revisions": {
+  "Q09-R1": "disclosed scope revision of the frozen Q08 layer gate (code/p6q06/q07/q08/release_q08.py): files under code/p6q06/q07/q08/q09/ and tools/*q09* are left to the Q09 gate; release_q08.py is pinned by q09_expected.json. Q05-Q07 gates untouched. guard_scan2 (Q05) untouched; the extension is a new Q09 module."
+ },
+ "O1_closure_unchanged": "CLOSED (scoped)",
+ "bulk_symmetry_restored": false,
+ "flags": {
+  "execution_pass": true,
+  "claim_status": "partial",
+  "scope": "pole level, one loop, kappa^3, three-point rows"
+ },
+ "seconds": 5.5
+}

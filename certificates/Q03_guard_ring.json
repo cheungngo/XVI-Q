@@ -1,0 +1,26 @@
+{
+ "forms": {
+  "ring_evaluate": "raises",
+  "ring_subs": "raises",
+  "ring_call": "raises",
+  "ring_compose": "raises",
+  "field_evaluate": "raises",
+  "field_subs": "raises",
+  "field_call": "raises",
+  "sring_evaluate": "raises"
+ },
+ "n_forms": 8,
+ "missed": [],
+ "legitimate_algebra": {
+  "d_free_ring_evaluate": "9",
+  "cancel": "d + 4",
+  "factor": "d*(d - 1)",
+  "together": "(d + X)/(d*X)"
+ },
+ "entry_points": [
+  "Poly.new (polynomial construction with d as generator or in the domain)",
+  "dred._check_rule (any internal rename/substitution of d)",
+  "PolyElement/FracElement evaluate/subs/__call__/compose on a ring/field with d as generator"
+ ],
+ "residual_disclosed": "raw dense-list evaluation (densetools dup_eval/dmp_eval_in on lists carrying no symbol information) cannot be attributed to d and is not guarded; no package code uses it"
+}

@@ -1,0 +1,26 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q05",
+ "decision": "ACCEPT",
+ "checks": {
+  "expected_file_pinned": true,
+  "every_certified_value_matches_pinned": true,
+  "pinned_files_rehashed": true,
+  "no_unpinned_code_tools_tests_file": true,
+  "bound_q04_report_rehashed": true,
+  "scan_live_clean_and_evasions_flagged": true,
+  "rules_validated": true,
+  "D13_orientation_disclosed": true,
+  "ghost_equation_two_point_constant": true,
+  "ghost_equation_three_point": true,
+  "graphs_evaluated_nonzero": true,
+  "G01_G02_missing": true,
+  "row_c_phi_phi_closed_with_mutations": true,
+  "ghost_rows_open_not_overclaimed": true,
+  "honest_partial": true,
+  "errata_recorded": true,
+  "O1_record_unchanged": true,
+  "Q04_layer_accepted": true,
+  "gate_reads_in_source_set": true
+ }
+}

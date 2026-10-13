@@ -1,0 +1,22 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q07",
+ "decision": "ACCEPT",
+ "checks": {
+  "expected_file_pinned": true,
+  "every_certified_value_matches_pinned": true,
+  "pinned_files_rehashed": true,
+  "no_unpinned_code_tools_tests_file": true,
+  "scan_live_clean_incl_q07": true,
+  "hhc_tree_calibrated": true,
+  "hhc_4D_closed_with_mutations": true,
+  "hhc_remainder_explicit_evanescent": true,
+  "naive_CT_recorded_not_consistent": true,
+  "joint_CT_solvable_verified": true,
+  "status_scoped_honest": true,
+  "revision_disclosed": true,
+  "O1_record_unchanged": true,
+  "Q06_layer_accepted": true,
+  "gate_reads_in_source_set": true
+ }
+}

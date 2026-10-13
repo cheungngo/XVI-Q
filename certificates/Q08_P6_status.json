@@ -1,0 +1,32 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q08",
+ "P6_outcome": "Partial",
+ "goals": {
+  "1_ghost_equation_compatibility": "ESTABLISHED: X can be chosen ghost-equation compatible (rho = -2 from the loops); free directions 152 -> 104",
+  "2_invariant_operator_basis": "Partial: no explicit invariant-operator (R^2/Riemann^2-type evanescent) basis constructed; three-point cohomology-type count only (26 hhh-only closed evanescent cubic structures); X not expressed in an operator basis",
+  "3_free_parameters": "Partial: >= 97 (fitted lambda) of 152 in BRST-trivial family span, <= 116; >= 36 uncharacterised; physical vs trivial NOT settled",
+  "4_p22_consistency": "OPEN: not reached (cubic completion of the p22 kappa^2 evanescent operators not constructed)"
+ },
+ "sigma0_closure_kappa3": "unchanged from Q07: CLOSED at pole level on the one-loop three-point rows (enlarged evanescent CT domain); now also with a ghost-equation-compatible X",
+ "not_implied": [
+  "kappa^3 four-point / higher rows",
+  "finite parts",
+  "uniqueness of X",
+  "physical nature of the remaining free directions",
+  "consistency with p22 operators",
+  "bulk symmetry restoration",
+  "any change to the O.1 record"
+ ],
+ "disclosed_revisions": {
+  "Q08-R1": "disclosed scope revision of the frozen Q07 layer gate (code/p6q06/q07/release_q07.py): files under code/p6q06/q07/q08/ and tools/*q08* are left to the Q08 gate. release_q07.py is pinned by q08_expected.json. Q05 and Q06 gates untouched."
+ },
+ "O1_closure_unchanged": "CLOSED (scoped)",
+ "bulk_symmetry_restored": false,
+ "flags": {
+  "execution_pass": true,
+  "claim_status": "partial",
+  "scope": "pole level, one loop, kappa^3, three-point rows"
+ },
+ "seconds": 186.9
+}

@@ -1,0 +1,33 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q11",
+ "status": "released (honest partial: sigma-images in Ktilde variables, conditional classification)",
+ "P6_outcome": "Partial",
+ "sigma0_status_kappa3": "evanescent kappa^3 three-point defect sigma0-exact at pole level; X non-unique (ghost-eq compatible)",
+ "O1_closure": "CLOSED (scoped)",
+ "O1_closure_confirmed": true,
+ "hard_stops": {
+  "bulk_symmetry_restored": false,
+  "insertion": "frozen",
+  "XV_B_opened": false,
+  "XIV_J_opened": false,
+  "Route_B_discharged": false,
+  "Missing_never_zero": true
+ },
+ "independent_rebuild_q05": "not requested",
+ "independent_rebuild_q06": "not requested",
+ "independent_rebuild_q07": "PASSED (reviewer; report sha 03f5393f)",
+ "independent_rebuild_q08": "PASSED on execution (reviewer; report sha cc67001e)",
+ "independent_rebuild_q09": "not requested",
+ "independent_rebuild_q10": "not requested",
+ "independent_rebuild_q11": "not requested",
+ "goals": {
+  "1_sigma_images": "Partial: genuine Ktilde construction built (F, G; P absorbed as the cbar partner of F); 71/194 F and 8/33 G in N; Q08 F defect diagnosed (missing cbar partner / E channel); remaining failures OPEN (not trace-driven)",
+  "2_classification": "Partial (conditional): N_g 104 = sigma span 46 + blind 24 - overlap 9 + 43 unclassified",
+  "3_invariant_basis": "OPEN: not constructed",
+  "3_p22_consistency": "OPEN: not reached"
+ },
+ "execution_pass": true,
+ "claim_status": "partial",
+ "gate": "code/p6q06/q07/q08/q09/q10/q11/release_q11.py"
+}

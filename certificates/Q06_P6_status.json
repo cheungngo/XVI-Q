@@ -1,0 +1,65 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q06",
+ "P6_outcome": "Partial",
+ "stages": {
+  "ghost_rows_4D_closed": true,
+  "ghost_rows_evanescent_remainder": "explicit; removable by p22-type evanescent CTs; their kappa^3 s0-consistency OPEN",
+  "G10_second_route": true,
+  "V4_validated_gauge_identity": true,
+  "graphs_evaluated_pole": [
+   "G01",
+   "G02",
+   "G03",
+   "G04",
+   "G05",
+   "G06",
+   "G07",
+   "G08",
+   "G09",
+   "G10",
+   "G11",
+   "G12",
+   "G13",
+   "G14",
+   "G15"
+  ],
+  "graphs_missing": [],
+  "graphs_derived_zero": [
+   "T1",
+   "T2",
+   "T3"
+  ],
+  "row_c_phi_phi": "closed at pole level (Q05)",
+  "row_c_c_cbar": "closed on 4D part; evanescent remainder OPEN",
+  "row_c_c_K": "closed on 4D part; evanescent remainder OPEN",
+  "row_h_h_c": "Missing (channel ledger recorded; not assembled)"
+ },
+ "h_h_c_ledger": [
+  "Gamma_hhh (G01+G02+G08+G14+G15) [h -> s0 h(c)]",
+  "delta S_2/delta h (EH + gauge fixing) . Gamma_{K h c} (G03+G07)",
+  "s1 h = L_c h  . Gamma_hh pole (all kappa^2 hh self-energy graphs)",
+  "delta S_EH3/delta h|_hh . Gamma_{K c} (D13)",
+  "b eliminated: s cbar ~ F(h) => F(h) . Gamma_{cbar c h} (G04+G09)  [channel absent from the Q04 ledger]"
+ ],
+ "kappa3_CT_domain_reduction": "Missing",
+ "kappa3_defect": "Missing",
+ "kappa3_CT_solve": "Missing",
+ "sigma0_closure_kappa3": "NOT established",
+ "finite_parts": "Missing (pole level only)",
+ "errata": {
+  "Q06-E1": "Q05 ghost rows reported OPEN because of a Grassmann-sign error in the K-channel assembly (rows.ghost_row); not a property of the graphs (low; corrected here, Q05 record kept)",
+  "Q06-E2": "Q04 ledger for h.h.c omits the b-elimination channel F(h).Gamma_{cbar c h} (low; recorded)"
+ },
+ "disclosed_revisions": {
+  "Q06-R1": "Q06-R1 (disclosed revision of the frozen Q05 layer): code/p6q05/release_q05.py now treats the pinned Q05_guard_scan n_files_scanned as a LOWER bound (the recursive scan count grows when Q06 adds code files) and excludes Q06-owned files (code/p6q06/, tests/test_q06.py, tools/*q06*) from its unpinned-file check; those are pinned by the Q06 gate. Q05_guard_scan.json regenerated (26 -> 33 files, still clean). release_q05.py is re-pinned by q06_expected.json."
+ },
+ "O1_closure_unchanged": "CLOSED (scoped)",
+ "bulk_symmetry_restored": false,
+ "flags": {
+  "execution_pass": true,
+  "claim_status": "partial",
+  "scope": "pole level, one loop, kappa^3"
+ },
+ "seconds": 881.3
+}

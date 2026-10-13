@@ -1,0 +1,26 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q02",
+ "graph": "D12_hh_scalar_tadpole",
+ "XVI_O": "inventory 'provisional_listed', sym_factor 1/2 'Unverified', never evaluated; XVI-O ledgers do NOT label D12 'Missing' (searched: O_quantum_target, amplitude_status, symmetry_defect, diagram_inventory)",
+ "XVI_P_p14r": "Missing (p14r)",
+ "XVI_P_p15": "vanishing_under_declared_prescription",
+ "XVI_P_p15_derivation": "certificates/P15_batchA.json graphs.D12 (route 1 frozen-dred lift + S0, route 2 symmetric integration, IR-mass and cutoff analysis)",
+ "XVI_P_p23_stale_line_present": true,
+ "XVI_Q_Q02_independent": {
+  "integrand": "phi phi self-contraction on V_hh_phi_phi; numerator carries l (phi legs)",
+  "loop_numerator_degree_in_l": 2,
+  "omegas": [
+   2,
+   4
+  ],
+  "logarithmic_member": false,
+  "UV_pole": "0",
+  "IR_pole": "0",
+  "value": "0 (DERIVED: every member int (l^2)^j/l^2 is scaleless with omega = 2 + 2j > 0 -- a pure power divergence; no 1/eps on the UV or the IR side; MS-bar counterterm 0)",
+  "status": "Evaluated_vanishing_under_declared_prescription"
+ },
+ "reconciliation": "'Missing' was the p14r status (integrand only, no value) and survives only as stale text in XVI-P P23_O1_scope's O.5 evidence line (self-contradictory with P15, already flagged by the p23 review). D12 was EVALUATED in XVI-P p15: vanishing_under_declared_prescription by two routes with IR-mass and cutoff analysis; Q02 confirms independently on the engine integrand: every member int (l^2)^j / l^2 with omega in {2, 4}, no logarithmic member, so neither a UV nor an IR pole: DR value 0 DERIVED (not by convention; Missing is never set to zero). Recorded as erratum E6; XVI-O and XVI-P untouched.",
+ "status": "Evaluated_vanishing_under_declared_prescription",
+ "consistent": true
+}

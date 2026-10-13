@@ -1,0 +1,60 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q02",
+ "mechanism_numerator_general_c_n": "-c*n**2*pl**2 + 2*c*n**2*pl*pp - c*n**2*pp**2 + 4*c*n*pl**2 - 8*c*n*pl*pp + 4*c*n*pp**2 - 4*c*pl**2 + 8*c*pl*pp - 4*c*pp**2 + 2*ll*pp + n*pl**2 - 2*n*pl*pp + n*pp**2 - 2*pl**2",
+ "mechanism_reading": "V.P.V' = 2 p^2 (l-p)^2 + (n-2)(p.q)^2 [1 - c(n-2)]: trace-mode piece cancels iff c = 1/(n-2)",
+ "N_DRED_equals_2p2(l-p)^2": true,
+ "cases": {
+  "DRED (n=4, c=1/2) -- declared": {
+   "value_over_master": "0",
+   "zero": true
+  },
+  "CDR (n=D, c=1/(D-2))": {
+   "value_over_master": "0",
+   "zero": true
+  },
+  "MUT mixed scheme (n=4, c=1/(D-2))": {
+   "value_over_master": "pp**2*(D - 4)/(2*(D - 2))",
+   "zero": false
+  },
+  "MUT vertex trace normalisation alpha_v=1/2": {
+   "value_over_master": "pp**2/4",
+   "zero": false
+  },
+  "GAUGE T3 piece g3=1 (expected 0: l^a V_ab = p_b q^2 + q_b p^2, every term carries q^2 -> scaleless)": {
+   "value_over_master": "0",
+   "zero": true
+  },
+  "MUT non-de Donder gauge T4 piece (beta != -2), g4=1": {
+   "value_over_master": "pp**2*(D - 1)",
+   "zero": false
+  },
+  "MUT non-de Donder gauge T5 piece, g5=1": {
+   "value_over_master": "pp**2*(D - 2)*(D - 1)/8",
+   "zero": false
+  },
+  "MUT non-minimal coupling lam=xi (CDR)": {
+   "value_over_master": "-pp**2*xi",
+   "zero": false
+  }
+ },
+ "T3_zero_by_Ward_identity": true,
+ "xi_dependence_linear_only (Froeb: m=0 xi^2 terms vanish)": true,
+ "declared_zero": true,
+ "all_mutations_nonzero": true,
+ "literature": {
+  "reference": "M. B. Froeb, Class. Quantum Grav. 35 (2018) 055006, arXiv:1710.00839 (flat space, general gauge, n dims)",
+  "statement": "graviton-loop scalar self-energy from the de Donder propagator parts vanishes identically for xi = 0, m = 0 (in accordance with Kahya & Woodard 2007); m = 0 xi^2 terms vanish; gauge-parameter pieces contribute (gauge-dependent 1PI)",
+  "agreement": "AGREES: declared case 0; xi enters linearly only; non-de Donder piece nonzero"
+ },
+ "engine_routes": {
+  "route1_A": "0",
+  "route2_IBP_A": "0",
+  "routes_agree": true,
+  "N_factorised": "(p0**2 - p1**2 - p2**2 - p3**2)*(l0**2 - 2*l0*p0 - l1**2 + 2*l1*p1 - l2**2 + 2*l2*p2 - l3**2 + 2*l3*p3 + p0**2 - p1**2 - p2**2 - p3**2)/2",
+  "N_proportional_to_p2_times_scalar_denominator": true
+ },
+ "engine_mutation_drop_trace": "-I/8",
+ "E7": "symmetry factor of D04 is 1 (distinct-species internal lines; no automorphism with labelled external legs). XVI-O's '1/2' was Unverified and never used for a value; XVI-P never evaluated D04 (excluded from ch by phi-parity) and its D11 (two identical phi lines) keeps S_f = 1/2 correctly: NO earlier value changes.",
+ "D05a_D12": "genuine one-propagator tadpoles: no external momentum flows through the loop line, so the integral is scaleless; omega = 2 (D05a) / 2, 4 (D12) power divergences, no logarithmic member -> no 1/eps on either side; 0 is not a UV/IR pole cancellation. (Unlike D04, whose bubble is NOT scaleless.)"
+}

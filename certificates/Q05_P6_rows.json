@@ -1,0 +1,67 @@
+{
+ "identity": "(S, Gamma_1^pole) restricted to three-field gh1 monomials (Q04 ledger rows)",
+ "normalisation": "all amplitudes 'i x coefficient' / 'i Gamma'; antifield-channel signs calibrated on the classical (S0, S1) = 0 (tree, kappa^1; O.2-verified master equation) and used unchanged",
+ "c.phi.phi": {
+  "row": "c.phi.phi",
+  "calibration_sigma_phistar": "1",
+  "tree_identity_closed_with_sigma": true,
+  "channels": {
+   "S0_hphiphi": "I*H_gc1_p1*H_p1_p1*H_p1_p2/8 - I*H_gc1_p1*H_p1_p1*H_p2_p2/48 + I*H_gc1_p1*H_p1_p2**2/4 - I*H_gc1_p1*H_p2_p2**2/24 - I*H_gc1_p2*H_p1_p1**2/16 - I*H_gc1_p2*H_p1_p1*H_p1_p2/24 + I*H_gc1_p2*H_p1_p1*H_p2_p2/12 + I*H_gc1_p2*H_p1_p2**2/6 + I*H_gc1_p2*H_p1_p2*H_p2_p2/6",
+   "S0_phistar": "I*H_gc1_p1*H_p1_p1*H_p2_p2/12 + I*H_gc1_p1*H_p2_p2**2/24 - I*H_gc1_p2*H_p1_p1**2/8 - I*H_gc1_p2*H_p1_p1*H_p1_p2/3 - I*H_gc1_p2*H_p1_p1*H_p2_p2/12 - I*H_gc1_p2*H_p1_p2**2/6 - I*H_gc1_p2*H_p1_p2*H_p2_p2/6",
+   "S1_Kc": "-I*H_gc1_p1*H_p1_p1*H_p1_p2/8 - I*H_gc1_p1*H_p1_p1*H_p2_p2/16 - I*H_gc1_p1*H_p1_p2**2/4 + 3*I*H_gc1_p2*H_p1_p1**2/16 + 3*I*H_gc1_p2*H_p1_p1*H_p1_p2/8"
+  },
+  "residual": "0",
+  "closed_at_pole_level": true,
+  "mutations_detected": {
+   "flip_sigma": true,
+   "drop_S1_Kc_channel": true,
+   "drop_G05": false,
+   "drop_G06": true,
+   "drop_G12": true,
+   "drop_G13": true
+  },
+  "G05_s0_projection_zero": true,
+  "G05_note": "G05's pole is nonzero but its s0-projection vanishes identically, so the row cannot detect dropping G05 (recorded, not a failure; G05 enters other projections)",
+  "evanescent_note": "every T structure dies under the s0 polarisation (T(p1, c) = 0): the row must vanish exactly; it does (no evanescent counterterm needed or available in this row)",
+  "ledger_erratum": "Q04 ledger listed only Gamma_phi phi = 0 for (S1, Gamma2); the S1 h-phi-phi vertex x Gamma_K c (D13) channel also enters and is REQUIRED (dropping it leaves a nonzero residual)"
+ },
+ "ghost_rows": {
+  "c.c.cbar": {
+   "tree_sigma_c": "-1",
+   "tree_closes_with_constant_sigma": true,
+   "loop_residual_n_terms": 44,
+   "loop_residual_zero": false,
+   "loop_residual_4D_part_zero": false,
+   "loop_residual_sha256": "cbffb51d23ad05c203b193387a22e983390d00ab5e117bd678f0e2e44a5a4f3d",
+   "channel_terms": {
+    "h": 72,
+    "K": 28,
+    "c1": 68,
+    "c2": 36
+   },
+   "any_channel_coefficient_combination_closes": false,
+   "status": "OPEN (unresolved): the assembled one-loop row does not close and no rescaling of its four channels closes it; NOT reported as an obstruction. Diagnosis so far: the three-point ghost equation holds graph by graph (G04 = -2 G03[K->T], G09 = -2 G07[K->T]), so the cbar-c-h / K-c-h graphs are mutually consistent; the defect lies in G10 (c* c c; one loop-shift bug already found and fixed in Q05), the K / c channels, or the row assembly (Grassmann ordering of the two identical c legs). Next step: independent check of G10 and of the c-channel."
+  },
+  "c.c.K": {
+   "tree_sigma_c": "1",
+   "tree_closes_with_constant_sigma": true,
+   "loop_residual_n_terms": 32,
+   "loop_residual_zero": false,
+   "loop_residual_4D_part_zero": false,
+   "loop_residual_sha256": "094591a4ba9b96762929f1f09f00611e2544bf4ba3859a06d87da817d0b7a45a",
+   "channel_terms": {
+    "h": 54,
+    "K": 16,
+    "c1": 54,
+    "c2": 30
+   },
+   "any_channel_coefficient_combination_closes": false,
+   "status": "OPEN (unresolved): the assembled one-loop row does not close and no rescaling of its four channels closes it; NOT reported as an obstruction. Diagnosis so far: the three-point ghost equation holds graph by graph (G04 = -2 G03[K->T], G09 = -2 G07[K->T]), so the cbar-c-h / K-c-h graphs are mutually consistent; the defect lies in G10 (c* c c; one loop-shift bug already found and fixed in Q05), the K / c channels, or the row assembly (Grassmann ordering of the two identical c legs). Next step: independent check of G10 and of the c-channel."
+  }
+ },
+ "h.h.c": {
+  "status": "Missing",
+  "why": "needs G01 (V3^3; evaluation did not finish within the release budget) and G02 (V4 not constructed)"
+ },
+ "others": "h.phi.c, phi.b.c, phi.c.cbs, c.c.phis: zero by phi-parity; aux rows: no loop entry (Q04 ledger)"
+}

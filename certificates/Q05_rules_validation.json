@@ -1,0 +1,49 @@
+{
+ "validations": {
+  "D01": {
+   "mine_d4": "27*H_a1_a1*H_a2_a2*H_p1_p1**2/80 - 19*H_a1_a1*H_a2_p1**2*H_p1_p1/60 + 11*H_a1_a1*H_p1_p1**2*T_a2_a2/48 + 71*H_a1_a2**2*H_p1_p1**2/120 - 11*H_a1_a2*H_a1_p1*H_a2_p1*H_p1_p1/10 + 4*H_a1_a2*H_p1_p1**2*T_a1_a2/3 - 19*H_a1_p1**2*H_a2_a2*H_p1_p1/60 + 13*H_a1_p1**2*H_a2_p1**2/15 - H_a1_p1**2*H_p1_p1*T_a2_a2/6 - 4*H_a1_p1*H_a2_p1*H_p1_p1*T_a1_a2/3 + 11*H_a2_a2*H_p1_p1**2*T_a1_a1/48 - H_a2_p1**2*H_p1_p1*T_a1_a1/6 + H_p1_p1**2*T_a1_a1*T_a2_a2/8 + 3*H_p1_p1**2*T_a1_a2**2/4",
+   "ratio": "I",
+   "constant": true
+  },
+  "D03": {
+   "mine_d4": "-7*H_a1_a1*H_a2_a2*H_p1_p1**2/48 + H_a1_a1*H_a2_p1**2*H_p1_p1/8 - 5*H_a1_a1*H_p1_p1**2*T_a2_a2/48 - H_a1_a2**2*H_p1_p1**2/12 + H_a1_a2*H_a1_p1*H_a2_p1*H_p1_p1/12 - H_a1_a2*H_p1_p1**2*T_a1_a2/3 + H_a1_p1**2*H_a2_a2*H_p1_p1/8 - H_a1_p1**2*H_a2_p1**2/6 + H_a1_p1**2*H_p1_p1*T_a2_a2/24 + H_a1_p1*H_a2_p1*H_p1_p1*T_a1_a2/3 - 5*H_a2_a2*H_p1_p1**2*T_a1_a1/48 + H_a2_p1**2*H_p1_p1*T_a1_a1/24 - H_p1_p1**2*T_a1_a1*T_a2_a2/16 - H_p1_p1**2*T_a1_a2**2/4",
+   "ratio": "I",
+   "constant": true
+  },
+  "D06": {
+   "mine_d4": "-3*I*H_gb_gc*H_p1_p1**2/8 + I*H_gb_p1*H_gc_p1*H_p1_p1/4 - I*H_p1_p1**2*T_gb_gc/2",
+   "ratio": "I",
+   "constant": true
+  },
+  "D13": {
+   "mine_d4": "-3*I*H_aK_gc*H_aK_p1*H_p1_p1/8 + I*H_aK_p1**2*H_gc_p1/4 - I*H_aK_p1*H_p1_p1*T_aK_gc/2",
+   "ratio": "-I",
+   "constant": true
+  }
+ },
+ "expected_ratios": {
+  "D01": "I",
+  "D03": "I",
+  "D06": "I",
+  "D13": "-I"
+ },
+ "all_constant": true,
+ "ratios_as_expected": true,
+ "convention_I": "mine/XVI-P = I is the Q04-established convention factor (own pole = i x XVI-P pole; D11 in Q04)",
+ "D13_orientation_disclosure": "D13 (K'.c) matches XVI-P with constant ratio -I on all structures (T1, T2, T3, E2): an overall sign relative to the I convention, i.e. the Grassmann ordering/orientation of the K'.c slot differs between the two codes. Own rows use own D13 consistently; the c.phi.phi row (which uses own D13) closes exactly, so the own orientation is the one consistent with own vertices.",
+ "ghost_equation_two_point": {
+  "ratio_D06_over_D13_K_to_T": "-2",
+  "expected_constant": true,
+  "T": "T_mn = sym(k, cbar) - (1/2) eta k.cbar (cbar momentum k)"
+ },
+ "ghost_equation_three_point": {
+  "ratio_G04_over_G03_K_to_T": "-2",
+  "ratio_G09_over_G07_K_to_T": "-2",
+  "ratio_total": "-2",
+  "meaning": "ghost equation (Gamma depends on cbar only through K' = K + dPsi/dh): the cbar-c-h graphs equal -2 x the K-c-h graphs with K -> T(cbar), graph by graph; same -2 as tree level and two-point"
+ },
+ "propagators": {
+  "graviton": "i/k^2 (I - J/2), Q4S trace 4; derived: EH quadratic gauge invariant, EH + XVI-P gf (+D.D) = k^2 (I - J/2) (XVI-P K = -Box P)",
+  "ghost": "-1/k^2 (from i cbar Box c)"
+ }
+}

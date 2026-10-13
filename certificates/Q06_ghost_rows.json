@@ -1,0 +1,113 @@
+{
+ "identity": "(S, Gamma_1^pole) restricted to c.c.X monomials, X = cbar / K (Q05 channels)",
+ "diagnosis": "Q05 assembled the K channel (delta S1/delta h|_{X c_j} . Gamma_{K c_i}) with the orientation sign of the h channel.  In the K channel c_i sits in Gamma_{K c_i}, to the right of c_j, so reordering to c1 c2 costs one extra Grassmann transposition: K_o enters with -sgn(o).  G10 (checked by a second route), the c channels and the identical-c antisymmetrisation were correct.",
+ "c.c.K": {
+  "row": "ccK",
+  "channel_coefficients": {
+   "h1": "1",
+   "h2": "-1",
+   "K1": "-1",
+   "K2": "1",
+   "c1": "1",
+   "c2": "1"
+  },
+  "channel_terms": {
+   "h1": 101,
+   "K1": 8,
+   "h2": 101,
+   "K2": 8,
+   "c1": 54,
+   "c2": 30
+  },
+  "unconstrained_fit_4D": {
+   "channels": [
+    "K1",
+    "K2",
+    "c1",
+    "c2",
+    "h1",
+    "h2"
+   ],
+   "solution_up_to_scale": [
+    "x5",
+    "-x5",
+    "-x5",
+    "-x5",
+    "-x5",
+    "x5"
+   ]
+  },
+  "residual_4D": "0",
+  "residual_4D_zero": true,
+  "evanescent_remainder": "-H_aK_p1*H_aK_p2*H_p1_p1*T_gc1_gc2/16 + H_aK_p1*H_aK_p2*H_p2_p2*T_gc1_gc2/16 + H_aK_p1*H_gc1_p1*H_p1_p1*T_aK_gc2/24 - H_aK_p1*H_gc1_p1*H_p2_p2*T_aK_gc2/48 - H_aK_p1*H_gc1_p2*H_p1_p1*T_aK_gc2/48 - H_aK_p1*H_gc1_p2*H_p1_p2*T_aK_gc2/12 + H_aK_p1*H_gc1_p2*H_p2_p2*T_aK_gc2/48 - H_aK_p1*H_gc2_p1*H_p1_p1*T_aK_gc1/48 + H_aK_p1*H_gc2_p1*H_p1_p2*T_aK_gc1/12 + H_aK_p1*H_gc2_p1*H_p2_p2*T_aK_gc1/48 + H_aK_p1*H_gc2_p2*H_p1_p1*T_aK_gc1/48 - H_aK_p1*H_gc2_p2*H_p2_p2*T_aK_gc1/24 + H_aK_p2*H_gc1_p1*H_p1_p1*T_aK_gc2/24 - H_aK_p2*H_gc1_p1*H_p2_p2*T_aK_gc2/48 - H_aK_p2*H_gc1_p2*H_p1_p1*T_aK_gc2/48 - H_aK_p2*H_gc1_p2*H_p1_p2*T_aK_gc2/12 + H_aK_p2*H_gc1_p2*H_p2_p2*T_aK_gc2/48 - H_aK_p2*H_gc2_p1*H_p1_p1*T_aK_gc1/48 + H_aK_p2*H_gc2_p1*H_p1_p2*T_aK_gc1/12 + H_aK_p2*H_gc2_p1*H_p2_p2*T_aK_gc1/48 + H_aK_p2*H_gc2_p2*H_p1_p1*T_aK_gc1/48 - H_aK_p2*H_gc2_p2*H_p2_p2*T_aK_gc1/24",
+  "evanescent_remainder_n_terms": 22,
+  "evanescent_remainder_sha256": "1a99f4aa5af52a7dc8d4941804bddbb5e4e779ec0a73de4874a1cce58497887e",
+  "evanescent_remainder_every_term_has_T": true,
+  "Q05_assembly_residual_4D_n_terms": 10,
+  "mutations_detected": {
+   "drop_h1": true,
+   "drop_K1": true,
+   "drop_h2": true,
+   "drop_K2": true,
+   "drop_c1": true,
+   "drop_c2": true,
+   "flip_sigma_c": true,
+   "Q05_K_sign": true
+  }
+ },
+ "c.c.cbar": {
+  "row": "ccb",
+  "channel_coefficients": {
+   "h1": "1",
+   "h2": "-1",
+   "K1": "-1",
+   "K2": "1",
+   "c1": "-1",
+   "c2": "-1"
+  },
+  "channel_terms": {
+   "h1": 81,
+   "K1": 14,
+   "h2": 81,
+   "K2": 14,
+   "c1": 68,
+   "c2": 36
+  },
+  "unconstrained_fit_4D": {
+   "channels": [
+    "K1",
+    "K2",
+    "c1",
+    "c2",
+    "h1",
+    "h2"
+   ],
+   "solution_up_to_scale": [
+    "x5",
+    "-x5",
+    "x5",
+    "x5",
+    "-x5",
+    "x5"
+   ]
+  },
+  "residual_4D": "0",
+  "residual_4D_zero": true,
+  "evanescent_remainder": "-H_gb3_p1*H_p1_p1*H_p2_p2*T_gc1_gc2/16 + H_gb3_p1*H_p2_p2**2*T_gc1_gc2/16 - H_gb3_p2*H_p1_p1**2*T_gc1_gc2/16 + H_gb3_p2*H_p1_p1*H_p2_p2*T_gc1_gc2/16 + H_gc1_p1*H_p1_p1**2*T_gb3_gc2/24 + H_gc1_p1*H_p1_p1*H_p1_p2*T_gb3_gc2/12 + H_gc1_p1*H_p1_p1*H_p2_p2*T_gb3_gc2/48 - H_gc1_p1*H_p1_p2*H_p2_p2*T_gb3_gc2/24 - H_gc1_p1*H_p2_p2**2*T_gb3_gc2/48 - H_gc1_p2*H_p1_p1**2*T_gb3_gc2/48 - H_gc1_p2*H_p1_p1*H_p1_p2*T_gb3_gc2/8 - H_gc1_p2*H_p1_p2**2*T_gb3_gc2/6 - H_gc1_p2*H_p1_p2*H_p2_p2*T_gb3_gc2/24 + H_gc1_p2*H_p2_p2**2*T_gb3_gc2/48 - H_gc2_p1*H_p1_p1**2*T_gb3_gc1/48 + H_gc2_p1*H_p1_p1*H_p1_p2*T_gb3_gc1/24 + H_gc2_p1*H_p1_p2**2*T_gb3_gc1/6 + H_gc2_p1*H_p1_p2*H_p2_p2*T_gb3_gc1/8 + H_gc2_p1*H_p2_p2**2*T_gb3_gc1/48 + H_gc2_p2*H_p1_p1**2*T_gb3_gc1/48 + H_gc2_p2*H_p1_p1*H_p1_p2*T_gb3_gc1/24 - H_gc2_p2*H_p1_p1*H_p2_p2*T_gb3_gc1/48 - H_gc2_p2*H_p1_p2*H_p2_p2*T_gb3_gc1/12 - H_gc2_p2*H_p2_p2**2*T_gb3_gc1/24",
+  "evanescent_remainder_n_terms": 24,
+  "evanescent_remainder_sha256": "ff8920c71b47e3d7e1fd1c4055bb3a5e1a139b530817c5efb9dc45e13e5b55f6",
+  "evanescent_remainder_every_term_has_T": true,
+  "Q05_assembly_residual_4D_n_terms": 18,
+  "mutations_detected": {
+   "drop_h1": true,
+   "drop_K1": true,
+   "drop_h2": true,
+   "drop_K2": true,
+   "drop_c1": true,
+   "drop_c2": true,
+   "flip_sigma_c": true,
+   "Q05_K_sign": true
+  }
+ },
+ "status": "CLOSED on the 4D (non-evanescent) part at pole level for both rows; the remainder is purely evanescent (every term carries one T between external polarisations).  Since the row is linear and the 4D part vanishes, local evanescent counterterms equal to minus the evanescent pole parts (p22 prescription) remove it; whether those counterterms are s0-consistent on the full kappa^3 evanescent domain is OPEN."
+}

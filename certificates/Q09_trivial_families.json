@@ -1,0 +1,33 @@
+{
+ "derivation": "sigma(Y) = (S0, Y). Y = K.F: X_hhh = D-op(F), X_Khc = A-op(F); the row operators are the same A-op and D-op and commute, so sigma^2 = 0 fixes lambda_F = -1 (relative sign of the field / antifield derivatives of a fermionic Y); likewise lambda_P = -1 with the E-op; lambda_G = +1 (both pieces are dY/dc* . dS0/dc).",
+ "families": {
+  "F": {
+   "lambda_derived": "-1",
+   "n_generators": 204,
+   "n_in_N": 139,
+   "n_fail": 65,
+   "n_fail_with_trace_monomials": 65
+  },
+  "G": {
+   "lambda_derived": "1",
+   "n_generators": 33,
+   "n_in_N": 0,
+   "n_fail": 33,
+   "n_fail_with_trace_monomials": 13
+  },
+  "P": {
+   "lambda_derived": "-1",
+   "n_generators": 134,
+   "n_in_N": 0,
+   "n_fail": 134,
+   "n_fail_with_trace_monomials": 98
+  }
+ },
+ "dim_trivial_span_derived": 59,
+ "dim_trivial_span_derived_inside_ghost_eq": 27,
+ "Q08_fitted_counts_superseded": {
+  "fitted_lower_bound_in_N": 97,
+  "status": "fitted, not derivation-backed; superseded by the derived counts"
+ },
+ "diagnosis": "F at the derived lambda: 139/204 generators in N; every one of the 65 failures carries a trace monomial (K or h trace), pointing to the eta-trace / d-convention inside the probe contraction rather than to the derivation. The Q08 G and P constructions are NOT closed at the derived lambda (0/33, 0/134): their pieces were built by hand and are inconsistent with the row operators. Both are OPEN."
+}

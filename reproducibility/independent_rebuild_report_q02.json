@@ -1,0 +1,206 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q02",
+ "reviewer": "independent (Grok Bot executor), adversarial",
+ "O1_verdict": {
+  "decision": "CONFIRM CLOSED (scoped)",
+  "scope": "one-loop, order kappa^2, bulk two-point retained sector of S_inv (h, phi, c, cbar, b + antifields; gh0 seeds), m=0, frozen gauge fermion, under XVI-P's declared prescription (DRED: QdS loop momenta, Q4S vertex indices, MS-bar) INCLUDING the p22 evanescent counterterm contract revision; NOT the functional ST4b, NOT bulk symmetry restoration, NOT XVI-O's own ledger (read-only, still NOT_CLOSED there)",
+  "conditions_for_the_label": [
+   "record that ST4a with QdS externals needs the p14r 11 directions PLUS the p22 evanescent operators (outside p14r; sigma0 closure incl. them verified in my p22 review) -- 'ST4a in the declared p14r domain' alone is true only on 4D externals",
+   "record that the prescription is XVI-P's DRED one; XVI-O's o70-sync D11 kernel prescription is not the one used (both XVI-O kernel continuations fail on evanescent externals, my p22 finding)"
+  ],
+  "checklist": {
+   "State retained quantum identity": "EARNED (XVI-O statement (S,Gamma_1)=A_1 / ST4a / ST4b read verbatim from XVI-O notes/retained_quantum_identity.tex and ledgers/symmetry_defect.json)",
+   "List amplitudes constrained by identity": "EARNED (own row enumeration: 23 = gh0 one-field 4 + gh1 one-field 1 + gh0 two-field 14 + gh1 two-field 4; own graph enumeration (p23 review) E2=9, E1=3; one-loop kappa^2 antifield correlators reduce to K'.c = D13; phi*.c, c*, cbar*, b* give no E<=2 graph)",
+   "S_inv^{[2]} classical consistency": "EARNED (Q01; confirmed by my own independent engines incl. anticommuting ghost sector)",
+   "Evaluate inventory graphs": "EARNED (D04 0 by my own rules; D05a/D12/D02/D14 scaleless, no log member; D06 == XVI-P P15 Sigma exactly in d; D01/D03/D11/D13 XVI-P values, inputs content-identical to my p23 rebuild)",
+   "Demonstrate identity remainder cancellation / CT solution": "EARNED with the domain wording condition (ch defect zero exactly in d with x=0 (P19, reviewed p19/p20); ghost equation c.b; c.cbar* unreachable (no cbar* on any vertex); c.phi parity; own CT = -pole reproduces all 11 coordinates over Q(i); full sigma0 closure of complete MS-bar CT incl. evanescent: verified in my p20 (own k1) and p22 (own c.b) reviews on byte-identical inputs)",
+   "Enlarge target if identity requires more legs/orders": "NOT TRIGGERED, correctly (kappa^E power counting, own enumerator p23; three-point starts at kappa^3; Gamma_1[kappa^1] one-point only and 0)",
+   "enlarge_rule_3 (no XVI-M identification)": "respected",
+   "downgrade_rules": "respected: every row/graph individually justified; D05b tree CT bookkeeping (z_phiphi=0), D07-D09 tree seeds enter only via (S_k, .), D10 comparison-only unused"
+  }
+ },
+ "source": {
+  "zip_sha256": "378651a3a279cde0a8fd67d4e39ac5833d5a94ff00f10f62a001be8ab2b244dc",
+  "tree_sha256": "4b551b9801cd14b8f2b81775942d535ab282a75c1557148a94a91a9dad88a810",
+  "n_files": 60
+ },
+ "entrypoint": {
+  "pass": true,
+  "compared": 16,
+  "equal": 16,
+  "gate": "accepted, O1 CLOSED_PENDING_INDEPENDENT_REVIEW",
+  "tests": "47 passed",
+  "top_level_workspace": "UNCHANGED (file list/size/mtime snapshot before vs after both builds; no sync option passed, Q_SYNC_DIR unset)"
+ },
+ "intake": "33 pins sha ok; all 15 XVI-P provenance certificates content-identical to my own p23 rebuild; new XVI-O pins byte-identical to /workspace/XVI-O",
+ "D04": {
+  "own_feynman_rules": "vertex from (1/2)sqrt(-g)g^{mn}dphi dphi (own B^{mn} expansion); graviton kinetic operator from own ell_2 + gauge fixing: EH + D.D = k^2 P with c=1/2, lam=1 (only for the derived s cbar orientation, = XVI-P derived_eps -1; other sign/normalisations not of k^2 P form)",
+  "kinetic": {
+   "EH_plus_gf": [],
+   "EH_alone": [],
+   "EH_minus_gf(sign mutation)": [
+    {
+     "c": "1/2",
+     "lam": "1"
+    }
+   ],
+   "EH_plus_half_gf": []
+  },
+  "result": {
+   "N_general": "-A**2*(c*l2**2*n**2 - 4*c*l2**2*n + 4*c*l2**2 - 2*c*l2*n**2*p2 - 2*c*l2*n**2*q2 + 8*c*l2*n*p2 + 8*c*l2*n*q2 - 8*c*l2*p2 - 8*c*l2*q2 + c*n**2*p2**2 + 2*c*n**2*p2*q2 + c*n**2*q2**2 - 4*c*n*p2**2 - 8*c*n*p2*q2 - 4*c*n*q2**2 + 4*c*p2**2 + 8*c*p2*q2 + 4*c*q2**2 - l2**2*n + 2*l2**2 + 2*l2*n*p2 + 2*l2*n*q2 - 4*l2*p2 - 4*l2*q2 - n*p2**2 - 2*n*p2*q2 - n*q2**2 + 2*p2**2 - 4*p2*q2 + 2*q2**2)/4",
+   "master_coefficient_general": "-A**2*p2**2*(n - 2)*(c*n - 2*c - 1)/4",
+   "DRED (n=4, c=1/2)": "0",
+   "CDR (n=d, c=1/(d-2))": "0",
+   "mixed (n=4, c=1/(d-2)) [mutation]": "A**2*p2**2*(d - 4)/(2*(d - 2))",
+   "vertex trace 1/2 [mutation]": "A**2*p2**2/4",
+   "c=0 (drop propagator trace) [mutation]": "A**2*p2**2/2",
+   "D04_zero_DRED_and_CDR": true,
+   "symmetry_factor": "1 (two distinguishable lines h, phi; no automorphism exchanging them)",
+   "D05a_D12": "single propagator 1/l^2 (or phi loop 1/l^2), numerator polynomial in l,p: int l^{2a} (l.p)^b / l^2 scaleless -> 0 exactly; no log member, pure power (omega=2,4)"
+  },
+  "mechanism": "master coefficient -A^2 p^4 (n-2)(c(n-2)-1)/4: trace coefficient c=1/(n-2) cancels the (p.q)^2 trace-mode term in DRED (n=4,c=1/2) and CDR (n=d); remainder 2p^2 q^2 -> p^2 int 1/l^2 scaleless; exact in d, off shell, no EOM. Mutation values reproduce the package's exactly (mixed scheme (d-4)/(2(d-2)) p^4, trace 1/2 -> p^4/4).",
+  "symmetry_factor_E7": "1 confirmed (h and phi lines distinguishable)",
+  "literature": "Froeb, CQG 35 (2018) 055006, arXiv:1710.00839 (source read): eq. inv2pf_termsumint_grav is the Feynman-gauge (alpha=1, de Donder) graviton-loop part after dropping scaleless terms, CDR in n dims, Euclidean-type signature; text: 'for minimal coupling xi=0 and in the massless limit m=0, this vanishes identically, in accordance with Kahya-Woodard 2007'; m=0 xi^2 terms vanish (Boran-Kahya-Park); gauge-dependent pieces k=3,4,5 cancel only against coordinate corrections. Package's reading is faithful; caveat: Froeb is CDR, the DRED case rests on the c=1/(n-2) algebra (confirmed above)."
+ },
+ "D05a_D12": "single propagator, no external momentum through loop: scaleless pure power divergences, 0 exactly",
+ "D06": "MS-bar parts recomputed from exact-d coefficients (e.g. S1: pole -3/8, local -2/3 from A1=+1/12); equals XVI-P P15 Sigma exactly in d (not recomputed with own Feynman rules -- disclosed)",
+ "counterterms_own": {
+  "hh": "-(D01+D03+D11) 4D poles = (49i/480, 41i/160, -49i/240, -41i/80, 43i/120)",
+  "cK": "(0,-3/8,1/4)",
+  "ccb_routeG": "(-3/8,1/4) (= -(route-G pole 3/8,-1/4))",
+  "phiphi": "0",
+  "n_directions": 11,
+  "all_in_Q_i": true
+ },
+ "guard": {
+  "apart": "now refused (Q01 bypass fixed)",
+  "NEW_BYPASS": "sympy.polys.rings.ring([d,X],QQ) / fields.field: from_expr then .evaluate(d,4) gives exact d=4 value on all 4 probe exprs (toy/qb.json); package does not use it",
+  "detail": {
+   "field_evaluate": {
+    "lin": "BYPASS (correct value)",
+    "pow": "BYPASS (correct value)",
+    "alone": "BYPASS (correct value)",
+    "mixed": "BYPASS (correct value)"
+   },
+   "ring_evaluate": {
+    "lin": "BYPASS (correct value)",
+    "pow": "BYPASS (correct value)",
+    "alone": "BYPASS (correct value)",
+    "mixed": "BYPASS (correct value)"
+   },
+   "Poly_in_X_d_in_domain_evaluate": {
+    "lin": "error CoercionFailed: Cannot convert d**2 - d of type <class 'sympy.core.add.Add'>",
+    "pow": "error AttributeError: 'PythonMPQ' object has no attribute 'as_expr'",
+    "alone": "error CoercionFailed: Cannot convert d of type <class 'dred.OpaqueDimension'> to Q",
+    "mixed": "error CoercionFailed: Cannot convert d**2 - 2*d - 2 of type <class 'sympy.core.add"
+   },
+   "apart_residue (Q01 bypass)": {
+    "lin": "RAISED guard",
+    "pow": "RAISED guard",
+    "alone": "RAISED guard",
+    "mixed": "RAISED guard"
+   }
+  }
+ },
+ "gate_value_checks": {
+  "control": [
+   0,
+   "{\"publication\": \"accepted\", \"O1_closure\": \"CLOSED_PENDING_INDEPENDENT_REVIEW\", \"failed\": [], \"mismatches\": {}}"
+  ],
+  "hh_CT_coeff": [
+   1,
+   "{\"publication\": \"REJECTED\", \"O1_closure\": \"NOT_CLOSED\", \"failed\": [\"every_certified_value_matches_pinned\"], \"mismatches\": {\"Q02_bulk_identity\": [\"/bulk_counterterms_explicit/coeffi"
+  ],
+  "phiphi_CT_nonzero": [
+   1,
+   "{\"publication\": \"REJECTED\", \"O1_closure\": \"NOT_CLOSED\", \"failed\": [\"every_certified_value_matches_pinned\", \"bulk_CT_explicit_in_domain\"], \"mismatches\": {\"Q02_bulk_identity\": [\"/bul"
+  ],
+  "D04_value": [
+   1,
+   "{\"publication\": \"REJECTED\", \"O1_closure\": \"NOT_CLOSED\", \"failed\": [\"every_certified_value_matches_pinned\", \"D04_zero_two_routes\"], \"mismatches\": {\"Q02_bulk_graphs\": [\"/D04/value\"]}"
+  ],
+  "D06_pole": [
+   1,
+   "{\"publication\": \"REJECTED\", \"O1_closure\": \"NOT_CLOSED\", \"failed\": [\"every_certified_value_matches_pinned\", \"D06_equals_XVI_P_and_exact\"], \"mismatches\": {\"Q02_bulk_graphs\": [\"/D06/l"
+  ],
+  "row_outcome": [
+   1,
+   "{\"publication\": \"REJECTED\", \"O1_closure\": \"NOT_CLOSED\", \"failed\": [\"every_certified_value_matches_pinned\"], \"mismatches\": {\"Q02_bulk_identity\": [\"/rows/h.phi/outcome\"]}}"
+  ],
+  "row_dropped": [
+   1,
+   "{\"publication\": \"REJECTED\", \"O1_closure\": \"NOT_CLOSED\", \"failed\": [\"every_certified_value_matches_pinned\", \"bulk_rows_all_classified\"], \"mismatches\": {\"Q02_bulk_identity\": [\"/n_row"
+  ],
+  "O1_evidence_text": [
+   1,
+   "{\"publication\": \"REJECTED\", \"O1_closure\": \"NOT_CLOSED\", \"failed\": [\"every_certified_value_matches_pinned\"], \"mismatches\": {\"Q02_O1\": [\"/items[3]/evidence\"]}}"
+  ],
+  "O1_confirmed_true": [
+   1,
+   "{\"publication\": \"REJECTED\", \"O1_closure\": \"NOT_CLOSED\", \"failed\": [\"every_certified_value_matches_pinned\", \"O1_walk_consistent\"], \"mismatches\": {\"Q02_O1\": [\"/O1_closure_confirmed\"]"
+  ],
+  "D04_literature_text": [
+   1,
+   "{\"publication\": \"REJECTED\", \"O1_closure\": \"NOT_CLOSED\", \"failed\": [\"every_certified_value_matches_pinned\"], \"mismatches\": {\"Q02_D04_scrutiny\": [\"/literature\"]}}"
+  ],
+  "E7_changed": [
+   1,
+   "{\"publication\": \"REJECTED\", \"O1_closure\": \"NOT_CLOSED\", \"failed\": [\"every_certified_value_matches_pinned\"], \"mismatches\": {\"Q02_D04_scrutiny\": [\"/E7\"]}}"
+  ],
+  "expected_json_edit": [
+   1,
+   "{\"publication\": \"REJECTED\", \"O1_closure\": \"NOT_CLOSED\", \"failed\": [\"expected_file_pinned\"], \"mismatches\": {}}"
+  ],
+  "provenance_cert_edit": [
+   0,
+   "{\"publication\": \"accepted\", \"O1_closure\": \"CLOSED_PENDING_INDEPENDENT_REVIEW\", \"failed\": [], \"mismatches\": {}}"
+  ],
+  "errata_edit": [
+   1,
+   "{\"publication\": \"REJECTED\", \"O1_closure\": \"NOT_CLOSED\", \"failed\": [\"errata_file_equals_certified\"], \"mismatches\": {}}"
+  ]
+ },
+ "findings": [
+  {
+   "id": "ST4a_domain_wording",
+   "severity": "medium",
+   "text": "O.1 item 5 evidence says ST4a holds with the 11-direction p14r domain; with the declared QdS externals the local divergent part also contains evanescent poles matched only by the p22 evanescent operators (outside p14r). Mathematics is fine (closure incl. evanescent verified), but the record must name the enlarged domain."
+  },
+  {
+   "id": "prescription_vs_XVI_O_kernel",
+   "severity": "medium",
+   "text": "Closure is under XVI-P's DRED prescription; XVI-O's o70-sync D11 kernel counterterm (closure reason 8) used a continuation that fails on evanescent externals (p22). The O.1 record should state that XVI-O's kernel prescription is superseded/not used, not just 'answered'."
+  },
+  {
+   "id": "D01_D03_not_reviewer_recomputed",
+   "severity": "low",
+   "text": "D01/D03 pole values are XVI-P certificates; I have not recomputed them with own rules in any review. Mitigation: the ch defect vanishes exactly in d, a strong cross-check on the hh slot."
+  },
+  {
+   "id": "gate_provenance_unrehashed",
+   "severity": "low",
+   "text": "Gate accepts an edited provenance certificate (P19 'ZERO'->'NONZERO'); pins are checked only at intake time in the build, not re-hashed by the gate."
+  },
+  {
+   "id": "guard_ring_field_bypass",
+   "severity": "low",
+   "text": "PolyRing/FracField with d as generator evaluate d=4."
+  },
+  {
+   "id": "literature_scope",
+   "severity": "info",
+   "text": "Froeb supports the CDR case; DRED case rests on own algebra (confirmed)."
+  },
+  {
+   "id": "title_pages",
+   "severity": "info",
+   "text": "page 1 of each PDF has no 'XVI-Q Q02' footer (title page)."
+  }
+ ],
+ "caveats": [
+  "same box as author: shared Python/sympy pin and TeX Live; not an independent machine",
+  "sigma0 closure and ch defect not re-derived from scratch in this review: relied on my earlier p19-p22 independent checks on byte-identical inputs",
+  "D06 accepted via equality with XVI-P P15 (verified ghost equation), not own Feynman rules"
+ ]
+}

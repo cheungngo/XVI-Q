@@ -1,0 +1,20 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q08",
+ "decision": "ACCEPT",
+ "checks": {
+  "expected_file_pinned": true,
+  "every_certified_value_matches_pinned": true,
+  "pinned_files_rehashed": true,
+  "no_unpinned_code_tools_tests_file": true,
+  "scan_live_clean_incl_q07": true,
+  "ghost_equation_compatible": true,
+  "free_directions_not_overclaimed": true,
+  "status_scoped_honest": true,
+  "revision_disclosed": true,
+  "Q07_result_unchanged": true,
+  "O1_record_unchanged": true,
+  "Q07_layer_accepted": true,
+  "gate_reads_in_source_set": true
+ }
+}

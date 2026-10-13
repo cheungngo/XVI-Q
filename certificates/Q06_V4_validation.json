@@ -1,0 +1,8 @@
+{
+ "vertex": "V4_grav = i x delta^4 S_EH (kappa^2 stripped), code/p6q06/v4.py",
+ "gauge_n2_V3_vs_V2_zero": true,
+ "gauge_n3_V4_vs_V3_zero": true,
+ "V4_permutation_symmetric": true,
+ "V4_terms_generic": 12732,
+ "XVI-P_comparison": "not possible: no non-scaleless XVI-P graph contains V4 (the V4 tadpole is scaleless); validated instead by the exact EH gauge identity delta0 S4 + delta1 S3 = 0"
+}

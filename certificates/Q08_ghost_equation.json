@@ -1,0 +1,19 @@
+{
+ "ghost_equation": "Gamma_{cbar c h} = rho Gamma_{K c h}[K -> T(cbar) = sym(k,cbar) - (1/2)(k.cbar) eta]",
+ "loop_poles": {
+  "rho_total": "-2",
+  "rho_G04_G03": "-2",
+  "rho_G09_G07": "-2"
+ },
+ "loops_satisfy_with_rho_minus_2": true,
+ "constraint_imposed": "X_{cbar ch} = -2 X_{Kch}[K -> T(cbar)]",
+ "solvable_with_ghost_equation": true,
+ "particular_solution": {
+  "verified_A_x_eq_b": true,
+  "n_nonzero": 525,
+  "sha256": "ad67cf90b540f88ac13a91da394589b885b4ef87796629ddcd4cdf114699eac9"
+ },
+ "dim_free_without_ghost_eq": 152,
+ "dim_free_with_ghost_eq": 104,
+ "trace_convention": "eta-trace at d4-residue level: hat trace 4, tilde trace 0 (geq.py); validated by the loop poles obeying the map with one constant"
+}

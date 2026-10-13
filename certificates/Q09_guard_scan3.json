@@ -1,0 +1,21 @@
+{
+ "scope": "every .py under code/, tools/, tests/ (recursive) minus declared probe files",
+ "n_files_scanned": 104,
+ "extension_hits": {},
+ "extension_clean": true,
+ "probes_flagged": {
+  "methodcaller_attr": true,
+  "methodcaller_alias": true,
+  "methodcaller_getattr": true,
+  "coeff_d": true,
+  "coeff_exponent_d": true,
+  "independent_d": true,
+  "degree_d": true,
+  "powers_dict_subscript": true,
+  "powers_dict_get": true,
+  "coefficients_dict_get": true
+ },
+ "all_probes_flagged": true,
+ "base_scan2_clean": true,
+ "base_scan2_evasions_flagged": true
+}

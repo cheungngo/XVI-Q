@@ -1,0 +1,116 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q02",
+ "prescription": "XVI-P p14r/p22: DRED (QdS loop momenta, Q4S vertex indices), d opaque (qguard), MS-bar, Feynman +i0, m = 0 (XVI-O bulk_mass_policy; XVI-N massless obstruction: insertion untouched)",
+ "Gamma1_convention": "i Gamma_1 = graph sum; coefficients per kappa^2 in units of MB = Ihat(1,1) = 1/eps + 2 - L + O(eps)",
+ "symmetry_factors": {
+  "D04": "1 (two distinct-species internal lines; no automorphism fixing external legs; XVI-O's '1/2 Unverified' corrected)",
+  "D06": "1 (as XVI-O)",
+  "D05a": "1/2",
+  "D12": "1/2"
+ },
+ "D04": {
+  "route1_fp": {},
+  "route1_fit_exact": true,
+  "route1_rows": 6,
+  "route2_invariant_fit_identical": true,
+  "route2_IBP_A": "0",
+  "route1_A": "0",
+  "N_factorised": "(p0**2 - p1**2 - p2**2 - p3**2)*(l0**2 - 2*l0*p0 - l1**2 + 2*l1*p1 - l2**2 + 2*l2*p2 - l3**2 + 2*l3*p3 + p0**2 - p1**2 - p2**2 - p3**2)/2",
+  "N_proportional_to_p2_times_scalar_denominator": true,
+  "route3_hand_contraction": "2*p.p*q.q  (= 2 p^2 (l-p)^2 with q = l - p; engine N = 1/2 p^2 (l-p)^2: same shape, engine vertex normalisation)",
+  "reading": "N cancels the scalar propagator: D04 = (p^2/2) * int 1/l^2 (graviton line) = scaleless, omega = 2 power divergence, no log member: D04 = 0 exactly in d by BOTH routes (route 1 uses no scaleless rule)",
+  "routes_agree": true,
+  "N_invariant_form": {
+   "(l.l)^0(l.p)^0(p.p)^2": "1/2",
+   "(l.l)^0(l.p)^1(p.p)^1": "-1",
+   "(l.l)^0(l.p)^2(p.p)^0": "0",
+   "(l.l)^1(l.p)^0(p.p)^1": "1/2",
+   "(l.l)^1(l.p)^1(p.p)^0": "0",
+   "(l.l)^2(l.p)^0(p.p)^0": "0"
+  },
+  "structure": "Gamma_1^{phi phi}(p) = kappa^2 A(d) (p^2)^2 MB  (no evanescent structure: Gt.p = 0)",
+  "value": "0",
+  "laurent": {
+   "UV_pole": "0",
+   "MSbar_finite": "0",
+   "local": "0",
+   "coefficient_of_L": "0"
+  },
+  "status": "Evaluated_vanishing_under_declared_prescription"
+ },
+ "D06": {
+  "fit": {
+   "S1_delta^rho_nu_p4": "-(4*d - 7)/(8*(d - 1))",
+   "S2_p^rho_p_nu_p2": "3*(d - 2)/(8*(d - 1))",
+   "SE_Gt^rho_nu_p4": "-3/(8*(d - 1))"
+  },
+  "fit_exact": true,
+  "rows": 96,
+  "laurent": {
+   "S1_delta^rho_nu_p4": {
+    "A_exact_d": "-(4*d - 7)/(8*(d - 1))",
+    "UV_pole": "-3/8",
+    "MSbar_finite": "3*L/8 - 2/3",
+    "coefficient_of_L": "3/8",
+    "local": "-2/3"
+   },
+   "S2_p^rho_p_nu_p2": {
+    "A_exact_d": "3*(d - 2)/(8*(d - 1))",
+    "UV_pole": "1/4",
+    "MSbar_finite": "5/12 - L/4",
+    "coefficient_of_L": "-1/4",
+    "local": "5/12"
+   },
+   "SE_Gt^rho_nu_p4": {
+    "A_exact_d": "-3/(8*(d - 1))",
+    "UV_pole": "-1/8",
+    "MSbar_finite": "L/8 - 1/3",
+    "coefficient_of_L": "1/8",
+    "local": "-1/3"
+   }
+  },
+  "XVI_P_P15_ghost_self_energy_coefficients": {
+   "S1": "-(4*d - 7)/(8*(d - 1))",
+   "S2": "3*(d - 2)/(8*(d - 1))",
+   "SE": "-3/(8*(d - 1))"
+  },
+  "equals_XVI_P_P15_exactly": true,
+  "reading": "full one-loop cbar c two-point under the declared prescription; independent construction (this file) equals XVI-P P15_D13 ghost self-energy (route 2 there; ghost equation verified there) exactly in d"
+ },
+ "tadpoles": {
+  "D12": {
+   "integrand": "phi phi self-contraction on V_hh_phi_phi; numerator carries l (phi legs)",
+   "loop_numerator_degree_in_l": 2,
+   "omegas": [
+    2,
+    4
+   ],
+   "logarithmic_member": false,
+   "UV_pole": "0",
+   "IR_pole": "0",
+   "value": "0 (DERIVED: every member int (l^2)^j/l^2 is scaleless with omega = 2 + 2j > 0 -- a pure power divergence; no 1/eps on the UV or the IR side; MS-bar counterterm 0)",
+   "status": "Evaluated_vanishing_under_declared_prescription"
+  },
+  "D05a": {
+   "integrand": "h h self-contraction on V_hh_phi_phi; a2 has no derivative of h",
+   "loop_numerator_degree_in_l": 0,
+   "omegas": [
+    2
+   ],
+   "logarithmic_member": false,
+   "UV_pole": "0",
+   "IR_pole": "0",
+   "value": "0 (DERIVED: every member int (l^2)^j/l^2 is scaleless with omega = 2 + 2j > 0 -- a pure power divergence; no 1/eps on the UV or the IR side; MS-bar counterterm 0)",
+   "status": "Evaluated_vanishing_under_declared_prescription",
+   "numerator_l_independent": true
+  }
+ },
+ "mutations": {
+  "D04_S_f_half_still_zero (zero is S_f-independent; not a detector)": true,
+  "D04_drop_trace_part_changes_A": true,
+  "D04_drop_trace_part_value": "-I/8",
+  "D06_S_f_half_changes_coefficients": true
+ },
+ "seconds": 18.7
+}

@@ -1,0 +1,109 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q02",
+ "version_label": "XVI-Q Q02",
+ "date": "2026-10-10",
+ "execution_pass": true,
+ "publication": "accepted",
+ "value_checks": {
+  "expected_file_pinned": true,
+  "every_certified_value_matches_pinned": true,
+  "_value_mismatches": {},
+  "conventions_files_pinned": true,
+  "per_file_pins_each_true": true,
+  "O2c_cells_exact_and_true": true,
+  "O2c_build_input_all_orders": true,
+  "O2_constructed": true,
+  "D04_zero_two_routes": true,
+  "D06_equals_XVI_P_and_exact": true,
+  "D05a_D12_no_log_member": true,
+  "mutations_detect": true,
+  "D12_reconciled": true,
+  "bulk_rows_all_classified": true,
+  "bulk_outcome_and_closure": true,
+  "ST4a_pole_ct_cancel": true,
+  "vertex_checks": true,
+  "O1_walk_consistent": true,
+  "O1_enlarge_rule1_not_triggered_and_XVIM_unused": true,
+  "D04_scrutiny": true,
+  "bulk_CT_explicit_in_domain": true,
+  "independent_enumeration_9_3": true,
+  "guard_18_forms_all_raise": true,
+  "errata_file_equals_certified": true,
+  "errata_E1_E7_severities": true,
+  "registration_corrected": true,
+  "xvin_label_note": true,
+  "Q01_layer_accepted": true
+ },
+ "O1_closure": "CLOSED_PENDING_INDEPENDENT_REVIEW",
+ "O1_closure_confirmed": false,
+ "O1_closure_note": "pending independent review: becomes confirmed only after the Q02 independent rebuild passes",
+ "O1_closure_scope": "one-loop kappa^2 bulk two-point sector (hh, phi phi, cbar c, K'.c, one-point) of S_inv, m = 0, frozen gauge fermion, under the XVI-P declared prescription (DRED with opaque d, MS-bar, Feynman +i0, p22 evanescent counterterms; external momenta in QdS); insertion frozen (XVI-N massless obstruction untouched)",
+ "O1_not_implied": [
+  "bulk_symmetry_restored (all orders / all n-point): false",
+  "finite renormalised amplitudes with non-QdS (epsilon-scalar) external components: the p22 Q4S-trace O(eps)x pole remnant stays disclosed (identity unaffected: projected Q4S sum 0)",
+  "three-point / higher orders (P.6), prepared S_D, insertion"
+ ],
+ "O1_checklist": [
+  {
+   "item": "State retained quantum identity",
+   "owner": "O.6",
+   "earned": true,
+   "evidence": "XVI-O ST4a/ST4b and (S,Gamma_1) = A_1 (retained_quantum_identity.tex) stated on the bulk two-point retained sector; 23 gh0/gh1 rows enumerated mechanically"
+  },
+  {
+   "item": "List amplitudes constrained by identity",
+   "owner": "O.4",
+   "earned": true,
+   "evidence": "every gh0/gh1 one/two-field row classified with an individual justification; independent 1PI enumeration from the loop-capable vertices: E2 = 9, E1 = 3 (== XVI-P 9 / 3); antifield vertices c*cc, phi*c phi give no E <= 2 graph"
+  },
+  {
+   "item": "S_inv^{[2]} classical consistency",
+   "owner": "O.2",
+   "earned": true,
+   "evidence": "XVI-Q Q01: 2(S0,S2)+(S1,S1)=0 Constructed ((a) ell_4, (b) explicit antibracket expansion, (c) ghost/antifield); Q01 independent rebuild PASSED"
+  },
+  {
+   "item": "Evaluate inventory graphs",
+   "owner": "O.5",
+   "earned": true,
+   "evidence": "all 9 E=2 + 3 E=1 graphs have exact values: D01, D02, D03, D11, D13, D14a-c (XVI-P, pinned); D04 (Q02, 0 by engine routes 1+2 and independent route 4, with nonzero mutations, literature agreement); D05a (Q02, derived 0); D06 (Q02 == XVI-P Sigma); D12 reconciled (derived 0)"
+  },
+  {
+   "item": "Demonstrate identity remainder cancellation / CT solution",
+   "owner": "O.6/O.7",
+   "earned": true,
+   "evidence": "ST4a: 11-direction MS-bar CT in the declared p14r domain over Q(i) (phi.phi = 0 now earned); ST4b: c.h defect ZERO exactly in d (P19, x = 0), c.b = ghost equation (Sigma == D06), c.cbar* unreachable, c.phi parity; full sigma_0 closure of the complete MS-bar CT in every gh+1 sector (p20); cohomology of the domain 0; no free-EOM equivalence used"
+  },
+  {
+   "item": "Enlarge target if identity requires more legs/orders",
+   "owner": "O.1",
+   "earned": true,
+   "evidence": "rule 1 evaluated below: not triggered"
+  }
+ ],
+ "bulk_identity_outcome": "cancellable",
+ "bulk_symmetry_restored": false,
+ "symmetry_restored": false,
+ "flags": {
+  "bulk_O5_graphs_evaluated": "earned",
+  "D12_reconciled": "earned",
+  "bulk_identity_verified_two_point_kappa2": "earned",
+  "bulk_counterterms_solved": "earned",
+  "sigma0_closure_bulk": "earned",
+  "O2_kappa2_master_constructed": "earned (Q01)",
+  "d_guard_q02_verified": "earned",
+  "author_rebuild_passed": "see reproducibility",
+  "independent_rebuild_passed": "pending",
+  "independent_rebuild_passed_q01": true
+ },
+ "hard_stops": {
+  "bulk_symmetry_restored": false,
+  "insertion": "frozen",
+  "XV_B_opened": false,
+  "XIV_J_opened": false,
+  "Route_B_discharged": false,
+  "Missing_never_zero": true
+ },
+ "XVI_Q_registered": "locally; not published"
+}

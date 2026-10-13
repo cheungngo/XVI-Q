@@ -1,0 +1,30 @@
+{
+ "class": "leave-sympy (pure-Python term walk, str/srepr rename + re-parse, raw dense lists)",
+ "runtime_closable": false,
+ "why": "the computation happens outside every sympy entry point; a runtime guard cannot observe it",
+ "probes": {
+  "python_term_walk_eq_d": "raises (p22: equality test against d refused)",
+  "python_term_walk": "BYPASS (value 0)",
+  "str_rename_reparse": "BYPASS (value 0)",
+  "dense_list_eval": "BYPASS by construction (lists carry no symbol); disclosed since Q03"
+ },
+ "policy": "package code (code/q0*/*.py) must not use any escape primitive",
+ "forbidden": [
+  "N",
+  "as_coefficients_dict",
+  "dmp_eval",
+  "dmp_eval_in",
+  "dmp_eval_tail",
+  "dup_eval",
+  "dup_eval_in",
+  "evalf",
+  "lambdify",
+  "parse_expr",
+  "srepr",
+  "str(...).replace",
+  "sympify(str(...))"
+ ],
+ "scan_hits": [],
+ "scan_clean": true,
+ "n_files_scanned": 18
+}

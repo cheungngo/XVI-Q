@@ -1,0 +1,29 @@
+{
+ "landmark": "XVI-Q",
+ "series": "XVI",
+ "registered": "locally (this file only); NOT published, NOT pushed; no GitHub edit",
+ "how_found": "No local series registry exists in /workspace: enter-companion/ is an unversioned scraped snapshot of the published catalogue (its catalogue lists XVI-A..XVI-I; not a git checkout) and XVI-J..XVI-P are not listed anywhere locally. Registration state is package-local: XVI-P records 'XVI_P_registered': false in its RELEASE_STATUS; XVI-O has no registration flag at all. XVI-Q is therefore registered as a self-contained local record plus hash-pinned predecessor imports; enter-companion untouched.",
+ "decision": "user (2026-10-10): register a new landmark XVI-Q that imports XVI-P's verified ell_4 to discharge O.2, states the bulk identity, and attempts O.1 closure",
+ "predecessors_read_only": {
+  "XVI-O": "o70-sync (imported files pinned in intake/imports.json)",
+  "XVI-N": "XVI-N.tex + r10 status (pinned)",
+  "XVI-P": "p23, source zip 3f4a88db462923553272e8a41407c0c06aacbc431736efdfeda10c27aae8a177 (frozen)"
+ },
+ "release_plan": {
+  "Q01": "intake + O.2 classical kappa^2 master (a)(b)(c) + guard + value-checking gate",
+  "Q02": "bulk O.5 graphs D04/D05a/D06, bulk identity ST4a/ST4b, O.1 attempt"
+ },
+ "hard_stops": {
+  "O1_closure": "NOT_CLOSED unless every condition earned",
+  "bulk_symmetry_restored": false,
+  "insertion": "frozen (XVI-N thm:massless-obstruction)",
+  "XV_B_opened": false,
+  "XIV_J_opened": false,
+  "Route_B_discharged": false,
+  "XVI_M_pin": "unchanged",
+  "Missing_never_zero": true
+ },
+ "corrections": {
+  "Q02": "two Q01 inaccuracies fixed (independent review Q01): the catalogue lists XVI-A..I (not 'A,B,D,H,I only'); XVI-O has no registration flag (Q01 wrongly cited 'XVI-O RELEASE_STATUS')."
+ }
+}

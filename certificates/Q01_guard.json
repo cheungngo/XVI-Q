@@ -1,0 +1,38 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q01",
+ "forms": [
+  "Matrix_Dummy",
+  "Matrix_y",
+  "Poly_shift",
+  "apart_list",
+  "apart_residue",
+  "captured_rem",
+  "compose",
+  "evalf",
+  "groebner",
+  "lambdify",
+  "limit",
+  "polys_ns_rem",
+  "reduced",
+  "rem",
+  "rep_eval",
+  "resultant",
+  "subs",
+  "xreplace"
+ ],
+ "n_forms": 18,
+ "n_exprs": 4,
+ "missed": [],
+ "algebra": {
+  "cancel_factor": "(d**2 + 30*d - 34)/(32*(d - 1)*(d + 1))",
+  "domain_only_poly": "True",
+  "authorised_value": "1/80",
+  "d_free_rem": "2"
+ },
+ "entry_points": [
+  "Poly.new (polynomial construction with d as generator or in the domain)",
+  "dred._check_rule (any internal rename/substitution of d)",
+  "PolyElement/FracElement evaluate/subs/__call__/compose on a ring/field with d as generator"
+ ]
+}

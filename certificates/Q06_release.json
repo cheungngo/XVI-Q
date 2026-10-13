@@ -1,0 +1,23 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q06",
+ "decision": "ACCEPT",
+ "checks": {
+  "expected_file_pinned": true,
+  "every_certified_value_matches_pinned": true,
+  "pinned_files_rehashed": true,
+  "no_unpinned_code_tools_tests_file": true,
+  "scan_live_clean_incl_q06": true,
+  "ghost_rows_4D_closed_with_mutations": true,
+  "ghost_rows_evanescent_not_overclaimed": true,
+  "G10_second_route_equal": true,
+  "V4_gauge_identity_exact": true,
+  "fastpath_equals_expr_path": true,
+  "G01_G02_evaluated": true,
+  "honest_partial": true,
+  "errata_recorded": true,
+  "O1_record_unchanged": true,
+  "Q05_layer_accepted": true,
+  "gate_reads_in_source_set": true
+ }
+}

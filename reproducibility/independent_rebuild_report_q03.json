@@ -1,0 +1,116 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q03",
+ "reviewer": "independent (Grok Bot)",
+ "result": "PASS",
+ "O1_verdict": "CONFIRM CLOSED (scoped) - both Q02 medium conditions discharged; scope verbatim from my Q02 report",
+ "source": {
+  "zip_sha256": "0a43ef1afefb0bf529d32ed8effdecc5c27c5efc635e86299b9e3455eb2854fa",
+  "tree_sha256": "99b961c6dda7b13558174c83c54f435312e005aac7ba29612e9ea8e9aa54337c",
+  "files": 67
+ },
+ "entrypoint": {
+  "rc": 0,
+  "tree_matches_reference": true,
+  "reference_compared": 20,
+  "equal": 20,
+  "tests": "58 passed (test_q03 11/11)",
+  "gate": "accepted, O1 CLOSED (scoped)",
+  "own_build_copy": "BUILD_OK, gate accepted, all 14 certs equal pinned expected (strip seconds)"
+ },
+ "medium_fixes": {
+  "enlarged_domain": "present: 11 p14r 4D + 10 p22 evanescent (K'.c E2 -1/16, cbar.c SE 1/8, 8 h.h) = 21; item-5 evidence rewritten",
+  "prescription": "XVI-P DRED stated as used; XVI-O o70-sync kernel stated not used; reason 8 NOT_ANSWERED_IN_XVI_O_TERMS, reasons 1-7 ANSWERED",
+  "scope": "verbatim equal to my Q02 report",
+  "not_implied": "faithful (functional ST4b, bulk restoration, XVI-O ledger; adds P.6, insertion, eps-scalar externals - consistent)",
+  "caveats": "all 4 present (same-box, D01/D03 not own-rules, sigma0/c.h not re-derived in Q02, D06 via equality)",
+  "binding": "report sha e4b54702..., zip 378651a3..., tree 4b551b98... checked; bundled Q02 report byte-identical to mine"
+ },
+ "gate_tamper": {
+  "cases": 22,
+  "rejected": 17,
+  "accepted": [
+   "control",
+   "release_q03_itself_edit",
+   "tools_source_set_edit",
+   "manuscript_note_edit",
+   "README_edit"
+  ],
+  "pins": "33 provenance re-hashed + no unpinned; 12 code/intake files re-hashed"
+ },
+ "qguard": {
+  "package_8_forms": "all raise",
+  "my_Q02_ring/field forms": "raise on all 4 exprs",
+  "still_bypass": [
+   "python term walk (as_powers_dict, c*4**k)",
+   "srepr/str rename d->y then subs/lambdify",
+   "raw dense list dup_eval (disclosed)"
+  ],
+  "detail": {
+   "Q02_ring_evaluate": {
+    "lin": "RAISED guard",
+    "pow": "RAISED guard",
+    "alone": "RAISED guard",
+    "mixed": "RAISED guard"
+   },
+   "Q02_field_evaluate": {
+    "lin": "RAISED guard",
+    "pow": "RAISED guard",
+    "alone": "RAISED guard",
+    "mixed": "RAISED guard"
+   },
+   "py_term_walk": {
+    "lin": "BYPASS (correct value)",
+    "pow": "BYPASS (correct value)",
+    "alone": "BYPASS (correct value)",
+    "mixed": "BYPASS (correct value)"
+   },
+   "raw_dense_dup_eval (disclosed)": {
+    "lin": "BYPASS (correct value)",
+    "pow": "error AttributeError: 'int' object has no attribute 'has'",
+    "alone": "error AttributeError: 'int' object has no attribute 'has'",
+    "mixed": "error AttributeError: 'int' object has no attribute 'has'"
+   },
+   "srepr_rename_then_subs": {
+    "lin": "BYPASS (correct value)",
+    "pow": "BYPASS (correct value)",
+    "alone": "BYPASS (correct value)",
+    "mixed": "BYPASS (correct value)"
+   },
+   "lambdify_via_str": {
+    "lin": "BYPASS (correct value)",
+    "pow": "BYPASS (correct value)",
+    "alone": "BYPASS (correct value)",
+    "mixed": "BYPASS (correct value)"
+   }
+  }
+ },
+ "physics_vs_Q02": "no value change: 8 Q01/Q02 certs equal to my Q02 build except Q01_guard.entry_points (guard extension only); bulk/D04 code byte-identical",
+ "no_top_level_writes": "before/after snapshot of /workspace top level identical; build defaulted to no sync; /workspace/XVI-Q untouched except this report",
+ "findings": [
+  {
+   "sev": "low",
+   "id": "source_set_unpinned",
+   "text": "tools/source_set.py edit accepted by release_q03 (not in the 12 pinned files nor rebuild pins); it defines which reads count as source"
+  },
+  {
+   "sev": "info",
+   "id": "gate_self_pin",
+   "text": "release_q03.py self-edit accepted by the standalone gate; caught only by rebuild_from_source gate_and_expected_sha256 pin (inherent)"
+  },
+  {
+   "sev": "info",
+   "id": "text_unpinned",
+   "text": "manuscript notes / README edits accepted (not value-bearing)"
+  },
+  {
+   "sev": "low",
+   "id": "guard_rename_class",
+   "text": "d can still be evaluated by leaving sympy symbolics (pure-Python term walk, srepr/str rename); same class as disclosed dense-list gap; no package code uses it"
+  }
+ ],
+ "caveats": [
+  "same-box review: same machine, Python/sympy pin and TeX Live as the author",
+  "Q03 is a correction layer; physics accepted from my Q02 review (no recomputation beyond value-identity check)"
+ ]
+}

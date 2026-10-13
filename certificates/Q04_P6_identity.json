@@ -1,0 +1,128 @@
+{
+ "identity": "(S, Gamma_1) = A_1 at kappa^3, one loop: (S_0, Gamma_1^[3]) + (S_1, Gamma_1^[2]) + (S_2, Gamma_1^[1]) + (S_3, Gamma_1^[0])",
+ "terms": {
+  "(S_0, Gamma_1^[3])": "three-point Gamma_1 with the linear BRST (s0 h = d c, s0 c = 0, s0 phi = 0, antifield equations of S_0) -- needs the P.6 graphs",
+  "(S_1, Gamma_1^[2])": "two-point Gamma_1 (Q02, evaluated) with the quadratic BRST (c.dh, h dc, c.dc, c.dphi)",
+  "(S_2, Gamma_1^[1])": "0: Gamma_1^[1] is one-point only and vanishes (D14a-c)",
+  "(S_3, Gamma_1^[0])": "0: field independent"
+ },
+ "rows": [
+  {
+   "row": "h.h.c",
+   "class": "needs_inputs",
+   "inputs": {
+    "S0_Gamma3": [
+     "Gamma_hhh (5 graphs)",
+     "Gamma_K c h (2)"
+    ],
+    "S1_Gamma2": [
+     "Gamma_hh (Q02: D01, D02, D03, D11, D12)",
+     "Gamma_K c (D13)"
+    ],
+    "matter_subsector": "scalar-loop part = matter Ward identity (evaluated, Q04)"
+   }
+  },
+  {
+   "row": "h.phi.c",
+   "class": "zero",
+   "why": "phi-parity odd (every vertex even in {phi, phi*})"
+  },
+  {
+   "row": "h.b.c",
+   "class": "aux",
+   "why": "contains b / cbar* / b*: no interaction vertex (ghost-equation / nonminimal rows; not a loop entry)"
+  },
+  {
+   "row": "h.c.cbs",
+   "class": "aux",
+   "why": "contains b / cbar* / b*: no interaction vertex (ghost-equation / nonminimal rows; not a loop entry)"
+  },
+  {
+   "row": "phi.phi.c",
+   "class": "needs_inputs",
+   "inputs": {
+    "S0_Gamma3": [
+     "Gamma_h phi phi (4 graphs)",
+     "Gamma_phi* c phi (1)"
+    ],
+    "S1_Gamma2": [
+     "Gamma_phi phi = 0 (Q02)",
+     "Gamma_hh not entering"
+    ]
+   }
+  },
+  {
+   "row": "phi.b.c",
+   "class": "zero",
+   "why": "phi-parity odd (every vertex even in {phi, phi*})"
+  },
+  {
+   "row": "phi.c.cbs",
+   "class": "zero",
+   "why": "phi-parity odd (every vertex even in {phi, phi*})"
+  },
+  {
+   "row": "b.b.c",
+   "class": "aux",
+   "why": "contains b / cbar* / b*: no interaction vertex (ghost-equation / nonminimal rows; not a loop entry)"
+  },
+  {
+   "row": "b.c.cbs",
+   "class": "aux",
+   "why": "contains b / cbar* / b*: no interaction vertex (ghost-equation / nonminimal rows; not a loop entry)"
+  },
+  {
+   "row": "c.c.cb",
+   "class": "needs_inputs",
+   "inputs": {
+    "S0_Gamma3": [
+     "Gamma_cbar c h (2)",
+     "Gamma_c c c* (1)"
+    ],
+    "S1_Gamma2": [
+     "Gamma_cbar c (D06)"
+    ]
+   }
+  },
+  {
+   "row": "c.c.hs",
+   "class": "needs_inputs",
+   "inputs": {
+    "S0_Gamma3": [
+     "Gamma_K c h (2)",
+     "Gamma_c c c* (1)"
+    ],
+    "S1_Gamma2": [
+     "Gamma_K c (D13)"
+    ]
+   }
+  },
+  {
+   "row": "c.c.phis",
+   "class": "zero",
+   "why": "phi-parity odd (every vertex even in {phi, phi*})"
+  },
+  {
+   "row": "c.c.bs",
+   "class": "aux",
+   "why": "contains b / cbar* / b*: no interaction vertex (ghost-equation / nonminimal rows; not a loop entry)"
+  },
+  {
+   "row": "c.cbs.cbs",
+   "class": "aux",
+   "why": "contains b / cbar* / b*: no interaction vertex (ghost-equation / nonminimal rows; not a loop entry)"
+  }
+ ],
+ "n_rows": 14,
+ "counterterm_domain_kappa3": {
+  "hhh": {
+   "n_monomials_before_symmetry": 807,
+   "n_with_T (evanescent)": 588
+  },
+  "h_phi_phi": {
+   "n_monomials_before_symmetry": 21,
+   "n_with_T (evanescent)": 6
+  },
+  "status": "structural count only (momentum conservation used through p1, p2; Bose symmetrisation and the BRST/sigma_0 reduction to the invariant domain NOT done in Q04)"
+ }
+}

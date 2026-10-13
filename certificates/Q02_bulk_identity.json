@@ -1,0 +1,550 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q02",
+ "XVI_O_ST4_definition_verbatim": {
+  "ST4a": "Gamma_1,local = sum z_i C_i (gh=0)",
+  "ST4b": "P_ret(S,C)=-P_ret A_1 (gh(C)=0; defect gh=1)",
+  "withdrawn_OR": "local_OR_defect single target"
+ },
+ "bulk_counterterms_explicit": {
+  "convention": "Ghat coordinates on the p14r kappa^2 densities (G = kappa^2 N_eps Ghat MB); MS-bar CT = -pole; c.cb in the route-G (c,cb) orientation used by the p20 full closure",
+  "coefficients": {
+   "h.h#0": "49*I/480",
+   "h.h#1": "41*I/160",
+   "h.h#2": "-49*I/240",
+   "h.h#3": "-41*I/80",
+   "h.h#4": "43*I/120",
+   "c.cb#0": "-3/8",
+   "c.cb#1": "1/4",
+   "c.K#0": "0",
+   "c.K#1": "-3/8",
+   "c.K#2": "1/4",
+   "phi.phi#0": "0"
+  },
+  "domain_sectors_and_sizes": {
+   "h.h": 5,
+   "c.cb": 2,
+   "c.K": 3,
+   "phi.phi": 1
+  },
+  "every_label_in_domain": true,
+  "n_directions": 11,
+  "all_in_Q_i": true,
+  "cbc_from_D06_equals_P15_orientation_poles": [
+   true,
+   true
+  ],
+  "cbc_orientation_ratio_routeG_over_P15": [
+   "-1",
+   "-1"
+  ],
+  "phiphi": "0 from Q02 D04 + D05a (in P19 the phi.phi coordinate 0 was a placeholder 'not an input'; now earned)",
+  "evanescent_p22": {
+   "Kc_E2": "-1/16",
+   "ccb_SE": "1/8",
+   "hh_sum": {
+    "g4_mn gt_rs (p.p)^2": "-7*I/120",
+    "g4_mr gt_ns (p.p)^2": "-I/160",
+    "g4_rs gt_mn (p.p)^2": "-7*I/120",
+    "gt_mn gt_rs (p.p)^2": "I/160",
+    "gt_mn p_r p_s (p.p)^1": "7*I/120",
+    "gt_mr gt_ns (p.p)^2": "I/160",
+    "gt_mr p_n p_s (p.p)^1": "I/160",
+    "gt_rs p_m p_n (p.p)^1": "7*I/120"
+   },
+   "role": "outside the p14r 4D domain (disclosed p22 contract revision); subtract the evanescent poles only; NOT needed for the identity (P19 ch solve x = 0; evanescent poles decouple from the ch slots)"
+  },
+  "ok": true
+ },
+ "independent_graph_enumeration": {
+  "E1": [
+   [
+    [
+     "V3_grav"
+    ],
+    [
+     "h-h"
+    ],
+    [
+     "h"
+    ]
+   ],
+   [
+    [
+     "V_cb_c_h"
+    ],
+    [
+     "c-cb"
+    ],
+    [
+     "h"
+    ]
+   ],
+   [
+    [
+     "V_h_phi_phi"
+    ],
+    [
+     "phi-phi"
+    ],
+    [
+     "h"
+    ]
+   ]
+  ],
+  "E2": [
+   [
+    [
+     "V3_grav",
+     "V3_grav"
+    ],
+    [
+     "h-h",
+     "h-h"
+    ],
+    [
+     "h",
+     "h"
+    ]
+   ],
+   [
+    [
+     "V4_grav"
+    ],
+    [
+     "h-h"
+    ],
+    [
+     "h",
+     "h"
+    ]
+   ],
+   [
+    [
+     "V_K_c_h",
+     "V_cb_c_h"
+    ],
+    [
+     "c-cb",
+     "h-h"
+    ],
+    [
+     "K",
+     "c"
+    ]
+   ],
+   [
+    [
+     "V_cb_c_h",
+     "V_cb_c_h"
+    ],
+    [
+     "c-cb",
+     "c-cb"
+    ],
+    [
+     "h",
+     "h"
+    ]
+   ],
+   [
+    [
+     "V_cb_c_h",
+     "V_cb_c_h"
+    ],
+    [
+     "c-cb",
+     "h-h"
+    ],
+    [
+     "c",
+     "cb"
+    ]
+   ],
+   [
+    [
+     "V_h_phi_phi",
+     "V_h_phi_phi"
+    ],
+    [
+     "h-h",
+     "phi-phi"
+    ],
+    [
+     "phi",
+     "phi"
+    ]
+   ],
+   [
+    [
+     "V_h_phi_phi",
+     "V_h_phi_phi"
+    ],
+    [
+     "phi-phi",
+     "phi-phi"
+    ],
+    [
+     "h",
+     "h"
+    ]
+   ],
+   [
+    [
+     "V_hh_phi_phi"
+    ],
+    [
+     "h-h"
+    ],
+    [
+     "phi",
+     "phi"
+    ]
+   ],
+   [
+    [
+     "V_hh_phi_phi"
+    ],
+    [
+     "phi-phi"
+    ],
+    [
+     "h",
+     "h"
+    ]
+   ]
+  ],
+  "n_E1": 3,
+  "n_E2": 9
+ },
+ "vertex_checks": {
+  "n_vertices": 15,
+  "interaction_vertices": [
+   "V3_grav",
+   "V4_grav",
+   "V_cb_c_h",
+   "V_K_c_h",
+   "V_cs_c_c",
+   "V_phis_c_phi",
+   "V_h_phi_phi",
+   "V_hh_phi_phi"
+  ],
+  "phi_parity_even_all": true,
+  "phi_parity_per_vertex": {
+   "V2_grav": true,
+   "V3_grav": true,
+   "V4_grav": true,
+   "M0_ghost": true,
+   "V_cb_c_h": true,
+   "V_K_c": true,
+   "V_K_c_h": true,
+   "V_cs_c_c": true,
+   "V_phis_c_phi": true,
+   "V_b_h": true,
+   "V_b_b": true,
+   "V_cbs_b": true,
+   "M_phi": true,
+   "V_h_phi_phi": true,
+   "V_hh_phi_phi": true
+  },
+  "aux_b_cbs_bs_on_no_interaction_vertex": true,
+  "quadratic_vertices_with_aux": [
+   "V_b_h",
+   "V_b_b",
+   "V_cbs_b"
+  ]
+ },
+ "rows": {
+  "b.b": {
+   "group": "gh0_two",
+   "class": "zero",
+   "reason": "auxiliary/nonminimal field on no interaction vertex (checked): no 1PI loop entry",
+   "outcome": "zero"
+  },
+  "b.cbs": {
+   "group": "gh0_two",
+   "class": "zero",
+   "reason": "auxiliary/nonminimal field on no interaction vertex (checked): no 1PI loop entry",
+   "outcome": "zero"
+  },
+  "b.h": {
+   "group": "gh0_two",
+   "class": "zero",
+   "reason": "auxiliary/nonminimal field on no interaction vertex (checked): no 1PI loop entry",
+   "outcome": "zero"
+  },
+  "b.phi": {
+   "group": "gh0_two",
+   "class": "zero",
+   "reason": "phi-parity: every vertex even in {phi, phi*} (checked) -> odd rows vanish identically",
+   "outcome": "zero"
+  },
+  "bs.c": {
+   "group": "gh0_two",
+   "class": "zero",
+   "reason": "auxiliary/nonminimal field on no interaction vertex (checked): no 1PI loop entry",
+   "outcome": "zero"
+  },
+  "c.cb": {
+   "group": "gh0_two",
+   "class": "cbc",
+   "outcome": "cancellable"
+  },
+  "c.hs": {
+   "group": "gh0_two",
+   "class": "Kc",
+   "outcome": "cancellable"
+  },
+  "c.phis": {
+   "group": "gh0_two",
+   "class": "zero",
+   "reason": "phi-parity: every vertex even in {phi, phi*} (checked) -> odd rows vanish identically",
+   "outcome": "zero"
+  },
+  "cbs.cbs": {
+   "group": "gh0_two",
+   "class": "zero",
+   "reason": "auxiliary/nonminimal field on no interaction vertex (checked): no 1PI loop entry",
+   "outcome": "zero"
+  },
+  "cbs.h": {
+   "group": "gh0_two",
+   "class": "zero",
+   "reason": "auxiliary/nonminimal field on no interaction vertex (checked): no 1PI loop entry",
+   "outcome": "zero"
+  },
+  "cbs.phi": {
+   "group": "gh0_two",
+   "class": "zero",
+   "reason": "phi-parity: every vertex even in {phi, phi*} (checked) -> odd rows vanish identically",
+   "outcome": "zero"
+  },
+  "h.h": {
+   "group": "gh0_two",
+   "class": "hh",
+   "outcome": "cancellable"
+  },
+  "h.phi": {
+   "group": "gh0_two",
+   "class": "zero",
+   "reason": "phi-parity: every vertex even in {phi, phi*} (checked) -> odd rows vanish identically",
+   "outcome": "zero"
+  },
+  "phi.phi": {
+   "group": "gh0_two",
+   "class": "phiphi",
+   "outcome": "zero"
+  },
+  "b.c": {
+   "group": "gh1_two",
+   "class": "ST4b_ghost_equation",
+   "reason": "c.b row of (S,Gamma) = b Sigma_cbc + (d b) G_Kc: the ghost equation",
+   "outcome": "zero"
+  },
+  "c.cbs": {
+   "group": "gh1_two",
+   "class": "ST4b_unreachable",
+   "reason": "c.cbar*: unreachable (XVI-P P22 a_closure: S0 quadratic part h.h, h.b, b.b, b.cbs)",
+   "outcome": "zero"
+  },
+  "c.h": {
+   "group": "gh1_two",
+   "class": "ST4b_ch",
+   "outcome": "zero"
+  },
+  "c.phi": {
+   "group": "gh1_two",
+   "class": "zero",
+   "reason": "phi-parity: every vertex even in {phi, phi*} (checked) -> odd rows vanish identically",
+   "outcome": "zero"
+  },
+  "h": {
+   "group": "gh0_one",
+   "class": "onepoint_h",
+   "outcome": "zero"
+  },
+  "phi": {
+   "group": "gh0_one",
+   "class": "zero",
+   "reason": "phi-parity: every vertex even in {phi, phi*} (checked) -> odd rows vanish identically",
+   "outcome": "zero"
+  },
+  "b": {
+   "group": "gh0_one",
+   "class": "zero",
+   "reason": "auxiliary/nonminimal field on no interaction vertex (checked): no 1PI loop entry",
+   "outcome": "zero"
+  },
+  "cbs": {
+   "group": "gh0_one",
+   "class": "zero",
+   "reason": "auxiliary/nonminimal field on no interaction vertex (checked): no 1PI loop entry",
+   "outcome": "zero"
+  },
+  "c": {
+   "group": "gh1_one",
+   "class": "zero",
+   "reason": "gh1 one-point defect c^mu(p=0): no 1PI one-loop graph has a single external ghost (the only ghost vertex V_cb_c_h would need a second internal c to close the cbar line) and no Lorentz-covariant constant vector exists",
+   "outcome": "zero"
+  }
+ },
+ "n_rows": 23,
+ "unclassified_rows": [],
+ "ST4a": {
+  "hh": {
+   "graphs": [
+    "D01",
+    "D02",
+    "D03",
+    "D11",
+    "D12"
+   ],
+   "values": {
+    "D01_D03": "XVI-P P16_batchC (evaluated)",
+    "D02": "0 derived (P15_batchA)",
+    "D12": "0 (DERIVED: every member int (l^2)^j/l^2 is scaleless with omega = 2 + 2j > 0 -- a pure power divergence; no 1/eps on the UV or the IR side; MS-bar counterterm 0) ; XVI-P P15_batchA: vanishing_under_declared_prescription",
+    "D11": "XVI-P P18_D11 (matching M1-M3; evanescent EV_M2)"
+   },
+   "counterterm": "p14r 4D h.h MS-bar directions + p22 evanescent h.h operators (sum coefficients pinned in P22)",
+   "outcome": "cancellable",
+   "evidence_flags": {
+    "batchC_evaluated": true,
+    "batchA_evaluated": true
+   }
+  },
+  "cbc": {
+   "graphs": [
+    "D06"
+   ],
+   "D06_equals_XVI_P_Sigma": true,
+   "poles": {
+    "S1_delta^rho_nu_p4": "-3/8",
+    "S2_p^rho_p_nu_p2": "1/4",
+    "SE_Gt^rho_nu_p4": "-1/8"
+   },
+   "counterterm": {
+    "4D (delta p^4, p^rho p_nu p^2)": {
+     "S1_delta^rho_nu_p4": "3/8",
+     "S2_p^rho_p_nu_p2": "-1/4"
+    },
+    "evanescent SE (p22 ghost-equation partner)": "1/8"
+   },
+   "SE_pole_plus_p22_CT_zero": true,
+   "outcome": "cancellable"
+  },
+  "phiphi": {
+   "graphs": [
+    "D04",
+    "D05a"
+   ],
+   "D04": "0",
+   "D04_routes_agree": true,
+   "D05a": "0 (DERIVED: every member int (l^2)^j/l^2 is scaleless with omega = 2 + 2j > 0 -- a pure power divergence; no 1/eps on the UV or the IR side; MS-bar counterterm 0)",
+   "total_pole": "0",
+   "counterterm": "z_phiphi = 0 (none needed; the declared phi phi domain {phi Box^2 phi} is untouched)",
+   "outcome": "zero"
+  },
+  "Kc": {
+   "graphs": [
+    "D13"
+   ],
+   "4D_poles_in_p14r_cK_basis": true,
+   "E2_pole": "1/16",
+   "p22_Kc_E2_CT": "-1/16",
+   "E2_pole_plus_CT_zero": true,
+   "outcome": "cancellable"
+  },
+  "onepoint_h": {
+   "graphs": [
+    "D14a",
+    "D14b",
+    "D14c"
+   ],
+   "value": "0 derived (P15_batchA)",
+   "outcome": "zero"
+  }
+ },
+ "ST4b": {
+  "ST4b_ch": {
+   "source": "XVI-P P19_defect: projected defect ZERO exactly in d; counterterm solve outcome ZERO",
+   "projected_identity_verified": "earned",
+   "outcome": "zero"
+  },
+  "ST4b_ghost_equation": {
+   "source": "XVI-P P15_D13 ghost_equation (64 components, exact in d) + P22 a_closure c.b (closed; exact in the gt sector); Sigma there == D06 here exactly",
+   "ghost_equation_agree": true,
+   "c_b_closed": true,
+   "D06_is_that_Sigma": true,
+   "outcome": "zero"
+  },
+  "ST4b_unreachable": {
+   "source": "P22 a_closure c.cbs",
+   "outcome": "zero"
+  }
+ },
+ "sigma0_closure": {
+  "XVI_P_full_closure_all_gh1_sectors": "P19_defect full_closure_mutation_detector + renormalised_defect_zero",
+  "renormalised_defect_zero": true,
+  "mutation_detector_cases_detected": {
+   "drop_graph_D11": false,
+   "drop_graph_D13 (c.K data = 0, Sigma held fixed)": true,
+   "flip_sign_Kc (c.K data -> -c.K, Sigma held fixed)": true,
+   "drop_graph_D03": true,
+   "drop_graph_D01": true,
+   "flip_phase_D03": true,
+   "symmetry_factor_D03_x2": true,
+   "Sigma_orientation_unconverted (p19 error)": true
+  },
+  "phiphi_CT": "0 (D04 + D05a = 0); sigma_0 rank on the phi.phi direction is 0 (XVI-P P19 D_cap_ker_sigma0), so the direction is sigma_0-closed for any coefficient; NO free-EOM equivalence is used (XVI-O O.6 domain item 4)",
+  "phiphi_sigma0_rank": 0,
+  "phi_odd_rows": "identically zero (parity)",
+  "closed": true,
+  "full_closure_with_complete_MSbar_CT": "p20 (corrects p19): with the P15 Sigma coordinates converted from the (cb,c) to the route-G (c,cb) orientation (measured ratio -1), the DERIVED factor +1 gives full sigma_0 closure of the complete MS-bar counterterm (h.h + c.K + c.cb) in every ghost +1 sector; the p19 table above (factors 1, -1, i, -i on UNCONVERTED coordinates) is the bookkeeping error, kept for the erratum",
+  "relative_factor_derived_equals_P15": true,
+  "sigma0_ranks": {
+   "h.h": {
+    "dim": 5,
+    "sigma0_rank": 3,
+    "P_ch_sigma0_rank": 3
+   },
+   "c.cb": {
+    "dim": 2,
+    "sigma0_rank": 2,
+    "P_ch_sigma0_rank": 0
+   },
+   "c.K": {
+    "dim": 3,
+    "sigma0_rank": 3,
+    "P_ch_sigma0_rank": 1
+   },
+   "phi.phi": {
+    "dim": 1,
+    "sigma0_rank": 0,
+    "P_ch_sigma0_rank": 0
+   }
+  },
+  "cohomology_dim_D": 0
+ },
+ "bulk_identity_outcome": "cancellable",
+ "residual": null,
+ "E2_enumeration_XVI_P_p23": {
+  "enumerated": 9,
+  "frozen": 9,
+  "missing_from_enumeration": [],
+  "not_in_frozen_inventory": [],
+  "equal": true
+ },
+ "bulk_counterterms": {
+  "hh": "p14r MS-bar h.h + p22 evanescent (pinned)",
+  "Kc": "p14r c.K' + p22 E2 (-1/16)",
+  "cbc": {
+   "4D": {
+    "S1_delta^rho_nu_p4": "3/8",
+    "S2_p^rho_p_nu_p2": "-1/4"
+   },
+   "SE": "1/8"
+  },
+  "phiphi": "0",
+  "onepoint": "0"
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "homogeneous_space": {
+  "dim_N": 152,
+  "dim_N_with_ghost_eq": 104,
+  "rank_rows_bose": 669,
+  "n_unknowns": 821
+ },
+ "single_sector_blind_directions": {
+  "dim_N_Kch_only": 69,
+  "dim_N_cbar_ch_only": 0,
+  "dim_N_cstar_cc_only": 12,
+  "dim_N_hhh_only": 26,
+  "dim_trivial_best_lambda_cap_N_and_ghost_eq": 55
+ },
+ "trivial_families": {
+  "F": {
+   "n_generators": 204,
+   "dim_span_both_pieces": 121,
+   "dim_N_cap_span_both_pieces_upper_bound": 67,
+   "best_uniform_lambda": "-1",
+   "dim_N_cap_family_at_best_lambda": 65,
+   "scan": {
+    "0": 2,
+    "1": 61,
+    "-1": 65,
+    "2": 61,
+    "-2": 63,
+    "1/2": 61,
+    "-1/2": 61,
+    "I": 61,
+    "-I": 61,
+    "2*I": 61,
+    "-2*I": 61,
+    "I/2": 61,
+    "-I/2": 61,
+    "4": 61,
+    "-4": 61
+   }
+  },
+  "G": {
+   "n_generators": 33,
+   "dim_span_both_pieces": 66,
+   "dim_N_cap_span_both_pieces_upper_bound": 24,
+   "best_uniform_lambda": "I/2",
+   "dim_N_cap_family_at_best_lambda": 11,
+   "scan": {
+    "0": 0,
+    "1": 0,
+    "-1": 0,
+    "2": 0,
+    "-2": 0,
+    "1/2": 0,
+    "-1/2": 0,
+    "I": 0,
+    "-I": 0,
+    "2*I": 0,
+    "-2*I": 0,
+    "I/2": 11,
+    "-I/2": 0,
+    "4": 0,
+    "-4": 0
+   }
+  },
+  "P": {
+   "n_generators": 134,
+   "dim_span_both_pieces": 109,
+   "dim_N_cap_span_both_pieces_upper_bound": 13,
+   "best_uniform_lambda": "-2",
+   "dim_N_cap_family_at_best_lambda": 12,
+   "scan": {
+    "0": 0,
+    "1": 0,
+    "-1": 0,
+    "2": 0,
+    "-2": 12,
+    "1/2": 0,
+    "-1/2": 0,
+    "I": 0,
+    "-I": 0,
+    "2*I": 0,
+    "-2*I": 0,
+    "I/2": 0,
+    "-I/2": 0,
+    "4": 0,
+    "-4": 0
+   }
+  }
+ },
+ "dim_N_cap_all_families_upper_bound": 116,
+ "dim_N_cap_all_families_best_lambda": 97,
+ "dim_trivial_best_lambda_within_ghost_eq_subspace": 55,
+ "reading": "Of the 152 free directions (104 with the ghost equation), at least 97 (55 within the ghost-equation subspace) lie in the span of fitted BRST-trivial families (field redefinitions h -> h + F(h,h), c -> c + G(c,h), gauge-fermion change cbar.Phi(h,h)); at most 116 can. The families are only partly closed in N with one uniform lambda (F 65/121, G 11/66, P 12/109): the relative normalisations are FITTED, not derived, and the families are not complete at three points. Remaining >= 36 directions are not shown trivial: 26 hhh-only sigma0-closed evanescent cubic structures (candidate invariant evanescent operators) and blind directions of the three-point rows (69 Kch-only, 12 c*cc-only) constrained only by the ghost equation / four-point rows."
+}

@@ -1,0 +1,138 @@
+{
+ "landmark": "XVI-Q",
+ "release": "Q01",
+ "equation": "2(S0,S2) + (S1,S1) = 0 on S_inv (classical BV master at kappa^2)",
+ "items": {
+  "a_ell4": {
+   "status": "Constructed",
+   "argument": "XVI-P p23 ell_4 export (3360 terms, re-executed byte-identical) equals an INDEPENDENT Gamma-Gamma reconstruction term by term; the single normalisation (-2) is fixed by XVI-O's conformal probe and equals XVI-O's convention ell_4 = -2[eps^4](sqrt(-q)R); the export also reproduces XVI-O's probe exactly",
+   "detail": {
+    "route": "independent Gamma-Gamma series (this file), not XVI-P quartic.py",
+    "normalisation_from_XVI_O_probe": "-2",
+    "n_terms_mine": 3360,
+    "n_terms_export": 3360,
+    "full_polynomial_equal": true,
+    "n_terms_difference": 0,
+    "export_on_XVI_O_probe_equal": true,
+    "seconds": 2.1,
+    "mutation_one_term_x2_detected": true
+   }
+  },
+  "b_antibracket_expansion": {
+   "status": "Constructed",
+   "argument": "(S,S)|af0,grav at kappa^2 = 2 int W_2, W_2 = sum E(ell_4) s0 h + E(ell_3) s1 h (s2 = 0 derived) -- the explicit component form of 2(S0,S2)+(S1,S1); W_2 has 15428 terms and E_{c^mu}(W_2) = 0 exactly (independent XVI-Q jet engine; agrees with XVI-P grav_noether re-executed)",
+   "detail": {
+    "unmutated": {
+     "kappa0": {
+      "W_terms": 132,
+      "E_c_W_terms": {
+       "0": 0,
+       "1": 0,
+       "2": 0,
+       "3": 0
+      },
+      "antibracket_af0_vanishes": true
+     },
+     "kappa1": {
+      "W_terms": 2148,
+      "E_c_W_terms": {
+       "0": 0,
+       "1": 0,
+       "2": 0,
+       "3": 0
+      },
+      "antibracket_af0_vanishes": true
+     },
+     "kappa2": {
+      "W_terms": 15428,
+      "E_c_W_terms": {
+       "0": 0,
+       "1": 0,
+       "2": 0,
+       "3": 0
+      },
+      "antibracket_af0_vanishes": true
+     },
+     "seconds": 4.6
+    },
+    "mutation_scale_ell4_term_detected": true,
+    "mutation_drop_s1_detected": true
+   }
+  },
+  "c_ghost_antifield": {
+   "status": "Constructed",
+   "argument": "re-executed exact XVI-P P13 master: af1/af2 (invariant and Psi-transformed variables) and the af0 ghost/gauge-fixing cell vanish at kappa^0..kappa^2 with s2 DERIVED zero in all sectors (not invented; answers XVI-O's 'Absent under inherited s'); s nilpotent exactly; 7 mutations each produce residuals. Evidence = re-execution of XVI-P's engine (no second independent engine for this sector in Q01).",
+   "kappa2_table": {
+    "af0_grav_Noether": true,
+    "af0_scalar_Noether": true,
+    "af0_ghost_gf_transformed": true,
+    "af1_invariant": true,
+    "af1_transformed": true,
+    "af2_invariant": true,
+    "af2_transformed": true
+   },
+   "s2": {
+    "h": "derived_zero",
+    "c": "derived_zero",
+    "phi": "derived_zero",
+    "cb": "derived_zero",
+    "b": "derived_zero"
+   }
+  }
+ },
+ "item_status": {
+  "a_ell4": "Constructed",
+  "b_antibracket_expansion": "Constructed",
+  "c_ghost_antifield": "Constructed"
+ },
+ "O2_kappa2_master_status": "Constructed",
+ "scope": "classical, S_inv, through O(kappa^2), m = 0; NOT quantum, NOT the prepared S_D, NOT the insertion",
+ "exports_sha256": {
+  "2": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+  "3": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+  "4": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc"
+ },
+ "exports_identical_to_p23": true,
+ "classical_certs_content_identical_to_p23": {
+  "P13_quartic_verified": true,
+  "P13_brst_derivation": true,
+  "P13_master_kappa2": true,
+  "P13_boundary_identity": true,
+  "P13_gauge_fixing_map": true
+ },
+ "master_mutations": {
+  "flip_sigma_c": {
+   "claim_status": "Partial",
+   "n_residuals": 6
+  },
+  "drop_cstar": {
+   "claim_status": "Partial",
+   "n_residuals": 6
+  },
+  "alter_gf_shift": {
+   "claim_status": "Partial",
+   "n_residuals": 2
+  },
+  "flip_odd_derivative_sign": {
+   "claim_status": "Partial",
+   "n_residuals": 6
+  },
+  "corrupt_a2": {
+   "claim_status": "Partial",
+   "n_residuals": 1
+  },
+  "corrupt_ell4": {
+   "claim_status": "Partial",
+   "n_residuals": 1
+  },
+  "drop_s1_transport": {
+   "claim_status": "Partial",
+   "n_residuals": 2
+  }
+ },
+ "W_terms": {
+  "kappa0": 132,
+  "kappa1": 2148,
+  "kappa2": 15428
+ }
+}
